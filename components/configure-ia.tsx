@@ -69,7 +69,7 @@ export default function ConfigureIA() {
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure conversando{" "}
-              <span className="italic" style={{ color: "#6C4FE8" }}>
+              <span className="italic gradient-brand">
                 com a IA
               </span>
             </h2>

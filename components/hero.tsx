@@ -50,11 +50,11 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             Sua clínica atendendo{" "}
-            <span className="italic" style={{ color: "#6C4FE8" }}>
+            <span className="italic gradient-brand">
               24 horas
             </span>
             <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
-            <span className="italic" style={{ color: "#6C4FE8" }}>
+            <span className="italic gradient-brand">
               online.
             </span>
           </h1>

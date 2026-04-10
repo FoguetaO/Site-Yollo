@@ -14,7 +14,7 @@ export default function FooterImoveis() {
               >
                 B
               </span>
-              <span className="text-white font-bold text-lg">Bella IA</span>
+              <span className="font-bold text-lg gradient-brand">Bella IA</span>
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
               Assistente IA para WhatsApp especializada em imobiliárias. Capta, qualifica e agenda visitas das 24 horas por dia.

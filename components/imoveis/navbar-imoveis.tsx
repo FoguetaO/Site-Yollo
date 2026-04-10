@@ -45,7 +45,7 @@ export default function NavbarImoveis() {
           >
             B
           </span>
-          <span>Bella IA</span>
+          <span className="gradient-brand">Bella IA</span>
         </a>
 
         {/* Desktop nav */}

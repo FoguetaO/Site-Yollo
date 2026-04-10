@@ -101,7 +101,7 @@ export default function Comparison() {
             <span className="md:hidden">
               <br />
             </span>
-            <span className="text-4xl md:text-5xl italic" style={{ color: "#6C4FE8" }}>
+            <span className="text-4xl md:text-5xl italic gradient-brand">
               com a Bella IA?
             </span>
           </h2>

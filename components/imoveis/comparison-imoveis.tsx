@@ -98,7 +98,7 @@ export default function ComparisonImoveis() {
           <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
             O que muda{" "}
             <span className="md:hidden"><br /></span>
-            <span className="text-4xl md:text-5xl italic" style={{ color: "#2563EB" }}>
+            <span className="text-4xl md:text-5xl italic gradient-brand">
               com a Bella IA?
             </span>
           </h2>

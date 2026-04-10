@@ -68,7 +68,7 @@ export default function ConfigureIAImoveis() {
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure conversando{" "}
-              <span className="italic" style={{ color: "#2563EB" }}>
+              <span className="italic gradient-brand">
                 com a IA
               </span>
             </h2>

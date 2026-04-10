@@ -97,7 +97,7 @@ export default function SocialProofImoveis() {
       <div className="max-w-[1200px] mx-auto px-6 mb-12 md:mb-16">
         <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 text-center">
           Imobiliárias que{" "}
-          <span className="italic" style={{ color: "#2563EB" }}>
+          <span className="italic gradient-brand">
             já usam
           </span>
         </h2>
@@ -145,7 +145,7 @@ export default function SocialProofImoveis() {
             <p className="text-sm font-semibold text-neutral-500 uppercase tracking-widest">Conversa real</p>
             <h3 className="text-2xl font-normal text-neutral-900 mt-2">
               Veja a IA em{" "}
-              <span className="italic" style={{ color: "#2563EB" }}>
+              <span className="italic gradient-brand">
                 ação
               </span>
             </h3>

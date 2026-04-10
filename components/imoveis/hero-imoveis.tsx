@@ -50,11 +50,11 @@ export default function HeroImoveis() {
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             Sua imobiliária captando leads{" "}
-            <span className="italic" style={{ color: "#2563EB" }}>
+            <span className="italic gradient-brand">
               24 horas
             </span>
             <br className="hidden md:block" /> pelo WhatsApp — sem corretor precisar estar{" "}
-            <span className="italic" style={{ color: "#2563EB" }}>
+            <span className="italic gradient-brand">
               disponível.
             </span>
           </h1>

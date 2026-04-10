@@ -157,7 +157,7 @@ export default function SocialProof() {
       <div className="max-w-[1200px] mx-auto px-6 mb-12 text-center">
         <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
           Clínicas que já{" "}
-          <span className="italic" style={{ color: "#6C4FE8" }}>
+          <span className="italic gradient-brand">
             transformaram
           </span>{" "}
           o atendimento

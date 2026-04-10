@@ -17,7 +17,7 @@ export default function HowItWorks() {
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
             Como a{" "}
-            <span className="italic" style={{ color: "#6C4FE8" }}>
+            <span className="italic gradient-brand">
               Bella IA
             </span>{" "}
             funciona

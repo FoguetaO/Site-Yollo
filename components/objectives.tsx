@@ -12,7 +12,7 @@ export default function Objectives() {
             <span className="md:hidden">
               <br />
             </span>{" "}
-            <span className="text-4xl md:text-5xl italic" style={{ color: "#6C4FE8" }}>
+            <span className="text-4xl md:text-5xl italic gradient-brand">
               seu objetivo.
             </span>
           </h2>
