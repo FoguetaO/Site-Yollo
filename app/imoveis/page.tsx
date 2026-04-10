@@ -2,6 +2,7 @@ import NavbarImoveis from "@/components/imoveis/navbar-imoveis"
 import HeroImoveis from "@/components/imoveis/hero-imoveis"
 import ComparisonImoveis from "@/components/imoveis/comparison-imoveis"
 import HowItWorksImoveis from "@/components/imoveis/how-it-works-imoveis"
+import HowItConnectsImoveis from "@/components/imoveis/how-it-connects-imoveis"
 import ObjectivesImoveis from "@/components/imoveis/objectives-imoveis"
 import ConfigureIAImoveis from "@/components/imoveis/configure-ia-imoveis"
 import StatsImoveis from "@/components/imoveis/stats-imoveis"
@@ -25,6 +26,7 @@ export default function ImoveisPage() {
       <HeroImoveis />
       <ComparisonImoveis />
       <HowItWorksImoveis />
+      <HowItConnectsImoveis />
       <ObjectivesImoveis />
       <ConfigureIAImoveis />
       <StatsImoveis />

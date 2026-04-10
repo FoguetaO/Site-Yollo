@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import Comparison from "@/components/comparison"
 import HowItWorks from "@/components/how-it-works"
+import HowItConnects from "@/components/how-it-connects"
 import Objectives from "@/components/objectives"
 import ConfigureIA from "@/components/configure-ia"
 import Stats from "@/components/stats"
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <Comparison />
       <HowItWorks />
+      <HowItConnects />
       <Objectives />
       <ConfigureIA />
       <Stats />
