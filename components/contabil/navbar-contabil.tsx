@@ -3,12 +3,12 @@
 import { useState, useEffect, useRef } from "react"
 
 const segments = [
-  { label: "Imobiliário", href: "/imoveis", active: true },
+  { label: "Contabilidade", href: "/contabil", active: true },
+  { label: "Imobiliário", href: "/imoveis", active: false },
   { label: "Clínica de Estética", href: "/", active: false },
-  { label: "Contabilidade", href: "/contabil", active: false },
 ]
 
-export default function NavbarImoveis() {
+export default function NavbarContabil() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [segmentOpen, setSegmentOpen] = useState(false)
@@ -39,19 +39,18 @@ export default function NavbarImoveis() {
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/imoveis" className="flex items-center gap-2 font-bold text-xl text-neutral-900">
+        <a href="/contabil" className="flex items-center gap-2 font-bold text-xl text-neutral-900">
           <span
             className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: "#2563EB" }}
+            style={{ backgroundColor: "#6C4FE8" }}
           >
-            B
+            Y
           </span>
           <span className="gradient-brand">Yollo IA</span>
         </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600">
-          {/* Segmento dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"
@@ -70,7 +69,7 @@ export default function NavbarImoveis() {
               </svg>
             </button>
             {segmentOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-white rounded-xl border border-neutral-100 shadow-lg overflow-hidden py-1">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-xl border border-neutral-100 shadow-lg overflow-hidden py-1">
                 {segments.map((seg) => (
                   <a
                     key={seg.label}
@@ -84,7 +83,7 @@ export default function NavbarImoveis() {
                     {seg.active && (
                       <span
                         className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white"
-                        style={{ backgroundColor: "#2563EB" }}
+                        style={{ backgroundColor: "#6C4FE8" }}
                       >
                         Atual
                       </span>
@@ -111,7 +110,7 @@ export default function NavbarImoveis() {
           <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5"
-            style={{ backgroundColor: "#2563EB" }}
+            style={{ backgroundColor: "#6C4FE8" }}
           >
             Agendar demonstração
           </a>
@@ -139,7 +138,7 @@ export default function NavbarImoveis() {
               <a
                 key={seg.label}
                 href={seg.href}
-                className={`block py-2 text-sm font-medium ${seg.active ? "text-blue-600" : "text-neutral-600"}`}
+                className={`block py-2 text-sm font-medium ${seg.active ? "text-violet-600" : "text-neutral-600"}`}
                 onClick={() => setMobileOpen(false)}
               >
                 {seg.label}
@@ -157,8 +156,8 @@ export default function NavbarImoveis() {
           </a>
           <a
             href="#contratar"
-            className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center transition-all"
-            style={{ backgroundColor: "#2563EB" }}
+            className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center"
+            style={{ backgroundColor: "#6C4FE8" }}
             onClick={() => setMobileOpen(false)}
           >
             Agendar demonstração

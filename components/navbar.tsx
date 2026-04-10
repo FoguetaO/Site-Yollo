@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react"
 const segments = [
   { label: "Clínica de Estética", href: "/", active: true },
   { label: "Imobiliário", href: "/imoveis", active: false },
+  { label: "Contabilidade", href: "/contabil", active: false },
 ]
 
 export default function Navbar() {
