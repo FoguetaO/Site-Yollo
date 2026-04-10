@@ -3,11 +3,11 @@
 import { useEffect, useRef, useState } from "react"
 
 const messages = [
-  { role: "bot", text: "Olá! Vou te ajudar a configurar sua assistente. Como se chama sua clínica?", delay: 0 },
+  { role: "bot", text: "Olá! Vou te ajudar a configurar sua assistente de estética. Como se chama sua clínica?", delay: 0 },
   { role: "user", text: "Clínica Bella Pele", delay: 1200 },
   { role: "bot", text: "Perfeito! E quais procedimentos vocês oferecem?", delay: 2400 },
   { role: "user", text: "Limpeza de pele, botox, preenchimento e peeling", delay: 3600 },
-  { role: "bot", text: "Ótimo! Já configurei sua IA. Ela já pode atender seus clientes!", delay: 4800 },
+  { role: "bot", text: "Ótimo! Já configurei sua IA com os procedimentos e preços. Ela já pode atender seus clientes!", delay: 4800 },
 ]
 
 export default function ConfigureIA() {
@@ -47,175 +47,146 @@ export default function ConfigureIA() {
       id="configure-sua-ia"
       className="pt-12 pb-24 md:pt-20 md:pb-32 relative bg-white overflow-hidden"
     >
-      {/* Background grid */}
-      <div className="absolute inset-0 pointer-events-none hidden md:block opacity-30">
+      {/* Background glow */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
+          className="hidden md:block absolute -top-[30%] -left-[15%] w-[80%] h-[80%] rounded-full blur-[180px] opacity-30"
+          style={{         background: "radial-gradient(circle, #6C4FE833, transparent)" }}
         />
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
-        {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
-            Configuração{" "}
-            <span className="italic gradient-brand">
-              simples com IA
-            </span>
-          </h2>
-          <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
-            Sem fluxos complexos, sem planilhas. Basta gerar um prompt e conversar com nossa IA — ela aprende tudo sobre sua clínica.
-          </p>
-        </div>
-
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Card 1: Gerar Prompt */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-3 text-neutral-900">Gere um prompt</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
-                Nossas IA não é treinada em conversa. Comece gerando um prompt base com suas principais informações.
-              </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left: text */}
+          <div>
+            <div className="mb-4">
+              <div
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
+                style={{ backgroundColor: "#6C4FE812", borderColor: "#6C4FE830", color: "#4F39B0" }}
+              >
+                Configuração simples
+              </div>
             </div>
-            {/* Visual: Prompt generation demo */}
-            <div className="mt-auto bg-gradient-to-br from-neutral-50 to-white rounded-xl overflow-hidden border border-neutral-100 shadow-inner min-h-[200px] p-4">
-              <div className="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider mb-3">
-                Seu prompt base
-              </div>
-              <div className="bg-white rounded-lg border border-neutral-100 p-3 text-[11px] text-neutral-700 leading-relaxed font-mono space-y-2">
-                <div>📍 Clínica: Bella Pele</div>
-                <div>💅 Procedimentos:</div>
-                <div className="ml-4">• Limpeza de pele - R$180</div>
-                <div className="ml-4">• Botox - R$350</div>
-                <div className="ml-4">• Preenchimento - R$400</div>
-                <div>⏰ Horários: 9h às 18h</div>
-                <div>🎯 Público: Mulheres 25-55 anos</div>
-              </div>
+            <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
+              Configure conversando{" "}
+              <span className="italic gradient-brand">
+                com a IA
+              </span>
+            </h2>
+            <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8">
+              Sem fluxos complexos, sem planilhas. Basta conversar com nosso agente de configuração e ele aprende tudo
+              sobre a sua clínica: tratamentos, preços, horários e muito mais.
+            </p>
+            <ul className="flex flex-col gap-4 mb-10">
+              {[
+                "Aprende o tom de voz da sua clínica",
+                "Conhece todos os seus tratamentos e preços",
+                "Integra com sua agenda online",
+                "Pronto para atender em minutos",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 mt-0.5"
+                    style={{ color: "#6C4FE8" }}
+                  >
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 12l2 2 4-4" />
+                  </svg>
+                  <span className="text-sm text-neutral-700 font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            {/* Security badge */}
+            <div className="flex items-center gap-3 p-4 rounded-xl bg-neutral-50 border border-neutral-100 w-fit">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-green-600 flex-shrink-0"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              <span className="text-sm font-medium text-neutral-700">Conexão Segura — API Oficial WhatsApp</span>
             </div>
           </div>
 
-          {/* Card 2: Assistente de Configuração */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-3 text-neutral-900">Assistente de configuração</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
-                Configure sua IA com gerador de prompt e veja como funciona em tempo real.
-              </p>
+          {/* Right: chat demo */}
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 h-[520px] flex flex-col">
+            <div className="text-center mb-4">
+              <h3 className="text-lg font-semibold text-neutral-900 mb-1">Assistente de Configuração</h3>
+              <p className="text-sm text-neutral-500">Configure sua IA conversando</p>
             </div>
-            {/* Visual: Chat interface with typing animation */}
-            <div className="mt-auto bg-white rounded-2xl p-4 shadow-md border border-neutral-100 flex flex-col h-[280px] overflow-hidden">
-              {/* Chat header */}
-              <div
-                className="rounded-t-xl rounded-b-none px-4 py-3 flex items-center gap-3 mb-3"
-                style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
-              >
-                <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">
-                  ✓
-                </div>
-                <div>
-                  <div className="text-white text-xs font-semibold">Yollo IA</div>
-                  <div className="text-white/70 text-[10px]">Gerador de Prompt</div>
-                </div>
-              </div>
 
-              {/* Messages area */}
-              <div className="flex-1 bg-neutral-50 rounded-b-xl p-3 space-y-3 overflow-y-auto text-xs">
-                {/* Bot message */}
+            {/* Chat header */}
+            <div
+              className="rounded-2xl rounded-b-none px-5 py-3 flex items-center gap-3"
+              style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
+            >
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-sm font-bold">
+                B
+              </div>
+              <div>
+                <div className="text-white text-sm font-semibold">Yollo IA</div>
+                <div className="text-white/70 text-xs">Agente de Configuração</div>
+              </div>
+            </div>
+
+            {/* Messages */}
+            <div className="flex-1 bg-neutral-50 rounded-b-2xl p-4 space-y-3 overflow-y-auto">
+              {messages.slice(0, visibleCount).map((msg, i) => (
+                <div
+                  key={i}
+                  className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                >
+                  <div
+                    className={`max-w-[90%] rounded-2xl px-4 py-2.5 shadow-sm text-sm leading-relaxed ${
+                      msg.role === "user"
+                        ? "text-white rounded-tr-sm"
+                        : "bg-white text-neutral-800 border border-neutral-100 rounded-tl-sm"
+                    }`}
+                    style={msg.role === "user" ? { backgroundColor: "#6C4FE8" } : {}}
+                  >
+                    {msg.text}
+                  </div>
+                </div>
+              ))}
+
+              {/* Typing indicator */}
+              {visibleCount > 0 && visibleCount < messages.length && (
                 <div className="flex justify-start">
-                  <div className="bg-white text-neutral-800 rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm border border-neutral-100 max-w-[85%]">
-                    Seu negócio é qual?
-                  </div>
-                </div>
-
-                {/* User typing animation */}
-                {visibleCount >= 1 && (
-                  <div className="flex justify-end">
-                    <div
-                      className="text-white rounded-2xl rounded-tr-sm px-3 py-2 max-w-[85%]"
-                      style={{ backgroundColor: "#6C4FE8" }}
-                    >
-                      Sou dermatologista, ofereço tratamentos com laser...
-                      {visibleCount === 1 && <span className="animate-pulse">|</span>}
-                    </div>
-                  </div>
-                )}
-
-                {/* Bot response */}
-                {visibleCount >= 2 && (
-                  <div className="flex justify-start">
-                    <div className="bg-white text-neutral-800 rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm border border-neutral-100 max-w-[85%] text-[11px]">
-                      Perfeito! Gerei seu prompt:
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Prompt generated section */}
-              {visibleCount >= 3 && (
-                <div className="mt-3 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-2">
-                  <div className="text-[9px] font-bold text-green-700 uppercase tracking-widest mb-1.5">
-                    Prompt pronto
-                  </div>
-                  <div className="text-[10px] text-green-800 leading-tight font-mono bg-white bg-opacity-50 rounded p-1.5">
-                    <div>🏥 Dermatologista especialista</div>
-                    <div>💉 Laser, peeling, botox</div>
-                    <div>📱 Atende por WhatsApp</div>
+                  <div className="bg-white border border-neutral-100 rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm flex gap-1 items-center">
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "0ms" }} />
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "150ms" }} />
+                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "300ms" }} />
                   </div>
                 </div>
               )}
             </div>
           </div>
+        </div>
 
-          {/* Card 3: Pronto para Atender */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-3 text-neutral-900">Pronto para atender</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
-                Sua IA já conhece tudo sobre a clínica e está preparada para atender seus clientes com perfeição.
-              </p>
-            </div>
-            {/* Visual: Ready state demo */}
-            <div className="mt-auto bg-white rounded-xl border border-neutral-100 overflow-hidden shadow-sm min-h-[200px]">
-              <div className="bg-green-50 border-b border-green-200 px-4 py-3">
-                <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 rounded-full bg-green-500" />
-                  <span className="text-xs font-semibold text-green-700">Configuração completa</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2 text-[10px] text-green-700">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                    Informações da clínica
-                  </div>
-                  <div className="flex items-center gap-2 text-[10px] text-green-700">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                    Procedimentos e preços
-                  </div>
-                  <div className="flex items-center gap-2 text-[10px] text-green-700">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                    Tom de voz personalizado
-                  </div>
-                  <div className="flex items-center gap-2 text-[10px] text-green-700">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                    Pronto para atender
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* CTA */}
+        <div className="flex justify-center mt-12">
+          <a
+            href="#contratar"
+            className="text-white text-lg font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
+            style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
+          >
+            Contratar agora →
+          </a>
         </div>
       </div>
     </section>
