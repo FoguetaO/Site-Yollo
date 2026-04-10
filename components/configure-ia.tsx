@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const FIELDS = [
   { label: "Nome do negócio", placeholder: "Ex: Clínica Bella Pele", key: "nome" },
@@ -29,6 +29,8 @@ export default function ConfigureIA() {
   const sectionRef = useRef<HTMLElement>(null)
   const demoIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const typeIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const timeoutRef1 = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const timeoutRef2 = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   function typePrompt(text: string) {
     if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
@@ -47,15 +49,13 @@ export default function ConfigureIA() {
   function handleGenerate() {
     if (generating || promptVisible) return
     setGenerating(true)
-    const t = setTimeout(() => {
+    timeoutRef1.current = setTimeout(() => {
       setGenerating(false)
       setPromptVisible(true)
       typePrompt(buildPrompt(fields))
     }, 1800)
-    return () => clearTimeout(t)
   }
 
-  // Auto-demo animation when section enters view
   useEffect(() => {
     let cancelled = false
 
@@ -71,6 +71,7 @@ export default function ConfigureIA() {
           demoIntervalRef.current = setInterval(() => {
             if (cancelled) {
               clearInterval(demoIntervalRef.current!)
+              demoIntervalRef.current = null
               return
             }
             if (step < keys.length) {
@@ -81,19 +82,16 @@ export default function ConfigureIA() {
             } else {
               clearInterval(demoIntervalRef.current!)
               demoIntervalRef.current = null
-              const t1 = setTimeout(() => {
+              timeoutRef1.current = setTimeout(() => {
                 if (cancelled) return
                 setGenerating(true)
-                const t2 = setTimeout(() => {
+                timeoutRef2.current = setTimeout(() => {
                   if (cancelled) return
                   setGenerating(false)
                   setPromptVisible(true)
                   typePrompt(buildPrompt(DEMO_VALUES))
                 }, 1800)
-                // store t2 so cleanup can clear it
-                ;(demoIntervalRef as React.MutableRefObject<any>).current = { type: "timeout", id: t2 }
               }, 600)
-              ;(demoIntervalRef as React.MutableRefObject<any>).current = { type: "timeout", id: t1 }
             }
           }, 900)
         })
@@ -106,14 +104,9 @@ export default function ConfigureIA() {
     return () => {
       cancelled = true
       observer.disconnect()
-      if (demoIntervalRef.current) {
-        const ref = demoIntervalRef.current as any
-        if (ref && typeof ref === "object" && ref.type === "timeout") {
-          clearTimeout(ref.id)
-        } else {
-          clearInterval(demoIntervalRef.current as ReturnType<typeof setInterval>)
-        }
-      }
+      if (demoIntervalRef.current) clearInterval(demoIntervalRef.current)
+      if (timeoutRef1.current) clearTimeout(timeoutRef1.current)
+      if (timeoutRef2.current) clearTimeout(timeoutRef2.current)
       if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
     }
   }, [])
@@ -128,7 +121,7 @@ export default function ConfigureIA() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="hidden md:block absolute -top-[30%] -left-[15%] w-[80%] h-[80%] rounded-full blur-[180px] opacity-30"
-          style={{         background: "radial-gradient(circle, #6C4FE833, transparent)" }}
+          style={{ background: "radial-gradient(circle, #6C4FE833, transparent)" }}
         />
       </div>
 
@@ -146,9 +139,7 @@ export default function ConfigureIA() {
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure conversando{" "}
-              <span className="italic gradient-brand">
-                com a IA
-              </span>
+              <span className="italic gradient-brand">com a IA</span>
             </h2>
             <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8">
               Sem fluxos complexos, sem planilhas. Basta conversar com nosso agente de configuração e ele aprende tudo
@@ -208,8 +199,18 @@ export default function ConfigureIA() {
               style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
             >
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
                 </svg>
               </div>
               <div>
@@ -231,9 +232,8 @@ export default function ConfigureIA() {
                       readOnly
                       value={fields[field.key]}
                       placeholder={field.placeholder}
-                      className="w-full text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-2.5 outline-none placeholder:text-neutral-400 transition-all focus:border-violet-400 focus:bg-white"
+                      className="w-full text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-2.5 outline-none placeholder:text-neutral-400 transition-all"
                     />
-                    {/* blinking cursor on active field */}
                     {demoStep === i + 1 && fields[field.key] && !promptVisible && (
                       <span className="absolute right-3 top-1/2 -translate-y-1/2 w-px h-4 bg-violet-500 animate-pulse" />
                     )}
@@ -251,7 +251,15 @@ export default function ConfigureIA() {
                 >
                   {generating ? (
                     <>
-                      <svg className="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <svg
+                        className="animate-spin"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
                         <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity="0.25" />
                         <path d="M21 12a9 9 0 00-9-9" />
                       </svg>
@@ -259,7 +267,16 @@ export default function ConfigureIA() {
                     </>
                   ) : (
                     <>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
                         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
                       </svg>
                       Gerar Prompt com IA
@@ -273,7 +290,9 @@ export default function ConfigureIA() {
                 <div className="mt-2 rounded-xl border border-violet-200 bg-violet-50 p-4">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-2 h-2 rounded-full bg-violet-500" />
-                    <span className="text-xs font-bold text-violet-700 uppercase tracking-widest">Prompt gerado pela IA</span>
+                    <span className="text-xs font-bold text-violet-700 uppercase tracking-widest">
+                      Prompt gerado pela IA
+                    </span>
                   </div>
                   <p className="text-xs text-violet-900 leading-relaxed font-mono">
                     {typedPrompt}
