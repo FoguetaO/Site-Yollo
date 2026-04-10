@@ -3,7 +3,7 @@ export default function Objectives() {
     <section
       id="beneficios"
       className="pt-12 pb-24 md:pt-20 md:pb-32 relative overflow-hidden"
-      style={{ backgroundColor: "#F9F6F3" }}
+      style={{ backgroundColor: "#F5F3FF" }}
     >
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
@@ -12,7 +12,7 @@ export default function Objectives() {
             <span className="md:hidden">
               <br />
             </span>{" "}
-            <span className="text-4xl md:text-5xl italic" style={{ color: "#C8956C" }}>
+            <span className="text-4xl md:text-5xl italic" style={{ color: "#6C4FE8" }}>
               seu objetivo.
             </span>
           </h2>
@@ -23,7 +23,7 @@ export default function Objectives() {
           <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm transition-all duration-300 flex flex-col hover:-translate-y-2 hover:shadow-xl">
             <div
               className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-              style={{ backgroundColor: "#C8956C18" }}
+              style={{ backgroundColor: "#6C4FE818" }}
             >
               <svg
                 width="22"
@@ -34,7 +34,7 @@ export default function Objectives() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ color: "#C8956C" }}
+                style={{ color: "#6C4FE8" }}
               >
                 <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 12l2 2 4-4" />
               </svg>
@@ -55,7 +55,7 @@ export default function Objectives() {
           <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm transition-all duration-300 flex flex-col hover:-translate-y-2 hover:shadow-xl">
             <div
               className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-              style={{ backgroundColor: "#C8956C18" }}
+              style={{ backgroundColor: "#6C4FE818" }}
             >
               <svg
                 width="22"
@@ -66,7 +66,7 @@ export default function Objectives() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                style={{ color: "#C8956C" }}
+                style={{ color: "#6C4FE8" }}
               >
                 <path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM9 16l2 2 4-4" />
               </svg>
@@ -87,7 +87,7 @@ export default function Objectives() {
           <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm transition-all duration-300 flex flex-col hover:-translate-y-2 hover:shadow-xl relative">
             <span
               className="absolute top-4 right-4 text-[10px] font-bold px-2.5 py-1 rounded-full text-white"
-              style={{ backgroundColor: "#C8956C" }}
+              style={{ backgroundColor: "#6C4FE8" }}
             >
               Em breve
             </span>

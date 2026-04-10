@@ -151,7 +151,7 @@ export default function LeadForm() {
                   type="submit"
                   disabled={loading}
                   className="w-full py-4 rounded-xl text-white font-semibold text-base transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg"
-                  style={{ backgroundColor: "#C8956C", boxShadow: "0 8px 24px #C8956C44" }}
+                  style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
                 >
                   {loading ? "Enviando..." : "Quero agendar minha demonstração gratuita →"}
                 </button>

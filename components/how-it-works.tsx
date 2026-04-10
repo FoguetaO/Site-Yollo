@@ -17,7 +17,7 @@ export default function HowItWorks() {
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
             Como a{" "}
-            <span className="italic" style={{ color: "#C8956C" }}>
+            <span className="italic" style={{ color: "#6C4FE8" }}>
               Bella IA
             </span>{" "}
             funciona
@@ -47,7 +47,7 @@ export default function HowItWorks() {
                 <div className="self-end text-xs text-neutral-400 pr-1">08:02</div>
                 <div
                   className="self-end rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white max-w-[90%]"
-                  style={{ backgroundColor: "#C8956C" }}
+                  style={{ backgroundColor: "#6C4FE8" }}
                 >
                   Olá! Sim, fazemos! Nossa limpeza de pele profunda custa R$ 180. Posso te mostrar o que está incluso?
                 </div>
@@ -79,7 +79,7 @@ export default function HowItWorks() {
                   <div key={item.name} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-neutral-100 shadow-sm">
                     <div
                       className="w-7 h-7 rounded-full flex items-center justify-center text-white text-[10px] font-bold flex-shrink-0"
-                      style={{ backgroundColor: "#C8956C" }}
+                      style={{ backgroundColor: "#6C4FE8" }}
                     >
                       {item.initials}
                     </div>
@@ -116,10 +116,10 @@ export default function HowItWorks() {
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Agenda de hoje</div>
                 <div className="flex flex-col gap-2">
                   {[
-                    { time: "09:00", name: "Limpeza de Pele — Ana C.", color: "#C8956C" },
-                    { time: "10:30", name: "Micropigmentação — Lucia M.", color: "#C8956C" },
-                    { time: "14:00", name: "Botox — Fernanda S.", color: "#C8956C" },
-                    { time: "16:00", name: "Peeling — Carla R.", color: "#C8956C" },
+                    { time: "09:00", name: "Limpeza de Pele — Ana C.", color: "#6C4FE8" },
+                    { time: "10:30", name: "Micropigmentação — Lucia M.", color: "#6C4FE8" },
+                    { time: "14:00", name: "Botox — Fernanda S.", color: "#6C4FE8" },
+                    { time: "16:00", name: "Peeling — Carla R.", color: "#6C4FE8" },
                   ].map((slot) => (
                     <div key={slot.time} className="flex items-center gap-2 text-[10px]">
                       <span className="text-neutral-400 w-10 flex-shrink-0">{slot.time}</span>

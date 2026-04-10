@@ -11,7 +11,7 @@ export default function Footer() {
             <a href="/" className="inline-flex items-center gap-2">
               <span
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                style={{ backgroundColor: "#C8956C" }}
+                style={{ backgroundColor: "#6C4FE8" }}
               >
                 B
               </span>
@@ -50,7 +50,7 @@ export default function Footer() {
                   className="w-10 h-10 rounded-xl flex items-center justify-center transition-all hover:-translate-y-0.5"
                   style={{ backgroundColor: "#ffffff14", color: "#9CA3AF" }}
                   onMouseEnter={(e) => {
-                    ;(e.currentTarget as HTMLElement).style.backgroundColor = "#C8956C"
+                    ;(e.currentTarget as HTMLElement).style.backgroundColor = "#6C4FE8"
                     ;(e.currentTarget as HTMLElement).style.color = "#fff"
                   }}
                   onMouseLeave={(e) => {

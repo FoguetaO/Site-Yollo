@@ -51,7 +51,7 @@ export default function ConfigureIA() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="hidden md:block absolute -top-[30%] -left-[15%] w-[80%] h-[80%] rounded-full blur-[180px] opacity-30"
-          style={{ background: "radial-gradient(circle, #C8956C33, transparent)" }}
+          style={{         background: "radial-gradient(circle, #6C4FE833, transparent)" }}
         />
       </div>
 
@@ -62,14 +62,14 @@ export default function ConfigureIA() {
             <div className="mb-4">
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
-                style={{ backgroundColor: "#C8956C12", borderColor: "#C8956C30", color: "#9E6644" }}
+                style={{ backgroundColor: "#6C4FE812", borderColor: "#6C4FE830", color: "#4F39B0" }}
               >
                 Configuração simples
               </div>
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure conversando{" "}
-              <span className="italic" style={{ color: "#C8956C" }}>
+              <span className="italic" style={{ color: "#6C4FE8" }}>
                 com a IA
               </span>
             </h2>
@@ -95,7 +95,7 @@ export default function ConfigureIA() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     className="flex-shrink-0 mt-0.5"
-                    style={{ color: "#C8956C" }}
+                    style={{ color: "#6C4FE8" }}
                   >
                     <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 12l2 2 4-4" />
                   </svg>
@@ -133,7 +133,7 @@ export default function ConfigureIA() {
             {/* Chat header */}
             <div
               className="rounded-2xl rounded-b-none px-5 py-3 flex items-center gap-3"
-              style={{ background: "linear-gradient(to right, #C8956C, #E0A87A)" }}
+              style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
             >
               <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-sm font-bold">
                 B
@@ -157,7 +157,7 @@ export default function ConfigureIA() {
                         ? "text-white rounded-tr-sm"
                         : "bg-white text-neutral-800 border border-neutral-100 rounded-tl-sm"
                     }`}
-                    style={msg.role === "user" ? { backgroundColor: "#C8956C" } : {}}
+                    style={msg.role === "user" ? { backgroundColor: "#6C4FE8" } : {}}
                   >
                     {msg.text}
                   </div>
@@ -183,7 +183,7 @@ export default function ConfigureIA() {
           <a
             href="#contratar"
             className="text-white text-lg font-semibold px-8 py-4 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
-            style={{ backgroundColor: "#C8956C", boxShadow: "0 8px 24px #C8956C44" }}
+            style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
           >
             Contratar agora →
           </a>

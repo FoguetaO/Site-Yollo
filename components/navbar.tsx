@@ -43,7 +43,7 @@ export default function Navbar() {
         <a href="/" className="flex items-center gap-2 font-bold text-xl text-neutral-900">
           <span
             className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: "#C8956C" }}
+            style={{ backgroundColor: "#6C4FE8" }}
           >
             B
           </span>
@@ -85,7 +85,7 @@ export default function Navbar() {
                     {seg.active && (
                       <span
                         className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white"
-                        style={{ backgroundColor: "#C8956C" }}
+                        style={{ backgroundColor: "#6C4FE8" }}
                       >
                         Atual
                       </span>
@@ -112,7 +112,7 @@ export default function Navbar() {
           <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5"
-            style={{ backgroundColor: "#C8956C" }}
+            style={{ backgroundColor: "#6C4FE8" }}
           >
             Agendar demonstração
           </a>
@@ -149,7 +149,7 @@ export default function Navbar() {
                 key={seg.label}
                 href={seg.href}
                 className={`block py-2 text-sm font-medium ${
-                  seg.active ? "text-[#C8956C] font-semibold" : "text-neutral-600"
+                  seg.active ? "text-[#6C4FE8] font-semibold" : "text-neutral-600"
                 }`}
                 onClick={() => setMobileOpen(false)}
               >
@@ -181,7 +181,7 @@ export default function Navbar() {
           <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center transition-all"
-            style={{ backgroundColor: "#C8956C" }}
+            style={{ backgroundColor: "#6C4FE8" }}
             onClick={() => setMobileOpen(false)}
           >
             Agendar demonstração

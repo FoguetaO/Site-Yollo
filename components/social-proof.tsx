@@ -63,7 +63,7 @@ function CommentCard({ initials, username, time, text, likes }: (typeof comments
         <div className="flex items-start gap-3">
           <div
             className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 text-white text-sm font-bold"
-            style={{ background: "linear-gradient(135deg, #C8956C, #E0A87A)" }}
+            style={{ background: "linear-gradient(135deg, #6C4FE8, #9879F0)" }}
           >
             {initials}
           </div>
@@ -109,7 +109,7 @@ function WhatsAppCard() {
               className={`max-w-[85%] rounded-xl px-3 py-2 text-xs shadow-sm relative ${
                 msg.from === "client" ? "bg-white text-neutral-800 rounded-tl-sm" : "text-white rounded-tr-sm"
               }`}
-              style={msg.from === "ia" ? { backgroundColor: "#C8956C" } : {}}
+              style={msg.from === "ia" ? { backgroundColor: "#6C4FE8" } : {}}
             >
               {msg.text}
             </div>
@@ -157,7 +157,7 @@ export default function SocialProof() {
       <div className="max-w-[1200px] mx-auto px-6 mb-12 text-center">
         <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
           Clínicas que já{" "}
-          <span className="italic" style={{ color: "#C8956C" }}>
+          <span className="italic" style={{ color: "#6C4FE8" }}>
             transformaram
           </span>{" "}
           o atendimento
