@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 const FIELDS = [
   { label: "Nome do negócio", placeholder: "Ex: Clínica Bella Pele", key: "nome" },
@@ -30,69 +30,93 @@ export default function ConfigureIA() {
   const demoIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const typeIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
-  // Auto-demo animation when section enters view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            runDemo()
-            observer.disconnect()
-          }
-        })
-      },
-      { threshold: 0.3 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => {
-      observer.disconnect()
-      if (demoIntervalRef.current) clearInterval(demoIntervalRef.current)
-      if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
-    }
-  }, [])
-
-  function runDemo() {
-    const keys = FIELDS.map((f) => f.key)
-    let step = 0
-    demoIntervalRef.current = setInterval(() => {
-      if (step < keys.length) {
-        const key = keys[step]
-        setFields((prev) => ({ ...prev, [key]: DEMO_VALUES[key] }))
-        setDemoStep(step + 1)
-        step++
-      } else {
-        clearInterval(demoIntervalRef.current!)
-        setTimeout(() => {
-          setGenerating(true)
-          setTimeout(() => {
-            setGenerating(false)
-            setPromptVisible(true)
-            typePrompt(buildPrompt(DEMO_VALUES))
-          }, 1800)
-        }, 600)
-      }
-    }, 900)
-  }
-
   function typePrompt(text: string) {
+    if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
     let i = 0
     setTypedPrompt("")
     typeIntervalRef.current = setInterval(() => {
       i++
       setTypedPrompt(text.slice(0, i))
-      if (i >= text.length) clearInterval(typeIntervalRef.current!)
+      if (i >= text.length) {
+        clearInterval(typeIntervalRef.current!)
+        typeIntervalRef.current = null
+      }
     }, 18)
   }
 
   function handleGenerate() {
     if (generating || promptVisible) return
     setGenerating(true)
-    setTimeout(() => {
+    const t = setTimeout(() => {
       setGenerating(false)
       setPromptVisible(true)
       typePrompt(buildPrompt(fields))
     }, 1800)
+    return () => clearTimeout(t)
   }
+
+  // Auto-demo animation when section enters view
+  useEffect(() => {
+    let cancelled = false
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return
+          observer.disconnect()
+
+          const keys = FIELDS.map((f) => f.key)
+          let step = 0
+
+          demoIntervalRef.current = setInterval(() => {
+            if (cancelled) {
+              clearInterval(demoIntervalRef.current!)
+              return
+            }
+            if (step < keys.length) {
+              const key = keys[step]
+              setFields((prev) => ({ ...prev, [key]: DEMO_VALUES[key] }))
+              setDemoStep(step + 1)
+              step++
+            } else {
+              clearInterval(demoIntervalRef.current!)
+              demoIntervalRef.current = null
+              const t1 = setTimeout(() => {
+                if (cancelled) return
+                setGenerating(true)
+                const t2 = setTimeout(() => {
+                  if (cancelled) return
+                  setGenerating(false)
+                  setPromptVisible(true)
+                  typePrompt(buildPrompt(DEMO_VALUES))
+                }, 1800)
+                // store t2 so cleanup can clear it
+                ;(demoIntervalRef as React.MutableRefObject<any>).current = { type: "timeout", id: t2 }
+              }, 600)
+              ;(demoIntervalRef as React.MutableRefObject<any>).current = { type: "timeout", id: t1 }
+            }
+          }, 900)
+        })
+      },
+      { threshold: 0.3 }
+    )
+
+    if (sectionRef.current) observer.observe(sectionRef.current)
+
+    return () => {
+      cancelled = true
+      observer.disconnect()
+      if (demoIntervalRef.current) {
+        const ref = demoIntervalRef.current as any
+        if (ref && typeof ref === "object" && ref.type === "timeout") {
+          clearTimeout(ref.id)
+        } else {
+          clearInterval(demoIntervalRef.current as ReturnType<typeof setInterval>)
+        }
+      }
+      if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
+    }
+  }, [])
 
   return (
     <section
