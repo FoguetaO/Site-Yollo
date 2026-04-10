@@ -183,62 +183,55 @@ export default function HowItConnects() {
             </div>
           </div>
 
-          {/* Card 3 — IA aprende */}
+          {/* Card 3 — IA atende */}
           <div className="bg-[#F8F8FA] rounded-3xl p-8 flex flex-col">
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 03</span>
             </div>
             <h3 className="text-2xl font-bold text-neutral-900 mb-3 leading-snug">
-              A IA aprende automaticamente
+              A IA atende por voce, 24 horas
             </h3>
-            <p className="text-sm text-neutral-500 leading-relaxed mb-8">
-              Analisa todas as suas conversas anteriores e aprende seu tom de voz, suas perguntas e seu processo de atendimento.
+            <p className="text-sm text-neutral-500 leading-relaxed mb-6">
+              Seu assistente responde clientes, tira duvidas, qualifica e agenda — tudo automaticamente, sem voce precisar estar online.
             </p>
 
-            {/* Brain visual */}
-            <div className="flex-1 flex flex-col items-center justify-center gap-5">
-              <div className="relative flex items-center justify-center">
-                <div
-                  className="w-28 h-28 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: "#6C4FE810" }}
-                >
-                  <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center"
-                    style={{ backgroundColor: "#6C4FE818" }}
-                  >
-                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#6C4FE8" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.26Z" />
-                      <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.26Z" />
-                    </svg>
-                  </div>
+            {/* WhatsApp chat mock */}
+            <div className="flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 flex flex-col">
+              <div className="px-4 py-3 flex items-center gap-2 bg-[#075E54]">
+                <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">
+                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                  </svg>
                 </div>
-                {/* Pulsing ring */}
-                {analyzing && (
-                  <div className="absolute inset-0 rounded-full border-2 border-[#6C4FE8] animate-ping opacity-30" />
-                )}
+                <div>
+                  <p className="text-white text-xs font-semibold leading-none">Yollo IA</p>
+                  <p className="text-green-300 text-[10px] mt-0.5">online agora</p>
+                </div>
               </div>
               <div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border"
-                style={{
-                  backgroundColor: "#6C4FE810",
-                  borderColor: "#6C4FE830",
-                }}
+                className="flex-1 p-3 flex flex-col gap-2"
+                style={{ minHeight: 180, background: "#ECE5DD" }}
               >
-                <svg
-                  className="w-3.5 h-3.5"
-                  style={{ color: "#6C4FE8" }}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3l14 9-14 9V3z" />
-                </svg>
-                <span
-                  className="text-xs font-bold uppercase tracking-wider"
-                  style={{ color: "#6C4FE8" }}
-                >
-                  {analyzing ? "Aprendendo..." : "Analisando"}
-                </span>
+                <div className="flex justify-end">
+                  <div className="bg-[#DCF8C6] px-3 py-2 rounded-2xl rounded-tr-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
+                    Oi! Voces tem horario amanha de manha?
+                  </div>
+                </div>
+                <div className="flex justify-start">
+                  <div className="bg-white px-3 py-2 rounded-2xl rounded-tl-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
+                    Ola! Temos sim. Qual procedimento voce gostaria? 😊
+                  </div>
+                </div>
+                <div className="flex justify-end">
+                  <div className="bg-[#DCF8C6] px-3 py-2 rounded-2xl rounded-tr-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
+                    Limpeza de pele
+                  </div>
+                </div>
+                <div className="flex justify-start">
+                  <div className="bg-white px-3 py-2 rounded-2xl rounded-tl-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
+                    Perfeito! Agendado para amanha as 9h. Te mando a confirmacao! ✅
+                  </div>
+                </div>
               </div>
             </div>
           </div>
