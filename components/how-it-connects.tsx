@@ -10,6 +10,7 @@ export default function HowItConnects() {
   const [displayedText, setDisplayedText] = useState("")
   const [charIndex, setCharIndex] = useState(0)
 
+  // Typewriter effect — runs once, stops when done
   useEffect(() => {
     if (!generated) return
     if (charIndex < promptOutput.length) {
@@ -19,36 +20,17 @@ export default function HowItConnects() {
       }, 18)
       return () => clearTimeout(t)
     }
+    // Done typing — just stop, no reset
   }, [generated, charIndex])
 
+  // Auto-trigger once on mount
   useEffect(() => {
-    if (!generated) return
-    if (charIndex >= promptOutput.length) {
-      const t = setTimeout(() => {
-        setGenerated(false)
-        setDisplayedText("")
-        setCharIndex(0)
-        setAnalyzing(false)
-      }, 3000)
-      return () => clearTimeout(t)
-    }
-  }, [generated, charIndex])
-
-  function handleGenerate() {
-    if (generated) return
-    setAnalyzing(true)
-    setTimeout(() => {
-      setGenerated(true)
-    }, 900)
-  }
-
-  // Auto-trigger loop
-  useEffect(() => {
-    if (!generated && !analyzing && displayedText === "") {
-      const t = setTimeout(() => handleGenerate(), 1200)
-      return () => clearTimeout(t)
-    }
-  }, [generated, analyzing, displayedText])
+    const t = setTimeout(() => {
+      setAnalyzing(true)
+      setTimeout(() => setGenerated(true), 900)
+    }, 800)
+    return () => clearTimeout(t)
+  }, [])
 
   return (
     <section className="py-24 bg-white">
@@ -81,7 +63,7 @@ export default function HowItConnects() {
 
             {/* QR visual */}
             <div className="flex-1 flex flex-col items-center justify-center gap-4">
-              <div className="relative">
+              <div className="relative" style={{ width: 140, height: 140 }}>
                 <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
                   {/* Top-left corner block */}
                   <rect x="10" y="10" width="46" height="46" rx="6" stroke="#1A1A1A" strokeWidth="6" fill="none" />
@@ -105,12 +87,27 @@ export default function HowItConnects() {
                   <rect x="68" y="116" width="8" height="8" rx="2" fill="#1A1A1A" />
                   <rect x="100" y="116" width="8" height="8" rx="2" fill="#1A1A1A" />
                   <rect x="116" y="116" width="8" height="8" rx="2" fill="#1A1A1A" />
-                  {/* Scan line */}
-                  <line x1="10" y1="70" x2="130" y2="70" stroke="#22C55E" strokeWidth="2.5" strokeDasharray="4 3" />
                   {/* Phone icon center */}
                   <circle cx="70" cy="70" r="12" fill="#22C55E" />
                   <text x="70" y="75" textAnchor="middle" fontSize="13" fill="white">&#128222;</text>
                 </svg>
+                {/* Animated scan line — sits on top of SVG */}
+                <div
+                  className="absolute left-2 right-2 h-0.5 rounded-full"
+                  style={{
+                    background: "linear-gradient(to right, transparent, #22C55E, transparent)",
+                    animation: "qr-scan 2s ease-in-out infinite",
+                    top: 10,
+                    boxShadow: "0 0 6px #22C55E88",
+                  }}
+                />
+                <style>{`
+                  @keyframes qr-scan {
+                    0%   { top: 10px; opacity: 0.4; }
+                    50%  { opacity: 1; }
+                    100% { top: 128px; opacity: 0.4; }
+                  }
+                `}</style>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/30 bg-green-50">
                 <svg className="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
