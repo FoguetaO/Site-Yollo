@@ -127,8 +127,11 @@ const allCards = [
   { type: "whatsapp" as const, data: null, key: "w2" },
 ]
 
-// Duplicate for seamless loop
-const loopCards = [...allCards, ...allCards]
+// Duplicate for seamless loop — append a unique suffix to avoid duplicate keys
+const loopCards = [
+  ...allCards.map((c) => ({ ...c, key: `${c.key}-a` })),
+  ...allCards.map((c) => ({ ...c, key: `${c.key}-b` })),
+]
 
 export default function SocialProof() {
   const trackRef = useRef<HTMLDivElement>(null)

@@ -1,3 +1,5 @@
+"use client"
+
 export default function Footer() {
   return (
     <footer style={{ backgroundColor: "#111110", color: "#9CA3AF", padding: "3.5rem 1.5rem 2rem" }}>
