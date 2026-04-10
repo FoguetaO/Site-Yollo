@@ -47,7 +47,7 @@ export default function Navbar() {
           >
             B
           </span>
-          <span className="gradient-brand">Bella IA</span>
+          <span className="gradient-brand">Yollo IA</span>
         </a>
 
         {/* Desktop nav */}

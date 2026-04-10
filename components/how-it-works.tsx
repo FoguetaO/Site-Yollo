@@ -18,7 +18,7 @@ export default function HowItWorks() {
           <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
             Como a{" "}
             <span className="italic gradient-brand">
-              Bella IA
+              Yollo IA
             </span>{" "}
             funciona
           </h2>

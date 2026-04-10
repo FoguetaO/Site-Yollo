@@ -76,7 +76,7 @@ export default function StatsImoveis() {
                 {stat2}M+
               </span>
               <span className="block text-sm font-semibold text-white/70 mt-2">visitas agendadas</span>
-              <span className="hidden md:block text-xs text-white/30 mt-0.5">gerenciadas pela Bella IA</span>
+              <span className="hidden md:block text-xs text-white/30 mt-0.5">gerenciadas pela Yollo IA</span>
             </div>
             <div className="flex-1 text-center md:text-left">
               <span className="block text-4xl md:text-5xl font-semibold text-white tracking-tight leading-none">

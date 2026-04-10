@@ -17,7 +17,7 @@ export default function WhatsAppFloat() {
       }`}
     >
       <div className="bg-white text-neutral-900 px-3.5 py-2 rounded-lg text-sm font-medium shadow-md whitespace-nowrap opacity-0 hover:opacity-100 transition-opacity pointer-events-none group-hover:opacity-100 hidden md:block">
-        Fale com a Bella IA
+        Fale com a Yollo IA
       </div>
       <a
         href="#contratar"

@@ -62,7 +62,7 @@ const withItems = [
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
-    title: "Bella IA responde em 8 segundos",
+    title: "Yollo IA responde em 8 segundos",
     sub: "Apresenta imóveis, tira dúvidas de preço e localização",
     color: "bg-green-50 border-green-200",
   },
@@ -99,7 +99,7 @@ export default function ComparisonImoveis() {
             O que muda{" "}
             <span className="md:hidden"><br /></span>
             <span className="text-4xl md:text-5xl italic gradient-brand">
-              com a Bella IA?
+              com a Yollo IA?
             </span>
           </h2>
         </div>
@@ -112,14 +112,14 @@ export default function ComparisonImoveis() {
               onClick={() => setActiveTab("without")}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${activeTab === "without" ? "bg-white shadow text-neutral-900" : "text-neutral-500"}`}
             >
-              Sem a Bella IA
+              Sem a Yollo IA
             </button>
             <button
               type="button"
               onClick={() => setActiveTab("with")}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all ${activeTab === "with" ? "bg-white shadow text-neutral-900" : "text-neutral-500"}`}
             >
-              Com a Bella IA
+              Com a Yollo IA
             </button>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function ComparisonImoveis() {
           <div className={`rounded-2xl p-6 md:p-8 border border-red-100/60 shadow-sm bg-[#fffbfb] ${activeTab === "with" ? "hidden md:block" : "block"}`}>
             <div className="hidden md:flex items-center gap-2 mb-8">
               <span className="w-2.5 h-2.5 rounded-full bg-red-500" />
-              <span className="text-xs font-bold uppercase tracking-widest text-red-600">Sem a Bella IA</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-red-600">Sem a Yollo IA</span>
             </div>
             <div className="space-y-0">
               {withoutItems.map((item, i) => (
@@ -159,7 +159,7 @@ export default function ComparisonImoveis() {
           <div className={`rounded-2xl p-6 md:p-8 border border-green-100/60 shadow-sm bg-[#f8fdf9] ${activeTab === "without" ? "hidden md:block" : "block"}`}>
             <div className="hidden md:flex items-center gap-2 mb-8">
               <span className="w-2.5 h-2.5 rounded-full bg-green-500" />
-              <span className="text-xs font-bold uppercase tracking-widest text-green-600">Com a Bella IA</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-green-600">Com a Yollo IA</span>
             </div>
             <div className="space-y-0">
               {withItems.map((item, i) => (

@@ -7,14 +7,14 @@ const testimonials = [
     key: "t1",
     name: "Carlos Mendes",
     role: "Diretor, Imobiliária Mendes Prime",
-    text: "Antes a gente perdia lead toda noite. Agora a Bella IA qualifica e já agenda a visita enquanto o corretor dorme. Triplicamos os agendamentos.",
+    text: "Antes a gente perdia lead toda noite. Agora a Yollo IA qualifica e já agenda a visita enquanto o corretor dorme. Triplicamos os agendamentos.",
     stars: 5,
   },
   {
     key: "t2",
     name: "Ana Rodrigues",
     role: "Corretora autônoma, São Paulo",
-    text: "Eu sozinha não conseguia atender todos os leads do ZAP. Com a Bella IA, nenhum lead fica sem resposta. Aumentei minha carteira em 40%.",
+    text: "Eu sozinha não conseguia atender todos os leads do ZAP. Com a Yollo IA, nenhum lead fica sem resposta. Aumentei minha carteira em 40%.",
     stars: 5,
   },
   {
@@ -102,7 +102,7 @@ export default function SocialProofImoveis() {
           </span>
         </h2>
         <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto text-center">
-          Veja o que corretores e gestores estão dizendo após implementar a Bella IA.
+          Veja o que corretores e gestores estão dizendo após implementar a Yollo IA.
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export default function SocialProofImoveis() {
                 B
               </div>
               <div>
-                <p className="text-white text-sm font-semibold">Bella IA — Imobiliária</p>
+                <p className="text-white text-sm font-semibold">Yollo IA — Imobiliária</p>
                 <p className="text-white/70 text-xs">online</p>
               </div>
             </div>

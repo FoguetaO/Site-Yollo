@@ -163,7 +163,7 @@ export default function SocialProof() {
           o atendimento
         </h2>
         <p className="text-base text-neutral-500 mt-4 max-w-xl mx-auto">
-          Veja o que donos de clínicas estão dizendo sobre a Bella IA
+          Veja o que donos de clínicas estão dizendo sobre a Yollo IA
         </p>
       </div>
 

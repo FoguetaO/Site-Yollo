@@ -139,7 +139,7 @@ export default function ConfigureIA() {
                 B
               </div>
               <div>
-                <div className="text-white text-sm font-semibold">Bella IA</div>
+                <div className="text-white text-sm font-semibold">Yollo IA</div>
                 <div className="text-white/70 text-xs">Agente de Configuração</div>
               </div>
             </div>

@@ -15,7 +15,7 @@ export default function Footer() {
               >
                 B
               </span>
-              <span className="font-bold text-lg gradient-brand">Bella IA</span>
+              <span className="font-bold text-lg gradient-brand">Yollo IA</span>
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
               Assistente IA para WhatsApp especializada em clínicas de estética. Agenda, qualifica e atende suas
@@ -139,7 +139,7 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="pt-8 text-center text-[13px]" style={{ color: "#6B7280" }}>
-          © {new Date().getFullYear()} Bella IA. Todos os direitos reservados.
+          © {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.
         </div>
       </div>
     </footer>

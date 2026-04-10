@@ -61,7 +61,7 @@ export default function HeroImoveis() {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Bella IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
+            A Yollo IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
             Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
           </p>
 

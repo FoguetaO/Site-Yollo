@@ -14,7 +14,7 @@ import FooterImoveis from "@/components/imoveis/footer-imoveis"
 import WhatsAppFloat from "@/components/whatsapp-float"
 
 export const metadata = {
-  title: "Bella IA — Assistente IA para WhatsApp que Capta, Qualifica e Vende Imóveis 24/7",
+  title: "Yollo IA — Assistente IA para WhatsApp que Capta, Qualifica e Vende Imóveis 24/7",
   description:
     "Assistente IA para WhatsApp que responde leads em segundos, qualifica compradores e agenda visitas automaticamente para sua imobiliária. Teste 30 dias.",
 }

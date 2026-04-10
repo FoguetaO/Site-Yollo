@@ -61,7 +61,7 @@ export default function Hero() {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Bella IA responde dúvidas, agenda procedimentos e qualifica clientes automaticamente. Seus clientes
+            A Yollo IA responde dúvidas, agenda procedimentos e qualifica clientes automaticamente. Seus clientes
             recebem atendimento em segundos — e nem percebem que é uma IA.
           </p>
 

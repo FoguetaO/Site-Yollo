@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Bella IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7',
+  title: 'Yollo IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7',
   description: 'Assistente IA para WhatsApp que responde clientes em segundos, agenda procedimentos automaticamente e organiza sua clínica de estética. Teste 30 dias.',
 }
 

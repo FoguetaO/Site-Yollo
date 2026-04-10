@@ -14,7 +14,7 @@ export default function FooterImoveis() {
               >
                 B
               </span>
-              <span className="font-bold text-lg gradient-brand">Bella IA</span>
+              <span className="font-bold text-lg gradient-brand">Yollo IA</span>
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
               Assistente IA para WhatsApp especializada em imobiliárias. Capta, qualifica e agenda visitas das 24 horas por dia.
@@ -123,7 +123,7 @@ export default function FooterImoveis() {
         </div>
 
         <div className="pt-8 text-center text-[13px]" style={{ color: "#6B7280" }}>
-          © {new Date().getFullYear()} Bella IA. Todos os direitos reservados.
+          © {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.
         </div>
       </div>
     </footer>
