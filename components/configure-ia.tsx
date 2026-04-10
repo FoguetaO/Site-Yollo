@@ -100,32 +100,75 @@ export default function ConfigureIA() {
             </div>
           </div>
 
-          {/* Card 2: Configure Conversando */}
+          {/* Card 2: Assistente de Configuração */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-3 text-neutral-900">Configure conversando</h3>
+              <h3 className="text-xl font-semibold mb-3 text-neutral-900">Assistente de configuração</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
-                Use o prompt para conversar com nosso agente e ele aprende o tom, valores e detalhes da sua clínica.
+                Configure sua IA com gerador de prompt e veja como funciona em tempo real.
               </p>
             </div>
-            {/* Visual: Chat demo */}
-            <div className="mt-auto bg-[#F5F5F5] rounded-xl p-3 min-h-[200px] relative overflow-hidden border border-neutral-200 flex flex-col">
+            {/* Visual: Chat interface with typing animation */}
+            <div className="mt-auto bg-white rounded-2xl p-4 shadow-md border border-neutral-100 flex flex-col h-[280px] overflow-hidden">
+              {/* Chat header */}
               <div
-                className="rounded-lg px-3 py-2 text-xs text-white mb-2 w-fit max-w-[85%]"
-                style={{ backgroundColor: "#6C4FE8" }}
+                className="rounded-t-xl rounded-b-none px-4 py-3 flex items-center gap-3 mb-3"
+                style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
               >
-                Qual é o tom que vocês usam com clientes?
-              </div>
-              <div className="self-end bg-white rounded-lg px-3 py-2 text-xs text-neutral-700 mb-3 w-fit max-w-[85%] border border-neutral-200">
-                Acolhedor e profissional, sempre com emojis e muito carinho
-              </div>
-              <div className="mt-auto">
-                <div className="flex gap-1 items-center">
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "0ms" }} />
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "150ms" }} />
-                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "300ms" }} />
+                <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-white text-xs font-bold">
+                  ✓
+                </div>
+                <div>
+                  <div className="text-white text-xs font-semibold">Yollo IA</div>
+                  <div className="text-white/70 text-[10px]">Gerador de Prompt</div>
                 </div>
               </div>
+
+              {/* Messages area */}
+              <div className="flex-1 bg-neutral-50 rounded-b-xl p-3 space-y-3 overflow-y-auto text-xs">
+                {/* Bot message */}
+                <div className="flex justify-start">
+                  <div className="bg-white text-neutral-800 rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm border border-neutral-100 max-w-[85%]">
+                    Seu negócio é qual?
+                  </div>
+                </div>
+
+                {/* User typing animation */}
+                {visibleCount >= 1 && (
+                  <div className="flex justify-end">
+                    <div
+                      className="text-white rounded-2xl rounded-tr-sm px-3 py-2 max-w-[85%]"
+                      style={{ backgroundColor: "#6C4FE8" }}
+                    >
+                      Sou dermatologista, ofereço tratamentos com laser...
+                      {visibleCount === 1 && <span className="animate-pulse">|</span>}
+                    </div>
+                  </div>
+                )}
+
+                {/* Bot response */}
+                {visibleCount >= 2 && (
+                  <div className="flex justify-start">
+                    <div className="bg-white text-neutral-800 rounded-2xl rounded-tl-sm px-3 py-2 shadow-sm border border-neutral-100 max-w-[85%] text-[11px]">
+                      Perfeito! Gerei seu prompt:
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Prompt generated section */}
+              {visibleCount >= 3 && (
+                <div className="mt-3 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-lg p-2">
+                  <div className="text-[9px] font-bold text-green-700 uppercase tracking-widest mb-1.5">
+                    Prompt pronto
+                  </div>
+                  <div className="text-[10px] text-green-800 leading-tight font-mono bg-white bg-opacity-50 rounded p-1.5">
+                    <div>🏥 Dermatologista especialista</div>
+                    <div>💉 Laser, peeling, botox</div>
+                    <div>📱 Atende por WhatsApp</div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
