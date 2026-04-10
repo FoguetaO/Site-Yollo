@@ -2,34 +2,53 @@
 
 import { useEffect, useState } from "react"
 
-const chatMessages = [
-  { role: "ia", text: "Ola! Vou te ajudar a configurar seu assistente para sua clinica." },
-  { role: "user", text: "Estetica Bella" },
-  { role: "ia", text: "Perfeito! Quais procedimentos voce oferece? Limpeza de pele, botox, outros?" },
-  { role: "user", text: "Limpeza, botox e peeling" },
-]
+const promptOutput = "Voce e uma assistente virtual da Clinica Estetica Bella Pele. Responda sempre de forma simpatica e profissional. Ofereca procedimentos como limpeza de pele, botox e peeling. Agende horarios disponíveis e qualifique cada cliente com cuidado."
 
 export default function HowItConnects() {
-  const [visibleMessages, setVisibleMessages] = useState(0)
   const [analyzing, setAnalyzing] = useState(false)
+  const [generated, setGenerated] = useState(false)
+  const [displayedText, setDisplayedText] = useState("")
+  const [charIndex, setCharIndex] = useState(0)
 
   useEffect(() => {
-    if (visibleMessages < chatMessages.length) {
-      const timer = setTimeout(() => {
-        setVisibleMessages((v) => v + 1)
-      }, 1100)
-      return () => clearTimeout(timer)
-    } else {
-      const timer = setTimeout(() => {
-        setAnalyzing(true)
-        setTimeout(() => {
-          setVisibleMessages(0)
-          setAnalyzing(false)
-        }, 2500)
-      }, 800)
-      return () => clearTimeout(timer)
+    if (!generated) return
+    if (charIndex < promptOutput.length) {
+      const t = setTimeout(() => {
+        setDisplayedText((prev) => prev + promptOutput[charIndex])
+        setCharIndex((i) => i + 1)
+      }, 18)
+      return () => clearTimeout(t)
     }
-  }, [visibleMessages])
+  }, [generated, charIndex])
+
+  useEffect(() => {
+    if (!generated) return
+    if (charIndex >= promptOutput.length) {
+      const t = setTimeout(() => {
+        setGenerated(false)
+        setDisplayedText("")
+        setCharIndex(0)
+        setAnalyzing(false)
+      }, 3000)
+      return () => clearTimeout(t)
+    }
+  }, [generated, charIndex])
+
+  function handleGenerate() {
+    if (generated) return
+    setAnalyzing(true)
+    setTimeout(() => {
+      setGenerated(true)
+    }, 900)
+  }
+
+  // Auto-trigger loop
+  useEffect(() => {
+    if (!generated && !analyzing && displayedText === "") {
+      const t = setTimeout(() => handleGenerate(), 1200)
+      return () => clearTimeout(t)
+    }
+  }, [generated, analyzing, displayedText])
 
   return (
     <section className="py-24 bg-white">
@@ -102,47 +121,67 @@ export default function HowItConnects() {
             </div>
           </div>
 
-          {/* Card 2 — Chat de configuração */}
+          {/* Card 2 — Gerador de Prompt */}
           <div className="bg-[#F8F8FA] rounded-3xl p-8 flex flex-col">
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 02</span>
             </div>
             <h3 className="text-2xl font-bold text-neutral-900 mb-3 leading-snug">
-              Configure conversando com a IA
+              Gere o prompt da sua IA em segundos
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Nosso Agente de configuracao ajuda voce a configurar a sua IA do jeito que voce precisa.
+              Nosso gerador interno cria o prompt ideal para a sua clinica automaticamente — sem precisar saber nada de tecnologia.
             </p>
 
-            {/* Mini chat */}
+            {/* Prompt generator visual */}
             <div className="flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 flex flex-col">
               {/* Header */}
               <div
                 className="px-4 py-3 flex items-center gap-2"
                 style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
               >
-                <div className="w-2 h-2 rounded-full bg-white/60" />
-                <span className="text-white text-xs font-semibold">Assistente de Configuracao</span>
+                <svg className="w-3.5 h-3.5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                <span className="text-white text-xs font-semibold">Gerador de Prompt</span>
               </div>
-              {/* Messages */}
-              <div className="flex-1 p-3 flex flex-col gap-2 overflow-hidden" style={{ minHeight: 180 }}>
-                {chatMessages.slice(0, visibleMessages).map((msg, i) => (
-                  <div
-                    key={i}
-                    className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"} animate-in fade-in slide-in-from-bottom-2 duration-300`}
-                  >
-                    <div
-                      className={`max-w-[85%] px-3 py-2 rounded-2xl text-xs leading-relaxed ${
-                        msg.role === "user"
-                          ? "text-white"
-                          : "bg-neutral-100 text-neutral-700"
-                      }`}
-                      style={msg.role === "user" ? { backgroundColor: "#6C4FE8" } : {}}
-                    >
-                      {msg.text}
-                    </div>
+
+              <div className="p-3 flex flex-col gap-2" style={{ minHeight: 200 }}>
+                {/* Input fields */}
+                <div className="bg-neutral-50 border border-neutral-200 rounded-xl px-3 py-2 flex items-center gap-2">
+                  <span className="text-[10px] text-neutral-400 font-medium shrink-0">Negocio</span>
+                  <span className="text-xs text-neutral-700 font-medium">Clinica Estetica Bella Pele</span>
+                </div>
+                <div className="bg-neutral-50 border border-neutral-200 rounded-xl px-3 py-2 flex items-center gap-2">
+                  <span className="text-[10px] text-neutral-400 font-medium shrink-0">Servicos</span>
+                  <span className="text-xs text-neutral-700">Limpeza, Botox, Peeling</span>
+                </div>
+
+                {/* Generate button */}
+                <button
+                  className="w-full mt-1 py-2 rounded-xl text-white text-xs font-bold transition-opacity"
+                  style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)", opacity: analyzing ? 0.7 : 1 }}
+                >
+                  {analyzing && !generated ? (
+                    <span className="flex items-center justify-center gap-1.5">
+                      <svg className="w-3 h-3 animate-spin" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                      </svg>
+                      Gerando...
+                    </span>
+                  ) : "Gerar Prompt"}
+                </button>
+
+                {/* Output */}
+                {generated && (
+                  <div className="bg-[#F5F3FF] border border-[#6C4FE830] rounded-xl p-2.5 text-[10px] leading-relaxed text-neutral-600 animate-in fade-in duration-300">
+                    {displayedText}
+                    {charIndex < promptOutput.length && (
+                      <span className="inline-block w-1 h-3 ml-0.5 bg-[#6C4FE8] animate-pulse rounded-sm" />
+                    )}
                   </div>
-                ))}
+                )}
               </div>
             </div>
           </div>
