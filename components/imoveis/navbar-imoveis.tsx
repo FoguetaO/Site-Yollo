@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react"
 const segments = [
   { label: "Imobiliário", href: "/imoveis", active: true },
   { label: "Clínica de Estética", href: "/", active: false },
+  { label: "Contabilidade", href: "/contabil", active: false },
 ]
 
 export default function NavbarImoveis() {
@@ -38,14 +39,8 @@ export default function NavbarImoveis() {
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/imoveis" className="flex items-center gap-2 font-bold text-xl text-neutral-900">
-          <span
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: "#2563EB" }}
-          >
-            B
-          </span>
-          <span className="gradient-brand">Yollo IA</span>
+        <a href="/imoveis" className="flex items-center">
+          <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto" />
         </a>
 
         {/* Desktop nav */}

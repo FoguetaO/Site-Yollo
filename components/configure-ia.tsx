@@ -2,42 +2,112 @@
 
 import { useEffect, useRef, useState } from "react"
 
-const messages = [
-  { role: "bot", text: "Olá! Vou te ajudar a configurar sua assistente de estética. Como se chama sua clínica?", delay: 0 },
-  { role: "user", text: "Clínica Bella Pele", delay: 1200 },
-  { role: "bot", text: "Perfeito! E quais procedimentos vocês oferecem?", delay: 2400 },
-  { role: "user", text: "Limpeza de pele, botox, preenchimento e peeling", delay: 3600 },
-  { role: "bot", text: "Ótimo! Já configurei sua IA com os procedimentos e preços. Ela já pode atender seus clientes!", delay: 4800 },
+const FIELDS = [
+  { label: "Nome do negócio", placeholder: "Ex: Clínica Bella Pele", key: "nome" },
+  { label: "Segmento", placeholder: "Ex: Estética, Saúde, Varejo...", key: "segmento" },
+  { label: "Serviços oferecidos", placeholder: "Ex: Limpeza de pele, botox, peeling", key: "servicos" },
+  { label: "Tom de atendimento", placeholder: "Ex: Acolhedor e profissional", key: "tom" },
 ]
 
+const DEMO_VALUES: Record<string, string> = {
+  nome: "Clínica Bella Pele",
+  segmento: "Estética e Dermatologia",
+  servicos: "Limpeza de pele, botox, preenchimento, peeling",
+  tom: "Acolhedor, profissional e empático",
+}
+
+function buildPrompt(values: Record<string, string>) {
+  return `Você é a assistente virtual da ${values.nome || "[nome]"}, especializada em ${values.segmento || "[segmento]"}. Seus serviços incluem: ${values.servicos || "[serviços]"}. Seu tom de atendimento é ${values.tom || "[tom]"}. Responda sempre de forma clara, tire dúvidas sobre procedimentos, valores e agendamentos. Nunca invente informações que não foram fornecidas.`
+}
+
 export default function ConfigureIA() {
-  const [visibleCount, setVisibleCount] = useState(0)
+  const [fields, setFields] = useState<Record<string, string>>({ nome: "", segmento: "", servicos: "", tom: "" })
+  const [generating, setGenerating] = useState(false)
+  const [promptVisible, setPromptVisible] = useState(false)
+  const [typedPrompt, setTypedPrompt] = useState("")
+  const [demoStep, setDemoStep] = useState(0)
   const sectionRef = useRef<HTMLElement>(null)
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const demoIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const typeIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  const timeoutRef1 = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const timeoutRef2 = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  function typePrompt(text: string) {
+    if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
+    let i = 0
+    setTypedPrompt("")
+    typeIntervalRef.current = setInterval(() => {
+      i++
+      setTypedPrompt(text.slice(0, i))
+      if (i >= text.length) {
+        clearInterval(typeIntervalRef.current!)
+        typeIntervalRef.current = null
+      }
+    }, 18)
+  }
+
+  function handleGenerate() {
+    if (generating || promptVisible) return
+    setGenerating(true)
+    timeoutRef1.current = setTimeout(() => {
+      setGenerating(false)
+      setPromptVisible(true)
+      typePrompt(buildPrompt(fields))
+    }, 1800)
+  }
 
   useEffect(() => {
+    let cancelled = false
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            let count = 0
-            intervalRef.current = setInterval(() => {
-              count++
-              setVisibleCount(count)
-              if (count >= messages.length) {
-                clearInterval(intervalRef.current!)
-              }
-            }, 1200)
-            observer.disconnect()
-          }
+          if (!entry.isIntersecting) return
+          observer.disconnect()
+
+          const keys = FIELDS.map((f) => f.key)
+          let step = 0
+
+          demoIntervalRef.current = setInterval(() => {
+            if (cancelled) {
+              clearInterval(demoIntervalRef.current!)
+              demoIntervalRef.current = null
+              return
+            }
+            if (step < keys.length) {
+              const key = keys[step]
+              setFields((prev) => ({ ...prev, [key]: DEMO_VALUES[key] }))
+              setDemoStep(step + 1)
+              step++
+            } else {
+              clearInterval(demoIntervalRef.current!)
+              demoIntervalRef.current = null
+              timeoutRef1.current = setTimeout(() => {
+                if (cancelled) return
+                setGenerating(true)
+                timeoutRef2.current = setTimeout(() => {
+                  if (cancelled) return
+                  setGenerating(false)
+                  setPromptVisible(true)
+                  typePrompt(buildPrompt(DEMO_VALUES))
+                }, 1800)
+              }, 600)
+            }
+          }, 900)
         })
       },
       { threshold: 0.3 }
     )
+
     if (sectionRef.current) observer.observe(sectionRef.current)
+
     return () => {
+      cancelled = true
       observer.disconnect()
-      if (intervalRef.current) clearInterval(intervalRef.current)
+      if (demoIntervalRef.current) clearInterval(demoIntervalRef.current)
+      if (timeoutRef1.current) clearTimeout(timeoutRef1.current)
+      if (timeoutRef2.current) clearTimeout(timeoutRef2.current)
+      if (typeIntervalRef.current) clearInterval(typeIntervalRef.current)
     }
   }, [])
 
@@ -51,7 +121,7 @@ export default function ConfigureIA() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="hidden md:block absolute -top-[30%] -left-[15%] w-[80%] h-[80%] rounded-full blur-[180px] opacity-30"
-          style={{         background: "radial-gradient(circle, #6C4FE833, transparent)" }}
+          style={{ background: "radial-gradient(circle, #6C4FE833, transparent)" }}
         />
       </div>
 
@@ -69,9 +139,7 @@ export default function ConfigureIA() {
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure conversando{" "}
-              <span className="italic gradient-brand">
-                com a IA
-              </span>
+              <span className="italic gradient-brand">com a IA</span>
             </h2>
             <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8">
               Sem fluxos complexos, sem planilhas. Basta conversar com nosso agente de configuração e ele aprende tudo
@@ -123,55 +191,115 @@ export default function ConfigureIA() {
             </div>
           </div>
 
-          {/* Right: chat demo */}
-          <div className="bg-white rounded-2xl p-6 shadow-lg border border-neutral-100 h-[520px] flex flex-col">
-            <div className="text-center mb-4">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-1">Assistente de Configuração</h3>
-              <p className="text-sm text-neutral-500">Configure sua IA conversando</p>
-            </div>
-
-            {/* Chat header */}
+          {/* Right: prompt generator */}
+          <div className="bg-white rounded-2xl shadow-lg border border-neutral-100 flex flex-col overflow-hidden">
+            {/* Header */}
             <div
-              className="rounded-2xl rounded-b-none px-5 py-3 flex items-center gap-3"
+              className="px-6 py-4 flex items-center gap-3"
               style={{ background: "linear-gradient(to right, #6C4FE8, #9879F0)" }}
             >
-              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white text-sm font-bold">
-                B
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 20h9" />
+                  <path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z" />
+                </svg>
               </div>
               <div>
-                <div className="text-white text-sm font-semibold">Yollo IA</div>
-                <div className="text-white/70 text-xs">Agente de Configuração</div>
+                <div className="text-white text-sm font-semibold">Gerador de Prompt</div>
+                <div className="text-white/70 text-xs">Preencha e a IA cria seu prompt</div>
               </div>
             </div>
 
-            {/* Messages */}
-            <div className="flex-1 bg-neutral-50 rounded-b-2xl p-4 space-y-3 overflow-y-auto">
-              {messages.slice(0, visibleCount).map((msg, i) => (
-                <div
-                  key={i}
-                  className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
-                >
-                  <div
-                    className={`max-w-[90%] rounded-2xl px-4 py-2.5 shadow-sm text-sm leading-relaxed ${
-                      msg.role === "user"
-                        ? "text-white rounded-tr-sm"
-                        : "bg-white text-neutral-800 border border-neutral-100 rounded-tl-sm"
-                    }`}
-                    style={msg.role === "user" ? { backgroundColor: "#6C4FE8" } : {}}
-                  >
-                    {msg.text}
+            {/* Form fields */}
+            <div className="p-6 flex flex-col gap-3">
+              {FIELDS.map((field, i) => (
+                <div key={field.key}>
+                  <label className="block text-xs font-semibold text-neutral-500 mb-1 uppercase tracking-wide">
+                    {field.label}
+                  </label>
+                  <div className="relative">
+                    <input
+                      type="text"
+                      readOnly
+                      value={fields[field.key]}
+                      placeholder={field.placeholder}
+                      className="w-full text-sm text-neutral-800 bg-neutral-50 border border-neutral-200 rounded-lg px-3 py-2.5 outline-none placeholder:text-neutral-400 transition-all"
+                    />
+                    {demoStep === i + 1 && fields[field.key] && !promptVisible && (
+                      <span className="absolute right-3 top-1/2 -translate-y-1/2 w-px h-4 bg-violet-500 animate-pulse" />
+                    )}
                   </div>
                 </div>
               ))}
 
-              {/* Typing indicator */}
-              {visibleCount > 0 && visibleCount < messages.length && (
-                <div className="flex justify-start">
-                  <div className="bg-white border border-neutral-100 rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm flex gap-1 items-center">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "0ms" }} />
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "150ms" }} />
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-400 animate-bounce" style={{ animationDelay: "300ms" }} />
+              {/* Generate button */}
+              {!promptVisible && (
+                <button
+                  onClick={handleGenerate}
+                  disabled={generating}
+                  className="mt-2 w-full py-3 rounded-xl text-sm font-semibold text-white transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  style={{ backgroundColor: "#6C4FE8", boxShadow: "0 4px 14px #6C4FE855" }}
+                >
+                  {generating ? (
+                    <>
+                      <svg
+                        className="animate-spin"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                      >
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" opacity="0.25" />
+                        <path d="M21 12a9 9 0 00-9-9" />
+                      </svg>
+                      Gerando seu prompt...
+                    </>
+                  ) : (
+                    <>
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                      </svg>
+                      Gerar Prompt com IA
+                    </>
+                  )}
+                </button>
+              )}
+
+              {/* Generated prompt */}
+              {promptVisible && (
+                <div className="mt-2 rounded-xl border border-violet-200 bg-violet-50 p-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div className="w-2 h-2 rounded-full bg-violet-500" />
+                    <span className="text-xs font-bold text-violet-700 uppercase tracking-widest">
+                      Prompt gerado pela IA
+                    </span>
                   </div>
+                  <p className="text-xs text-violet-900 leading-relaxed font-mono">
+                    {typedPrompt}
+                    {typedPrompt.length < buildPrompt(DEMO_VALUES).length && (
+                      <span className="inline-block w-px h-3 bg-violet-500 animate-pulse ml-0.5 align-middle" />
+                    )}
+                  </p>
                 </div>
               )}
             </div>

@@ -1,21 +1,18 @@
 "use client"
 
-export default function Footer() {
+export default function FooterContabil() {
   return (
-    <footer style={{ backgroundColor: "#111110", color: "#9CA3AF", padding: "3.5rem 1.5rem 2rem" }}>
+    <footer style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "3.5rem 1.5rem 2rem" }}>
       <div className="max-w-[1200px] mx-auto">
-        {/* Top grid */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/" className="inline-flex items-center">
+            <a href="/contabil" className="inline-flex items-center">
               <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto brightness-0 invert" />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Assistente IA para WhatsApp especializada em clínicas de estética. Agenda, qualifica e atende suas
-              clientes 24 horas por dia.
+              Assistente IA para WhatsApp especializada em escritórios contábeis. Atende clientes, lembra prazos e recolhe documentos 24h por dia.
             </p>
-            {/* Social links */}
             <div className="flex gap-3 mt-1">
               {[
                 {
@@ -28,11 +25,11 @@ export default function Footer() {
                   ),
                 },
                 {
-                  label: "TikTok",
+                  label: "LinkedIn",
                   href: "#",
                   icon: (
                     <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34l.04-8.49a8.27 8.27 0 0 0 4.83 1.54V4.88a4.85 4.85 0 0 1-1.1-.19z" />
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   ),
                 },
@@ -70,11 +67,7 @@ export default function Footer() {
                 { label: "Configuração", href: "#configure-sua-ia" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm transition-colors hover:text-neutral-100"
-                    style={{ color: "#9CA3AF" }}
-                  >
+                  <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>
                     {link.label}
                   </a>
                 </li>
@@ -94,11 +87,7 @@ export default function Footer() {
                 { label: "Contato", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm transition-colors hover:text-neutral-100"
-                    style={{ color: "#9CA3AF" }}
-                  >
+                  <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>
                     {link.label}
                   </a>
                 </li>
@@ -118,11 +107,7 @@ export default function Footer() {
                 { label: "Termos de uso", href: "#" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm transition-colors hover:text-neutral-100"
-                    style={{ color: "#9CA3AF" }}
-                  >
+                  <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>
                     {link.label}
                   </a>
                 </li>
@@ -131,7 +116,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
         <div className="pt-8 text-center text-[13px]" style={{ color: "#6B7280" }}>
           © {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.
         </div>
