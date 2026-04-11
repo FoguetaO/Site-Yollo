@@ -49,7 +49,7 @@ const features = [
     badge: "Campanhas",
     title: "Disparo em massa de mensagens no WhatsApp",
     description:
-      "Envie campanhas personalizadas para toda a sua base com poucos cliques. Segmente por perfil, personalize com o nome do cliente e acompanhe taxa de abertura e resposta em tempo real.",
+      "Envie campanhas personalizadas para toda a sua base com poucos cliques. Segmente por tag ou funil, personalize com o nome do cliente e acompanhe respostas em tempo real.",
     keywords: ["disparo em massa WhatsApp", "campanha de WhatsApp", "marketing pelo WhatsApp"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -60,12 +60,32 @@ const features = [
       <div className="space-y-3">
         <div className="bg-white rounded-xl border border-neutral-100 p-3 shadow-sm">
           <div className="text-[10px] text-neutral-400 mb-0.5 uppercase tracking-widest">Campanha ativa</div>
-          <div className="text-sm font-semibold text-neutral-800">Promoção de Lançamento</div>
+          <div className="text-sm font-semibold text-neutral-800">Promocao de Lancamento</div>
         </div>
-        <div className="grid grid-cols-3 gap-2">
+        {/* Segmentacao por tag ou funil */}
+        <div className="bg-neutral-50 rounded-xl p-3 space-y-2">
+          <div className="text-[10px] text-neutral-400 uppercase tracking-widest mb-1">Segmentacao</div>
+          <div className="flex flex-wrap gap-1.5">
+            {["Lead quente", "Interessado", "Pos-venda", "Inativo"].map((tag) => (
+              <span
+                key={tag}
+                className="text-[11px] font-medium px-2.5 py-1 rounded-full border"
+                style={{ backgroundColor: "#6C4FE810", borderColor: "#6C4FE830", color: "#6C4FE8" }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="flex items-center gap-2 pt-1">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6C4FE8" strokeWidth="2">
+              <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
+            </svg>
+            <span className="text-[11px] text-neutral-500">Ou por etapa do funil</span>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-2">
           {[
             { label: "Enviadas", value: "2.840", color: "#6C4FE8" },
-            { label: "Abertas", value: "2.491", color: "#9879F0" },
             { label: "Respondidas", value: "634", color: "#22c55e" },
           ].map((s) => (
             <div key={s.label} className="bg-white rounded-xl border border-neutral-100 p-3 shadow-sm text-center">
@@ -73,15 +93,6 @@ const features = [
               <div className="text-[10px] text-neutral-500 mt-0.5">{s.label}</div>
             </div>
           ))}
-        </div>
-        <div className="bg-neutral-50 rounded-xl p-3">
-          <div className="flex justify-between text-xs text-neutral-500 mb-1.5">
-            <span>Taxa de abertura</span>
-            <span className="font-semibold text-neutral-700">87%</span>
-          </div>
-          <div className="w-full h-2 bg-neutral-200 rounded-full overflow-hidden">
-            <div className="h-full rounded-full" style={{ width: "87%", backgroundColor: "#6C4FE8" }} />
-          </div>
         </div>
       </div>
     ),
