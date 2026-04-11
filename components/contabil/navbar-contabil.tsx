@@ -39,7 +39,7 @@ export default function NavbarContabil() {
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/contabil" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto" />
         </a>
 

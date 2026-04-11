@@ -7,7 +7,7 @@ export default function FooterContabil() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/contabil" className="inline-flex items-center">
+            <a href="/" className="inline-flex items-center">
               <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto brightness-0 invert" />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
