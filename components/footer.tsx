@@ -8,14 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/" className="inline-flex items-center gap-2">
-              <span
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-                style={{ backgroundColor: "#6C4FE8" }}
-              >
-                B
-              </span>
-              <span className="font-bold text-lg gradient-brand">Yollo IA</span>
+            <a href="/" className="inline-flex items-center">
+              <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto brightness-0 invert" />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
               Assistente IA para WhatsApp especializada em clínicas de estética. Agenda, qualifica e atende suas

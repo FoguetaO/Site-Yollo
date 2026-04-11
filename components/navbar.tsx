@@ -41,14 +41,8 @@ export default function Navbar() {
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 font-bold text-xl text-neutral-900">
-          <span
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: "#6C4FE8" }}
-          >
-            B
-          </span>
-          <span className="gradient-brand">Yollo IA</span>
+        <a href="/" className="flex items-center">
+          <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto" />
         </a>
 
         {/* Desktop nav */}
