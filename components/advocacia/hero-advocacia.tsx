@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-export default function HeroImoveis() {
+export default function HeroAdvocacia() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -14,14 +14,24 @@ export default function HeroImoveis() {
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
       style={{
-        background: "linear-gradient(to bottom, #EFF6FF, #DBEAFE, #BFDBFE)",
+        background: "linear-gradient(to bottom, #F5F3FF, #EDE9FE, #DDD6FE)",
       }}
     >
-      {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-30 blur-[120px]"
-          style={{ backgroundColor: "#2563EB" }}
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-25 blur-[120px]"
+          style={{ backgroundColor: "#6C4FE8" }}
+        />
+      </div>
+
+      <div className="absolute inset-0 pointer-events-none hidden md:block opacity-20">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(108,79,232,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(108,79,232,0.15) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
+          }}
         />
       </div>
 
@@ -29,48 +39,40 @@ export default function HeroImoveis() {
         <div
           className={`flex flex-col items-center text-center max-w-5xl mx-auto transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
-          {/* Eyebrow tag */}
           <div className="mb-6 md:mb-10">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
               style={{
-                backgroundColor: "#2563EB18",
-                borderColor: "#2563EB40",
-                color: "#1D4ED8",
+                backgroundColor: "#6C4FE818",
+                borderColor: "#6C4FE840",
+                color: "#4F39B0",
               }}
             >
-              <span
-                className="w-2 h-2 rounded-full animate-pulse"
-                style={{ backgroundColor: "#2563EB" }}
-              />
-              Assistente IA para Imobiliárias
+              <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#6C4FE8" }} />
+              Assistente IA para Escritórios e Advogados
             </div>
           </div>
 
-          {/* Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
-            Sua imobiliária captando leads{" "}
-            <span className="italic gradient-brand">
+            Seu escritório de advocacia atendendo clientes{" "}
+            <span className="inline-block italic gradient-brand">
               24 horas
             </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem corretor precisar estar{" "}
-            <span className="italic gradient-brand">
+            <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
+            <span className="inline-block italic gradient-brand">
               disponível.
             </span>
           </h1>
 
-          {/* Subheadline */}
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Yollo IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
-            Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
+            A Yollo IA responde dúvidas jurídicas, qualifica leads, agenda consultas e acompanha casos automaticamente. Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10">
             <a
               href="#contratar"
               className="text-white text-lg font-semibold px-8 py-4 rounded-full w-full sm:w-auto text-center transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
-              style={{ backgroundColor: "#2563EB", boxShadow: "0 8px 24px #2563EB44" }}
+              style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
             >
               Quero agendar minha demonstração →
             </a>
@@ -78,7 +80,7 @@ export default function HeroImoveis() {
               href="#como-funciona"
               className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#2563EB" }}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
                   d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
                   stroke="currentColor"
@@ -91,7 +93,6 @@ export default function HeroImoveis() {
             </a>
           </div>
 
-          {/* Trust badges */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
@@ -109,7 +110,6 @@ export default function HeroImoveis() {
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-transparent via-white/40 to-white z-30 pointer-events-none" />
     </section>
   )

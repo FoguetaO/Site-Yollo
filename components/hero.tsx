@@ -43,26 +43,21 @@ export default function Hero() {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ backgroundColor: "#6C4FE8" }}
               />
-              Assistente IA para Clínicas de Estética
+              Plataforma de Atendimento com Inteligência Artificial
             </div>
           </div>
 
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
-            Sua clínica atendendo{" "}
-            <span className="italic gradient-brand">
-              24 horas
-            </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
-            <span className="italic gradient-brand">
-              online.
-            </span>
+            Automatize seu atendimento{" "}
+            <span className="italic gradient-brand">no WhatsApp</span>
+            <br className="hidden md:block" /> e venda mais com{" "}
+            <span className="italic gradient-brand">Inteligência Artificial</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Yollo IA responde dúvidas, agenda procedimentos e qualifica clientes automaticamente. Seus clientes
-            recebem atendimento em segundos — e nem percebem que é uma IA.
+            A Yollo IA é a plataforma completa de automação de WhatsApp com IA: atende clientes, agenda, faz follow-up, dispara campanhas e organiza seu CRM — 24 horas por dia, 7 dias por semana.
           </p>
 
           {/* CTA Buttons */}
@@ -72,22 +67,13 @@ export default function Hero() {
               className="text-white text-lg font-semibold px-8 py-4 rounded-full w-full sm:w-auto text-center transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
               style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
             >
-              Quero agendar minha demonstração →
+              Agendar demonstração gratuita →
             </a>
             <a
-              href="#como-funciona"
+              href="#funcionalidades"
               className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
-                <path
-                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              Ver como funciona
+              Ver todas as funcionalidades
             </a>
           </div>
 
@@ -95,15 +81,15 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial do WhatsApp</span>
+              <span className="font-medium">Sem precisar de programador</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Configuração em minutos</span>
+              <span className="font-medium">Funciona para qualquer negócio</span>
             </div>
           </div>
         </div>

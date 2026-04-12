@@ -138,16 +138,16 @@ export default function ConfigureIA() {
               </div>
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
-              Configure conversando{" "}
-              <span className="italic gradient-brand">com a IA</span>
+              Configure sua IA{" "}
+              <span className="italic gradient-brand">por prompt</span>
             </h2>
             <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8">
-              Sem fluxos complexos, sem planilhas. Basta conversar com nosso agente de configuração e ele aprende tudo
-              sobre a sua clínica: tratamentos, preços, horários e muito mais.
+              Sem fluxos complexos, sem planilhas. Você preenche as informações da sua clínica e nosso gerador cria
+              automaticamente o prompt que instrui a IA sobre como atender seus clientes.
             </p>
             <ul className="flex flex-col gap-4 mb-10">
               {[
-                "Aprende o tom de voz da sua clínica",
+                "Define o tom de voz da sua clínica",
                 "Conhece todos os seus tratamentos e preços",
                 "Integra com sua agenda online",
                 "Pronto para atender em minutos",

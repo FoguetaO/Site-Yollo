@@ -58,7 +58,7 @@ export default function HowItConnects() {
               Conecte seu WhatsApp de forma segura
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-8">
-              Usamos a API oficial da Meta. Chega de banimentos e leads esperando atendimento.
+              Conecte via API Oficial ou API Não Oficial do WhatsApp — você escolhe a melhor opção para o seu negócio.
             </p>
 
             {/* QR visual */}

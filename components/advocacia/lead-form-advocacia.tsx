@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
-export default function LeadFormContabil() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", clients: "" })
+export default function LeadFormAdvocacia() {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", area: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -26,7 +26,7 @@ export default function LeadFormContabil() {
               Comece agora
             </h2>
             <p className="text-base md:text-lg text-gray-500 mt-3 text-center md:text-left">
-              Preencha seus dados e comece a atender seus clientes contábeis 24h pelo WhatsApp — sem aumentar sua equipe.
+              Preencha seus dados e comece a atender seus clientes jurídicos 24h pelo WhatsApp — sem aumentar sua equipe.
             </p>
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[
@@ -79,30 +79,29 @@ export default function LeadFormContabil() {
                 className="space-y-5 bg-white md:bg-gray-50/50 md:border md:border-gray-100 md:rounded-2xl md:p-8 md:shadow-sm"
               >
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="name-contabil">
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="name-advocacia">
                     Nome completo
                   </label>
                   <input
-                    id="name-contabil"
+                    id="name-advocacia"
                     type="text"
                     required
-                    placeholder="Ana Paula Ferreira"
+                    placeholder="Dr. Carlos Mendes"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
-                    style={{ "--tw-ring-color": "#6C4FE8" } as React.CSSProperties}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email-contabil">
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email-advocacia">
                     Gmail
                   </label>
                   <input
-                    id="email-contabil"
+                    id="email-advocacia"
                     type="email"
                     required
-                    placeholder="ana@gmail.com"
+                    placeholder="carlos@gmail.com"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
@@ -110,11 +109,11 @@ export default function LeadFormContabil() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone-contabil">
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone-advocacia">
                     WhatsApp
                   </label>
                   <input
-                    id="phone-contabil"
+                    id="phone-advocacia"
                     type="tel"
                     required
                     placeholder="(11) 98765-4321"
@@ -125,21 +124,23 @@ export default function LeadFormContabil() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="clients-contabil">
-                    Quantos clientes você atende hoje?
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="area-advocacia">
+                    Qual é sua área de atuação?
                   </label>
                   <select
-                    id="clients-contabil"
+                    id="area-advocacia"
                     required
-                    value={form.clients}
-                    onChange={(e) => setForm({ ...form, clients: e.target.value })}
+                    value={form.area}
+                    onChange={(e) => setForm({ ...form, area: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
                   >
                     <option value="">Selecione...</option>
-                    <option>Até 30 clientes</option>
-                    <option>De 30 a 100 clientes</option>
-                    <option>De 100 a 300 clientes</option>
-                    <option>Mais de 300 clientes</option>
+                    <option>Direito Civil</option>
+                    <option>Direito Trabalhista</option>
+                    <option>Direito Empresarial</option>
+                    <option>Direito Previdenciário</option>
+                    <option>Direito de Família</option>
+                    <option>Multidisciplinar</option>
                   </select>
                 </div>
 

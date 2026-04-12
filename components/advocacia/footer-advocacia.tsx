@@ -1,6 +1,6 @@
 "use client"
 
-export default function FooterContabil() {
+export default function FooterAdvocacia() {
   return (
     <footer style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "3.5rem 1.5rem 2rem" }}>
       <div className="max-w-[1200px] mx-auto">
@@ -11,7 +11,7 @@ export default function FooterContabil() {
               <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto brightness-0 invert" />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Assistente IA para WhatsApp especializada em escritórios contábeis. Atende clientes, lembra prazos e recolhe documentos 24h por dia.
+              Assistente IA para WhatsApp especializada em escritórios de advocacia e advogados autônomos. Atende clientes, qualifica casos e agenda consultas 24h por dia.
             </p>
             <div className="flex gap-3 mt-1">
               {[
@@ -64,7 +64,7 @@ export default function FooterContabil() {
               {[
                 { label: "Como funciona", href: "#como-funciona" },
                 { label: "Benefícios", href: "#beneficios" },
-                { label: "Configuração", href: "#configure-sua-ia" },
+                { label: "FAQ", href: "#faq" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>

@@ -32,9 +32,9 @@ export default function LeadForm() {
             {/* Value props — desktop only */}
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[
-                { title: "Configuração em minutos", desc: "Sem fluxos complexos. A IA aprende sobre sua clínica sozinha." },
-                { title: "Sem fidelidade", desc: "Cancele quando quiser. Sem multa, sem burocracia." },
-                { title: "API oficial do WhatsApp", desc: "Sem risco de banimento. Parceiro verificado da Meta." },
+                { title: "Configuração em minutos", desc: "Sem fluxos complexos. A IA aprende sobre sua clínica via prompt." },
+                { title: "Planos flexíveis", desc: "Mensal, Trimestral ou Semestral. Cancele quando quiser, sem multa." },
+                { title: "API Oficial e Não Oficial do WhatsApp", desc: "Escolha a melhor opção para o seu negócio." },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
                   <svg
@@ -98,13 +98,13 @@ export default function LeadForm() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email">
-                    Email
+                    Gmail
                   </label>
                   <input
                     id="email"
                     type="email"
                     required
-                    placeholder="maria@clinica.com.br"
+                    placeholder="maria@gmail.com"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
@@ -113,7 +113,7 @@ export default function LeadForm() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone">
-                    WhatsApp da clínica
+                    WhatsApp
                   </label>
                   <input
                     id="phone"
