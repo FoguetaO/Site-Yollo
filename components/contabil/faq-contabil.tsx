@@ -6,17 +6,17 @@ const faqs = [
   {
     question: "O que é a Yollo IA para escritórios contábeis?",
     answer:
-      "A Yollo IA é um assistente de inteligência artificial para WhatsApp especializado em contabilidade. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas sobre Simples Nacional, MEI, CNPJ, obrigações acessórias e prazos fiscais, recolhe documentos e agenda reuniões. Diferente de chatbots com fluxos engessados, a Yollo IA usa IA generativa para aprender sobre o seu escritório e atender de forma natural e precisa.",
+      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada em contabilidade. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas sobre Simples Nacional, MEI, CNPJ, obrigações acessórias e prazos fiscais, recolhe documentos e agenda reuniões — tudo configurado via prompt com as informações do seu escritório.",
   },
   {
     question: "Para quem a Yollo IA contábil é indicada?",
     answer:
-      "É ideal para escritórios contábeis de qualquer porte que recebem mensagens frequentes de clientes pelo WhatsApp e desejam automatizar o atendimento sem perder a qualidade. Os perfis mais comuns são: escritórios com carteira de 50 a 500 clientes, contadores autônomos que trabalham sozinhos, escritórios que atendem MPEs e MEIs, e escritórios em crescimento que não querem contratar mais auxiliares de atendimento.",
+      "É ideal para escritórios contábeis de qualquer porte que recebem mensagens frequentes de clientes pelo WhatsApp e desejam automatizar o atendimento sem perder a qualidade. Os perfis mais comuns são: escritórios com carteira de 50 a 500 clientes, contadores autônomos, escritórios que atendem MPEs e MEIs, e escritórios em crescimento que não querem contratar mais auxiliares de atendimento.",
   },
   {
-    question: "Os clientes percebem que estão falando com uma IA?",
+    question: "Como a IA aprende sobre meu escritório?",
     answer:
-      "Na maioria das vezes, não. A Yollo IA é treinada com o tom de voz do seu escritório e aprende as especificidades da sua carteira. Para dúvidas técnicas mais complexas, ela transfere para o contador responsável com um resumo do contexto — garantindo continuidade sem perda de informação.",
+      "A Yollo IA é treinada por prompt — você informa os serviços do escritório, regimes tributários atendidos, prazos monitorados e o tom de atendimento. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
   },
   {
     question: "A IA consegue responder sobre legislação tributária?",
@@ -29,9 +29,9 @@ const faqs = [
       "A Yollo IA envia uma mensagem automática ao cliente solicitando os documentos necessários para o fechamento do mês, declarações ou outros processos. O cliente pode responder com fotos, PDFs ou links. Os documentos são organizados por cliente e a equipe é notificada quando tudo estiver completo — sem precisar ligar ou enviar e-mails.",
   },
   {
-    question: "Quanto tempo leva para configurar?",
+    question: "Quais planos estão disponíveis?",
     answer:
-      "A configuração inicial leva de 30 a 60 minutos. Você informa à Yollo IA sobre seus serviços, regimes tributários atendidos, prazos que monitora e o tom de atendimento do escritório. Depois disso, ela já está pronta para atender seus clientes.",
+      "Oferecemos três modalidades: Mensal, Trimestral e Semestral. Todos os planos podem ser cancelados a qualquer momento, sem multa e sem burocracia.",
   },
   {
     question: "Posso testar antes de contratar?",

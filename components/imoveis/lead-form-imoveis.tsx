@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 export default function LeadFormImoveis() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", segment: "" })
+  const [form, setForm] = useState({ name: "", email: "", phone: "", segment: "", plan: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -30,9 +30,9 @@ export default function LeadFormImoveis() {
             </p>
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[
-                { title: "Configuração em minutos", desc: "Sem fluxos complexos. A IA aprende sobre sua imobiliária sozinha." },
-                { title: "Sem fidelidade", desc: "Cancele quando quiser. Sem multa, sem burocracia." },
-                { title: "API oficial do WhatsApp", desc: "Sem risco de banimento. Parceiro verificado da Meta." },
+                { title: "Configuração em minutos", desc: "Sem fluxos complexos. A IA aprende sobre sua imobiliária via prompt." },
+                { title: "Planos flexíveis", desc: "Mensal, Trimestral ou Semestral. Cancele quando quiser, sem multa." },
+                { title: "API Oficial e Não Oficial do WhatsApp", desc: "Escolha a melhor opção para o seu negócio." },
               ].map((item) => (
                 <div key={item.title} className="flex items-start gap-3">
                   <svg
@@ -95,13 +95,13 @@ export default function LeadFormImoveis() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email-imoveis">
-                    Email
+                    Gmail
                   </label>
                   <input
                     id="email-imoveis"
                     type="email"
                     required
-                    placeholder="carlos@imobiliaria.com.br"
+                    placeholder="carlos@gmail.com"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
@@ -110,7 +110,7 @@ export default function LeadFormImoveis() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone-imoveis">
-                    WhatsApp da imobiliária
+                    WhatsApp
                   </label>
                   <input
                     id="phone-imoveis"
@@ -142,6 +142,29 @@ export default function LeadFormImoveis() {
                     <option>Alto padrão e luxo</option>
                     <option>Todos os segmentos</option>
                   </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5">
+                    Plano de interesse
+                  </label>
+                  <div className="grid grid-cols-3 gap-2">
+                    {["Mensal", "Trimestral", "Semestral"].map((p) => (
+                      <button
+                        key={p}
+                        type="button"
+                        onClick={() => setForm({ ...form, plan: p })}
+                        className="py-2.5 rounded-xl border text-sm font-medium transition-all"
+                        style={
+                          form.plan === p
+                            ? { backgroundColor: "#2563EB", borderColor: "#2563EB", color: "#fff" }
+                            : { backgroundColor: "#fff", borderColor: "#e5e7eb", color: "#374151" }
+                        }
+                      >
+                        {p}
+                      </button>
+                    ))}
+                  </div>
                 </div>
 
                 <button

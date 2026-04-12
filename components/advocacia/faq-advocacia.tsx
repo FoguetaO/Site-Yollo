@@ -6,12 +6,12 @@ const faqs = [
   {
     question: "O que é a Yollo IA para escritórios de advocacia?",
     answer:
-      "A Yollo IA é um assistente de inteligência artificial para WhatsApp especializado em advocacia. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas jurídicas iniciais, qualifica leads, coleta documentos e agenda consultas. Diferente de chatbots com fluxos engessados, a Yollo IA usa IA generativa para aprender sobre seu escritório e atender de forma natural e precisa.",
+      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada em advocacia. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas jurídicas iniciais, qualifica leads, coleta documentos e agenda consultas — tudo configurado via prompt com as informações do seu escritório.",
   },
   {
     question: "Para quem a Yollo IA jurídica é indicada?",
     answer:
-      "É ideal para escritórios de advocacia de qualquer porte e advogados autônomos que recebem mensagens frequentes de clientes pelo WhatsApp e desejam automatizar o atendimento sem perder qualidade. Os perfis mais comuns são: escritórios com 2 a 20 advogados, advogados solo que trabalham sozinhos, escritórios que atendem pessoa física e jurídica, e escritórios em crescimento que não querem contratar secretárias.",
+      "É ideal para escritórios de advocacia de qualquer porte e advogados autônomos que recebem mensagens frequentes de clientes pelo WhatsApp e desejam automatizar o atendimento sem perder qualidade. Os perfis mais comuns são: escritórios com 2 a 20 advogados, advogados solo, escritórios que atendem pessoa física e jurídica, e escritórios em crescimento que não querem contratar secretárias.",
   },
   {
     question: "A IA pode dar consultoria jurídica?",
@@ -19,19 +19,24 @@ const faqs = [
       "Não. A Yollo IA não dá pareceres ou consultoria jurídica — apenas respostas informativas iniciais e qualificação de casos. Para questões que exigem análise técnica, ela orienta o cliente a agendar uma consulta com o advogado. Isso garante segurança jurídica e responsabilidade ética.",
   },
   {
-    question: "Os clientes percebem que estão falando com uma IA?",
+    question: "Como a IA aprende sobre meu escritório?",
     answer:
-      "Na maioria das vezes, não. A Yollo IA é treinada com o tom de voz do seu escritório e aprende as especificidades da sua área de atuação. Para casos mais complexos, ela transfere para o advogado responsável com um resumo do contexto — garantindo continuidade sem perda de informação.",
+      "A Yollo IA é treinada por prompt — você informa as áreas de atuação, tom de atendimento, tipos de caso que atende e o processo de qualificação. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
   },
   {
     question: "Funciona com diferentes áreas do direito?",
     answer:
-      "Sim! Civil, trabalhista, empresarial, previdenciário, familiar, tributário — você configura a IA conforme sua especialidade e ela aprende a responder dentro do seu contexto. Escritórios multidisciplinares também podem criar fluxos diferentes por área.",
+      "Sim! Civil, trabalhista, empresarial, previdenciário, familiar, tributário — você configura via prompt conforme sua especialidade. Escritórios multidisciplinares também podem definir diferentes instruções por área de atuação.",
   },
   {
     question: "Como funciona a coleta de documentos?",
     answer:
       "A Yollo IA envia uma mensagem automática ao cliente solicitando os documentos necessários para o caso (contratos, holerites, carteira de trabalho, procurações etc). O cliente pode responder com fotos ou PDFs diretamente pelo WhatsApp. Os documentos são organizados por cliente e a equipe é notificada quando tudo estiver completo.",
+  },
+  {
+    question: "Quais planos estão disponíveis?",
+    answer:
+      "Oferecemos três modalidades: Mensal, Trimestral e Semestral. Todos os planos podem ser cancelados a qualquer momento, sem multa e sem burocracia.",
   },
   {
     question: "Posso testar antes de contratar?",
