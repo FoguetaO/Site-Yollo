@@ -1,6 +1,9 @@
 "use client"
 
-export default function Footer() {
+import Link from "next/link"
+import { blogCategories } from "@/lib/blog-data"
+
+export default function BlogFooter() {
   return (
     <footer style={{ backgroundColor: "#111110", color: "#9CA3AF", padding: "3.5rem 1.5rem 2rem" }}>
       <div className="max-w-[1200px] mx-auto">
@@ -8,12 +11,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/" className="inline-flex items-center">
+            <Link href="/" className="inline-flex items-center">
               <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto brightness-0 invert" />
-            </a>
+            </Link>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Assistente IA para WhatsApp especializada em clínicas de estética. Agenda, qualifica e atende suas
-              clientes 24 horas por dia.
+              Assistente IA para WhatsApp que responde clientes em segundos, agenda automaticamente e
+              organiza seu negócio 24 horas por dia.
             </p>
             {/* Social links */}
             <div className="flex gap-3 mt-1">
@@ -36,6 +39,15 @@ export default function Footer() {
                     </svg>
                   ),
                 },
+                {
+                  label: "LinkedIn",
+                  href: "#",
+                  icon: (
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                  ),
+                },
               ].map((social) => (
                 <a
                   key={social.label}
@@ -43,14 +55,6 @@ export default function Footer() {
                   aria-label={social.label}
                   className="w-10 h-10 rounded-xl flex items-center justify-center transition-all hover:-translate-y-0.5"
                   style={{ backgroundColor: "#ffffff14", color: "#9CA3AF" }}
-                  onMouseEnter={(e) => {
-                    ;(e.currentTarget as HTMLElement).style.backgroundColor = "#6C4FE8"
-                    ;(e.currentTarget as HTMLElement).style.color = "#fff"
-                  }}
-                  onMouseLeave={(e) => {
-                    ;(e.currentTarget as HTMLElement).style.backgroundColor = "#ffffff14"
-                    ;(e.currentTarget as HTMLElement).style.color = "#9CA3AF"
-                  }}
                 >
                   {social.icon}
                 </a>
@@ -58,25 +62,46 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Produto */}
+          {/* Blog Categories */}
           <div className="flex flex-col gap-3">
             <h4 className="text-[13px] font-semibold uppercase tracking-widest" style={{ color: "#E5E7EB" }}>
-              Produto
+              Categorias
+            </h4>
+            <ul className="flex flex-col gap-2">
+              {blogCategories.slice(0, 4).map((category) => (
+                <li key={category.slug}>
+                  <Link
+                    href={`/blog/categoria/${category.slug}`}
+                    className="text-sm transition-colors hover:text-neutral-100"
+                    style={{ color: "#9CA3AF" }}
+                  >
+                    {category.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Segmentos */}
+          <div className="flex flex-col gap-3">
+            <h4 className="text-[13px] font-semibold uppercase tracking-widest" style={{ color: "#E5E7EB" }}>
+              Segmentos
             </h4>
             <ul className="flex flex-col gap-2">
               {[
-                { label: "Como funciona", href: "#como-funciona" },
-                { label: "Benefícios", href: "#beneficios" },
-                { label: "Configuração", href: "#configure-sua-ia" },
+                { label: "Clínicas de Estética", href: "/" },
+                { label: "Imobiliário", href: "/imoveis" },
+                { label: "Contabilidade", href: "/contabil" },
+                { label: "Advocacia", href: "/advocacia" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm transition-colors hover:text-neutral-100"
                     style={{ color: "#9CA3AF" }}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -91,40 +116,18 @@ export default function Footer() {
               {[
                 { label: "Sobre nós", href: "#" },
                 { label: "Blog", href: "/blog" },
-                { label: "Contato", href: "#contratar" },
-              ].map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm transition-colors hover:text-neutral-100"
-                    style={{ color: "#9CA3AF" }}
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Suporte */}
-          <div className="flex flex-col gap-3">
-            <h4 className="text-[13px] font-semibold uppercase tracking-widest" style={{ color: "#E5E7EB" }}>
-              Suporte
-            </h4>
-            <ul className="flex flex-col gap-2">
-              {[
-                { label: "FAQ", href: "#faq" },
+                { label: "Contato", href: "/#contratar" },
+                { label: "FAQ", href: "/#faq" },
                 { label: "Privacidade", href: "#" },
-                { label: "Termos de uso", href: "#" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm transition-colors hover:text-neutral-100"
                     style={{ color: "#9CA3AF" }}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
