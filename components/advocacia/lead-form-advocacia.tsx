@@ -3,7 +3,7 @@
 import { useState } from "react"
 
 export default function LeadFormAdvocacia() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", area: "", plan: "" })
+  const [form, setForm] = useState({ name: "", email: "", phone: "", area: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -142,29 +142,6 @@ export default function LeadFormAdvocacia() {
                     <option>Direito de Família</option>
                     <option>Multidisciplinar</option>
                   </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5">
-                    Plano de interesse
-                  </label>
-                  <div className="grid grid-cols-3 gap-2">
-                    {["Mensal", "Trimestral", "Semestral"].map((p) => (
-                      <button
-                        key={p}
-                        type="button"
-                        onClick={() => setForm({ ...form, plan: p })}
-                        className="py-2.5 rounded-xl border text-sm font-medium transition-all"
-                        style={
-                          form.plan === p
-                            ? { backgroundColor: "#6C4FE8", borderColor: "#6C4FE8", color: "#fff" }
-                            : { backgroundColor: "#fff", borderColor: "#e5e7eb", color: "#374151" }
-                        }
-                      >
-                        {p}
-                      </button>
-                    ))}
-                  </div>
                 </div>
 
                 <button
