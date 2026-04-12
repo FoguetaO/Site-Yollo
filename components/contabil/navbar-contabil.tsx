@@ -6,6 +6,7 @@ const segments = [
   { label: "Contabilidade", href: "/contabil", active: true },
   { label: "Imobiliário", href: "/imoveis", active: false },
   { label: "Clínica de Estética", href: "/", active: false },
+  { label: "Advocacia", href: "/advocacia", active: false },
 ]
 
 export default function NavbarContabil() {
