@@ -1,3 +1,12 @@
+export interface BlogPostImage {
+  src: string
+  alt: string
+  title: string
+  caption?: string
+  width: number
+  height: number
+}
+
 export interface BlogPost {
   slug: string
   title: string
@@ -14,6 +23,7 @@ export interface BlogPost {
   }
   keywords: string[]
   relatedPosts: string[]
+  image: BlogPostImage
 }
 
 export interface BlogCategory {
@@ -82,6 +92,14 @@ export const blogPosts: BlogPost[] = [
       "IA para clínicas de estética"
     ],
     relatedPosts: ["como-reduzir-faltas-clinica-estetica", "crm-whatsapp-estetica", "ia-atendimento-clinica"],
+    image: {
+      src: "/blog/automacao-whatsapp-clinica-estetica.jpg",
+      alt: "Recepção de clínica de estética com smartphone mostrando atendimento automatizado via WhatsApp",
+      title: "Automação de WhatsApp para Clínicas de Estética",
+      caption: "Com a automação, sua clínica responde clientes em segundos, mesmo fora do horário comercial.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Por que automatizar o atendimento da sua clínica de estética?
 
@@ -164,6 +182,14 @@ A automação de WhatsApp não é mais um diferencial — é uma necessidade par
       "taxa de faltas procedimentos"
     ],
     relatedPosts: ["automacao-whatsapp-clinica-estetica", "crm-whatsapp-estetica", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/como-reduzir-faltas-clinica-estetica.jpg",
+      alt: "Tablet com calendário de agendamentos de clínica de estética e smartphone com lembretes automáticos de confirmação",
+      title: "Como Reduzir Faltas em Clínicas de Estética com Confirmação Automática",
+      caption: "Lembretes automáticos via WhatsApp podem reduzir as faltas em até 61%.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O custo invisível das faltas para sua clínica
 
@@ -228,6 +254,14 @@ A [Yollo IA](/) automatiza todas essas estratégias:
       "fidelização clientes estética"
     ],
     relatedPosts: ["automacao-whatsapp-clinica-estetica", "como-reduzir-faltas-clinica-estetica", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/crm-whatsapp-estetica.jpg",
+      alt: "Dashboard de CRM para clínica de estética integrado ao WhatsApp com histórico de clientes e procedimentos",
+      title: "CRM para Clínicas de Estética Integrado ao WhatsApp",
+      caption: "Um CRM integrado ao WhatsApp centraliza toda a jornada do cliente, do primeiro contato à fidelização.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Por que sua clínica precisa de um CRM integrado ao WhatsApp
 
@@ -291,6 +325,14 @@ A [Yollo IA](/) oferece um CRM nativo com integração total ao WhatsApp:
       "captação clientes estética"
     ],
     relatedPosts: ["automacao-whatsapp-clinica-estetica", "crm-whatsapp-estetica", "ia-atendimento-whatsapp"],
+    image: {
+      src: "/blog/marketing-clinica-estetica-instagram.jpg",
+      alt: "Profissional de estética criando conteúdo para Instagram com feed de clínica de estética visível no smartphone",
+      title: "Marketing Digital para Clínicas de Estética: Instagram e WhatsApp",
+      caption: "Integrar Instagram e WhatsApp com automação inteligente aumenta a conversão de leads em agendamentos.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## A jornada do cliente de estética em 2024
 
@@ -371,6 +413,14 @@ A [Yollo IA](/) conecta seu Instagram ao WhatsApp automaticamente:
       "IA para imobiliárias"
     ],
     relatedPosts: ["qualificacao-leads-imobiliarios", "follow-up-vendas-whatsapp", "crm-imobiliario-whatsapp"],
+    image: {
+      src: "/blog/automacao-whatsapp-imobiliaria.jpg",
+      alt: "Corretor de imóveis mostrando anúncio de propriedade no tablet com WhatsApp aberto no smartphone para atendimento automático",
+      title: "Automação de WhatsApp para Imobiliárias e Corretores de Imóveis",
+      caption: "Corretores que automatizam o atendimento respondem leads 480x mais rápido e fecham até 2x mais negócios.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O desafio do corretor de imóveis em 2024
 
@@ -464,6 +514,14 @@ A [Yollo IA para Imobiliárias](/imoveis) foi desenvolvida especificamente para 
       "funil de vendas imóveis"
     ],
     relatedPosts: ["automacao-whatsapp-imobiliaria", "crm-imobiliario-whatsapp", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/qualificacao-leads-imobiliarios.jpg",
+      alt: "Corretor imobiliário analisando funil de vendas com gráficos de qualificação de leads em laptop",
+      title: "Qualificação de Leads Imobiliários: Como Filtrar Compradores Sérios",
+      caption: "Lead scoring automático permite focar energia nos clientes com real intenção de compra.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O problema dos leads "frios"
 
@@ -561,6 +619,14 @@ A [Yollo IA para Imobiliárias](/imoveis) faz a qualificação automaticamente:
       "crm whatsapp imobiliária"
     ],
     relatedPosts: ["automacao-whatsapp-imobiliaria", "qualificacao-leads-imobiliarios", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/crm-imobiliario-whatsapp.jpg",
+      alt: "Monitor com dashboard de CRM imobiliário mostrando pipeline de leads e histórico de conversas WhatsApp",
+      title: "CRM Imobiliário Integrado ao WhatsApp para Corretores",
+      caption: "Centralize leads, histórico de conversas e agendamento de visitas em uma única plataforma.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Por que corretores perdem vendas sem CRM
 
@@ -643,6 +709,14 @@ A [Yollo IA](/imoveis) oferece CRM imobiliário completo:
       "vendas pelo whatsapp"
     ],
     relatedPosts: ["automacao-whatsapp-imobiliaria", "qualificacao-leads-imobiliarios", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/vender-mais-imoveis-whatsapp.jpg",
+      alt: "Corretor de imóveis celebrando fechamento de venda com casal na frente de casa moderna",
+      title: "Como Vender Mais Imóveis pelo WhatsApp com Estratégias de Conversão",
+      caption: "Corretores que dominam o WhatsApp como canal de vendas fecham até 3x mais negócios.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O WhatsApp como canal de vendas imobiliárias
 
@@ -720,6 +794,14 @@ A [automação de WhatsApp](/blog/automacao-whatsapp-imobiliaria) pode cuidar da
       "digitalização escritório contábil"
     ],
     relatedPosts: ["captacao-clientes-contabilidade", "ia-atendimento-whatsapp", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/automacao-escritorio-contabilidade.jpg",
+      alt: "Contador em escritório moderno com automação de fluxos de trabalho visível no computador e documentos organizados",
+      title: "Automação de WhatsApp para Escritórios Contábeis e Contadores",
+      caption: "Escritórios contábeis que automatizam o atendimento atendem mais clientes sem aumentar a equipe.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O desafio dos escritórios contábeis em 2024
 
@@ -817,6 +899,14 @@ A [Yollo IA para Contabilidade](/contabil) foi desenvolvida para contadores:
       "leads para contadores"
     ],
     relatedPosts: ["automacao-whatsapp-escritorio-contabil", "ia-atendimento-whatsapp", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/captacao-clientes-contabilidade.jpg",
+      alt: "Contador assinando contrato com novo cliente empresário em escritório contábil moderno",
+      title: "Captação de Clientes para Escritórios Contábeis com Marketing Digital",
+      caption: "Estratégias de marketing digital permitem que contadores alcancem empresas que precisam dos seus serviços.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Por que escritórios contábeis precisam de marketing digital
 
@@ -907,6 +997,14 @@ De nada adianta gerar leads se o atendimento é lento. A [Yollo IA](/contabil) g
       "satisfação cliente contabilidade"
     ],
     relatedPosts: ["automacao-whatsapp-escritorio-contabil", "captacao-clientes-contabilidade", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/fidelizacao-clientes-escritorio-contabil.jpg",
+      alt: "Contador e cliente empresário revisando resultados financeiros positivos juntos em escritório contábil moderno",
+      title: "Como Fidelizar Clientes em Escritórios Contábeis com Comunicação Proativa",
+      caption: "Clientes fiéis indicam novos negócios: cada cliente retido pode gerar até R$ 72 mil em valor de ciclo de vida.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O custo de perder um cliente contábil
 
@@ -1002,6 +1100,14 @@ A [Yollo IA](/contabil) ajuda na fidelização com:
       "IA para advogados"
     ],
     relatedPosts: ["marketing-digital-advogados", "como-agendar-consultas-advocacia", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/automacao-advocacia-whatsapp.jpg",
+      alt: "Advogado em escritório moderno com smartphone mostrando atendimento automatizado via WhatsApp e balanças de justiça ao fundo",
+      title: "Automação de WhatsApp para Advogados e Escritórios de Advocacia",
+      caption: "A automação ética no escritório de advocacia libera tempo para o que realmente importa: a prática do direito.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O cenário da advocacia digital em 2024
 
@@ -1110,6 +1216,14 @@ A [Yollo IA para Advocacia](/advocacia) foi desenvolvida para respeitar o Códig
       "captação clientes advocacia"
     ],
     relatedPosts: ["automacao-whatsapp-advogado", "como-agendar-consultas-advocacia", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/marketing-digital-advogados.jpg",
+      alt: "Advogado construindo presença digital com website profissional e LinkedIn abertos no computador em escritório",
+      title: "Marketing Digital para Advogados: Como Atrair Clientes Respeitando as Regras da OAB",
+      caption: "O marketing jurídico dentro das normas da OAB pode gerar um fluxo constante de novos clientes.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Marketing jurídico: o que pode e o que não pode
 
@@ -1204,6 +1318,14 @@ A [Yollo IA para Advocacia](/advocacia) complementa seu marketing:
       "sistema agendamento advocacia"
     ],
     relatedPosts: ["automacao-whatsapp-advogado", "marketing-digital-advogados", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/agendamento-consultas-juridicas.jpg",
+      alt: "Recepcionista de escritório de advocacia agendando consultas em tablet com calendário digital",
+      title: "Agendamento Automatizado de Consultas Jurídicas para Escritórios de Advocacia",
+      caption: "O agendamento automatizado elimina horas perdidas com ligações e reduz as faltas em até 60%.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O problema do agendamento manual
 
@@ -1293,6 +1415,14 @@ A [Yollo IA](/advocacia) oferece sistema completo de agendamento:
       "whatsapp para empresas"
     ],
     relatedPosts: ["ia-atendimento-whatsapp", "follow-up-vendas-whatsapp", "automacao-whatsapp-clinica-estetica"],
+    image: {
+      src: "/blog/whatsapp-business-api-para-empresas.jpg",
+      alt: "Múltiplos smartphones exibindo conversas do WhatsApp Business API com fluxo de automação para empresas",
+      title: "WhatsApp Business API: Guia Completo para Empresas em 2024",
+      caption: "A API oficial do WhatsApp permite automação completa, múltiplos atendentes e integração com CRM.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O que é WhatsApp Business API
 
@@ -1394,6 +1524,14 @@ A Meta monitora:
       "atendimento automatizado ia"
     ],
     relatedPosts: ["whatsapp-business-api-guia-completo", "follow-up-vendas-whatsapp", "automacao-whatsapp-clinica-estetica"],
+    image: {
+      src: "/blog/ia-atendimento-whatsapp.jpg",
+      alt: "Conceito de chatbot com inteligência artificial mostrando bolhas de conversa holográficas e rede neural no smartphone",
+      title: "IA para Atendimento no WhatsApp: Como a Inteligência Artificial Revoluciona o Atendimento ao Cliente",
+      caption: "A IA generativa vai muito além dos chatbots tradicionais: ela entende contexto, adapta respostas e aprende continuamente.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O que muda com IA no atendimento
 
@@ -1488,6 +1626,14 @@ A [Yollo IA](/) oferece:
       "recuperar leads whatsapp"
     ],
     relatedPosts: ["ia-atendimento-whatsapp", "whatsapp-business-api-guia-completo", "automacao-whatsapp-clinica-estetica"],
+    image: {
+      src: "/blog/follow-up-vendas-whatsapp.jpg",
+      alt: "Vendedor analisando pipeline de follow-up no computador com WhatsApp aberto no celular e lembretes de contato",
+      title: "Follow-up de Vendas pelo WhatsApp: Como Automatizar e Converter Mais Leads",
+      caption: "Automatizar o follow-up garante que nenhum lead seja esquecido, aumentando a conversão em até 47%.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Por que o follow-up é essencial
 
@@ -1581,6 +1727,14 @@ A [Yollo IA](/) automatiza follow-ups:
       "como usar ia no trabalho"
     ],
     relatedPosts: ["ia-atendimento-whatsapp", "automacao-processos-ia", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/ia-generativa-para-negocios.jpg",
+      alt: "Executivo interagindo com assistente de inteligência artificial holográfico com gráficos de crescimento empresarial ao fundo",
+      title: "IA Generativa para Negócios: Aplicações Práticas em Vendas, Atendimento e Marketing",
+      caption: "A IA generativa já está transformando vendas, atendimento e operações em empresas de todos os portes.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O que é IA Generativa
 
@@ -1694,6 +1848,14 @@ Para atendimento ao cliente, uma [IA especializada](/) traz melhores resultados.
       "digitalização negócio"
     ],
     relatedPosts: ["ia-generativa-para-negocios", "ia-atendimento-whatsapp", "follow-up-vendas-whatsapp"],
+    image: {
+      src: "/blog/automacao-processos-pequenas-empresas.jpg",
+      alt: "Empresário de pequena empresa revisando fluxo de automação de processos no laptop em escritório moderno",
+      title: "Automação de Processos com IA para Pequenas e Médias Empresas",
+      caption: "PMEs que adotam automação com IA crescem sem precisar aumentar equipe proporcionalmente.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## Por que PMEs devem automatizar
 
@@ -1817,6 +1979,14 @@ O atendimento ao cliente é geralmente o melhor ponto de partida:
       "previsões ia"
     ],
     relatedPosts: ["ia-generativa-para-negocios", "automacao-processos-ia", "ia-atendimento-whatsapp"],
+    image: {
+      src: "/blog/tendencias-ia-2024-pequenas-empresas.jpg",
+      alt: "Visualização futurista de rede neural com gráficos de tendências de inteligência artificial para 2024 e além",
+      title: "Tendências de Inteligência Artificial para Negócios em 2024",
+      caption: "Em 2024, a IA deixa de ser hype e se torna ferramenta essencial para empresas competitivas.",
+      width: 1280,
+      height: 720,
+    },
     content: `
 ## O cenário de IA em 2024
 

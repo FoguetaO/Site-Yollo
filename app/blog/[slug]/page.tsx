@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import { blogPosts, getPostBySlug, getRelatedPosts, formatDate } from "@/lib/blog-data"
 import BlogNavbar from "@/components/blog/blog-navbar"
@@ -40,11 +41,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       authors: [post.author.name],
       locale: "pt_BR",
       siteName: "Yollo IA",
+      images: [
+        {
+          url: `https://yollo.ai${post.image.src}`,
+          width: post.image.width,
+          height: post.image.height,
+          alt: post.image.alt,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
+      images: [`https://yollo.ai${post.image.src}`],
     },
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -68,6 +78,13 @@ export default async function BlogPostPage({ params }: Props) {
     "@type": "Article",
     headline: post.title,
     description: post.description,
+    image: {
+      "@type": "ImageObject",
+      url: `https://yollo.ai${post.image.src}`,
+      width: post.image.width,
+      height: post.image.height,
+      caption: post.image.caption,
+    },
     datePublished: post.publishedAt,
     dateModified: post.updatedAt,
     author: {
@@ -79,6 +96,10 @@ export default async function BlogPostPage({ params }: Props) {
       "@type": "Organization",
       name: "Yollo IA",
       url: "https://yollo.ai",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://yollo.ai/logo-yollo.png",
+      },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -225,6 +246,28 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </section>
 
+        {/* Featured Image */}
+        <div className="max-w-[1000px] mx-auto px-6 -mt-4 mb-0">
+          <figure className="rounded-2xl overflow-hidden shadow-lg">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src={post.image.src}
+                alt={post.image.alt}
+                title={post.image.title}
+                fill
+                className="object-cover"
+                sizes="(max-width: 1000px) 100vw, 1000px"
+                priority
+              />
+            </div>
+            {post.image.caption && (
+              <figcaption className="text-center text-sm text-neutral-500 bg-neutral-50 px-6 py-3">
+                {post.image.caption}
+              </figcaption>
+            )}
+          </figure>
+        </div>
+
         {/* Article Content */}
         <article className="max-w-[800px] mx-auto px-6 py-12">
           <BlogContent content={post.content} />
@@ -299,22 +342,16 @@ export default async function BlogPostPage({ params }: Props) {
                     href={`/blog/${relatedPost.slug}`}
                     className="group flex flex-col rounded-2xl overflow-hidden bg-white border border-neutral-100 transition-all duration-300 hover:shadow-xl hover:border-neutral-200 hover:-translate-y-1"
                   >
-                    <div className="relative overflow-hidden flex items-center justify-center aspect-[16/9] bg-gradient-to-br from-[#6C4FE8]/5 to-[#6C4FE8]/15">
-                      <div className="text-[#6C4FE8]/30">
-                        <svg
-                          className="w-12 h-12"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={1}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
-                          />
-                        </svg>
-                      </div>
+                    <div className="relative overflow-hidden aspect-[16/9]">
+                      <Image
+                        src={relatedPost.image.src}
+                        alt={relatedPost.image.alt}
+                        title={relatedPost.image.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        loading="lazy"
+                      />
                     </div>
                     <div className="flex flex-col gap-2 p-5">
                       <span className="text-sm font-semibold text-[#6C4FE8]">
