@@ -32,6 +32,7 @@ export const metadata: Metadata = {
 
 
 import Hero from "@/components/hero"
+import SegmentFeatureHero from "@/components/segment-feature-hero"
 import Features from "@/components/features"
 import Comparison from "@/components/comparison"
 import HowItWorks from "@/components/how-it-works"
@@ -51,6 +52,26 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <SegmentFeatureHero
+        badge="IA para Clínicas de Estética"
+        title="A secretária virtual que atende e agenda por você, 24h por dia"
+        description="O conjunto de recursos guiados por IA da Yollo inclui funcionalidades incríveis:"
+        features={[
+          { label: "Agendamento automático de procedimentos", href: "#funcionalidades" },
+          { label: "Qualificação e CRM de clientes", href: "#funcionalidades" },
+          { label: "Lembretes e redução de faltas", href: "#funcionalidades" },
+        ]}
+        ctaLabel="Explore os recursos para clínicas"
+        ctaHref="#contratar"
+        phoneImage={{
+          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qLv2UZe56j2fGzRf6QXfRdLRCz1lz4.png",
+          alt: "Smartphone mostrando atendimento automático via WhatsApp em clínica de estética pela IA Yollo — agendamento, qualificação de leads e CRM integrado",
+        }}
+        accentColor="#6C4FE8"
+        gradientFrom="#fdf4ff"
+        gradientVia="#fce7f3"
+        gradientTo="#f5f3ff"
+      />
       <Comparison />
       <Features />
       <HowItWorks />

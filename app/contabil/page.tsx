@@ -1,5 +1,6 @@
 import NavbarContabil from "@/components/contabil/navbar-contabil"
 import HeroContabil from "@/components/contabil/hero-contabil"
+import SegmentFeatureHero from "@/components/segment-feature-hero"
 import ComparisonContabil from "@/components/contabil/comparison-contabil"
 import HowItWorksContabil from "@/components/contabil/how-it-works-contabil"
 import ObjectivesContabil from "@/components/contabil/objectives-contabil"
@@ -10,9 +11,29 @@ import FooterContabil from "@/components/contabil/footer-contabil"
 import WhatsAppFloat from "@/components/whatsapp-float"
 
 export const metadata = {
-  title: "Yollo IA — Assistente IA para WhatsApp que Atende Clientes, Lembra Prazos e Recolhe Documentos 24/7",
+  title: "Yollo IA para Contabilidade — IA no WhatsApp que Atende Clientes e Lembra Obrigações 24/7",
   description:
-    "Assistente IA para WhatsApp especializada em escritórios contábeis. Responde dúvidas fiscais, envia lembretes de obrigações, recolhe documentos e agenda reuniões automaticamente. Teste grátis.",
+    "Automação de atendimento via WhatsApp com IA para escritórios contábeis e contadores. Responde dúvidas fiscais, envia lembretes de obrigações, recolhe documentos e agenda reuniões automaticamente.",
+  keywords: [
+    "IA para escritório contábil",
+    "automação WhatsApp contabilidade",
+    "chatbot WhatsApp contador",
+    "lembretes fiscais automáticos",
+    "atendimento automático escritório contábil",
+    "CRM para contabilidade",
+    "captação de clientes contabilidade",
+    "WhatsApp para contador",
+    "assistente virtual contabilidade",
+    "automação obrigações fiscais",
+  ],
+  alternates: { canonical: "https://yollo.ai/contabil" },
+  openGraph: {
+    title: "IA para Escritórios Contábeis — Yollo IA",
+    description: "Automatize o atendimento do seu escritório contábil. Responda clientes, lembre prazos e recolha documentos com IA.",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Yollo IA",
+  },
 }
 
 export default function ContabilPage() {
@@ -20,6 +41,26 @@ export default function ContabilPage() {
     <main>
       <NavbarContabil />
       <HeroContabil />
+      <SegmentFeatureHero
+        badge="IA para Escritórios Contábeis"
+        title="O assistente contábil que atende clientes e lembra prazos por você, 24h por dia"
+        description="Os recursos guiados por IA da Yollo para contabilidade incluem:"
+        features={[
+          { label: "Respostas automáticas a dúvidas fiscais e trabalhistas", href: "#funcionalidades" },
+          { label: "Lembretes automáticos de obrigações e prazos", href: "#funcionalidades" },
+          { label: "Recolhimento de documentos e agendamento de reuniões", href: "#funcionalidades" },
+        ]}
+        ctaLabel="Explore os recursos para contabilidade"
+        ctaHref="#contratar"
+        phoneImage={{
+          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qLv2UZe56j2fGzRf6QXfRdLRCz1lz4.png",
+          alt: "Smartphone mostrando atendimento automático de escritório contábil via WhatsApp com IA Yollo — lembretes fiscais e coleta de documentos",
+        }}
+        accentColor="#0d9488"
+        gradientFrom="#f0fdfa"
+        gradientVia="#ccfbf1"
+        gradientTo="#f0f9ff"
+      />
       <ComparisonContabil />
       <HowItWorksContabil />
       <ObjectivesContabil />

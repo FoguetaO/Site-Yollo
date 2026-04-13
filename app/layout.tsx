@@ -46,9 +46,8 @@ export const metadata: Metadata = {
     title: 'Yollo IA — Assistente IA para WhatsApp',
     description: 'Assistente IA para WhatsApp que responde clientes em segundos e agenda automaticamente.',
   },
-  verification: {
-    google: 'google-site-verification-code',
-  },
+  // Adicione seu código real do Google Search Console aqui:
+  // verification: { google: 'SEU_CODIGO_AQUI' },
   alternates: {
     canonical: 'https://yollo.ai',
   },
@@ -60,8 +59,13 @@ const organizationSchema = {
   '@type': 'Organization',
   name: 'Yollo IA',
   url: 'https://yollo.ai',
-  logo: 'https://yollo.ai/logo-yollo.png',
-  description: 'Assistente IA para WhatsApp que responde clientes em segundos, agenda procedimentos automaticamente e organiza seu negócio.',
+  logo: {
+    '@type': 'ImageObject',
+    url: 'https://yollo.ai/logo-yollo.png',
+    width: 240,
+    height: 64,
+  },
+  description: 'Plataforma de automação de WhatsApp com Inteligência Artificial para clínicas de estética, imobiliárias, escritórios contábeis e de advocacia.',
   sameAs: [
     'https://www.instagram.com/yollo.ia',
     'https://www.linkedin.com/company/yollo-ia',
@@ -72,6 +76,50 @@ const organizationSchema = {
     contactType: 'customer support',
     availableLanguage: 'Portuguese',
   },
+  areaServed: 'BR',
+  foundingLocation: 'Brasil',
+}
+
+// JSON-LD Schema for WebSite with SearchAction
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Yollo IA',
+  url: 'https://yollo.ai',
+  inLanguage: 'pt-BR',
+  description: 'Plataforma de automação de atendimento via WhatsApp com IA para negócios brasileiros.',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: 'https://yollo.ai/blog?q={search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
+// JSON-LD Schema for SoftwareApplication
+const softwareSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Yollo IA',
+  operatingSystem: 'Web, WhatsApp',
+  applicationCategory: 'BusinessApplication',
+  description: 'Plataforma de automação de WhatsApp com IA — agenda, qualifica leads, faz follow-up e dispara campanhas para clínicas, imobiliárias, contadores e advogados.',
+  url: 'https://yollo.ai',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'BRL',
+    availability: 'https://schema.org/InStock',
+  },
+  featureList: [
+    'Atendimento automático 24h pelo WhatsApp',
+    'Agendamento automático de procedimentos',
+    'Qualificação de leads',
+    'Follow-up automático',
+    'Disparo de campanhas',
+    'CRM integrado',
+  ],
 }
 
 export default function RootLayout({
@@ -85,6 +133,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
         />
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
