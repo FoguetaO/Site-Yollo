@@ -13,12 +13,13 @@ export default function HeroContabil() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
+      aria-label="Yollo IA para Escritórios Contábeis — automação de atendimento via WhatsApp 24h"
       style={{
         background: "linear-gradient(to bottom, #F5F3FF, #EDE9FE, #DDD6FE)",
       }}
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
           className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-25 blur-[120px]"
           style={{ backgroundColor: "#6C4FE8" }}
@@ -26,7 +27,7 @@ export default function HeroContabil() {
       </div>
 
       {/* Grid background */}
-      <div className="absolute inset-0 pointer-events-none hidden md:block opacity-20">
+      <div className="absolute inset-0 pointer-events-none hidden md:block opacity-20" aria-hidden="true">
         <div
           className="absolute inset-0"
           style={{

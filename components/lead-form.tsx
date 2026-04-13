@@ -2,18 +2,68 @@
 
 import { useState } from "react"
 
+function applyPhoneMask(value: string): string {
+  const digits = value.replace(/\D/g, "").slice(0, 11)
+  if (digits.length <= 2) return digits.replace(/^(\d{0,2})/, "($1")
+  if (digits.length <= 6) return digits.replace(/^(\d{2})(\d{0,4})/, "($1) $2")
+  if (digits.length <= 10) return digits.replace(/^(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3")
+  return digits.replace(/^(\d{2})(\d{5})(\d{0,4})/, "($1) $2-$3")
+}
+
+function isValidPhone(value: string): boolean {
+  const digits = value.replace(/\D/g, "")
+  // Celular brasileiro: 11 dígitos (com DDD) e o 3º dígito deve ser 9
+  if (digits.length === 11 && digits[2] === "9") return true
+  // Fixo: 10 dígitos (com DDD)
+  if (digits.length === 10) return true
+  return false
+}
+
 export default function LeadForm() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", procedures: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [phoneError, setPhoneError] = useState<string | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const masked = applyPhoneMask(e.target.value)
+    setForm({ ...form, phone: masked })
+    if (phoneError && isValidPhone(masked)) setPhoneError(null)
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (!isValidPhone(form.phone)) {
+      setPhoneError("Digite um número de WhatsApp válido com DDD. Ex: (11) 98765-4321")
+      return
+    }
+
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
+    setError(null)
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        setError(data.error ?? "Ocorreu um erro. Tente novamente.")
+        setLoading(false)
+        return
+      }
+
       setSubmitted(true)
-    }, 1200)
+    } catch {
+      setError("Erro de conexão. Verifique sua internet e tente novamente.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -98,7 +148,7 @@ export default function LeadForm() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email">
-                    Gmail
+                    Seu melhor e-mail
                   </label>
                   <input
                     id="email"
@@ -121,9 +171,22 @@ export default function LeadForm() {
                     required
                     placeholder="(11) 98765-4321"
                     value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
+                    onChange={handlePhoneChange}
+                    onBlur={() => {
+                      if (form.phone && !isValidPhone(form.phone)) {
+                        setPhoneError("Digite um número de WhatsApp válido com DDD. Ex: (11) 98765-4321")
+                      }
+                    }}
+                    maxLength={15}
+                    inputMode="numeric"
+                    className={`w-full px-4 py-3 rounded-xl border bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition ${phoneError ? "border-red-400 focus:ring-red-200" : "border-gray-200"}`}
                   />
+                  {phoneError && (
+                    <p className="text-xs text-red-600 mt-1.5 flex items-center gap-1">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="flex-shrink-0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      {phoneError}
+                    </p>
+                  )}
                 </div>
 
                 <div>
@@ -146,6 +209,12 @@ export default function LeadForm() {
                     <option>Vários procedimentos</option>
                   </select>
                 </div>
+
+                {error && (
+                  <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3 text-center">
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"

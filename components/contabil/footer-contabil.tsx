@@ -2,16 +2,39 @@
 
 export default function FooterContabil() {
   return (
-    <footer style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "3.5rem 1.5rem 2rem" }}>
+    <footer
+      aria-label="Rodapé — Yollo IA para Contabilidade"
+      style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "4rem 1.5rem 2rem" }}
+    >
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
+
+        {/* SEO tagline */}
+        <div className="mb-10 pb-8 border-b border-white/[0.06]">
+          <p className="text-xs text-center leading-relaxed max-w-3xl mx-auto" style={{ color: "#6B7280" }}>
+            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Contabilidade</strong> — Automação de atendimento via WhatsApp com IA para{" "}
+            <a href="/contabil" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">escritórios contábeis e contadores</a>.{" "}
+            Lembretes automáticos de obrigações fiscais, coleta de documentos e agendamento de reuniões 24h.
+            Veja também:{" "}
+            <a href="/" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para clínicas de estética</a>,{" "}
+            <a href="/imoveis" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para imobiliárias</a> e{" "}
+            <a href="/advocacia" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para advocacia</a>.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/" className="inline-flex items-center">
-              <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto brightness-0 invert" />
+            <a href="/" aria-label="Yollo IA — Página inicial">
+              <img
+                src="/logo-yollo.png"
+                alt="Yollo IA — automação de WhatsApp com IA para escritórios contábeis"
+                className="h-8 w-auto brightness-0 invert"
+                width="120"
+                height="32"
+              />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Assistente IA para WhatsApp especializada em escritórios contábeis. Atende clientes, lembra prazos e recolhe documentos 24h por dia.
+              Automatize o atendimento do seu escritório contábil pelo WhatsApp. Responda clientes, envie lembretes de prazos fiscais e recolha documentos com IA — 24h por dia.
             </p>
             <div className="flex gap-3 mt-1">
               {[
@@ -38,6 +61,8 @@ export default function FooterContabil() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
+                  rel="noopener noreferrer"
+                  target="_blank"
                   className="w-10 h-10 rounded-xl flex items-center justify-center transition-all hover:-translate-y-0.5"
                   style={{ backgroundColor: "#ffffff14", color: "#9CA3AF" }}
                   onMouseEnter={(e) => {
@@ -55,16 +80,17 @@ export default function FooterContabil() {
             </div>
           </div>
 
-          {/* Produto */}
-          <div className="flex flex-col gap-3">
-            <h4 className="text-[13px] font-semibold uppercase tracking-widest" style={{ color: "#E5E7EB" }}>
-              Produto
-            </h4>
+          {/* Segmentos */}
+          <nav aria-label="Outros segmentos Yollo IA">
+            <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
+              Segmentos
+            </h2>
             <ul className="flex flex-col gap-2">
               {[
-                { label: "Como funciona", href: "#como-funciona" },
-                { label: "Benefícios", href: "#beneficios" },
-                { label: "Configuração", href: "#configure-sua-ia" },
+                { label: "IA para Clínicas de Estética", href: "/" },
+                { label: "IA para Imobiliárias", href: "/imoveis" },
+                { label: "IA para Contabilidade", href: "/contabil" },
+                { label: "IA para Advocacia", href: "/advocacia" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>
@@ -73,18 +99,39 @@ export default function FooterContabil() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
+
+          {/* Produto */}
+          <nav aria-label="Produto Yollo IA para contabilidade">
+            <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
+              Produto
+            </h2>
+            <ul className="flex flex-col gap-2">
+              {[
+                { label: "Como funciona a automação", href: "#como-funciona" },
+                { label: "Lembretes de obrigações", href: "#funcionalidades" },
+                { label: "Coleta de documentos", href: "#configure-sua-ia" },
+                { label: "Planos e preços", href: "#contratar" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           {/* Empresa */}
-          <div className="flex flex-col gap-3">
-            <h4 className="text-[13px] font-semibold uppercase tracking-widest" style={{ color: "#E5E7EB" }}>
+          <nav aria-label="Empresa Yollo IA">
+            <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
               Empresa
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-2">
               {[
-                { label: "Sobre nós", href: "#" },
-                { label: "Blog", href: "#" },
-                { label: "Contato", href: "#contratar" },
+                { label: "Sobre a Yollo IA", href: "#" },
+                { label: "Blog — IA e Automação", href: "/blog" },
+                { label: "Agendar demonstração", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>
                   <a href={link.href} className="text-sm transition-colors hover:text-neutral-100" style={{ color: "#9CA3AF" }}>
@@ -93,17 +140,17 @@ export default function FooterContabil() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Suporte */}
-          <div className="flex flex-col gap-3">
-            <h4 className="text-[13px] font-semibold uppercase tracking-widest" style={{ color: "#E5E7EB" }}>
+          <nav aria-label="Suporte Yollo IA">
+            <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
               Suporte
-            </h4>
+            </h2>
             <ul className="flex flex-col gap-2">
               {[
-                { label: "FAQ", href: "#faq" },
-                { label: "Privacidade", href: "#" },
+                { label: "Perguntas frequentes", href: "#faq" },
+                { label: "Política de privacidade", href: "#" },
                 { label: "Termos de uso", href: "#" },
               ].map((link) => (
                 <li key={link.label}>
@@ -113,11 +160,12 @@ export default function FooterContabil() {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
         </div>
 
-        <div className="pt-8 text-center text-[13px]" style={{ color: "#6B7280" }}>
-          © {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px]" style={{ color: "#6B7280" }}>
+          <span>© {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.</span>
+          <span>Parceiro oficial Meta — WhatsApp Business API</span>
         </div>
       </div>
     </footer>

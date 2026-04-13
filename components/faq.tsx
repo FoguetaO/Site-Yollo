@@ -6,45 +6,67 @@ const faqs = [
   {
     question: "O que é a Yollo IA?",
     answer:
-      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada em clínicas de estética. Ela atende suas clientes automaticamente 24 horas por dia, responde dúvidas sobre tratamentos, preços e disponibilidade, e agenda procedimentos direto no chat — tudo baseado em um prompt que você mesmo configura com as informações da sua clínica.",
+      "A Yollo IA é uma plataforma de automação de atendimento via WhatsApp com Inteligência Artificial. Ela atende seus clientes automaticamente 24 horas por dia, 7 dias por semana, responde dúvidas, qualifica leads e agenda procedimentos ou reuniões diretamente no chat — tudo configurado por você, sem precisar de programador.",
   },
   {
     question: "Para quem a Yollo IA é indicada?",
     answer:
-      "A Yollo IA é ideal para qualquer clínica de estética, spa ou profissional de beleza que recebe clientes pelo WhatsApp e quer automatizar o primeiro atendimento sem perder a qualidade. Os principais perfis incluem: esteticistas autônomas, clínicas de estética, spas, clínicas de dermatologia estética, biomédicos, centros de micropigmentação e salões de beleza.",
+      "A Yollo IA é ideal para qualquer negócio que recebe clientes pelo WhatsApp e quer automatizar o atendimento sem perder qualidade. Os segmentos com maior resultado são: clínicas de estética e dermatologia, imobiliárias e corretores de imóveis, escritórios de contabilidade e advocacia, salões de beleza, spas, consultórios e profissionais liberais.",
   },
   {
-    question: "Como a IA aprende sobre minha clínica?",
+    question: "Como a IA aprende sobre o meu negócio?",
     answer:
-      "A Yollo IA é treinada por prompt — você preenche as informações da sua clínica (tratamentos, preços, horários, tom de atendimento) e nosso gerador cria um prompt completo que instrui a IA sobre como atender seus clientes. Não há necessidade de treinar a IA com conversas.",
+      "A Yollo IA é configurada por prompt — você preenche as informações do seu negócio (serviços, preços, horários, tom de atendimento) e nosso gerador automático cria um prompt completo que instrui a IA sobre como atender seus clientes. Não há necessidade de programação ou treinamento com histórico de conversas.",
   },
   {
     question: "Como funciona a integração com minha agenda?",
     answer:
-      "A Yollo IA integra com as principais ferramentas de agenda online. Ela verifica os horários disponíveis em tempo real e confirma o agendamento diretamente no WhatsApp. Após o agendamento, ela envia lembretes automáticos para reduzir faltas.",
+      "A Yollo IA integra com as principais ferramentas de agenda online. O chatbot verifica os horários disponíveis em tempo real e confirma o agendamento diretamente no WhatsApp. Após o agendamento, envia lembretes automáticos para reduzir faltas e no-shows — sem você precisar intervir.",
   },
   {
-    question: "Preciso usar um número novo ou posso usar o número da minha clínica?",
+    question: "Preciso de um número novo ou posso usar o número atual do meu negócio?",
     answer:
-      "Você pode usar o número existente da sua clínica. Oferecemos integração tanto via API Oficial do WhatsApp Business quanto via API não oficial — você escolhe a opção que melhor se encaixa no seu negócio.",
+      "Você pode usar o número existente do seu negócio. Oferecemos integração tanto via API Oficial do WhatsApp Business (Meta Tech Provider) quanto via API não oficial (Meta Tech Provider) — você escolhe a opção que melhor se encaixa. Nenhuma das opções exige trocar o número.",
+  },
+  {
+    question: "A Yollo IA funciona para imobiliárias e escritórios de advocacia?",
+    answer:
+      "Sim! A Yollo IA é multi-segmento. Para imobiliárias, automatiza a qualificação de leads, agendamento de visitas e follow-up de propostas. Para escritórios de advocacia, agenda consultas, responde dúvidas iniciais e encaminha os clientes para os advogados responsáveis — sempre dentro das normas da OAB.",
   },
   {
     question: "Quais planos estão disponíveis?",
     answer:
-      "Oferecemos três modalidades: Mensal, Trimestral e Semestral. Todos os planos podem ser cancelados a qualquer momento, sem multa e sem burocracia.",
+      "Oferecemos três modalidades: Mensal, Trimestral e Semestral. Todos os planos incluem acesso completo à plataforma, suporte e atualizações. Você pode cancelar a qualquer momento, sem multa e sem burocracia.",
   },
   {
     question: "Posso testar antes de contratar?",
     answer:
-      "Sim! Oferecemos uma demonstração gratuita onde você pode ver a Yollo IA em ação com os dados da sua própria clínica. Basta preencher o formulário e nossa equipe entrará em contato para agendar.",
+      "Sim! Oferecemos uma demonstração gratuita e personalizada com os dados do seu negócio. Basta preencher o formulário acima e nossa equipe entrará em contato para agendar a demo — sem compromisso.",
   },
 ]
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+}
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <section id="faq" className="bg-white py-12 md:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-6 text-center">Perguntas frequentes</h2>
 

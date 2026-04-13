@@ -13,12 +13,13 @@ export default function HeroImoveis() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
+      aria-label="Yollo IA para Imobiliárias e Corretores — automação de atendimento via WhatsApp 24h"
       style={{
         background: "linear-gradient(to bottom, #EFF6FF, #DBEAFE, #BFDBFE)",
       }}
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
           className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-30 blur-[120px]"
           style={{ backgroundColor: "#2563EB" }}

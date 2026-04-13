@@ -10,7 +10,7 @@ const FIELDS = [
 ]
 
 const DEMO_VALUES: Record<string, string> = {
-  nome: "Clínica Bella Pele",
+  nome: "Clínica Estética Bella Pele",
   segmento: "Estética e Dermatologia",
   servicos: "Limpeza de pele, botox, preenchimento, peeling",
   tom: "Acolhedor, profissional e empático",
