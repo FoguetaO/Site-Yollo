@@ -3,9 +3,9 @@
 import { useState, useEffect, useRef } from "react"
 
 const segments = [
-  { label: "Contabilidade", href: "/contabil", active: true },
+  { label: "Contabilidade", href: "/contabilidade", active: true },
   { label: "Imobiliário", href: "/imoveis", active: false },
-  { label: "Clínica de Estética", href: "/", active: false },
+  { label: "Clínica de Estética", href: "/clinica-de-estetica", active: false },
   { label: "Advocacia", href: "/advocacia", active: false },
 ]
 
@@ -46,6 +46,9 @@ export default function NavbarContabil() {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600">
+          <a href="/" className="hover:text-neutral-900 transition-colors">
+            Início
+          </a>
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"
@@ -98,6 +101,9 @@ export default function NavbarContabil() {
           <a href="#faq" className="hover:text-neutral-900 transition-colors">
             FAQ
           </a>
+          <a href="/blog" className="hover:text-neutral-900 transition-colors">
+            Blog
+          </a>
         </div>
 
         {/* Desktop CTA */}
@@ -127,6 +133,9 @@ export default function NavbarContabil() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-neutral-100 px-6 py-4 flex flex-col gap-4">
+          <a href="/" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
+            Início
+          </a>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Segmento</p>
             {segments.map((seg) => (
@@ -148,6 +157,9 @@ export default function NavbarContabil() {
           </a>
           <a href="#faq" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
             FAQ
+          </a>
+          <a href="/blog" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
+            Blog
           </a>
           <a
             href="#contratar"

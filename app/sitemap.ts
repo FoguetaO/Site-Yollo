@@ -1,41 +1,67 @@
 import type { MetadataRoute } from "next"
+import { getAllPosts, getCategories } from "@/lib/blog-data"
+
+const BASE_URL = "https://yolloia.com.br"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yolloia.com.br"
+  const posts = getAllPosts()
+  const categories = getCategories()
 
-  // Data de última modificação — atualizar a cada deploy relevante
-  const lastModified = new Date("2026-04-12")
-
-  return [
+  // Páginas estáticas principais
+  const staticPages: MetadataRoute.Sitemap = [
     {
-      url: baseUrl,
-      lastModified,
+      url: BASE_URL,
+      lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/imoveis`,
-      lastModified,
+      url: `${BASE_URL}/clinica-de-estetica`,
+      lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 0.95,
     },
     {
-      url: `${baseUrl}/contabil`,
-      lastModified,
+      url: `${BASE_URL}/imoveis`,
+      lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 0.95,
     },
     {
-      url: `${baseUrl}/advocacia`,
-      lastModified,
+      url: `${BASE_URL}/contabilidade`,
+      lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.9,
+      priority: 0.95,
     },
     {
-      url: `${baseUrl}/blog`,
-      lastModified,
+      url: `${BASE_URL}/advocacia`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
       changeFrequency: "daily",
-      priority: 0.8,
+      priority: 0.9,
     },
   ]
+
+  // Páginas de categoria do blog
+  const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({
+    url: `${BASE_URL}/blog/categoria/${cat.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }))
+
+  // Artigos do blog — usa updatedAt para lastModified preciso
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt ?? post.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }))
+
+  return [...staticPages, ...categoryPages, ...blogPages]
 }
