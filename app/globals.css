@@ -226,7 +226,7 @@
   opacity: 1 !important;
   filter: blur(0px) !important;
   transform: translateY(0px) !important;
-  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease !important;
+  transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

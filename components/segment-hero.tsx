@@ -37,7 +37,7 @@ export default function SegmentHero({
   useEffect(() => {
     const timer = setTimeout(() => {
       document.querySelectorAll(".hero-segment-eb").forEach((el) => el.classList.add("eb"))
-    }, 500)
+    }, 50)
     return () => clearTimeout(timer)
   }, [])
 

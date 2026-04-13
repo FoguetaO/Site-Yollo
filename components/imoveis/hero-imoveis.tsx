@@ -7,7 +7,7 @@ export default function HeroImoveis() {
   useEffect(() => {
     const timer = setTimeout(() => {
       document.querySelectorAll(".hero-imoveis-eb").forEach((el) => el.classList.add("eb"))
-    }, 500)
+    }, 50)
     return () => clearTimeout(timer)
   }, [])
 
@@ -48,7 +48,7 @@ export default function HeroImoveis() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-imoveis-eb" style={{ fontSize: "51px", transitionDelay: "0.1s" }}>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-imoveis-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
             Sua imobiliária captando leads{" "}
             <span className="italic gradient-brand">
               24 horas
@@ -60,13 +60,13 @@ export default function HeroImoveis() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.2s" }}>
+          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
             Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.3s" }}>
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.21s" }}>
             <ShinyButton
               href="#contratar"
               label="Quero agendar minha demonstração →"
@@ -90,7 +90,7 @@ export default function HeroImoveis() {
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.4s" }}>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
               <span className="font-medium">Funciona no seu número</span>
