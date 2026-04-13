@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import ShinyButton from "@/components/shiny-button"
 
 export interface SegmentHeroProps {
   badge: string
@@ -97,17 +98,10 @@ export default function SegmentHero({
 
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 mt-2">
-              <a
+              <ShinyButton
                 href={ctaHref}
-                className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full text-white font-semibold text-base transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
-                style={{ backgroundColor: "#111110", boxShadow: "0 8px 24px rgba(0,0,0,0.25)" }}
-              >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-                  <line x1="7" y1="17" x2="17" y2="7" />
-                  <polyline points="7 7 17 7 17 17" />
-                </svg>
-                {ctaLabel}
-              </a>
+                label={ctaLabel}
+              />
             </div>
           </div>
 
