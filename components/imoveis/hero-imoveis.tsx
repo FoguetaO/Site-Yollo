@@ -49,7 +49,7 @@ export default function HeroImoveis() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             Sua imobiliária captando leads{" "}
             <span className="italic gradient-brand">
               24 horas

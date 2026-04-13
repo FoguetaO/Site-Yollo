@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             Automatize seu atendimento{" "}
             <span className="italic gradient-brand">no WhatsApp</span>
             <br className="hidden md:block" /> e venda mais com{" "}
