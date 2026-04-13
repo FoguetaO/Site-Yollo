@@ -26,7 +26,7 @@ export default function SegmentFeatureHero({
 }: SegmentFeatureHeroProps) {
   return (
     <section
-      className="w-full relative overflow-hidden rounded-3xl mx-auto max-w-[1200px] my-0"
+      className="w-full relative"
       aria-label={`Recursos — ${badge}`}
     >
       {/* Imagem de background posicionada absolutamente, sem zoom */}
@@ -41,7 +41,7 @@ export default function SegmentFeatureHero({
         />
       </div>
 
-      <div className="relative z-10 px-10 md:px-14">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
 
         {/* Coluna esquerda — texto */}
         <div className="flex flex-col gap-6 py-16 md:py-20 md:w-[45%] shrink-0">
