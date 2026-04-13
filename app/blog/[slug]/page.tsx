@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Yollo IA",
       images: [
         {
-          url: `https://yollo.ai${post.image.src}`,
+          url: `https://yolloia.com.br${post.image.src}`,
           width: post.image.width,
           height: post.image.height,
           alt: post.image.alt,
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: [`https://yollo.ai${post.image.src}`],
+      images: [`https://yolloia.com.br${post.image.src}`],
     },
     alternates: {
       canonical: `/blog/${post.slug}`,
@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
     description: post.description,
     image: {
       "@type": "ImageObject",
-      url: `https://yollo.ai${post.image.src}`,
+      url: `https://yolloia.com.br${post.image.src}`,
       width: post.image.width,
       height: post.image.height,
       caption: post.image.caption,
@@ -95,15 +95,15 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: "Yollo IA",
-      url: "https://yollo.ai",
+      url: "https://yolloia.com.br",
       logo: {
         "@type": "ImageObject",
-        url: "https://yollo.ai/logo-yollo.png",
+        url: "https://yolloia.com.br/logo-yollo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://yollo.ai/blog/${post.slug}`,
+      "@id": `https://yolloia.com.br/blog/${post.slug}`,
     },
     keywords: post.keywords.join(", "),
     articleSection: post.category,
@@ -121,19 +121,19 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://yollo.ai",
+        item: "https://yolloia.com.br",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://yollo.ai/blog",
+        item: "https://yolloia.com.br/blog",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: post.title,
-        item: `https://yollo.ai/blog/${post.slug}`,
+        item: `https://yolloia.com.br/blog/${post.slug}`,
       },
     ],
   }
@@ -292,7 +292,7 @@ export default async function BlogPostPage({ params }: Props) {
             <p className="text-sm font-semibold text-neutral-500 mb-3">Compartilhar:</p>
             <div className="flex gap-3">
               <a
-                href={`https://wa.me/?text=${encodeURIComponent(post.title + " - https://yollo.ai/blog/" + post.slug)}`}
+                href={`https://wa.me/?text=${encodeURIComponent(post.title + " - https://yolloia.com.br/blog/" + post.slug)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center hover:opacity-90 transition-opacity"
@@ -303,7 +303,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </svg>
               </a>
               <a
-                href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent("https://yollo.ai/blog/" + post.slug)}&title=${encodeURIComponent(post.title)}`}
+                href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent("https://yolloia.com.br/blog/" + post.slug)}&title=${encodeURIComponent(post.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center hover:opacity-90 transition-opacity"
@@ -314,7 +314,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </svg>
               </a>
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent("https://yollo.ai/blog/" + post.slug)}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent("https://yolloia.com.br/blog/" + post.slug)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-neutral-900 text-white flex items-center justify-center hover:opacity-90 transition-opacity"

@@ -58,11 +58,11 @@ export default async function CategoryPage({ params }: Props) {
     "@type": "CollectionPage",
     name: `${category.name} - Blog Yollo IA`,
     description: category.description,
-    url: `https://yollo.ai/blog/categoria/${category.slug}`,
+    url: `https://yolloia.com.br/blog/categoria/${category.slug}`,
     publisher: {
       "@type": "Organization",
       name: "Yollo IA",
-      url: "https://yollo.ai",
+      url: "https://yolloia.com.br",
     },
     inLanguage: "pt-BR",
     mainEntity: {
@@ -70,7 +70,7 @@ export default async function CategoryPage({ params }: Props) {
       itemListElement: posts.map((post, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `https://yollo.ai/blog/${post.slug}`,
+        url: `https://yolloia.com.br/blog/${post.slug}`,
       })),
     },
   }

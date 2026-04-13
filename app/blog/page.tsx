@@ -39,11 +39,11 @@ const blogSchema = {
   "@type": "Blog",
   name: "Blog Yollo IA",
   description: "Artigos sobre IA, WhatsApp Business, vendas e automação para negócios.",
-  url: "https://yollo.ai/blog",
+  url: "https://yolloia.com.br/blog",
   publisher: {
     "@type": "Organization",
     name: "Yollo IA",
-    url: "https://yollo.ai",
+    url: "https://yolloia.com.br",
   },
   inLanguage: "pt-BR",
   blogPost: blogPosts.slice(0, 10).map((post) => ({
@@ -56,7 +56,7 @@ const blogSchema = {
       "@type": "Person",
       name: post.author.name,
     },
-    url: `https://yollo.ai/blog/${post.slug}`,
+    url: `https://yolloia.com.br/blog/${post.slug}`,
   })),
 }
 

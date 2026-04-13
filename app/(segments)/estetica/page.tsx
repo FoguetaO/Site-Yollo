@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "secretária virtual clínica estética",
   ],
   alternates: {
-    canonical: "https://yollo.ai/estetica",
+    canonical: "https://yolloia.com.br/estetica",
   },
   openGraph: {
     title: "IA para Clínicas de Estética — Yollo IA",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Yollo IA",
     images: [
       {
-        url: "https://yollo.ai/segments/phone-estetica.jpg",
+        url: "https://yolloia.com.br/segments/phone-estetica.jpg",
         width: 1200,
         height: 630,
         alt: "Yollo IA para clínicas de estética — automação de WhatsApp",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IA para Clínicas de Estética — Yollo IA",
     description: "Automatize o atendimento da sua clínica com IA. Agende, qualifique e atenda 24h pelo WhatsApp.",
-    images: ["https://yollo.ai/segments/phone-estetica.jpg"],
+    images: ["https://yolloia.com.br/segments/phone-estetica.jpg"],
   },
 }
 
@@ -57,12 +57,12 @@ const segmentSchema = {
   name: "IA para Clínicas de Estética — Yollo IA",
   description:
     "Automação de atendimento via WhatsApp com IA para clínicas de estética. Agendamento automático, qualificação de leads e CRM integrado.",
-  url: "https://yollo.ai/estetica",
+  url: "https://yolloia.com.br/estetica",
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Início", item: "https://yollo.ai" },
-      { "@type": "ListItem", position: 2, name: "Clínica de Estética", item: "https://yollo.ai/estetica" },
+      { "@type": "ListItem", position: 1, name: "Início", item: "https://yolloia.com.br" },
+      { "@type": "ListItem", position: 2, name: "Clínica de Estética", item: "https://yolloia.com.br/estetica" },
     ],
   },
 }
