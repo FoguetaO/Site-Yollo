@@ -107,14 +107,14 @@ export default function SegmentFeatureHero({
           </a>
         </div>
 
-        {/* Coluna direita — imagem ocupa o restante e cresce até a borda */}
-        <div className="md:flex-1 flex items-end justify-center md:justify-end self-stretch overflow-hidden">
+        {/* Coluna direita — imagem renderiza no tamanho natural sem corte */}
+        <div className="md:flex-1 flex items-center justify-center md:justify-start">
           <Image
             src={phoneImage.src}
             alt={phoneImage.alt}
-            width={720}
-            height={600}
-            className="w-full h-full object-cover object-left"
+            width={760}
+            height={560}
+            className="w-full max-w-[640px] h-auto object-contain"
             loading="lazy"
           />
         </div>
