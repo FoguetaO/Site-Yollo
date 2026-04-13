@@ -26,10 +26,21 @@ export default function SegmentFeatureHero({
 }: SegmentFeatureHeroProps) {
   return (
     <section
-      className="w-full bg-white"
+      className="w-full relative overflow-hidden"
       aria-label={`Recursos — ${badge}`}
     >
-      <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
+      {/* Imagem de background cobrindo toda a seção */}
+      <Image
+        src={phoneImage.src}
+        alt=""
+        fill
+        className="object-cover"
+        style={{ objectPosition: "60% center" }}
+        loading="lazy"
+        aria-hidden="true"
+      />
+
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
 
         {/* Coluna esquerda — texto */}
         <div className="flex flex-col gap-6 py-16 md:py-20 md:w-[45%] shrink-0">
@@ -105,18 +116,6 @@ export default function SegmentFeatureHero({
             </svg>
             {ctaLabel}
           </a>
-        </div>
-
-        {/* Coluna direita — imagem centralizada, ocupa a altura da coluna de texto */}
-        <div className="md:flex-1 relative overflow-hidden min-h-[400px]">
-          <Image
-            src={phoneImage.src}
-            alt={phoneImage.alt}
-            fill
-            className="object-cover"
-            style={{ objectPosition: "60% center" }}
-            loading="lazy"
-          />
         </div>
 
       </div>
