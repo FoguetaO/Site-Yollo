@@ -222,7 +222,6 @@ const features = [
         {[
           { name: "Facebook Ads", leads: 142, conv: "28%", color: "#1877F2" },
           { name: "Instagram Ads", leads: 98, conv: "31%", color: "#E1306C" },
-          { name: "Google Ads", leads: 67, conv: "22%", color: "#FBBC04" },
         ].map((s) => (
           <div key={s.name} className="flex items-center gap-3 bg-white rounded-xl border border-neutral-100 p-3 shadow-sm">
             <div className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: s.color }} />
