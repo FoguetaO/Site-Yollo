@@ -56,14 +56,7 @@ const loopCards = [
 const CARD_WIDTH = 320
 const GAP = 24
 
-const whatsappConversation = [
-  { role: "user", text: "Oi, vi o apartamento de 3 quartos no ZAP. Ainda disponível?" },
-  { role: "bot", text: "Olá, Ricardo! Sim, está disponível. É um ótimo imóvel! Qual é o seu orçamento?" },
-  { role: "user", text: "Até R$ 600 mil. Tem financiamento?" },
-  { role: "bot", text: "Sim! Aceita financiamento pela CAIXA e bancos privados. Quer agendar uma visita esta semana?" },
-  { role: "user", text: "Quero! Pode ser quinta de tarde?" },
-  { role: "bot", text: "Perfeito! Agendei para quinta-feira às 15h. Vou te enviar o endereço completo e confirmar no dia anterior." },
-]
+
 
 export default function SocialProofImoveis() {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -138,49 +131,7 @@ export default function SocialProofImoveis() {
         <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent pointer-events-none" />
       </div>
 
-      {/* WhatsApp conversation mock */}
-      <div className="max-w-[1200px] mx-auto px-6 mt-16 md:mt-24">
-        <div className="max-w-md mx-auto">
-          <div className="text-center mb-6">
-            <p className="text-sm font-semibold text-neutral-500 uppercase tracking-widest">Conversa real</p>
-            <h3 className="text-2xl font-normal text-neutral-900 mt-2">
-              Veja a IA em{" "}
-              <span className="italic gradient-brand">
-                ação
-              </span>
-            </h3>
-          </div>
-          <div className="bg-[#E4DDD6] rounded-2xl overflow-hidden border border-[#D4CDB6] shadow-lg">
-            <div className="bg-[#075E54] px-4 py-3 flex items-center gap-3">
-              <div
-                className="w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold"
-                style={{ backgroundColor: "#2563EB" }}
-              >
-                B
-              </div>
-              <div>
-                <p className="text-white text-sm font-semibold">Yollo IA — Imobiliária</p>
-                <p className="text-white/70 text-xs">online</p>
-              </div>
-            </div>
-            <div className="p-4 flex flex-col gap-3">
-              {whatsappConversation.map((msg, i) => (
-                <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
-                  <div
-                    className={`max-w-[85%] rounded-2xl px-4 py-2.5 shadow-sm text-sm leading-relaxed ${
-                      msg.role === "user"
-                        ? "bg-[#DCF8C6] text-neutral-800 rounded-tr-sm"
-                        : "bg-white text-neutral-800 rounded-tl-sm"
-                    }`}
-                  >
-                    {msg.text}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
   )
 }

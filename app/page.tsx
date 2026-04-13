@@ -1,5 +1,32 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
+
+export const metadata: Metadata = {
+  title: "Yollo IA — Automação de Atendimento no WhatsApp com Inteligência Artificial",
+  description:
+    "A Yollo IA automatiza o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia. Para clínicas de estética, imobiliárias, escritórios contábeis e advocacia.",
+  alternates: {
+    canonical: "https://yolloia.com.br",
+  },
+  openGraph: {
+    title: "Yollo IA — Automação de Atendimento no WhatsApp com IA",
+    description:
+      "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia.",
+    url: "https://yolloia.com.br",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Yollo IA",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yollo IA — Automação de WhatsApp com IA",
+    description: "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica e atende 24h.",
+  },
+}
+
+
 import Hero from "@/components/hero"
+import Features from "@/components/features"
 import Comparison from "@/components/comparison"
 import HowItWorks from "@/components/how-it-works"
 import HowItConnects from "@/components/how-it-connects"
@@ -19,6 +46,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Comparison />
+      <Features />
       <HowItWorks />
       <HowItConnects />
       <Objectives />

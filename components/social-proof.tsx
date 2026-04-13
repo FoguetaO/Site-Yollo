@@ -47,14 +47,7 @@ const comments = [
   },
 ]
 
-const whatsappMessages = [
-  { from: "client", text: "Oi! Quanto custa a limpeza de pele?" },
-  { from: "ia", text: "Olá! Nossa limpeza de pele profunda é R$ 180 e dura 1h. Quer ver os horários disponíveis?" },
-  { from: "client", text: "Sim! Tenho disponibilidade na quinta-feira" },
-  { from: "ia", text: "Perfeito! Temos quinta às 14h e 16h. Qual prefere?" },
-  { from: "client", text: "14h está ótimo" },
-  { from: "ia", text: "Agendamento confirmado para quinta às 14h. Enviarei um lembrete na véspera! ✨" },
-]
+
 
 function CommentCard({ initials, username, time, text, likes }: (typeof comments)[0]) {
   return (
@@ -99,35 +92,8 @@ function CommentCard({ initials, username, time, text, likes }: (typeof comments
   )
 }
 
-function WhatsAppCard() {
-  return (
-    <div className="min-w-[300px] max-w-[300px] bg-[#E4DDD6] rounded-xl p-2 relative shadow-md border border-[#D4CDB6] overflow-hidden select-none flex-shrink-0">
-      <div className="relative z-10 flex flex-col gap-1">
-        {whatsappMessages.map((msg, i) => (
-          <div key={i} className={`flex ${msg.from === "client" ? "justify-start" : "justify-end"}`}>
-            <div
-              className={`max-w-[85%] rounded-xl px-3 py-2 text-xs shadow-sm relative ${
-                msg.from === "client" ? "bg-white text-neutral-800 rounded-tl-sm" : "text-white rounded-tr-sm"
-              }`}
-              style={msg.from === "ia" ? { backgroundColor: "#6C4FE8" } : {}}
-            >
-              {msg.text}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+const allCards = comments.map((c, i) => ({ type: "comment" as const, data: c, key: `c${i}` }))
 
-const allCards = [
-  ...comments.slice(0, 3).map((c, i) => ({ type: "comment" as const, data: c, key: `c${i}` })),
-  { type: "whatsapp" as const, data: null, key: "w1" },
-  ...comments.slice(3).map((c, i) => ({ type: "comment" as const, data: c, key: `c${i + 3}` })),
-  { type: "whatsapp" as const, data: null, key: "w2" },
-]
-
-// Duplicate for seamless loop — append a unique suffix to avoid duplicate keys
 const loopCards = [
   ...allCards.map((c) => ({ ...c, key: `${c.key}-a` })),
   ...allCards.map((c) => ({ ...c, key: `${c.key}-b` })),
@@ -174,13 +140,9 @@ export default function SocialProof() {
 
         <div className="overflow-hidden">
           <div ref={trackRef} className="flex gap-4 w-max">
-            {loopCards.map((card) =>
-              card.type === "whatsapp" ? (
-                <WhatsAppCard key={card.key} />
-              ) : (
-                <CommentCard key={card.key} {...(card.data as (typeof comments)[0])} />
-              )
-            )}
+            {loopCards.map((card) => (
+              <CommentCard key={card.key} {...(card.data as (typeof comments)[0])} />
+            ))}
           </div>
         </div>
       </div>

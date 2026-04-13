@@ -67,18 +67,18 @@ export default function ConfigureIAImoveis() {
               </div>
             </div>
             <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
-              Configure conversando{" "}
+              Configure sua IA{" "}
               <span className="italic gradient-brand">
-                com a IA
+                por prompt
               </span>
             </h2>
             <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8">
-              Sem fluxos complexos, sem planilhas. Basta conversar com nosso agente de configuração e ele aprende tudo
-              sobre a sua imobiliária: carteira de imóveis, perfil de cliente ideal, horários e muito mais.
+              Sem fluxos complexos, sem planilhas. Você preenche as informações da sua imobiliária e nosso gerador cria
+              automaticamente o prompt que instrui a IA sobre como atender seus leads.
             </p>
             <ul className="flex flex-col gap-4 mb-10">
               {[
-                "Aprende o tom de voz da sua imobiliária",
+                "Define o tom de voz da sua imobiliária",
                 "Conhece toda a sua carteira de imóveis",
                 "Integra com sua agenda de visitas",
                 "Pronto para qualificar leads em minutos",

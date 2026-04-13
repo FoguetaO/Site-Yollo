@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "O que é a Yollo IA para imobiliárias?",
     answer:
-      "A Yollo IA é um assistente de inteligência artificial para WhatsApp especializado no mercado imobiliário. Ela atende leads automaticamente, 24 horas por dia, responde dúvidas sobre imóveis, preços e condições de financiamento, qualifica compradores e inquilinos e agenda visitas diretamente no chat. Diferente de chatbots baseados em fluxos engessados, a Yollo IA usa IA generativa para aprender sobre sua carteira de imóveis e atender de forma natural.",
+      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada no mercado imobiliário. Ela atende leads automaticamente 24 horas por dia, responde dúvidas sobre imóveis, preços e condições de financiamento, qualifica compradores e inquilinos e agenda visitas — tudo configurado via prompt com as informações da sua carteira.",
   },
   {
     question: "Para quem a Yollo IA imobiliária é indicada?",
@@ -14,9 +14,9 @@ const faqs = [
       "É ideal para qualquer profissional ou empresa do mercado imobiliário que recebe leads pelo WhatsApp e quer automatizar a triagem sem perder qualidade. Os perfis mais comuns são: corretores autônomos, imobiliárias de médio porte, construtoras com stand de vendas, gestoras de locação e incorporadoras.",
   },
   {
-    question: "Os leads percebem que estão falando com uma IA?",
+    question: "Como a IA aprende sobre minha imobiliária?",
     answer:
-      "Na maioria das vezes, não. A Yollo IA é treinada para responder de forma natural, usando o tom de voz da sua imobiliária. Ela aprende sobre seus imóveis, sua região de atuação e o perfil dos seus clientes. Se quiser, você pode informar no início da conversa que é uma IA — a escolha é sua.",
+      "A Yollo IA é treinada por prompt — você informa os tipos de imóveis, regiões de atuação, condições de venda e locação, e o tom de atendimento. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
   },
   {
     question: "Como funciona a integração com minha agenda de visitas?",
@@ -26,17 +26,17 @@ const faqs = [
   {
     question: "A IA consegue apresentar os imóveis com fotos?",
     answer:
-      "Sim. A Yollo IA pode enviar links do imóvel, imagens e até vídeos diretamente no chat do WhatsApp. Ela também descreve os principais atributos do imóvel (metragem, quartos, vagas, condomínio) e responde dúvidas específicas com base nas informações que você cadastrou.",
+      "Sim. A Yollo IA pode enviar links do imóvel, imagens e até vídeos diretamente no chat do WhatsApp. Ela também descreve os principais atributos do imóvel (metragem, quartos, vagas, condomínio) com base nas informações que você configurou no prompt.",
   },
   {
-    question: "Quanto tempo leva para configurar?",
+    question: "Quais planos estão disponíveis?",
     answer:
-      "A configuração inicial leva em média 30 a 60 minutos. Você conversa com nosso agente de configuração, que aprende tudo sobre sua imobiliária — tipos de imóveis, regiões de atuação, condições de venda e locação. Após isso, a Yollo IA já está pronta para atender.",
+      "Oferecemos três modalidades: Mensal, Trimestral e Semestral. Todos os planos podem ser cancelados a qualquer momento, sem multa e sem burocracia.",
   },
   {
     question: "Posso testar antes de contratar?",
     answer:
-      "Sim! Oferecemos uma demonstração gratuita onde você pode ver a Yollo IA em ação com os dados da sua própria imobiliária. Basta preencher o formulário acima e nossa equipe entrará em contato para agendar.",
+      "Sim! Oferecemos uma demonstração gratuita onde você pode ver a Yollo IA em ação com os dados da sua própria imobiliária. Basta preencher o formulário e nossa equipe entrará em contato para agendar.",
   },
 ]
 

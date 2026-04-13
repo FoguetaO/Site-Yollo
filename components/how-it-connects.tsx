@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const promptOutput = "Voce e uma assistente virtual da Clinica Estetica Bella Pele. Responda sempre de forma simpatica e profissional. Ofereca procedimentos como limpeza de pele, botox e peeling. Agende horarios disponíveis e qualifique cada cliente com cuidado."
+const promptOutput = "Você é uma assistente virtual da Clínica Estética Bella Pele. Responda sempre de forma simpática e profissional. Ofereça procedimentos como limpeza de pele, botox e peeling. Agende horários disponíveis e qualifique cada cliente com cuidado."
 
 export default function HowItConnects() {
   const [analyzing, setAnalyzing] = useState(false)
@@ -58,7 +58,7 @@ export default function HowItConnects() {
               Conecte seu WhatsApp de forma segura
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-8">
-              Usamos a API oficial da Meta. Chega de banimentos e leads esperando atendimento.
+              Conecte via API Oficial ou API Não Oficial do WhatsApp — você escolhe a melhor opção para o seu negócio.
             </p>
 
             {/* QR visual */}
@@ -113,7 +113,7 @@ export default function HowItConnects() {
                 <svg className="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
-                <span className="text-xs font-bold text-green-600 uppercase tracking-wider">Conexao Segura</span>
+                <span className="text-xs font-bold text-green-600 uppercase tracking-wider">Conexão Segura</span>
               </div>
             </div>
           </div>
@@ -146,11 +146,11 @@ export default function HowItConnects() {
               <div className="p-3 flex flex-col gap-2" style={{ minHeight: 200 }}>
                 {/* Input fields */}
                 <div className="bg-neutral-50 border border-neutral-200 rounded-xl px-3 py-2 flex items-center gap-2">
-                  <span className="text-[10px] text-neutral-400 font-medium shrink-0">Negocio</span>
-                  <span className="text-xs text-neutral-700 font-medium">Clinica Estetica Bella Pele</span>
+                  <span className="text-[10px] text-neutral-400 font-medium shrink-0">Negócio</span>
+                  <span className="text-xs text-neutral-700 font-medium">Clínica Estética Bella Pele</span>
                 </div>
                 <div className="bg-neutral-50 border border-neutral-200 rounded-xl px-3 py-2 flex items-center gap-2">
-                  <span className="text-[10px] text-neutral-400 font-medium shrink-0">Servicos</span>
+                  <span className="text-[10px] text-neutral-400 font-medium shrink-0">Serviços</span>
                   <span className="text-xs text-neutral-700">Limpeza, Botox, Peeling</span>
                 </div>
 
@@ -189,10 +189,10 @@ export default function HowItConnects() {
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 03</span>
             </div>
             <h3 className="text-2xl font-bold text-neutral-900 mb-3 leading-snug">
-              A IA atende por voce, 24 horas
+              A IA atende por você, 24 horas
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Seu assistente responde clientes, tira duvidas, qualifica e agenda — tudo automaticamente, sem voce precisar estar online.
+              Seu assistente responde clientes, tira dúvidas, qualifica e agenda — tudo automaticamente, sem você precisar estar online.
             </p>
 
             {/* WhatsApp chat mock */}
@@ -214,12 +214,12 @@ export default function HowItConnects() {
               >
                 <div className="flex justify-end">
                   <div className="bg-[#DCF8C6] px-3 py-2 rounded-2xl rounded-tr-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
-                    Oi! Voces tem horario amanha de manha?
+                    Oi! Vocês têm horário amanhã de manhã?
                   </div>
                 </div>
                 <div className="flex justify-start">
                   <div className="bg-white px-3 py-2 rounded-2xl rounded-tl-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
-                    Ola! Temos sim. Qual procedimento voce gostaria? 😊
+                    Olá! Temos sim. Qual procedimento você gostaria? 😊
                   </div>
                 </div>
                 <div className="flex justify-end">
@@ -229,7 +229,7 @@ export default function HowItConnects() {
                 </div>
                 <div className="flex justify-start">
                   <div className="bg-white px-3 py-2 rounded-2xl rounded-tl-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
-                    Perfeito! Agendado para amanha as 9h. Te mando a confirmacao! ✅
+                    Perfeito! Agendado para amanhã às 9h. Enviarei a confirmação! ✅
                   </div>
                 </div>
               </div>

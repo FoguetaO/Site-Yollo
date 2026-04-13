@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import ShinyButton from "@/components/shiny-button"
 
 export default function HeroImoveis() {
   const [visible, setVisible] = useState(false)
@@ -13,12 +14,13 @@ export default function HeroImoveis() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
+      aria-label="Yollo IA para Imobiliárias e Corretores — automação de atendimento via WhatsApp 24h"
       style={{
         background: "linear-gradient(to bottom, #EFF6FF, #DBEAFE, #BFDBFE)",
       }}
     >
       {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
           className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-30 blur-[120px]"
           style={{ backgroundColor: "#2563EB" }}
@@ -48,7 +50,7 @@ export default function HeroImoveis() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
             Sua imobiliária captando leads{" "}
             <span className="italic gradient-brand">
               24 horas
@@ -67,13 +69,11 @@ export default function HeroImoveis() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10">
-            <a
+            <ShinyButton
               href="#contratar"
-              className="text-white text-lg font-semibold px-8 py-4 rounded-full w-full sm:w-auto text-center transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
-              style={{ backgroundColor: "#2563EB", boxShadow: "0 8px 24px #2563EB44" }}
-            >
-              Quero agendar minha demonstração →
-            </a>
+              label="Quero agendar minha demonstração →"
+              className="w-full sm:w-auto text-lg"
+            />
             <a
               href="#como-funciona"
               className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
@@ -99,7 +99,7 @@ export default function HeroImoveis() {
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial do WhatsApp</span>
+              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />

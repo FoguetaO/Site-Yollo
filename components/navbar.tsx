@@ -3,8 +3,10 @@
 import { useState, useEffect, useRef } from "react"
 
 const segments = [
-  { label: "Clínica de Estética", href: "/", active: true },
+  { label: "Clínica de Estética", href: "/clinica-de-estetica", active: false },
   { label: "Imobiliário", href: "/imoveis", active: false },
+  { label: "Contabilidade", href: "/contabilidade", active: false },
+  { label: "Advocacia", href: "/advocacia", active: false },
 ]
 
 export default function Navbar() {
@@ -40,18 +42,15 @@ export default function Navbar() {
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2 font-bold text-xl text-neutral-900">
-          <span
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm font-bold"
-            style={{ backgroundColor: "#6C4FE8" }}
-          >
-            B
-          </span>
-          <span className="gradient-brand">Yollo IA</span>
+        <a href="/" className="flex items-center">
+          <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto" />
         </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600">
+          <a href="/" className="hover:text-neutral-900 transition-colors">
+            Início
+          </a>
           {/* Segmento dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
@@ -105,6 +104,9 @@ export default function Navbar() {
           <a href="#faq" className="hover:text-neutral-900 transition-colors">
             FAQ
           </a>
+          <a href="/blog" className="hover:text-neutral-900 transition-colors">
+            Blog
+          </a>
         </div>
 
         {/* Desktop CTA */}
@@ -140,6 +142,9 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-neutral-100 px-6 py-4 flex flex-col gap-4">
+          <a href="/" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
+            Início
+          </a>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">
               Segmento
@@ -179,12 +184,19 @@ export default function Navbar() {
             FAQ
           </a>
           <a
+            href="/blog"
+            className="text-sm font-medium text-neutral-700 py-2"
+            onClick={() => setMobileOpen(false)}
+          >
+            Blog
+          </a>
+          <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center transition-all"
             style={{ backgroundColor: "#6C4FE8" }}
             onClick={() => setMobileOpen(false)}
           >
-            Agendar demonstração
+            Agendar demonstra��ão
           </a>
         </div>
       )}
