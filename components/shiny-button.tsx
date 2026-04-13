@@ -78,34 +78,33 @@ export default function ShinyButton({ label, href = "#", className = "", ...prop
           transform: translateY(-1px);
         }
 
-        .shiny-cta::before,
+        /* rotating glow border — sits BEHIND the button fill */
+        .shiny-cta::before {
+          content: "";
+          pointer-events: none;
+          position: absolute;
+          inset: -2px;
+          border-radius: inherit;
+          background: conic-gradient(
+            from var(--gradient-angle),
+            transparent 0%,
+            var(--shiny-cta-highlight) 8%,
+            var(--shiny-cta-highlight-subtle) 14%,
+            transparent 22%
+          );
+          animation: rotate-glow var(--duration) linear infinite;
+          z-index: -1;
+        }
+
+        /* solid background fill — sits ON TOP of the glow */
         .shiny-cta::after {
           content: "";
           pointer-events: none;
           position: absolute;
-          inset: -var(--shadow-size);
-          border-radius: inherit;
-        }
-
-        .shiny-cta::before {
-          inset: -1px;
-          background: conic-gradient(
-            from calc(var(--gradient-angle) - var(--gradient-percent)),
-            transparent 0%,
-            var(--shiny-cta-highlight) 5%,
-            var(--shiny-cta-highlight-subtle) 10%,
-            var(--shiny-cta-bg-subtle) 12%,
-            transparent 20%
-          );
-          animation: var(--animation);
-          animation-duration: var(--duration);
-          border-radius: inherit;
-        }
-
-        .shiny-cta::after {
-          inset: var(--shadow-size);
+          inset: 1px;
+          border-radius: calc(360px - 1px);
           background: var(--shiny-cta-bg);
-          border-radius: inherit;
+          z-index: 0;
         }
 
         .shiny-cta-label {
