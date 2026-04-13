@@ -4,9 +4,9 @@ import { useState, useEffect, useRef } from "react"
 
 const segments = [
   { label: "Advocacia", href: "/advocacia", active: true },
-  { label: "Contabilidade", href: "/contabil", active: false },
+  { label: "Contabilidade", href: "/contabilidade", active: false },
   { label: "Imobiliário", href: "/imoveis", active: false },
-  { label: "Clínica de Estética", href: "/", active: false },
+  { label: "Clínica de Estética", href: "/clinica-de-estetica", active: false },
 ]
 
 export default function NavbarAdvocacia() {
@@ -44,6 +44,9 @@ export default function NavbarAdvocacia() {
         </a>
 
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600">
+          <a href="/" className="hover:text-neutral-900 transition-colors">
+            Início
+          </a>
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"
@@ -93,6 +96,9 @@ export default function NavbarAdvocacia() {
           <a href="#faq" className="hover:text-neutral-900 transition-colors">
             FAQ
           </a>
+          <a href="/blog" className="hover:text-neutral-900 transition-colors">
+            Blog
+          </a>
         </div>
 
         <div className="hidden md:flex items-center gap-3">
@@ -119,6 +125,9 @@ export default function NavbarAdvocacia() {
 
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-neutral-100 px-6 py-4 flex flex-col gap-4">
+          <a href="/" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
+            Início
+          </a>
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Segmento</p>
             {segments.map((seg) => (
@@ -140,6 +149,9 @@ export default function NavbarAdvocacia() {
           </a>
           <a href="#faq" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
             FAQ
+          </a>
+          <a href="/blog" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
+            Blog
           </a>
           <a href="#contratar" className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center" style={{ backgroundColor: "#6C4FE8" }} onClick={() => setMobileOpen(false)}>
             Agendar demonstração

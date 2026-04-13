@@ -62,7 +62,11 @@ export default function HeroContabil() {
           </div>
 
           {/* Headline */}
+v0/rvefeqfqe-7890-968a8e8a
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
+=======
+          <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+v0/contatoopedrojustino-7361-773ff570
             Seu escritório contábil atendendo clientes{" "}
             <span className="italic gradient-brand">
               24 horas

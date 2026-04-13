@@ -1,9 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import ShinyButton from "@/components/shiny-button"
 
-export default function HeroAdvocacia() {
+export default function HeroEstetica() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -14,26 +13,16 @@ export default function HeroAdvocacia() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
-      aria-label="Yollo IA para Escritórios de Advocacia — automação de atendimento jurídico via WhatsApp 24h"
+      aria-label="Yollo IA para Clínicas de Estética — automação de atendimento via WhatsApp 24h"
       style={{
-        background: "linear-gradient(to bottom, #F5F3FF, #EDE9FE, #DDD6FE)",
+        background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
+      {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
-          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-25 blur-[120px]"
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-30 blur-[120px]"
           style={{ backgroundColor: "#6C4FE8" }}
-        />
-      </div>
-
-      <div className="absolute inset-0 pointer-events-none hidden md:block opacity-20" aria-hidden="true">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(108,79,232,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(108,79,232,0.15) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
         />
       </div>
 
@@ -41,6 +30,7 @@ export default function HeroAdvocacia() {
         <div
           className={`flex flex-col items-center text-center max-w-5xl mx-auto transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
         >
+          {/* Eyebrow tag */}
           <div className="mb-6 md:mb-10">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
@@ -50,36 +40,42 @@ export default function HeroAdvocacia() {
                 color: "#4F39B0",
               }}
             >
-              <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#6C4FE8" }} />
-              Assistente IA para Escritórios e Advogados
+              <span
+                className="w-2 h-2 rounded-full animate-pulse"
+                style={{ backgroundColor: "#6C4FE8" }}
+              />
+              Assistente IA para Clínicas de Estética
             </div>
           </div>
 
-v0/rvefeqfqe-7890-968a8e8a
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
-=======
+          {/* Headline */}
           <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
-v0/contatoopedrojustino-7361-773ff570
-            Seu escritório de advocacia atendendo clientes{" "}
-            <span className="inline-block italic gradient-brand">
-              24 horas
-            </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
-            <span className="inline-block italic gradient-brand">
-              disponível.
+            A secretária virtual que{" "}
+            <span className="italic gradient-brand">
+              agenda e atende
+            </span>{" "}
+            suas clientes
+            <br className="hidden md:block" /> pelo WhatsApp —{" "}
+            <span className="italic gradient-brand">
+              24h por dia.
             </span>
           </h1>
 
+          {/* Subheadline */}
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Yollo IA responde dúvidas jurídicas, qualifica leads, agenda consultas e acompanha casos automaticamente. Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
+            A Yollo IA responde suas clientes no momento em que elas mandam mensagem — mesmo à noite,
+            no fim de semana ou enquanto você realiza um procedimento. Agenda, tira dúvidas, qualifica e reduz faltas automaticamente.
           </p>
 
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10">
-            <ShinyButton
+            <a
               href="#contratar"
-              label="Quero agendar minha demonstração →"
-              className="w-full sm:w-auto text-lg"
-            />
+              className="text-white text-lg font-semibold px-8 py-4 rounded-full w-full sm:w-auto text-center transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
+              style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
+            >
+              Quero agendar minha demonstração →
+            </a>
             <a
               href="#como-funciona"
               className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
@@ -97,6 +93,7 @@ v0/contatoopedrojustino-7361-773ff570
             </a>
           </div>
 
+          {/* Trust badges */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
@@ -114,6 +111,7 @@ v0/contatoopedrojustino-7361-773ff570
         </div>
       </div>
 
+      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-transparent via-white/40 to-white z-30 pointer-events-none" />
     </section>
   )
