@@ -13,6 +13,7 @@ import SecurityImoveis from "@/components/imoveis/security-imoveis"
 import FAQImoveis from "@/components/imoveis/faq-imoveis"
 import FooterImoveis from "@/components/imoveis/footer-imoveis"
 import WhatsAppFloat from "@/components/whatsapp-float"
+import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
   title: "Yollo IA para Imobiliárias — IA no WhatsApp que Capta, Qualifica e Agenda Visitas 24/7",
@@ -33,14 +34,15 @@ export default function ImoveisPage() {
     <main>
       <NavbarImoveis />
       <HeroImoveis />
-      <ComparisonImoveis />
-      <HowItWorksImoveis />
-      <HowItConnectsImoveis />
-      <ObjectivesImoveis />
-      <ConfigureIAImoveis />
-      <StatsImoveis />
-      <LeadFormImoveis />
-      <SocialProofImoveis />
+      <ScrollReveal><ComparisonImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><HowItWorksImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><HowItConnectsImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><ObjectivesImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><ConfigureIAImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><StatsImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><LeadFormImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><SocialProofImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}>
       <SegmentFeatureHero
         badge="IA para Imobiliárias e Corretores"
         title="Qualifique leads e agende visitas enquanto você fecha negócios"
@@ -58,9 +60,10 @@ export default function ImoveisPage() {
         }}
         accentColor="#6C4FE8"
       />
-      <SecurityImoveis />
-      <FAQImoveis />
-      <FooterImoveis />
+      </ScrollReveal>
+      <ScrollReveal delay={50}><SecurityImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><FAQImoveis /></ScrollReveal>
+      <ScrollReveal delay={50}><FooterImoveis /></ScrollReveal>
       <WhatsAppFloat />
     </main>
   )
