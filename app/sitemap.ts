@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next"
-import { getAllPosts, getCategories } from "@/lib/blog-data"
+import { blogPosts, blogCategories } from "@/lib/blog-data"
 
 const BASE_URL = "https://yolloia.com.br"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const posts = getAllPosts()
-  const categories = getCategories()
+  const posts = blogPosts
+  const categories = blogCategories
 
   // Páginas estáticas principais
   const staticPages: MetadataRoute.Sitemap = [
