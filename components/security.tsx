@@ -20,8 +20,7 @@ export default function Security() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 text-neutral-900">
-            Duas opções de{" "}
-            <span className="font-semibold text-green-600">API WhatsApp</span>
+            <span className="font-semibold text-green-600">Parceiros oficiais</span> da Meta
           </h2>
           <p className="text-lg text-neutral-600 text-center mb-16 max-w-3xl mx-auto">
             Escolha a opção que melhor se encaixa no seu negócio. Ambas funcionam com a Yollo IA.
