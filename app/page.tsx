@@ -2,14 +2,14 @@ import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 
 export const metadata: Metadata = {
-  title: "Yollo IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7",
+  title: "Yollo IA — Automação de Atendimento no WhatsApp com Inteligência Artificial",
   description:
-    "Automatize o atendimento do seu negócio pelo WhatsApp com Inteligência Artificial. A Yollo IA agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia. Ideal para clínicas de estética, imobiliárias, escritórios contábeis e advocacia.",
+    "A Yollo IA automatiza o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia. Para clínicas de estética, imobiliárias, escritórios contábeis e advocacia.",
   alternates: {
     canonical: "https://yolloia.com.br",
   },
   openGraph: {
-    title: "Yollo IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7",
+    title: "Yollo IA — Automação de Atendimento no WhatsApp com IA",
     description:
       "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia.",
     url: "https://yolloia.com.br",
@@ -19,14 +19,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yollo IA — Assistente IA para WhatsApp",
+    title: "Yollo IA — Automação de WhatsApp com IA",
     description: "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica e atende 24h.",
   },
 }
 
 
 import Hero from "@/components/hero"
-import SegmentFeatureHero from "@/components/segment-feature-hero"
 import Features from "@/components/features"
 import Comparison from "@/components/comparison"
 import HowItWorks from "@/components/how-it-works"
@@ -55,23 +54,6 @@ export default function Home() {
       <Stats />
       <LeadForm />
       <SocialProof />
-      <SegmentFeatureHero
-        badge="IA para Clínicas de Estética"
-        title="Atende, agenda e qualifica seus clientes pelo WhatsApp, 24h por dia"
-        description="O conjunto de recursos guiados por IA da Yollo inclui funcionalidades incríveis:"
-        features={[
-          { label: "Agendamento automático de procedimentos", href: "#funcionalidades" },
-          { label: "Qualificação e CRM de clientes", href: "#funcionalidades" },
-          { label: "Lembretes e redução de faltas", href: "#funcionalidades" },
-        ]}
-        ctaLabel="Explore os recursos para clínicas"
-        ctaHref="#contratar"
-        phoneImage={{
-          src: "/ultimasecao.png",
-          alt: "Smartphone sendo segurado por uma mão mostrando conversa de atendimento automático via WhatsApp pela IA Yollo em clínica de estética",
-        }}
-        accentColor="#6C4FE8"
-      />
       <Security />
       <FAQ />
       <Footer />

@@ -22,7 +22,7 @@ const socialLinks = [
 ]
 
 const segmentLinks = [
-  { label: "IA para Clínicas de Estética", href: "/" },
+  { label: "IA para Clínicas de Estética", href: "/estetica" },
   { label: "IA para Imobiliárias e Corretores", href: "/imoveis" },
   { label: "IA para Escritórios Contábeis", href: "/contabil" },
   { label: "IA para Escritórios de Advocacia", href: "/advocacia" },
@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="mb-10 pb-8 border-b border-white/[0.06]">
           <p className="text-xs text-center leading-relaxed max-w-3xl mx-auto" style={{ color: "#6B7280" }}>
             <strong style={{ color: "#9CA3AF" }}>Yollo IA</strong> — Plataforma de automação de atendimento via WhatsApp com Inteligência Artificial para{" "}
-            <a href="/" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">clínicas de estética</a>,{" "}
+            <a href="/estetica" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">clínicas de estética</a>,{" "}
             <a href="/imoveis" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">imobiliárias e corretores de imóveis</a>,{" "}
             <a href="/contabil" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">escritórios de contabilidade</a> e{" "}
             <a href="/advocacia" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">escritórios de advocacia</a>.

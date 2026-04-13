@@ -3,13 +3,13 @@
 import { useState, useEffect, useRef } from "react"
 
 const segments = [
-  { label: "Advocacia", href: "/advocacia", active: true },
-  { label: "Contabilidade", href: "/contabil", active: false },
+  { label: "Clínica de Estética", href: "/estetica", active: true },
   { label: "Imobiliário", href: "/imoveis", active: false },
-  { label: "Clínica de Estética", href: "/estetica", active: false },
+  { label: "Contabilidade", href: "/contabil", active: false },
+  { label: "Advocacia", href: "/advocacia", active: false },
 ]
 
-export default function NavbarAdvocacia() {
+export default function NavbarEstetica() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [segmentOpen, setSegmentOpen] = useState(false)
@@ -35,18 +35,24 @@ export default function NavbarAdvocacia() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-neutral-100" : "bg-transparent"
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-neutral-100"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-6 h-16 flex items-center justify-between">
+        {/* Logo */}
         <a href="/" className="flex items-center">
           <img src="/logo-yollo.png" alt="Yollo IA" className="h-8 w-auto" />
         </a>
 
+        {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-neutral-600">
           <a href="/" className="hover:text-neutral-900 transition-colors">
             Início
           </a>
+
+          {/* Segmento dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"
@@ -56,7 +62,7 @@ export default function NavbarAdvocacia() {
             >
               Segmento
               <svg
-                className={`w-4 h-4 text-neutral-400 transition-transform ${segmentOpen ? "rotate-180" : ""}`}
+                className={`w-4 h-4 text-neutral-400 transition-transform duration-200 ${segmentOpen ? "rotate-180" : ""}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -65,7 +71,7 @@ export default function NavbarAdvocacia() {
               </svg>
             </button>
             {segmentOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 bg-white rounded-xl border border-neutral-100 shadow-lg overflow-hidden py-1">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-white rounded-xl border border-neutral-100 shadow-lg overflow-hidden py-1">
                 {segments.map((seg) => (
                   <a
                     key={seg.label}
@@ -77,7 +83,10 @@ export default function NavbarAdvocacia() {
                   >
                     <span>{seg.label}</span>
                     {seg.active && (
-                      <span className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white" style={{ backgroundColor: "#6C4FE8" }}>
+                      <span
+                        className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white"
+                        style={{ backgroundColor: "#6C4FE8" }}
+                      >
                         Atual
                       </span>
                     )}
@@ -101,6 +110,7 @@ export default function NavbarAdvocacia() {
           </a>
         </div>
 
+        {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#contratar"
@@ -111,6 +121,7 @@ export default function NavbarAdvocacia() {
           </a>
         </div>
 
+        {/* Mobile toggle */}
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           aria-label="Menu"
@@ -123,18 +134,23 @@ export default function NavbarAdvocacia() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-neutral-100 px-6 py-4 flex flex-col gap-4">
           <a href="/" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
             Início
           </a>
           <div>
-            <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">Segmento</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-neutral-400 mb-2">
+              Segmento
+            </p>
             {segments.map((seg) => (
               <a
                 key={seg.label}
                 href={seg.href}
-                className={`block py-2 text-sm font-medium ${seg.active ? "text-violet-600" : "text-neutral-600"}`}
+                className={`block py-2 text-sm font-medium ${
+                  seg.active ? "text-[#6C4FE8] font-semibold" : "text-neutral-600"
+                }`}
                 onClick={() => setMobileOpen(false)}
               >
                 {seg.label}
@@ -153,7 +169,12 @@ export default function NavbarAdvocacia() {
           <a href="/blog" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
             Blog
           </a>
-          <a href="#contratar" className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center" style={{ backgroundColor: "#6C4FE8" }} onClick={() => setMobileOpen(false)}>
+          <a
+            href="#contratar"
+            className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center transition-all"
+            style={{ backgroundColor: "#6C4FE8" }}
+            onClick={() => setMobileOpen(false)}
+          >
             Agendar demonstração
           </a>
         </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Navbar from "@/components/navbar"
+import NavbarEstetica from "@/components/estetica/navbar-estetica"
 import Footer from "@/components/footer"
 import SegmentHero from "@/components/segment-hero"
 import SegmentFeatureHero from "@/components/segment-feature-hero"
@@ -75,7 +75,7 @@ export default function EsteticaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(segmentSchema) }}
       />
-      <Navbar />
+      <NavbarEstetica />
       <main>
         <SegmentHero
           badge="IA para Clínicas de Estética"
