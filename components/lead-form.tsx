@@ -118,7 +118,7 @@ export default function LeadForm() {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email">
-                    Gmail
+                    Seu melhor e-mail
                   </label>
                   <input
                     id="email"
