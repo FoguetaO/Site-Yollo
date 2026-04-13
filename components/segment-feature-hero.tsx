@@ -26,19 +26,20 @@ export default function SegmentFeatureHero({
 }: SegmentFeatureHeroProps) {
   return (
     <section
-      className="w-full relative overflow-hidden"
+      className="w-full relative"
       aria-label={`Recursos — ${badge}`}
     >
-      {/* Imagem de background cobrindo toda a seção */}
-      <Image
-        src={phoneImage.src}
-        alt=""
-        fill
-        className="object-cover"
-        style={{ objectPosition: "60% center" }}
-        loading="lazy"
-        aria-hidden="true"
-      />
+      {/* Imagem de background posicionada absolutamente, sem zoom */}
+      <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <Image
+          src={phoneImage.src}
+          alt=""
+          fill
+          className="object-contain"
+          style={{ objectPosition: "75% center" }}
+          loading="lazy"
+        />
+      </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
 
