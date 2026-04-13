@@ -50,9 +50,9 @@ export default function SegmentFeatureHero({
           <span
             className="inline-flex items-center gap-1.5 self-start px-3 py-1 rounded-full text-xs font-medium border"
             style={{
-              borderColor: `${accentColor}40`,
-              color: accentColor,
-              backgroundColor: `${accentColor}0d`,
+              borderColor: "#13131320",
+              color: "#131313",
+              backgroundColor: "#13131308",
             }}
           >
             <svg
@@ -70,7 +70,7 @@ export default function SegmentFeatureHero({
           </span>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-balance text-neutral-900">
+          <h2 className="text-4xl md:text-5xl font-normal leading-tight text-balance text-neutral-900">
             {title}
           </h2>
 
@@ -82,7 +82,7 @@ export default function SegmentFeatureHero({
                 {f.href ? (
                   <a
                     href={f.href}
-                    className="font-medium underline underline-offset-2 transition-opacity hover:opacity-70"
+                    className="font-medium transition-opacity hover:opacity-70"
                     style={{ color: accentColor }}
                   >
                     {f.label}
