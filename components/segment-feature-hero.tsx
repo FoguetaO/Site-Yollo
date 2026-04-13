@@ -114,7 +114,7 @@ export default function SegmentFeatureHero({
             alt={phoneImage.alt}
             fill
             className="object-cover"
-            style={{ objectPosition: "10% center" }}
+            style={{ objectPosition: "60% center" }}
             loading="lazy"
           />
         </div>
