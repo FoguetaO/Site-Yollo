@@ -9,6 +9,7 @@ import LeadFormContabil from "@/components/contabil/lead-form-contabil"
 import FAQContabil from "@/components/contabil/faq-contabil"
 import FooterContabil from "@/components/contabil/footer-contabil"
 import WhatsAppFloat from "@/components/whatsapp-float"
+import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
   title: "Yollo IA para Contabilidade — IA no WhatsApp que Atende Clientes e Lembra Obrigações 24/7",
@@ -49,10 +50,11 @@ export default function ContabilidadePage() {
       <main>
         <NavbarContabil />
         <HeroContabil />
-        <ComparisonContabil />
-        <HowItWorksContabil />
-        <ObjectivesContabil />
-        <StatsContabil />
+        <ScrollReveal><ComparisonContabil /></ScrollReveal>
+        <ScrollReveal delay={50}><HowItWorksContabil /></ScrollReveal>
+        <ScrollReveal delay={50}><ObjectivesContabil /></ScrollReveal>
+        <ScrollReveal delay={50}><StatsContabil /></ScrollReveal>
+        <ScrollReveal delay={50}>
         <SegmentFeatureHero
           badge="IA para Escritórios Contábeis"
           title="Atenda clientes, lembre prazos e recolha documentos, 24h por dia"
@@ -73,9 +75,10 @@ export default function ContabilidadePage() {
           sectionPaddingTop="30px"
           contentPaddingTop="67px"
         />
-        <LeadFormContabil />
-        <FAQContabil />
-        <FooterContabil />
+        </ScrollReveal>
+        <ScrollReveal delay={50}><LeadFormContabil /></ScrollReveal>
+        <ScrollReveal delay={50}><FAQContabil /></ScrollReveal>
+        <ScrollReveal delay={50}><FooterContabil /></ScrollReveal>
         <WhatsAppFloat />
       </main>
     </>
