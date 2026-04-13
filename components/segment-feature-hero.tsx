@@ -107,13 +107,14 @@ export default function SegmentFeatureHero({
           </a>
         </div>
 
-        {/* Coluna direita — imagem ocupa toda a altura da coluna de texto */}
-        <div className="md:flex-1 relative min-h-[400px]">
+        {/* Coluna direita — imagem centralizada, ocupa a altura da coluna de texto */}
+        <div className="md:flex-1 relative overflow-hidden min-h-[400px]">
           <Image
             src={phoneImage.src}
             alt={phoneImage.alt}
             fill
-            className="object-cover object-left"
+            className="object-cover"
+            style={{ objectPosition: "30% center" }}
             loading="lazy"
           />
         </div>
