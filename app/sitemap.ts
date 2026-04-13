@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yollo.ai"
+  const baseUrl = "https://yolloia.com.br"
 
   // Data de última modificação — atualizar a cada deploy relevante
   const lastModified = new Date("2026-04-12")

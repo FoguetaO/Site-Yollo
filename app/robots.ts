@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/", "/admin/"],
       },
     ],
-    sitemap: "https://yollo.ai/sitemap.xml",
-    host: "https://yollo.ai",
+    sitemap: "https://yolloia.com.br/sitemap.xml",
+    host: "https://yolloia.com.br",
   }
 }

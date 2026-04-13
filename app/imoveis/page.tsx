@@ -18,7 +18,7 @@ export const metadata = {
   title: "Yollo IA para Imobiliárias — IA no WhatsApp que Capta, Qualifica e Agenda Visitas 24/7",
   description:
     "Automação de atendimento via WhatsApp com IA para imobiliárias e corretores de imóveis. Qualifique leads, agende visitas e faça follow-up automaticamente. Parceiro oficial Meta — WhatsApp Business API.",
-  alternates: { canonical: "https://yollo.ai/imoveis" },
+  alternates: { canonical: "https://yolloia.com.br/imoveis" },
   openGraph: {
     title: "IA para Imobiliárias e Corretores — Yollo IA",
     description: "Qualifique leads, agende visitas e feche mais negócios pelo WhatsApp com IA. Atendimento 24h.",

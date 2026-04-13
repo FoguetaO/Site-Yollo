@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   description:
     "Automatize o atendimento do seu negócio pelo WhatsApp com Inteligência Artificial. A Yollo IA agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia. Ideal para clínicas de estética, imobiliárias, escritórios contábeis e advocacia.",
   alternates: {
-    canonical: "https://yollo.ai",
+    canonical: "https://yolloia.com.br",
   },
   openGraph: {
     title: "Yollo IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7",
     description:
       "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia.",
-    url: "https://yollo.ai",
+    url: "https://yolloia.com.br",
     type: "website",
     locale: "pt_BR",
     siteName: "Yollo IA",

@@ -14,7 +14,7 @@ export const metadata = {
   title: "Yollo IA para Contabilidade — IA no WhatsApp que Atende Clientes e Lembra Obrigações 24/7",
   description:
     "Automação de atendimento via WhatsApp com IA para escritórios contábeis e contadores. Responde dúvidas fiscais, envia lembretes de obrigações, recolhe documentos e agenda reuniões automaticamente.",
-  alternates: { canonical: "https://yollo.ai/contabil" },
+  alternates: { canonical: "https://yolloia.com.br/contabil" },
   openGraph: {
     title: "IA para Escritórios Contábeis — Yollo IA",
     description: "Automatize o atendimento do seu escritório contábil. Responda clientes, lembre prazos e recolha documentos com IA.",

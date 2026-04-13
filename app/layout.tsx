@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   // Adicione seu código real do Google Search Console aqui:
   // verification: { google: 'SEU_CODIGO_AQUI' },
   alternates: {
-    canonical: 'https://yollo.ai',
+    canonical: 'https://yolloia.com.br',
   },
 }
 
@@ -49,10 +49,10 @@ const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Yollo IA',
-  url: 'https://yollo.ai',
+  url: 'https://yolloia.com.br',
   logo: {
     '@type': 'ImageObject',
-    url: 'https://yollo.ai/logo-yollo.png',
+    url: 'https://yolloia.com.br/logo-yollo.png',
     width: 240,
     height: 64,
   },
@@ -76,14 +76,14 @@ const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'Yollo IA',
-  url: 'https://yollo.ai',
+  url: 'https://yolloia.com.br',
   inLanguage: 'pt-BR',
   description: 'Plataforma de automação de atendimento via WhatsApp com IA para negócios brasileiros.',
   potentialAction: {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: 'https://yollo.ai/blog?q={search_term_string}',
+      urlTemplate: 'https://yolloia.com.br/blog?q={search_term_string}',
     },
     'query-input': 'required name=search_term_string',
   },
@@ -97,7 +97,7 @@ const softwareSchema = {
   operatingSystem: 'Web, WhatsApp',
   applicationCategory: 'BusinessApplication',
   description: 'Plataforma de automação de WhatsApp com IA — agenda, qualifica leads, faz follow-up e dispara campanhas para clínicas, imobiliárias, contadores e advogados.',
-  url: 'https://yollo.ai',
+  url: 'https://yolloia.com.br',
   offers: {
     '@type': 'Offer',
     priceCurrency: 'BRL',
