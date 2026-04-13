@@ -42,6 +42,7 @@ export default function SegmentFeatureHero({
           src={phoneImage.src}
           alt=""
           fill
+          sizes="(max-width: 768px) 0px, 55vw"
           className="object-contain"
           style={{ objectPosition: "75% center" }}
           loading="lazy"
