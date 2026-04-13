@@ -70,7 +70,7 @@ export default function SegmentFeatureHero({
           </span>
 
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl font-normal leading-tight text-balance text-neutral-900">
+          <h2 className="text-4xl font-normal leading-tight text-balance text-neutral-900" style={{ fontSize: "44px" }}>
             {title}
           </h2>
 
