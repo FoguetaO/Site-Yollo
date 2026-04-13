@@ -45,7 +45,7 @@ export default function AdvocaciaPage() {
         ctaLabel="Explore os recursos para advocacia"
         ctaHref="#contratar"
         phoneImage={{
-          src: "/segments/phone-advocacia.jpg",
+          src: "/ultimasecao.png",
           alt: "Smartphone mostrando agendamento automático de consultas jurídicas via WhatsApp com IA Yollo para escritório de advocacia",
         }}
         accentColor="#6C4FE8"

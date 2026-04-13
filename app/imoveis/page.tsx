@@ -53,7 +53,7 @@ export default function ImoveisPage() {
         ctaLabel="Explore os recursos para imobiliárias"
         ctaHref="#contratar"
         phoneImage={{
-          src: "/segments/phone-imoveis.jpg",
+          src: "/ultimasecao.png",
           alt: "Smartphone mostrando qualificação automática de leads imobiliários via WhatsApp com a IA Yollo — agendamento de visitas e follow-up automático",
         }}
         accentColor="#6C4FE8"

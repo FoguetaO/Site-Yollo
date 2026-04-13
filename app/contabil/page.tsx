@@ -45,7 +45,7 @@ export default function ContabilPage() {
         ctaLabel="Explore os recursos para contabilidade"
         ctaHref="#contratar"
         phoneImage={{
-          src: "/segments/phone-contabil.jpg",
+          src: "/ultimasecao.png",
           alt: "Smartphone mostrando atendimento automático de escritório contábil via WhatsApp com IA Yollo — lembretes fiscais e coleta de documentos",
         }}
         accentColor="#6C4FE8"
