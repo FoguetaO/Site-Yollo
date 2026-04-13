@@ -16,7 +16,7 @@ export default function HeroImoveis() {
       className="min-h-screen flex items-center relative overflow-hidden"
       aria-label="Yollo IA para Imobiliárias e Corretores — automação de atendimento via WhatsApp 24h"
       style={{
-        background: "linear-gradient(to bottom, #EFF6FF, #DBEAFE, #BFDBFE)",
+        background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
       {/* Background decoration */}
@@ -41,7 +41,7 @@ export default function HeroImoveis() {
             >
               <span
                 className="w-2 h-2 rounded-full animate-pulse"
-                style={{ backgroundColor: "#2563EB" }}
+          style={{ backgroundColor: "#6C4FE8" }}
               />
               Assistente IA para Imobiliárias
             </div>

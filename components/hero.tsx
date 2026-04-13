@@ -16,7 +16,7 @@ export default function Hero() {
       className="min-h-screen flex items-center relative overflow-hidden"
       aria-label="Yollo IA — plataforma de automação de WhatsApp com Inteligência Artificial"
       style={{
-        background: "linear-gradient(to bottom, #F5F3FF, #EDE9FD, #E4DDFB)",
+        background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
       {/* Background decoration — reduced blur for mobile perf */}

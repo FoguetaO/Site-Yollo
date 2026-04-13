@@ -16,7 +16,7 @@ export default function HeroContabil() {
       className="min-h-screen flex items-center relative overflow-hidden"
       aria-label="Yollo IA para Escritórios Contábeis — automação de atendimento via WhatsApp 24h"
       style={{
-        background: "linear-gradient(to bottom, #F5F3FF, #EDE9FE, #DDD6FE)",
+        background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
       {/* Background decoration */}
