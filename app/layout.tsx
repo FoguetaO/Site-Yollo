@@ -6,6 +6,12 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/favicon.png',
+  },
   title: {
     default: 'Yollo IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7',
     template: '%s | Yollo IA',
