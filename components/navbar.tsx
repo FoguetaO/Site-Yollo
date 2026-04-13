@@ -3,9 +3,9 @@
 import { useState, useEffect, useRef } from "react"
 
 const segments = [
-  { label: "Clínica de Estética", href: "/estetica", active: false },
+  { label: "Clínica de Estética", href: "/clinica-de-estetica", active: false },
   { label: "Imobiliário", href: "/imoveis", active: false },
-  { label: "Contabilidade", href: "/contabil", active: false },
+  { label: "Contabilidade", href: "/contabilidade", active: false },
   { label: "Advocacia", href: "/advocacia", active: false },
 ]
 
@@ -196,7 +196,7 @@ export default function Navbar() {
             style={{ backgroundColor: "#6C4FE8" }}
             onClick={() => setMobileOpen(false)}
           >
-            Agendar demonstração
+            Agendar demonstra��ão
           </a>
         </div>
       )}

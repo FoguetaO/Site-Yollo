@@ -3,9 +3,9 @@
 import { useState, useEffect, useRef } from "react"
 
 const segments = [
-  { label: "Contabilidade", href: "/contabil", active: true },
+  { label: "Contabilidade", href: "/contabilidade", active: true },
   { label: "Imobiliário", href: "/imoveis", active: false },
-  { label: "Clínica de Estética", href: "/estetica", active: false },
+  { label: "Clínica de Estética", href: "/clinica-de-estetica", active: false },
   { label: "Advocacia", href: "/advocacia", active: false },
 ]
 
