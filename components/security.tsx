@@ -20,7 +20,7 @@ export default function Security() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 text-neutral-900">
-            <span className="font-semibold text-green-600">Parceiros oficiais</span> da Meta
+            <span style={{ color: "#2b2929", fontWeight: "500" }}>Parceiros oficiais</span> da Meta
           </h2>
           <p className="text-lg text-neutral-600 text-center mb-16 max-w-3xl mx-auto">
             Escolha a opção que melhor se encaixa no seu negócio. Ambas funcionam com a Yollo IA.
@@ -49,7 +49,7 @@ export default function Security() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-                <span>Meta Tech Provider verificado</span>
+                <span>Saiba mais sobre o programa</span>
               </div>
             </div>
 
@@ -66,7 +66,7 @@ export default function Security() {
                   </div>
                 </div>
               </div>
-              <h3 className="text-xl font-medium mb-3 text-neutral-900">API Não Oficial do WhatsApp</h3>
+              <h3 className="text-xl font-medium mb-3 text-neutral-900">Meta Tech Provider</h3>
               <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
                 Conecta diretamente ao seu número de WhatsApp existente, <span className="font-medium">sem precisar migrar para o Business API</span>. Configuração mais rápida e sem necessidade de aprovação pela Meta. Ideal para começar rápido.
               </p>
