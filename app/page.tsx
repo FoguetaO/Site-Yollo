@@ -57,7 +57,7 @@ export default function Home() {
       <SocialProof />
       <SegmentFeatureHero
         badge="IA para Clínicas de Estética"
-        title="A secretária virtual que atende e agenda por você, 24h por dia"
+        title="Atende, agenda e qualifica seus clientes pelo WhatsApp, 24h por dia"
         description="O conjunto de recursos guiados por IA da Yollo inclui funcionalidades incríveis:"
         features={[
           { label: "Agendamento automático de procedimentos", href: "#funcionalidades" },

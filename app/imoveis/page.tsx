@@ -43,7 +43,7 @@ export default function ImoveisPage() {
       <SocialProofImoveis />
       <SegmentFeatureHero
         badge="IA para Imobiliárias e Corretores"
-        title="O assistente que qualifica leads e agenda visitas enquanto você fecha negócios"
+        title="Qualifique leads e agende visitas enquanto você fecha negócios"
         description="Os recursos da Yollo IA para o setor imobiliário incluem:"
         features={[
           { label: "Qualificação automática de compradores e locatários", href: "#funcionalidades" },

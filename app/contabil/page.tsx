@@ -35,7 +35,7 @@ export default function ContabilPage() {
       <StatsContabil />
       <SegmentFeatureHero
         badge="IA para Escritórios Contábeis"
-        title="O assistente contábil que atende clientes e lembra prazos por você, 24h por dia"
+        title="Atenda clientes, lembre prazos e recolha documentos, 24h por dia"
         description="Os recursos guiados por IA da Yollo para contabilidade incluem:"
         features={[
           { label: "Respostas automáticas a dúvidas fiscais e trabalhistas", href: "#funcionalidades" },

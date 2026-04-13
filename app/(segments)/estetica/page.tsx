@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import SegmentHero from "@/components/segment-hero"
+import SegmentFeatureHero from "@/components/segment-feature-hero"
 import Features from "@/components/features"
 import HowItWorks from "@/components/how-it-works"
 import LeadForm from "@/components/lead-form"
@@ -93,6 +94,23 @@ export default function EsteticaPage() {
         <HowItWorks />
         <Features />
         <LeadForm />
+        <SegmentFeatureHero
+          badge="IA para Clínicas de Estética"
+          title="A secretária virtual que atende e agenda por você, 24h por dia"
+          description="Os recursos guiados por IA da Yollo para clínicas de estética incluem:"
+          features={[
+            { label: "Agendamento automático de procedimentos", href: "#funcionalidades" },
+            { label: "Qualificação e CRM de clientes", href: "#funcionalidades" },
+            { label: "Lembretes e redução de faltas", href: "#funcionalidades" },
+          ]}
+          ctaLabel="Explore os recursos para estética"
+          ctaHref="#contratar"
+          phoneImage={{
+            src: "/ultimasecao.png",
+            alt: "Smartphone mostrando atendimento automático via WhatsApp em clínica de estética com IA Yollo",
+          }}
+          accentColor="#6C4FE8"
+        />
         <Faq />
       </main>
       <Footer />

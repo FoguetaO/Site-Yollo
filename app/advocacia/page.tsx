@@ -35,7 +35,7 @@ export default function AdvocaciaPage() {
       <FAQAdvocacia />
       <SegmentFeatureHero
         badge="IA para Escritórios de Advocacia"
-        title="O assistente jurídico que agenda consultas e qualifica clientes enquanto você advoga"
+        title="Agende consultas e qualifique clientes enquanto você advoga"
         description="Os recursos da Yollo IA para escritórios de advocacia incluem:"
         features={[
           { label: "Agendamento automático de consultas iniciais", href: "#funcionalidades" },
