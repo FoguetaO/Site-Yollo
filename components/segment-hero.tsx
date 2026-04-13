@@ -78,7 +78,7 @@ export default function SegmentHero({
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight text-balance">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight text-balance" style={{ fontSize: "51px" }}>
               {title}
               {titleHighlight && (
                 <>

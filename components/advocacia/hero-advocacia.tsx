@@ -54,7 +54,7 @@ export default function HeroAdvocacia() {
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
             Seu escritório de advocacia atendendo clientes{" "}
             <span className="inline-block italic gradient-brand">
               24 horas
