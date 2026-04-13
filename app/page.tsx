@@ -1,4 +1,36 @@
+import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
+
+export const metadata: Metadata = {
+  title: "Yollo IA — Automação de WhatsApp com IA para Clínicas, Imobiliárias, Contadores e Advogados",
+  description:
+    "Automatize o atendimento do seu negócio pelo WhatsApp com Inteligência Artificial. A Yollo IA agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia. Ideal para clínicas de estética, imobiliárias, escritórios contábeis e advocacia.",
+  keywords: [
+    "automação WhatsApp",
+    "chatbot WhatsApp com IA",
+    "assistente virtual WhatsApp",
+    "agendamento automático WhatsApp",
+    "IA para clínica de estética",
+    "IA para imobiliária",
+    "IA para escritório contábil",
+    "IA para advocacia",
+    "WhatsApp Business API",
+    "CRM WhatsApp",
+    "disparo em massa WhatsApp",
+    "follow-up automático WhatsApp",
+    "atendimento automático 24 horas",
+    "qualificação de leads WhatsApp",
+    "chatbot para clínica de estética",
+    "automação de atendimento",
+    "Meta Tech Provider",
+    "parceiro oficial Meta WhatsApp",
+  ],
+  alternates: {
+    canonical: "https://yollo.ai",
+  },
+}
+
+
 import Hero from "@/components/hero"
 import Features from "@/components/features"
 import Comparison from "@/components/comparison"

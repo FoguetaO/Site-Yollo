@@ -60,11 +60,11 @@ const features = [
       <div className="space-y-3">
         <div className="bg-white rounded-xl border border-neutral-100 p-3 shadow-sm">
           <div className="text-[10px] text-neutral-400 mb-0.5 uppercase tracking-widest">Campanha ativa</div>
-          <div className="text-sm font-semibold text-neutral-800">Promocao de Lancamento</div>
+          <div className="text-sm font-semibold text-neutral-800">Promoção de Lançamento</div>
         </div>
-        {/* Segmentacao por tag ou funil */}
+        {/* Segmentação por tag ou funil */}
         <div className="bg-neutral-50 rounded-xl p-3 space-y-2">
-          <div className="text-[10px] text-neutral-400 uppercase tracking-widest mb-1">Segmentacao</div>
+          <div className="text-[10px] text-neutral-400 uppercase tracking-widest mb-1">Segmentação</div>
           <div className="flex flex-wrap gap-1.5">
             {["Lead quente", "Interessado", "Pos-venda", "Inativo"].map((tag) => (
               <span
@@ -80,7 +80,7 @@ const features = [
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#6C4FE8" strokeWidth="2">
               <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
             </svg>
-            <span className="text-[11px] text-neutral-500">Ou por etapa do funil</span>
+            <span className="text-[11px] text-neutral-500">Ou por etapa do funil de vendas</span>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-2">
@@ -139,7 +139,7 @@ const features = [
   {
     id: "crm",
     label: "CRM",
-    badge: "Gestao de Leads",
+    badge: "Gestão de Leads",
     title: "CRM integrado ao WhatsApp",
     description:
       "Acompanhe cada lead no funil de vendas, registre interações, adicione tags e nunca perca o histórico de um cliente — tudo dentro do WhatsApp, sem trocar de ferramenta.",
@@ -172,12 +172,12 @@ const features = [
   },
   {
     id: "acoes",
-    label: "Acoes",
+    label: "Ações",
     badge: "Produtividade",
-    title: "Acoes rapidas para o seu time de vendas",
+    title: "Ações rápidas para o seu time de vendas",
     description:
       "Envie proposta, transfira atendimento, crie tarefa ou adicione nota com um clique — diretamente na conversa do WhatsApp. Seu time vende mais gastando menos tempo em operacional.",
-    keywords: ["acoes rapidas WhatsApp", "produtividade de vendas", "automacao de tarefas"],
+    keywords: ["ações rápidas WhatsApp", "produtividade de vendas", "automação de tarefas"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
@@ -187,7 +187,7 @@ const features = [
       <div className="grid grid-cols-2 gap-2">
         {[
           { label: "Enviar proposta", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" /></svg> },
-          { label: "Agendar reuniao", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg> },
+          { label: "Agendar reunião", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg> },
           { label: "Transferir lead", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg> },
           { label: "Criar tarefa", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg> },
           { label: "Adicionar ao funil", icon: <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg> },
@@ -206,12 +206,12 @@ const features = [
   },
   {
     id: "anuncios",
-    label: "Anuncios",
+    label: "Anúncios",
     badge: "Meta Ads",
-    title: "Integração com anuncios do Facebook e Instagram",
+    title: "Integração com anúncios do Facebook e Instagram",
     description:
-      "Conecte seus anuncios do Meta ao WhatsApp. Quando o lead clica no anuncio, a IA ja inicia a conversa automaticamente — capturando o contato e qualificando em segundos.",
-    keywords: ["anuncios WhatsApp", "Click to WhatsApp", "Meta Ads WhatsApp"],
+      "Conecte seus anúncios do Meta ao WhatsApp. Quando o lead clica no anúncio, a IA já inicia a conversa automaticamente — capturando o contato e qualificando em segundos.",
+    keywords: ["anúncios WhatsApp", "Click to WhatsApp", "Meta Ads WhatsApp"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14" /><path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
@@ -273,10 +273,10 @@ export default function Features() {
           </div>
           <h2 className="text-3xl md:text-5xl font-semibold text-neutral-900 text-balance">
             Tudo que seu time precisa{" "}
-            <span className="italic gradient-brand">em um so lugar</span>
+            <span className="italic gradient-brand">em um só lugar</span>
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto text-pretty">
-            Da captacao ao fechamento — automatize atendimento, dispare campanhas, gerencie leads e escale suas vendas pelo WhatsApp com Inteligencia Artificial.
+            Da captação ao fechamento — automatize atendimento, dispare campanhas, gerencie leads e escale suas vendas pelo WhatsApp com Inteligência Artificial.
           </p>
         </div>
 

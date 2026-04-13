@@ -81,15 +81,15 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
+              <span className="font-medium">Parceiro oficial Meta — API WhatsApp Business</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Sem precisar de programador</span>
+              <span className="font-medium">Sem programador — configure em minutos</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona para qualquer negócio</span>
+              <span className="font-medium">Clínicas, imobiliárias, contadores e advogados</span>
             </div>
           </div>
         </div>
