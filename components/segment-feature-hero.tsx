@@ -1,7 +1,5 @@
 "use client"
 
-import Image from "next/image"
-
 export interface SegmentFeatureHeroProps {
   badge: string
   title: string
@@ -14,9 +12,7 @@ export interface SegmentFeatureHeroProps {
     alt: string
   }
   accentColor?: string
-  gradientFrom?: string
-  gradientVia?: string
-  gradientTo?: string
+  backgroundImage?: string
 }
 
 export default function SegmentFeatureHero({
@@ -28,47 +24,48 @@ export default function SegmentFeatureHero({
   ctaHref,
   phoneImage,
   accentColor = "#6C4FE8",
-  gradientFrom = "#fdf4ff",
-  gradientVia = "#fce7f3",
-  gradientTo = "#f5f3ff",
+  backgroundImage = "/ultimasecao.png",
 }: SegmentFeatureHeroProps) {
   return (
-    /* Container pai — fundo branco da página */
+    /* Container pai — largura total, sem background próprio */
     <section
-      className="w-full bg-white py-16 md:py-24"
+      className="w-full py-0"
       aria-label={`Recursos — ${badge}`}
     >
       {/* Container filho — max-width centralizado com padding lateral */}
-      <div className="max-w-[1200px] mx-auto px-6">
+      <div className="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
+
         {/*
-          Inner card: fundo gradiente, overflow-hidden para conter o blob,
-          rounded-3xl para bordas arredondadas, grid de 2 colunas.
-          A coluna da imagem não tem overflow: a imagem pode "vazar" levemente
-          para cima/baixo mas fica contida horizontalmente no card.
+          Card interno: a imagem ultimasecao.png é o background via CSS background-image.
+          Layout em duas colunas — texto à esquerda, espaço vazio à direita
+          (a imagem já contém o smartphone posicionado à direita).
+          rounded-3xl e overflow-hidden garantem que a imagem respeita as bordas.
         */}
         <div
-          className="relative rounded-3xl overflow-hidden grid grid-cols-1 md:grid-cols-[1fr_480px] min-h-[420px] md:min-h-[480px]"
+          className="relative rounded-3xl overflow-hidden min-h-[420px] md:min-h-[500px] grid grid-cols-1 md:grid-cols-2"
           style={{
-            background: `linear-gradient(135deg, ${gradientFrom} 0%, ${gradientVia} 55%, ${gradientTo} 100%)`,
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center right",
+            backgroundRepeat: "no-repeat",
           }}
         >
-          {/* Blob decorativo de fundo */}
-          <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-            <div
-              className="absolute -top-20 right-0 w-[600px] h-[600px] rounded-full opacity-35 blur-[110px]"
-              style={{ backgroundColor: accentColor }}
-            />
-            <div
-              className="absolute bottom-0 left-1/3 w-[300px] h-[300px] rounded-full opacity-20 blur-[90px]"
-              style={{ backgroundColor: "#ec4899" }}
-            />
-          </div>
+          {/* Overlay sutil apenas sobre a metade esquerda para legibilidade do texto */}
+          <div
+            className="absolute inset-0 pointer-events-none"
+            aria-hidden="true"
+            style={{
+              background:
+                "linear-gradient(to right, rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.38) 55%, rgba(255,255,255,0) 100%)",
+            }}
+          />
 
-          {/* Coluna esquerda — texto */}
-          <div className="relative z-10 flex flex-col justify-center gap-7 px-10 py-12 md:px-14 md:py-14">
+          {/* Coluna esquerda — texto sobre o overlay */}
+          <div className="relative z-10 flex flex-col justify-center gap-6 px-10 py-14 md:px-14 md:py-16">
+
             {/* Badge */}
             <span
-              className="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full text-xs font-semibold border"
+              className="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full text-xs font-semibold border backdrop-blur-sm"
               style={{
                 backgroundColor: "#ffffff90",
                 borderColor: `${accentColor}40`,
@@ -90,12 +87,12 @@ export default function SegmentFeatureHero({
             </span>
 
             {/* Heading */}
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-neutral-900 leading-tight text-balance">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.6rem] font-bold leading-tight text-balance text-neutral-900">
               {title}
             </h2>
 
-            {/* Description + feature links */}
-            <p className="text-base md:text-lg text-neutral-600 leading-relaxed text-pretty max-w-[480px]">
+            {/* Descrição + feature links */}
+            <p className="text-base md:text-lg leading-relaxed text-pretty max-w-[420px] text-neutral-700">
               {description}{" "}
               {features.map((f, i) => (
                 <span key={f.label}>
@@ -140,58 +137,8 @@ export default function SegmentFeatureHero({
             </a>
           </div>
 
-          {/* Coluna direita — imagem do smartphone fixada à direita do container */}
-          <div className="relative hidden md:flex items-end justify-center">
-            {/* Sparkles decorativos */}
-            <div
-              aria-hidden="true"
-              className="absolute top-10 right-10 opacity-70"
-              style={{ color: "#ffffff" }}
-            >
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z" />
-              </svg>
-            </div>
-            <div
-              aria-hidden="true"
-              className="absolute top-20 right-28 opacity-40"
-              style={{ color: "#ffffff" }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z" />
-              </svg>
-            </div>
-
-            {/*
-              A imagem está posicionada para "sair" levemente para cima
-              do container (translate-y negativo), como no design de referência.
-              overflow-hidden no card-pai garante que não vaze nas laterais.
-            */}
-            <div className="-translate-y-6 drop-shadow-2xl w-[380px] xl:w-[420px]">
-              <Image
-                src={phoneImage.src}
-                alt={phoneImage.alt}
-                width={420}
-                height={560}
-                className="object-contain w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </div>
-
-          {/* Mobile: imagem centralizada abaixo do texto */}
-          <div className="md:hidden flex justify-center px-6 pb-8 -mt-4">
-            <div className="w-[260px] drop-shadow-xl">
-              <Image
-                src={phoneImage.src}
-                alt={phoneImage.alt}
-                width={260}
-                height={340}
-                className="object-contain w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </div>
+          {/* Coluna direita — vazia: o smartphone já está na imagem de background */}
+          <div className="hidden md:block" aria-hidden="true" />
         </div>
       </div>
     </section>

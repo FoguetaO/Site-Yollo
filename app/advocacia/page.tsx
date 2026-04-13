@@ -44,9 +44,6 @@ export default function AdvocaciaPage() {
           alt: "Smartphone mostrando agendamento automático de consultas jurídicas via WhatsApp com IA Yollo para escritório de advocacia",
         }}
         accentColor="#7c3aed"
-        gradientFrom="#faf5ff"
-        gradientVia="#ede9fe"
-        gradientTo="#f5f3ff"
       />
       <ComparisonAdvocacia />
       <HowItWorksAdvocacia />

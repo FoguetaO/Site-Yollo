@@ -71,9 +71,6 @@ export default function Home() {
           alt: "Smartphone sendo segurado por uma mão mostrando conversa de atendimento automático via WhatsApp pela IA Yollo em clínica de estética",
         }}
         accentColor="#6C4FE8"
-        gradientFrom="#fdf4ff"
-        gradientVia="#fce7f3"
-        gradientTo="#f5f3ff"
       />
       <Security />
       <FAQ />

@@ -49,9 +49,6 @@ export default function ImoveisPage() {
           alt: "Smartphone mostrando qualificação automática de leads imobiliários via WhatsApp com a IA Yollo — agendamento de visitas e follow-up automático",
         }}
         accentColor="#2563EB"
-        gradientFrom="#eff6ff"
-        gradientVia="#dbeafe"
-        gradientTo="#ede9fd"
       />
       <ComparisonImoveis />
       <HowItWorksImoveis />

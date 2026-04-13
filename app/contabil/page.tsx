@@ -45,9 +45,6 @@ export default function ContabilPage() {
           alt: "Smartphone mostrando atendimento automático de escritório contábil via WhatsApp com IA Yollo — lembretes fiscais e coleta de documentos",
         }}
         accentColor="#0d9488"
-        gradientFrom="#f0fdfa"
-        gradientVia="#ccfbf1"
-        gradientTo="#f0f9ff"
       />
       <ComparisonContabil />
       <HowItWorksContabil />
