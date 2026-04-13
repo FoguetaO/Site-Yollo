@@ -99,6 +99,9 @@ export default function NavbarImoveis() {
           <a href="#faq" className="hover:text-neutral-900 transition-colors">
             FAQ
           </a>
+          <a href="/blog" className="hover:text-neutral-900 transition-colors">
+            Blog
+          </a>
         </div>
 
         {/* Desktop CTA */}
@@ -149,6 +152,9 @@ export default function NavbarImoveis() {
           </a>
           <a href="#faq" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
             FAQ
+          </a>
+          <a href="/blog" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
+            Blog
           </a>
           <a
             href="#contratar"
