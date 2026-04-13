@@ -13,18 +13,6 @@ export const metadata = {
   title: "Yollo IA para Advocacia — IA no WhatsApp que Agenda Consultas e Qualifica Clientes 24/7",
   description:
     "Automação de atendimento via WhatsApp com IA para escritórios de advocacia. Agende consultas, qualifique potenciais clientes e faça follow-up automaticamente — respeitando as normas da OAB.",
-  keywords: [
-    "IA para escritório de advocacia",
-    "automação WhatsApp advocacia",
-    "chatbot WhatsApp advogado",
-    "agendamento de consultas jurídicas",
-    "qualificação de clientes advocacia",
-    "marketing jurídico WhatsApp",
-    "atendimento automático escritório advocacia",
-    "CRM para advogados",
-    "assistente virtual jurídico",
-    "WhatsApp para advogados",
-  ],
   alternates: { canonical: "https://yollo.ai/advocacia" },
   openGraph: {
     title: "IA para Escritórios de Advocacia — Yollo IA",
