@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { notFound } from "next/navigation"
 import { blogPosts, getPostBySlug, getRelatedPosts, formatDate } from "@/lib/blog-data"
-import BlogNavbar from "@/components/blog/blog-navbar"
+import Navbar from "@/components/navbar"
 import BlogFooter from "@/components/blog/blog-footer"
 import BlogContent from "@/components/blog/blog-content"
 
@@ -148,7 +148,7 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <BlogNavbar />
+      <Navbar />
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-[#F5F3FF] to-white pt-32 pb-12">

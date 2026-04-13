@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import ShinyButton from "@/components/shiny-button"
 
 export default function HeroAdvocacia() {
   const [visible, setVisible] = useState(false)
@@ -54,7 +55,11 @@ export default function HeroAdvocacia() {
             </div>
           </div>
 
+v0/rvefeqfqe-7890-968a8e8a
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
+=======
           <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+v0/contatoopedrojustino-7361-773ff570
             Seu escritório de advocacia atendendo clientes{" "}
             <span className="inline-block italic gradient-brand">
               24 horas
@@ -70,13 +75,11 @@ export default function HeroAdvocacia() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10">
-            <a
+            <ShinyButton
               href="#contratar"
-              className="text-white text-lg font-semibold px-8 py-4 rounded-full w-full sm:w-auto text-center transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
-              style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
-            >
-              Quero agendar minha demonstração →
-            </a>
+              label="Quero agendar minha demonstração →"
+              className="w-full sm:w-auto text-lg"
+            />
             <a
               href="#como-funciona"
               className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
