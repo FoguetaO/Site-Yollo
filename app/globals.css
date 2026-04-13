@@ -215,6 +215,30 @@
   .shiny-cta::before { animation: none; }
 }
 
+/* ── Hero entrance animation ── */
+.scroll-eb {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(30px);
+}
+
+.scroll-eb.eb {
+  opacity: 1 !important;
+  filter: blur(0px) !important;
+  transform: translateY(0px) !important;
+  transition: opacity 0.8s ease, filter 0.8s ease, transform 0.8s ease !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-eb,
+  .scroll-eb.eb {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition: none !important;
+  }
+}
+
 .gradient-brand {
   background: linear-gradient(90deg, #6C4FE8, #9879F0);
   -webkit-background-clip: text;

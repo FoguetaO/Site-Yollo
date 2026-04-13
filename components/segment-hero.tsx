@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import ShinyButton from "@/components/shiny-button"
 
 export interface SegmentHeroProps {
@@ -34,11 +34,11 @@ export default function SegmentHero({
   gradientFrom = "#F5F3FF",
   gradientTo = "#EDE9FD",
 }: SegmentHeroProps) {
-  const [visible, setVisible] = useState(false)
-
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 80)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => {
+      document.querySelectorAll(".hero-segment-eb").forEach((el) => el.classList.add("eb"))
+    }, 500)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -63,12 +63,10 @@ export default function SegmentHero({
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div
-          className={`flex flex-col md:flex-row items-center gap-12 md:gap-16 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className="flex flex-col md:flex-row items-center gap-12 md:gap-16"
         >
           {/* Left — text */}
-          <div className="flex-1 flex flex-col gap-6 max-w-xl">
+          <div className="flex-1 flex flex-col gap-6 max-w-xl scroll-eb hero-segment-eb">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 self-start px-4 py-2 rounded-full border text-sm font-medium"
               style={{ backgroundColor: "#ffffff80", borderColor: "#d8b4fe60", color: "#6b21a8" }}>
@@ -106,7 +104,7 @@ export default function SegmentHero({
           </div>
 
           {/* Right — phone mockup */}
-          <div className="flex-1 flex items-center justify-center md:justify-end relative">
+          <div className="flex-1 flex items-center justify-center md:justify-end relative scroll-eb hero-segment-eb" style={{ transitionDelay: "0.2s" }}>
             {/* Decorative sparkles */}
             <div aria-hidden="true" className="absolute top-4 right-8 text-purple-300">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
