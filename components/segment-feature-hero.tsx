@@ -29,7 +29,7 @@ export default function SegmentFeatureHero({
       className="w-full bg-white"
       aria-label={`Recursos — ${badge}`}
     >
-      <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-0">
+      <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-stretch gap-8 md:gap-0">
 
         {/* Coluna esquerda — texto */}
         <div className="flex flex-col gap-6 py-16 md:py-20 md:w-[45%] shrink-0">
@@ -107,14 +107,13 @@ export default function SegmentFeatureHero({
           </a>
         </div>
 
-        {/* Coluna direita — imagem renderiza no tamanho natural sem corte */}
-        <div className="md:flex-1 flex items-center justify-center md:justify-start">
+        {/* Coluna direita — imagem ocupa toda a altura da coluna de texto */}
+        <div className="md:flex-1 relative min-h-[400px]">
           <Image
             src={phoneImage.src}
             alt={phoneImage.alt}
-            width={760}
-            height={560}
-            className="w-full max-w-[640px] h-auto object-contain"
+            fill
+            className="object-cover object-left"
             loading="lazy"
           />
         </div>
