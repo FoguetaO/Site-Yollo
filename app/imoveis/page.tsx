@@ -33,6 +33,14 @@ export default function ImoveisPage() {
     <main>
       <NavbarImoveis />
       <HeroImoveis />
+      <ComparisonImoveis />
+      <HowItWorksImoveis />
+      <HowItConnectsImoveis />
+      <ObjectivesImoveis />
+      <ConfigureIAImoveis />
+      <StatsImoveis />
+      <LeadFormImoveis />
+      <SocialProofImoveis />
       <SegmentFeatureHero
         badge="IA para Imobiliárias e Corretores"
         title="O assistente que qualifica leads e agenda visitas enquanto você fecha negócios"
@@ -45,19 +53,11 @@ export default function ImoveisPage() {
         ctaLabel="Explore os recursos para imobiliárias"
         ctaHref="#contratar"
         phoneImage={{
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qLv2UZe56j2fGzRf6QXfRdLRCz1lz4.png",
+          src: "/segments/phone-imoveis.jpg",
           alt: "Smartphone mostrando qualificação automática de leads imobiliários via WhatsApp com a IA Yollo — agendamento de visitas e follow-up automático",
         }}
-        accentColor="#2563EB"
+        accentColor="#6C4FE8"
       />
-      <ComparisonImoveis />
-      <HowItWorksImoveis />
-      <HowItConnectsImoveis />
-      <ObjectivesImoveis />
-      <ConfigureIAImoveis />
-      <StatsImoveis />
-      <LeadFormImoveis />
-      <SocialProofImoveis />
       <SecurityImoveis />
       <FAQImoveis />
       <FooterImoveis />

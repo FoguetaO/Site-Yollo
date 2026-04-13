@@ -28,6 +28,11 @@ export default function AdvocaciaPage() {
     <main>
       <NavbarAdvocacia />
       <HeroAdvocacia />
+      <ComparisonAdvocacia />
+      <HowItWorksAdvocacia />
+      <StatsAdvocacia />
+      <ObjectivesAdvocacia />
+      <FAQAdvocacia />
       <SegmentFeatureHero
         badge="IA para Escritórios de Advocacia"
         title="O assistente jurídico que agenda consultas e qualifica clientes enquanto você advoga"
@@ -40,16 +45,11 @@ export default function AdvocaciaPage() {
         ctaLabel="Explore os recursos para advocacia"
         ctaHref="#contratar"
         phoneImage={{
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qLv2UZe56j2fGzRf6QXfRdLRCz1lz4.png",
+          src: "/segments/phone-advocacia.jpg",
           alt: "Smartphone mostrando agendamento automático de consultas jurídicas via WhatsApp com IA Yollo para escritório de advocacia",
         }}
-        accentColor="#7c3aed"
+        accentColor="#6C4FE8"
       />
-      <ComparisonAdvocacia />
-      <HowItWorksAdvocacia />
-      <StatsAdvocacia />
-      <ObjectivesAdvocacia />
-      <FAQAdvocacia />
       <LeadFormAdvocacia />
       <FooterAdvocacia />
     </main>

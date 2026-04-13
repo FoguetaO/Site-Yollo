@@ -29,6 +29,10 @@ export default function ContabilPage() {
     <main>
       <NavbarContabil />
       <HeroContabil />
+      <ComparisonContabil />
+      <HowItWorksContabil />
+      <ObjectivesContabil />
+      <StatsContabil />
       <SegmentFeatureHero
         badge="IA para Escritórios Contábeis"
         title="O assistente contábil que atende clientes e lembra prazos por você, 24h por dia"
@@ -41,15 +45,11 @@ export default function ContabilPage() {
         ctaLabel="Explore os recursos para contabilidade"
         ctaHref="#contratar"
         phoneImage={{
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qLv2UZe56j2fGzRf6QXfRdLRCz1lz4.png",
+          src: "/segments/phone-contabil.jpg",
           alt: "Smartphone mostrando atendimento automático de escritório contábil via WhatsApp com IA Yollo — lembretes fiscais e coleta de documentos",
         }}
-        accentColor="#0d9488"
+        accentColor="#6C4FE8"
       />
-      <ComparisonContabil />
-      <HowItWorksContabil />
-      <ObjectivesContabil />
-      <StatsContabil />
       <LeadFormContabil />
       <FAQContabil />
       <FooterContabil />
