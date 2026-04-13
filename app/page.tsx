@@ -46,6 +46,15 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <Comparison />
+      <Features />
+      <HowItWorks />
+      <HowItConnects />
+      <Objectives />
+      <ConfigureIA />
+      <Stats />
+      <LeadForm />
+      <SocialProof />
       <SegmentFeatureHero
         badge="IA para Clínicas de Estética"
         title="A secretária virtual que atende e agenda por você, 24h por dia"
@@ -58,23 +67,14 @@ export default function Home() {
         ctaLabel="Explore os recursos para clínicas"
         ctaHref="#contratar"
         phoneImage={{
-          src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-qLv2UZe56j2fGzRf6QXfRdLRCz1lz4.png",
-          alt: "Smartphone mostrando atendimento automático via WhatsApp em clínica de estética pela IA Yollo — agendamento, qualificação de leads e CRM integrado",
+          src: "/ultimasecao.png",
+          alt: "Smartphone sendo segurado por uma mão mostrando conversa de atendimento automático via WhatsApp pela IA Yollo em clínica de estética",
         }}
         accentColor="#6C4FE8"
         gradientFrom="#fdf4ff"
         gradientVia="#fce7f3"
         gradientTo="#f5f3ff"
       />
-      <Comparison />
-      <Features />
-      <HowItWorks />
-      <HowItConnects />
-      <Objectives />
-      <ConfigureIA />
-      <Stats />
-      <LeadForm />
-      <SocialProof />
       <Security />
       <FAQ />
       <Footer />
