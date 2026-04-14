@@ -9,28 +9,45 @@ const CHAT_MESSAGES = [
   { type: "bot", text: "Entendido! Vou encaminhar você para o nosso Departamento Pessoal, que cuida de tudo relacionado a CLT, férias e folha. Um instante.", time: "" },
 ]
 
+// Delay entre cada mensagem (ms) — alterna entre resposta do usuário e da IA
+const MESSAGE_DELAYS = [1000, 1600, 1800, 2000]
+
 function AnimatedChatSimulation() {
   const [visibleMessages, setVisibleMessages] = useState(0)
+  const [showTyping, setShowTyping] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleMessages((prev) => {
-        if (prev < CHAT_MESSAGES.length) {
-          return prev + 1
-        }
-        return 0
-      })
-    }, 1800)
+    const timeouts: ReturnType<typeof setTimeout>[] = []
 
-    return () => clearInterval(interval)
+    let accumulated = 800
+
+    CHAT_MESSAGES.forEach((msg, idx) => {
+      // Mostra "digitando..." antes de cada mensagem da IA
+      if (msg.type === "bot") {
+        const typingStart = accumulated
+        timeouts.push(setTimeout(() => setShowTyping(true), typingStart))
+        accumulated += 1200
+        const typingEnd = accumulated
+        timeouts.push(setTimeout(() => {
+          setShowTyping(false)
+          setVisibleMessages(idx + 1)
+        }, typingEnd))
+      } else {
+        const show = accumulated
+        timeouts.push(setTimeout(() => setVisibleMessages(idx + 1), show))
+        accumulated += MESSAGE_DELAYS[idx] ?? 1800
+      }
+    })
+
+    return () => timeouts.forEach(clearTimeout)
   }, [])
 
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight
     }
-  }, [visibleMessages])
+  }, [visibleMessages, showTyping])
 
   return (
     <div className="bg-[#E4DDD6] rounded-xl border border-[#D4CDB6] overflow-hidden flex flex-col" style={{ height: "280px" }}>
@@ -42,7 +59,7 @@ function AnimatedChatSimulation() {
         {CHAT_MESSAGES.slice(0, visibleMessages).map((msg, idx) => (
           <div key={idx} className={msg.type === "user" ? "flex justify-start" : "flex justify-end"}>
             <div
-              className={`rounded-2xl px-4 py-2.5 shadow-sm text-sm max-w-[90%] ${
+              className={`rounded-2xl px-4 py-2.5 shadow-sm text-sm max-w-[90%] leading-relaxed ${
                 msg.type === "user"
                   ? "bg-white text-neutral-800 rounded-tl-sm"
                   : "text-white rounded-tr-sm"
@@ -53,13 +70,15 @@ function AnimatedChatSimulation() {
             </div>
           </div>
         ))}
-        {visibleMessages > 0 && visibleMessages < CHAT_MESSAGES.length && (
+        {showTyping && (
           <div className="flex justify-end">
             <div
-              className="rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white opacity-50 animate-pulse"
+              className="rounded-2xl rounded-tr-sm px-4 py-3 shadow-sm flex items-center gap-1.5"
               style={{ backgroundColor: "#6C4FE8" }}
             >
-              Digitando...
+              <span className="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" style={{ animationDelay: "0ms" }} />
+              <span className="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" style={{ animationDelay: "150ms" }} />
+              <span className="w-1.5 h-1.5 rounded-full bg-white/70 animate-bounce" style={{ animationDelay: "300ms" }} />
             </div>
           </div>
         )}
