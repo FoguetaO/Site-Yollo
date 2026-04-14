@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 
-export default function LeadFormAdvocacia() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", area: "" })
+export default function LeadFormAgencia() {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", niche: "" })
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
@@ -17,7 +17,7 @@ export default function LeadFormAdvocacia() {
       const res = await fetch("/api/crm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, segment: "Advocacia" }),
+        body: JSON.stringify({ ...form, segment: "Agência de Marketing" }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -36,17 +36,16 @@ export default function LeadFormAdvocacia() {
     <section id="contratar" className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col md:flex-row md:gap-16 lg:gap-24 md:items-start">
-          {/* Left: headline + value props */}
           <div className="md:flex-1 md:sticky md:top-24 mb-10 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 tracking-tight text-center md:text-left">
               Comece agora
             </h2>
             <p className="text-base md:text-lg text-gray-500 mt-3 text-center md:text-left">
-              Preencha seus dados e comece a atender seus clientes jurídicos 24h pelo WhatsApp — sem aumentar sua equipe.
+              Preencha seus dados e veja a Yollo IA prospectando para o segmento e cidade da sua agência — em tempo real.
             </p>
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[
-                { title: "Configuração em minutos", desc: "Sem fluxos complexos. A IA aprende sobre seu escritório via prompt." },
+                { title: "Prospecção em minutos", desc: "Defina o nicho e a cidade — a IA entrega a lista e já inicia os disparos." },
                 { title: "Planos flexíveis", desc: "Mensal, Trimestral ou Semestral. Cancele quando quiser, sem multa." },
                 { title: "API Oficial e Não Oficial do WhatsApp", desc: "Escolha a melhor opção para o seu negócio." },
               ].map((item) => (
@@ -73,7 +72,6 @@ export default function LeadFormAdvocacia() {
             </div>
           </div>
 
-          {/* Right: form */}
           <div className="w-full md:w-[480px] lg:w-[520px] flex-shrink-0">
             {submitted ? (
               <div className="flex flex-col items-center justify-center gap-6 p-12 rounded-2xl border text-center" style={{ backgroundColor: "#F5F3FF", borderColor: "#DDD6FE" }}>
@@ -95,29 +93,30 @@ export default function LeadFormAdvocacia() {
                 className="space-y-5 bg-white md:bg-gray-50/50 md:border md:border-gray-100 md:rounded-2xl md:p-8 md:shadow-sm"
               >
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="name-advocacia">
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="name-agencia">
                     Nome completo
                   </label>
                   <input
-                    id="name-advocacia"
+                    id="name-agencia"
                     type="text"
                     required
-                    placeholder="Dr. Carlos Mendes"
+                    placeholder="Bruno Lima"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
+                    style={{ "--tw-ring-color": "#F59E0B" } as React.CSSProperties}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email-advocacia">
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email-agencia">
                     Gmail
                   </label>
                   <input
-                    id="email-advocacia"
+                    id="email-agencia"
                     type="email"
                     required
-                    placeholder="carlos@gmail.com"
+                    placeholder="bruno@agencia.com"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
@@ -125,11 +124,11 @@ export default function LeadFormAdvocacia() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone-advocacia">
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone-agencia">
                     WhatsApp
                   </label>
                   <input
-                    id="phone-advocacia"
+                    id="phone-agencia"
                     type="tel"
                     required
                     placeholder="(11) 98765-4321"
@@ -140,23 +139,24 @@ export default function LeadFormAdvocacia() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="area-advocacia">
-                    Qual é sua área de atuação?
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="niche-agencia">
+                    Qual nicho sua agência atende?
                   </label>
                   <select
-                    id="area-advocacia"
+                    id="niche-agencia"
                     required
-                    value={form.area}
-                    onChange={(e) => setForm({ ...form, area: e.target.value })}
+                    value={form.niche}
+                    onChange={(e) => setForm({ ...form, niche: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
                   >
                     <option value="">Selecione...</option>
-                    <option>Direito Civil</option>
-                    <option>Direito Trabalhista</option>
-                    <option>Direito Empresarial</option>
-                    <option>Direito Previdenciário</option>
-                    <option>Direito de Família</option>
-                    <option>Multidisciplinar</option>
+                    <option>Saúde e Estética</option>
+                    <option>Gastronomia e Food</option>
+                    <option>Varejo e E-commerce</option>
+                    <option>Serviços B2B</option>
+                    <option>Imobiliário</option>
+                    <option>Educação</option>
+                    <option>Múltiplos nichos</option>
                   </select>
                 </div>
 

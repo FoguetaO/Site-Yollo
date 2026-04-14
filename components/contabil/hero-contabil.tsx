@@ -55,26 +55,24 @@ export default function HeroContabil() {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ backgroundColor: "#6C4FE8" }}
               />
-              Assistente IA para Escritórios Contábeis
+              IA para Captação e Qualificação Contábil
             </div>
           </div>
 
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-contabil-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
-            Seu escritório contábil atendendo clientes{" "}
-            <span className="italic gradient-brand">
-              24 horas
-            </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem o contador precisar estar{" "}
-            <span className="italic gradient-brand">
-              disponível.
-            </span>
+            Seu escritório contábil captando,
+            <br className="hidden md:block" />
+            <span className="gradient-brand">qualificando e atendendo leads</span>
+            <br className="hidden md:block" />
+            de forma{" "}
+            <span className="gradient-brand">totalmente automatizada.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.14s" }}>
-            A Yollo IA responde dúvidas fiscais, envia lembretes de obrigações, recolhe documentos e agenda
-            reuniões automaticamente. Seus clientes ficam informados — e nem percebem que é uma IA.
+            A Yollo IA agenda reuniões, atende clientes automaticamente, distribui conversas por departamento,
+            rastreia leads por anúncios e entrega o prospect pronto para a negociação — sem intervenção da equipe.
           </p>
 
           {/* CTA Buttons */}
@@ -86,7 +84,7 @@ export default function HeroContabil() {
             />
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
@@ -99,21 +97,22 @@ export default function HeroContabil() {
               </svg>
               Ver como funciona
             </a>
+
           </div>
 
           {/* Trust badges */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">Leads qualificados automaticamente</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
+              <span className="font-medium">CRM com movimentação automática</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Configuração em minutos</span>
+              <span className="font-medium">Rastreamento de anúncios incluído</span>
             </div>
           </div>
         </div>

@@ -4,29 +4,29 @@ import { useState } from "react"
 
 const faqs = [
   {
-    question: "O que é a Yollo IA para escritórios contábeis?",
+    question: "O que a Yollo IA faz para escritórios contábeis?",
     answer:
-      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada em contabilidade. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas sobre Simples Nacional, MEI, CNPJ, obrigações acessórias e prazos fiscais, recolhe documentos e agenda reuniões — tudo configurado via prompt com as informações do seu escritório.",
+      "A Yollo IA automatiza o processo de captação e qualificação de leads para escritórios contábeis via WhatsApp. Ela agenda reuniões automaticamente, realiza o atendimento inicial por IA, distribui conversas para o departamento correto (fiscal, pessoal, societário ou comercial), rastreia qual anúncio gerou cada lead e move os cards do CRM conforme o lead avança na conversa — tudo sem intervenção da equipe.",
+  },
+  {
+    question: "A Yollo IA envia lembretes de obrigações fiscais?",
+    answer:
+      "Não. A Yollo IA não é focada em lembretes de obrigações nem em recolhimento de documentos de clientes ativos. Ela é especializada em captação, qualificação e nutrição de leads — ou seja, em transformar prospects em clientes prontos para fechar contrato. Para gestão de obrigações de clientes já ativos, existem outras ferramentas específicas.",
   },
   {
     question: "Para quem a Yollo IA contábil é indicada?",
     answer:
-      "É ideal para escritórios contábeis de qualquer porte que recebem mensagens frequentes de clientes pelo WhatsApp e desejam automatizar o atendimento sem perder a qualidade. Os perfis mais comuns são: escritórios com carteira de 50 a 500 clientes, contadores autônomos, escritórios que atendem MPEs e MEIs, e escritórios em crescimento que não querem contratar mais auxiliares de atendimento.",
+      "É ideal para escritórios contábeis que investem em anúncios (Meta Ads, Google Ads) para captação de novos clientes e precisam de um processo automatizado para qualificar e agendar reuniões com esses leads. Funciona muito bem para escritórios com equipe enxuta que não querem dedicar tempo do contador para triagem de curiosos.",
   },
   {
-    question: "Como a IA aprende sobre meu escritório?",
+    question: "Como funciona o CRM com movimentação automática?",
     answer:
-      "A Yollo IA é treinada por prompt — você informa os serviços do escritório, regimes tributários atendidos, prazos monitorados e o tom de atendimento. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
+      "Conforme o lead interage com a IA e avança nas etapas — responde as perguntas de qualificação, escolhe um horário de reunião, confirma o agendamento — o card dele é movido automaticamente entre as colunas do pipeline (Novo Lead → Qualificado → Reunião Marcada → Fechado). Nenhum clique manual é necessário.",
   },
   {
-    question: "A IA consegue responder sobre legislação tributária?",
+    question: "Como o rastreamento de anúncios funciona?",
     answer:
-      "Sim, dentro do que você configurar. A Yollo IA pode responder sobre regimes tributários (Simples, Presumido, Real), prazos de obrigações, procedimentos para abertura e encerramento de empresa, emissão de notas fiscais e dúvidas gerais sobre MEI. Ela não substitui a consultoria do contador, mas resolve as perguntas recorrentes que tomam tempo do dia a dia.",
-  },
-  {
-    question: "Como funciona a coleta de documentos?",
-    answer:
-      "A Yollo IA envia uma mensagem automática ao cliente solicitando os documentos necessários para o fechamento do mês, declarações ou outros processos. O cliente pode responder com fotos, PDFs ou links. Os documentos são organizados por cliente e a equipe é notificada quando tudo estiver completo — sem precisar ligar ou enviar e-mails.",
+      "Quando um lead clica em um anúncio e abre uma conversa no WhatsApp, a Yollo IA identifica automaticamente qual campanha ou anúncio gerou aquele contato. Assim você sabe exatamente quais anúncios estão trazendo leads qualificados, sem precisar perguntar ao cliente 'como nos encontrou'.",
   },
   {
     question: "Quais planos estão disponíveis?",

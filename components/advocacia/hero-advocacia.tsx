@@ -54,12 +54,12 @@ export default function HeroAdvocacia() {
           </div>
 
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-advocacia-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
-            Seu escritório de advocacia atendendo clientes{" "}
-            <span className="inline-block italic gradient-brand">
-              24 horas
+            Seu escritório de advocacia atendendo{" "}
+            <span className="inline-block gradient-brand">
+              24 horas por dia pelo
             </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
-            <span className="inline-block italic gradient-brand">
+            <br className="hidden md:block" /> WhatsApp, sem você precisar estar{" "}
+            <span className="inline-block gradient-brand">
               disponível.
             </span>
           </h1>
@@ -76,7 +76,7 @@ export default function HeroAdvocacia() {
             />
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
@@ -89,6 +89,7 @@ export default function HeroAdvocacia() {
               </svg>
               Ver como funciona
             </a>
+
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.28s" }}>
