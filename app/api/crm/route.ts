@@ -16,15 +16,16 @@ function buildWhatsAppMessage(name: string, segment: string): string {
   const firstName = name.trim().split(" ")[0]
 
   const messages: Record<string, string> = {
-    "Contabilidade": `Olá, ${firstName}! Tudo bem? 😊 Aqui é da equipe Yollo IA.\n\nVi que você tem interesse em automatizar o atendimento do seu escritório contábil pelo WhatsApp. Trabalhamos com agendamento automático, distribuição por departamento e CRM integrado — tudo pensado para a rotina de quem atua na área contábil.\n\nPosso te mostrar como funciona? É rápido e sem compromisso!`,
-    "Advocacia": `Olá, ${firstName}! Tudo bem? Aqui é da equipe Yollo IA.\n\nVi que você tem interesse em otimizar o atendimento do seu escritório jurídico. Nossa solução cuida do primeiro contato dos clientes 24h por dia, agenda reuniões e encaminha cada caso para o advogado responsável — sem sobrecarregar sua equipe.\n\nPodemos conversar sobre como isso funcionaria no seu escritório?`,
-    "Imóveis": `Olá, ${firstName}! Aqui é da equipe Yollo IA.\n\nVi que você atua no mercado imobiliário e tem interesse em automatizar o atendimento de leads pelo WhatsApp. Nossa IA qualifica compradores e locatários, agenda visitas e mantém o interesse do cliente quente até o fechamento.\n\nPosso te mostrar uma demonstração rápida?`,
-    "Agência de Marketing": `Olá, ${firstName}! Aqui é da equipe Yollo IA.\n\nVi que você tem interesse em usar automação de WhatsApp para sua agência ou para os clientes dela. Trabalhamos com prospecção ativa, atendimento automatizado e relatórios de performance — tudo via API.\n\nPosso te mostrar como funciona na prática?`,
+    "Contabilidade": `Olá, ${firstName}! Tudo bem?\n\nAqui é o Pedro, da Yollo I.A.\n\nVi que você tem interesse em automatizar o atendimento do seu escritório contábil. Trabalhamos com agendamento automático de reuniões, atendimento via IA no WhatsApp, distribuição de conversas por departamento e CRM com movimentação automática de leads — tudo pensado para escritórios contábeis que querem crescer sem aumentar a equipe.\n\nPosso te mostrar como funciona? É rápido e sem compromisso.`,
+    "Advocacia": `Olá, ${firstName}! Tudo bem?\n\nAqui é o Pedro, da Yollo I.A.\n\nVi que você tem interesse em otimizar o atendimento do seu escritório jurídico. Nossa solução atende clientes e prospects 24h por dia no WhatsApp, agenda reuniões de forma automática e encaminha cada caso para o advogado responsável — sem sobrecarregar sua equipe.\n\nPodemos conversar sobre como isso funcionaria no seu escritório?`,
+    "Imóveis": `Olá, ${firstName}! Tudo bem?\n\nAqui é o Pedro, da Yollo I.A.\n\nVi que você atua no mercado imobiliário e tem interesse em automatizar o atendimento de leads pelo WhatsApp. Nossa IA atende compradores e locatários a qualquer hora, agenda visitas e mantém o lead aquecido até o fechamento.\n\nPosso te mostrar uma demonstração rápida?`,
+    "Agência de Marketing": `Olá, ${firstName}! Tudo bem?\n\nAqui é o Pedro, da Yollo I.A.\n\nVi que você tem interesse em automação de WhatsApp para sua agência ou para os clientes dela. Trabalhamos com atendimento automatizado, qualificação de leads, disparo em massa personalizado e relatórios de performance.\n\nPosso te mostrar como funciona na prática?`,
+    "Estética e Saúde": `Olá, ${firstName}! Tudo bem?\n\nAqui é o Pedro, da Yollo I.A.\n\nVi que você tem interesse em automatizar o atendimento da sua clínica pelo WhatsApp. Nossa IA agenda consultas, responde dúvidas dos pacientes 24h por dia e envia lembretes automáticos — tudo sem precisar de um atendente disponível o tempo todo.\n\nPosso te mostrar como funciona?`,
   }
 
   return (
     messages[segment] ??
-    `Olá, ${firstName}! Aqui é da equipe Yollo IA. Vi que você tem interesse em automatizar o atendimento do seu negócio pelo WhatsApp. Posso te mostrar como funciona? É rápido e sem compromisso!`
+    `Olá, ${firstName}! Tudo bem?\n\nAqui é o Pedro, da Yollo I.A.\n\nVi que você tem interesse em automatizar o atendimento do seu negócio pelo WhatsApp. Posso te mostrar como funciona? É rápido e sem compromisso.`
   )
 }
 
