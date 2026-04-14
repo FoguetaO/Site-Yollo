@@ -49,12 +49,12 @@ export default function HeroImoveis() {
 
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-imoveis-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
-            Sua imobiliária captando leads{" "}
-            <span className="italic gradient-brand">
-              24 horas
+            Sua imobiliária captando{" "}
+            <span className="gradient-brand">
+              24 horas por dia pelo
             </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem corretor precisar estar{" "}
-            <span className="italic gradient-brand">
+            <br className="hidden md:block" /> WhatsApp, sem corretor precisar estar{" "}
+            <span className="gradient-brand">
               disponível.
             </span>
           </h1>
@@ -74,7 +74,7 @@ export default function HeroImoveis() {
             />
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#2563EB" }}>
                 <path
@@ -87,6 +87,7 @@ export default function HeroImoveis() {
               </svg>
               Ver como funciona
             </a>
+
           </div>
 
           {/* Trust badges */}

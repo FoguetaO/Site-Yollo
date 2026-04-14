@@ -51,12 +51,12 @@ export default function HeroEstetica() {
           {/* Headline */}
           <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             A secretária virtual que{" "}
-            <span className="italic gradient-brand">
+            <span className="gradient-brand">
               agenda e atende
             </span>{" "}
             suas clientes
-            <br className="hidden md:block" /> pelo WhatsApp —{" "}
-            <span className="italic gradient-brand">
+            <br className="hidden md:block" /> pelo WhatsApp,{" "}
+            <span className="gradient-brand">
               24h por dia.
             </span>
           </h1>
@@ -78,7 +78,7 @@ export default function HeroEstetica() {
             </a>
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
@@ -91,6 +91,7 @@ export default function HeroEstetica() {
               </svg>
               Ver como funciona
             </a>
+
           </div>
 
           {/* Trust badges */}
