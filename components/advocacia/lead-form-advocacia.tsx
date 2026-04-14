@@ -7,13 +7,29 @@ export default function LeadFormAdvocacia() {
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [error, setError] = useState<string | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
+    setError(null)
+    try {
+      const res = await fetch("/api/crm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, segment: "Advocacia" }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.error ?? "Ocorreu um erro. Tente novamente.")
+        return
+      }
       setSubmitted(true)
-    }, 1200)
+    } catch {
+      setError("Erro de conexão. Verifique sua internet e tente novamente.")
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -143,6 +159,12 @@ export default function LeadFormAdvocacia() {
                     <option>Multidisciplinar</option>
                   </select>
                 </div>
+
+                {error && (
+                  <p className="text-sm text-red-600 bg-red-50 border border-red-100 rounded-xl px-4 py-3 text-center">
+                    {error}
+                  </p>
+                )}
 
                 <button
                   type="submit"

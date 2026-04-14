@@ -44,10 +44,10 @@ export default function LeadForm() {
     setError(null)
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/crm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, segment: "Estética e Saúde" }),
       })
 
       const data = await res.json()
