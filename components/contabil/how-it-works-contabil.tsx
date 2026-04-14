@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from "react"
 
 const CHAT_MESSAGES = [
-  { type: "user", text: "Vocês atendem abertura de empresa para MEI?", time: "19:14" },
-  { type: "bot", text: "Sim! Trabalhamos com abertura de MEI, ME e LTDA. Qual o seu ramo de atividade? Assim consigo te passar os detalhes certos.", time: "19:14 ✓✓" },
-  { type: "user", text: "Sou designer freelancer", time: "" },
-  { type: "bot", text: "Perfeito! Para designers, o MEI costuma ser a melhor opção. Posso agendar uma conversa com o contador para te explicar tudo?", time: "" },
+  { type: "user", text: "Boa tarde! Tenho uma dúvida sobre a folha de pagamento da minha empresa.", time: "14:32" },
+  { type: "bot", text: "Boa tarde! Fico feliz em ajudar. Pode me contar um pouco mais sobre sua dúvida?", time: "14:32 ✓✓" },
+  { type: "user", text: "Preciso saber sobre o cálculo de férias para um funcionário CLT.", time: "" },
+  { type: "bot", text: "Entendido! Vou encaminhar você para o nosso Departamento Pessoal, que cuida de tudo relacionado a CLT, férias e folha. Um instante.", time: "" },
 ]
 
 function AnimatedChatSimulation() {
@@ -141,7 +141,7 @@ export default function HowItWorksContabil() {
             <div className="text-center mb-8">
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Atendimento automático por IA</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
-                A IA atende qualquer lead 24h por dia no WhatsApp: responde dúvidas, apresenta serviços e conduz a conversa até a qualificação.
+                A IA atende clientes e prospects 24h por dia no WhatsApp, responde dúvidas e identifica o assunto da conversa para encaminhar ao setor responsável.
               </p>
             </div>
             <div className="mt-auto w-full">
