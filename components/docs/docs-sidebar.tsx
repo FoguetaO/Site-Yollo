@@ -1,6 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import { Inter } from "next/font/google"
+
+const inter = Inter({ subsets: ["latin"] })
 
 type SubItem = { label: string; href: string; count?: number; endpoints?: { method: string; path: string }[] }
 type Section = { label: string; href: string; items: SubItem[] }
@@ -320,7 +323,7 @@ export default function DocsSidebar() {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="hidden lg:flex flex-col w-72 xl:w-80 flex-shrink-0 border-r border-neutral-100 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto py-6 px-3 font-sans">
+      <aside className={`hidden lg:flex flex-col w-72 xl:w-80 flex-shrink-0 border-r border-neutral-100 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto py-6 px-3 ${inter.className}`}>
         <nav className="flex flex-col gap-0.5">
           {NAV.map((section) => (
             <div key={section.label}>
