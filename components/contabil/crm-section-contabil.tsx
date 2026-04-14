@@ -65,7 +65,6 @@ const INITIAL_CARDS: Card[] = [
   { id: 6, name: "Mariana T.",  phone: "(61) 97777-8899", service: "Regularização MEI",           tag: "MEI",        column: "fechado" },
 ]
 
-// Sequência roda UMA VEZ — sem loop
 const MOVE_SEQUENCE = [
   { cardId: 1, toColumn: "qualificado", reason: "Lead qualificado pela IA" },
   { cardId: 3, toColumn: "reuniao",     reason: "Reunião agendada automaticamente" },
@@ -178,9 +177,13 @@ function DropZone({ active }: { active: boolean }) {
   )
 }
 
-// ─── Cursor SVG ───────────────────────────────────────────────────────────────
+// ─── Cursor SVG ─────────��─────────────────────────────────────────────────────
 
-function AnimatedCursor({ x, y, visible, clicking }: { x: number; y: number; visible: boolean; clicking: boolean }) {
+function AnimatedCursor({
+  x, y, visible, clicking, showRipple,
+}: {
+  x: number; y: number; visible: boolean; clicking: boolean; showRipple: boolean
+}) {
   return (
     <div
       className="pointer-events-none fixed z-[100]"
@@ -188,18 +191,40 @@ function AnimatedCursor({ x, y, visible, clicking }: { x: number; y: number; vis
         left: x,
         top: y,
         opacity: visible ? 1 : 0,
-        transition: "opacity 0.3s ease",
+        transition: "opacity 0.4s ease",
         transform: "translate(-4px, -4px)",
       }}
     >
+      {/* Click ripple */}
+      {showRipple && (
+        <div
+          className="absolute rounded-full"
+          style={{
+            width: 32,
+            height: 32,
+            top: -10,
+            left: -10,
+            backgroundColor: "rgba(108,79,232,0.18)",
+            animation: "ripple-click 0.5s ease-out forwards",
+          }}
+        />
+      )}
       <svg
-        width={clicking ? 22 : 24}
-        height={clicking ? 22 : 24}
+        width={clicking ? 20 : 24}
+        height={clicking ? 20 : 24}
         viewBox="0 0 24 24"
         fill="none"
-        style={{ transition: "width 0.15s, height 0.15s, filter 0.2s", filter: clicking ? "drop-shadow(0 2px 6px rgba(108,79,232,0.5))" : "drop-shadow(0 1px 3px rgba(0,0,0,0.3))" }}
+        style={{
+          transition: "width 0.12s ease, height 0.12s ease, filter 0.25s ease",
+          filter: clicking
+            ? "drop-shadow(0 3px 8px rgba(108,79,232,0.55))"
+            : "drop-shadow(0 1px 4px rgba(0,0,0,0.25))",
+        }}
       >
         <path d="M4 2L20 10L12 12L8 20L4 2Z" fill="white" stroke="#6C4FE8" strokeWidth="1.5" strokeLinejoin="round" />
+        {clicking && (
+          <circle cx="13" cy="13" r="3" fill="#6C4FE8" opacity="0.25" />
+        )}
       </svg>
     </div>
   )
@@ -209,11 +234,12 @@ function AnimatedCursor({ x, y, visible, clicking }: { x: number; y: number; vis
 
 export default function CRMSectionContabil() {
   const [cards, setCards] = useState<Card[]>(INITIAL_CARDS)
-  const [phase, setPhase] = useState<"idle" | "hovering" | "dragging" | "dropping" | "done">("idle")
+  const [phase, setPhase] = useState<"idle" | "hovering" | "dragging" | "dropping">("idle")
   const [stepIndex, setStepIndex] = useState(0)
   const [activeCardId, setActiveCardId] = useState<number | null>(null)
   const [destCol, setDestCol] = useState<string | null>(null)
   const [reason, setReason] = useState("IA movendo leads automaticamente")
+  const [showRipple, setShowRipple] = useState(false)
 
   // Cursor position (viewport-relative px)
   const [cursor, setCursor] = useState({ x: 0, y: 0 })
@@ -223,7 +249,6 @@ export default function CRMSectionContabil() {
   const cardRefs = useRef<Record<number, HTMLDivElement | null>>({})
   const colRefs = useRef<Record<string, HTMLDivElement | null>>({})
   const animating = useRef(false)
-  const done = useRef(false)
 
   const getCenter = (el: HTMLElement) => {
     const rect = el.getBoundingClientRect()
@@ -251,89 +276,109 @@ export default function CRMSectionContabil() {
     requestAnimationFrame(tick)
   }
 
-  const runStep = (idx: number) => {
-    if (idx >= MOVE_SEQUENCE.length || animating.current) return
+  const runStep = (idx: number, currentCards: Card[]) => {
+    if (animating.current) return
     animating.current = true
 
-    const step = MOVE_SEQUENCE[idx]
-    const cardEl = cardRefs.current[step.cardId]
-    const destColEl = colRefs.current[step.toColumn]
+    // Loop: reset cards and restart from step 0
+    const loopIdx = idx % MOVE_SEQUENCE.length
+    const isLoopStart = loopIdx === 0 && idx > 0
 
-    if (!cardEl || !destColEl) {
-      animating.current = false
-      return
+    const startRun = (cardsState: Card[]) => {
+      const step = MOVE_SEQUENCE[loopIdx]
+      const cardEl = cardRefs.current[step.cardId]
+      const destColEl = colRefs.current[step.toColumn]
+
+      if (!cardEl || !destColEl) {
+        animating.current = false
+        return
+      }
+
+      setStepIndex(loopIdx)
+      setActiveCardId(step.cardId)
+      setDestCol(step.toColumn)
+      setReason(step.reason)
+
+      const cardCenter = getCenter(cardEl)
+      const destCenter = getCenter(destColEl)
+
+      // Phase 1: cursor moves to card — suave (900ms)
+      setPhase("hovering")
+      animateCursorTo(
+        destCenter.x + 140, destCenter.y - 80,
+        cardCenter.x, cardCenter.y,
+        900,
+        (x, y) => setCursor({ x, y }),
+        () => {
+          // Phase 2: click visual — ripple + pausa (350ms)
+          setShowRipple(true)
+          setTimeout(() => setShowRipple(false), 500)
+          setTimeout(() => {
+            setPhase("dragging")
+
+            // Phase 3: arraste suave até destino (1100ms)
+            const startCardCenter = getCenter(cardEl)
+            animateCursorTo(
+              startCardCenter.x, startCardCenter.y,
+              destCenter.x, destCenter.y,
+              1100,
+              (x, y) => {
+                setCursor({ x, y })
+                setDragOffset({
+                  x: x - startCardCenter.x,
+                  y: y - startCardCenter.y,
+                })
+              },
+              () => {
+                // Phase 4: soltar
+                setPhase("dropping")
+                setTimeout(() => {
+                  setCards((prev) =>
+                    prev.map((c) => (c.id === step.cardId ? { ...c, column: step.toColumn } : c))
+                  )
+                  setDragOffset({ x: 0, y: 0 })
+
+                  setTimeout(() => {
+                    setPhase("idle")
+                    setActiveCardId(null)
+                    setDestCol(null)
+                    animating.current = false
+
+                    const nextIdx = idx + 1
+                    const nextLoopIdx = nextIdx % MOVE_SEQUENCE.length
+
+                    // Pausa entre movimentos
+                    setTimeout(() => {
+                      if (nextLoopIdx === 0) {
+                        // Reset cards to initial state before restarting
+                        setCards(INITIAL_CARDS)
+                        setReason("IA movendo leads automaticamente")
+                        setTimeout(() => runStep(nextIdx, INITIAL_CARDS), 800)
+                      } else {
+                        runStep(nextIdx, [])
+                      }
+                    }, 1400)
+                  }, 500)
+                }, 350)
+              }
+            )
+          }, 350)
+        }
+      )
     }
 
-    setActiveCardId(step.cardId)
-    setDestCol(step.toColumn)
-    setReason(step.reason)
-
-    const cardCenter = getCenter(cardEl)
-    const destCenter = getCenter(destColEl)
-
-    // Phase 1: move cursor to card (400ms)
-    setPhase("hovering")
-    animateCursorTo(
-      destCenter.x + 120, destCenter.y - 60,
-      cardCenter.x, cardCenter.y,
-      500,
-      (x, y) => setCursor({ x, y }),
-      () => {
-        // Phase 2: click-down on card (200ms pause)
-        setTimeout(() => {
-          setPhase("dragging")
-
-          // Phase 3: drag cursor to destination column (700ms)
-          const startCardCenter = getCenter(cardEl)
-          animateCursorTo(
-            startCardCenter.x, startCardCenter.y,
-            destCenter.x, destCenter.y,
-            800,
-            (x, y) => {
-              setCursor({ x, y })
-              setDragOffset({
-                x: x - startCardCenter.x,
-                y: y - startCardCenter.y,
-              })
-            },
-            () => {
-              // Phase 4: drop (release)
-              setPhase("dropping")
-              setTimeout(() => {
-                setCards((prev) =>
-                  prev.map((c) => (c.id === step.cardId ? { ...c, column: step.toColumn } : c))
-                )
-                setDragOffset({ x: 0, y: 0 })
-
-                setTimeout(() => {
-                  setPhase("idle")
-                  setActiveCardId(null)
-                  setDestCol(null)
-                  animating.current = false
-
-                  const nextIdx = idx + 1
-                  if (nextIdx < MOVE_SEQUENCE.length) {
-                    setStepIndex(nextIdx)
-                    setTimeout(() => runStep(nextIdx), 1200)
-                  } else {
-                    done.current = true
-                    setPhase("done")
-                    setReason("Todos os leads movidos pela IA")
-                  }
-                }, 400)
-              }, 300)
-            }
-          )
-        }, 250)
-      }
-    )
+    if (isLoopStart) {
+      setCards(INITIAL_CARDS)
+      setTimeout(() => startRun(INITIAL_CARDS), 800)
+    } else {
+      startRun(currentCards)
+    }
   }
 
   useEffect(() => {
-    // Start after 1.5s delay so the section is visible
     const timeout = setTimeout(() => {
-      if (!done.current) runStep(0)
-    }, 1500)
+      runStep(0, INITIAL_CARDS)
+    }, 1800)
     return () => clearTimeout(timeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -342,11 +387,12 @@ export default function CRMSectionContabil() {
 
   const isCursorVisible = phase === "hovering" || phase === "dragging" || phase === "dropping"
   const isClicking = phase === "dragging" || phase === "dropping"
+  const isPulsing = phase === "hovering" || phase === "dragging" || phase === "dropping"
 
   return (
     <section className="pt-12 pb-24 md:pt-20 md:pb-32 relative overflow-hidden" style={{ backgroundColor: "#F5F3FF" }}>
       {/* Animated cursor */}
-      <AnimatedCursor x={cursor.x} y={cursor.y} visible={isCursorVisible} clicking={isClicking} />
+      <AnimatedCursor x={cursor.x} y={cursor.y} visible={isCursorVisible} clicking={isClicking} showRipple={showRipple} />
 
       {/* Grid background */}
       <div
@@ -386,7 +432,7 @@ export default function CRMSectionContabil() {
             className="w-1.5 h-1.5 rounded-full flex-shrink-0"
             style={{
               backgroundColor: "#6C4FE8",
-              animation: phase !== "done" && phase !== "idle" ? "pulse 1s infinite" : "none",
+              animation: isPulsing ? "pulse 1s infinite" : "none",
             }}
           />
           IA movendo: {reason}
