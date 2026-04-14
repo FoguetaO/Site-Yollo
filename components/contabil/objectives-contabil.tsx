@@ -1,35 +1,44 @@
 export default function ObjectivesContabil() {
   const items = [
     {
-      title: "Agendamento 100% automático",
-      desc: "O lead escolhe o horário na agenda do contador sem nenhuma intervenção da equipe. Confirmação e lembretes enviados automaticamente.",
+      title: "Disparo em massa personalizado",
+      desc: "Envie mensagens para toda a carteira ou segmentos específicos — clientes MEI, Simples Nacional, empresas do Lucro Presumido — com texto adaptado para cada perfil.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" />
-        </svg>
-      ),
-    },
-    {
-      title: "Atendimento por IA 24h no WhatsApp",
-      desc: "A IA atende qualquer lead ou prospect fora do horário comercial, apresenta serviços e conduz a conversa até a qualificação.",
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
-        </svg>
-      ),
-    },
-    {
-      title: "Distribuição por departamento",
-      desc: "A IA identifica o assunto e encaminha a conversa para o departamento certo: fiscal, pessoal, societário ou comercial.",
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
         </svg>
       ),
     },
     {
       title: "Rastreamento de leads por anúncio",
-      desc: "Cada lead é vinculado automaticamente ao anúncio de origem. Saiba quais campanhas geram mais clientes sem precisar perguntar.",
+      desc: "Cada lead é vinculado automaticamente ao anúncio de origem. Saiba exatamente quais campanhas geram mais clientes sem precisar perguntar.",
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+      ),
+    },
+    {
+      title: "Histórico completo de conversas",
+      desc: "Todas as interações ficam registradas por cliente. O contador acessa o histórico antes de qualquer reunião sem precisar perguntar o que já foi conversado.",
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Respostas rápidas configuráveis",
+      desc: "Crie um banco de respostas prontas para as dúvidas mais frequentes do escritório: DAS, DCTF, abertura de CNPJ, prazo de IR e muito mais.",
+      icon: (
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      ),
+    },
+    {
+      title: "Multi-atendente com filas",
+      desc: "Vários colaboradores atendem simultaneamente pelo mesmo número. A IA triou, o humano fecha — com visibilidade total de quem está atendendo o quê.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -37,20 +46,11 @@ export default function ObjectivesContabil() {
       ),
     },
     {
-      title: "Qualificação automática de leads",
-      desc: "A IA faz perguntas estratégicas, identifica o serviço necessário e entrega o lead com perfil completo — pronto para a negociação.",
+      title: "Relatórios de atendimento",
+      desc: "Visualize volume de conversas por período, tempo médio de resposta, departamentos mais acionados e leads gerados — tudo em painel simples.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><path d="M9 15l2 2 4-4" />
-        </svg>
-      ),
-    },
-    {
-      title: "CRM com movimentação automática",
-      desc: "Conforme o lead avança na conversa, o card é movido automaticamente no pipeline — de novo lead até fechado, sem cliques manuais.",
-      icon: (
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" />
+          <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />
         </svg>
       ),
     },
@@ -65,7 +65,7 @@ export default function ObjectivesContabil() {
             <span className="italic gradient-brand">precisa</span>
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
-            A Yollo IA automatiza a captação e qualificação de leads para você focar em fechar contratos e crescer o escritório.
+            Recursos complementares que otimizam a rotina do escritório e melhoram a experiência do cliente.
           </p>
         </div>
 
