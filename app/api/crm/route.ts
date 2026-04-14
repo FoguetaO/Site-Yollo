@@ -56,14 +56,43 @@ async function createContact(payload: {
   }
 }
 
+// Labels legíveis para os campos extras de cada formulário
+const FIELD_LABELS: Record<string, string> = {
+  procedures:   "Procedimentos oferecidos",
+  clients:      "Quantidade de clientes",
+  area:         "Área de atuação",
+  niche:        "Nicho de mercado",
+  propertyType: "Foco da imobiliária",
+  extra:        "Informação adicional",
+}
+
+function buildDealDescription(extra: string): string {
+  if (!extra) return ""
+  // extra vem no formato "chave: valor | chave: valor"
+  return extra
+    .split(" | ")
+    .map((entry) => {
+      const [key, ...rest] = entry.split(": ")
+      const label = FIELD_LABELS[key.trim()] ?? key.trim()
+      return `${label}: ${rest.join(": ")}`
+    })
+    .join("\n")
+}
+
 // Cria a negociação no funil
-async function createDeal(contactId: string, segment: string): Promise<boolean> {
+async function createDeal(
+  contactId: string,
+  contactName: string,
+  segment: string,
+  description: string
+): Promise<boolean> {
   try {
     const res = await fetch(`${BASE_URL}/crm/negociacoes`, {
       method: "POST",
       headers: HEADERS,
       body: JSON.stringify({
-        titulo: `Lead Yollo IA — ${segment}`,
+        titulo: `${contactName} — ${segment}`,
+        descricao: description,
         id_contato: contactId,
         id_funil: FUNNEL_ID,
         id_estagio: STAGE_ID,
@@ -122,8 +151,9 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // 2. Criar negociação no funil
-    await createDeal(contactId, segment ?? "Geral")
+    // 2. Criar negociação com nome do lead no título e campo selecionado na descrição
+    const dealDescription = buildDealDescription(extraEntries)
+    await createDeal(contactId, name, segment ?? "Geral", dealDescription)
 
     // 3. Enviar mensagem WhatsApp imediatamente com a conexão configurada
     const message = buildWhatsAppMessage(name, segment ?? "")

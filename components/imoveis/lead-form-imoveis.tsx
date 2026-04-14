@@ -17,7 +17,13 @@ export default function LeadFormImoveis() {
       const res = await fetch("/api/crm", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, segment: "Imóveis" }),
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          propertyType: form.segment,
+          segment: "Imóveis",
+        }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -152,7 +158,7 @@ export default function LeadFormImoveis() {
                   >
                     <option value="">Selecione...</option>
                     <option>Venda residencial</option>
-                    <option>Locação residencial</option>
+                    <option>Locaç��o residencial</option>
                     <option>Venda e locação comercial</option>
                     <option>Lançamentos e incorporações</option>
                     <option>Alto padrão e luxo</option>
