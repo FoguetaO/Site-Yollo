@@ -78,7 +78,7 @@ export default function HeroEstetica() {
             </a>
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
