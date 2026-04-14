@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from "next/server"
 
-const BASE_URL = "https://app.agendasistemacrm.com.br/api"
+const BASE_URL = "https://integracao.agendasistemacrm.com.br/api/v1"
 const API_KEY = process.env.AGENDA_SISTEMA_API_KEY!
 const FUNNEL_ID = 5568
 const STAGE_ID = 34490
 
 const HEADERS = {
   "Content-Type": "application/json",
-  Authorization: `Bearer ${API_KEY}`,
+  "X-API-Key": API_KEY,
 }
 
 // Mensagens personalizadas por segmento
@@ -31,16 +31,17 @@ function buildWhatsAppMessage(name: string, segment: string): string {
 async function getWhatsAppConnectionId(): Promise<string | null> {
   try {
     const res = await fetch(`${BASE_URL}/whatsapp/conexoes`, { headers: HEADERS })
-    if (!res.ok) return null
     const data = await res.json()
-    // Tenta pegar a primeira conexão conectada
+    console.log("[v0] getWhatsAppConnectionId:", res.status, JSON.stringify(data))
+    if (!res.ok) return null
     const connections: { id: string; status?: string; connected?: boolean }[] =
       Array.isArray(data) ? data : data?.data ?? data?.conexoes ?? []
     const active = connections.find(
       (c) => c.status === "connected" || c.connected === true
     )
     return active?.id ?? connections[0]?.id ?? null
-  } catch {
+  } catch (err) {
+    console.log("[v0] getWhatsAppConnectionId error:", err)
     return null
   }
 }
@@ -54,20 +55,24 @@ async function createContact(payload: {
 }): Promise<string | null> {
   try {
     const phoneDigits = payload.phone.replace(/\D/g, "")
+    const body = {
+      nome_contato: payload.name,
+      email: payload.email,
+      telefone: phoneDigits,
+      observacao: payload.extra ?? "",
+    }
+    console.log("[v0] createContact body:", JSON.stringify(body))
     const res = await fetch(`${BASE_URL}/crm/contatos`, {
       method: "POST",
       headers: HEADERS,
-      body: JSON.stringify({
-        nome: payload.name,
-        email: payload.email,
-        telefone: phoneDigits,
-        observacao: payload.extra ?? "",
-      }),
+      body: JSON.stringify(body),
     })
-    if (!res.ok) return null
     const data = await res.json()
-    return data?.id ?? data?.data?.id ?? null
-  } catch {
+    console.log("[v0] createContact response:", res.status, JSON.stringify(data))
+    if (!res.ok) return null
+    return data?.data?.id ?? data?.id ?? null
+  } catch (err) {
+    console.log("[v0] createContact error:", err)
     return null
   }
 }
@@ -75,18 +80,23 @@ async function createContact(payload: {
 // Cria a negociação no funil
 async function createDeal(contactId: string, segment: string): Promise<boolean> {
   try {
-    const res = await fetch(`${BASE_URL}/crm/negocios`, {
+    const body = {
+      titulo: `Lead Yollo IA — ${segment}`,
+      id_contato: contactId,
+      id_funil: FUNNEL_ID,
+      id_estagio: STAGE_ID,
+    }
+    console.log("[v0] createDeal body:", JSON.stringify(body))
+    const res = await fetch(`${BASE_URL}/crm/negociacoes`, {
       method: "POST",
       headers: HEADERS,
-      body: JSON.stringify({
-        titulo: `Lead Yollo IA — ${segment}`,
-        contato_id: contactId,
-        funil_id: FUNNEL_ID,
-        estagio_id: STAGE_ID,
-      }),
+      body: JSON.stringify(body),
     })
+    const data = await res.json()
+    console.log("[v0] createDeal response:", res.status, JSON.stringify(data))
     return res.ok
-  } catch {
+  } catch (err) {
+    console.log("[v0] createDeal error:", err)
     return false
   }
 }
