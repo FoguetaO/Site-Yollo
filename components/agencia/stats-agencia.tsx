@@ -50,7 +50,7 @@ export default function StatsAgencia() {
       <div className="absolute inset-0 pointer-events-none">
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] rounded-full blur-[120px]"
-          style={{ backgroundColor: "#F59E0B08" }}
+          style={{ backgroundColor: "#6C4FE808" }}
         />
       </div>
 
@@ -63,7 +63,7 @@ export default function StatsAgencia() {
 
         <div className="flex flex-col md:flex-row md:items-center gap-12 md:gap-0 max-w-5xl">
           <div className="flex-1 text-center md:text-left">
-            <span className="block text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#F59E0B" }}>
+            <span className="block text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#6C4FE8" }}>
               {stat1}+
             </span>
             <span className="block text-lg font-semibold text-white/80 mt-2">prospects por disparo</span>

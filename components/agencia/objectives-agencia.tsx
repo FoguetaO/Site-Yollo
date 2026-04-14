@@ -77,7 +77,7 @@ export default function ObjectivesAgencia() {
             >
               <div
                 className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                style={{ backgroundColor: "#F59E0B12", color: "#F59E0B" }}
+                style={{ backgroundColor: "#6C4FE812", color: "#6C4FE8" }}
               >
                 {item.icon}
               </div>

@@ -63,9 +63,9 @@ export default function LeadFormAgencia() {
 
           <div className="w-full md:w-[480px] lg:w-[520px] flex-shrink-0">
             {submitted ? (
-              <div className="flex flex-col items-center justify-center gap-6 p-12 rounded-2xl border text-center" style={{ backgroundColor: "#FFFBEB", borderColor: "#FDE68A" }}>
-                <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: "#FEF3C7" }}>
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#F59E0B" }}>
+              <div className="flex flex-col items-center justify-center gap-6 p-12 rounded-2xl border text-center" style={{ backgroundColor: "#F5F3FF", borderColor: "#DDD6FE" }}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: "#EDE9FE" }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#6C4FE8" }}>
                     <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 12l2 2 4-4" />
                   </svg>
                 </div>
@@ -153,7 +153,7 @@ export default function LeadFormAgencia() {
                   type="submit"
                   disabled={loading}
                   className="w-full py-4 rounded-xl text-white font-semibold text-base transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg"
-                  style={{ backgroundColor: "#F59E0B", boxShadow: "0 8px 24px #F59E0B44" }}
+                  style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
                 >
                   {loading ? "Enviando..." : "Quero agendar minha demonstração gratuita →"}
                 </button>

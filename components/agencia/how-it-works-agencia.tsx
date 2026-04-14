@@ -43,12 +43,12 @@ export default function HowItWorksAgencia() {
               <div className="p-4">
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Prospecção ativa</div>
                 <div className="flex flex-col gap-2 mb-3">
-                  <div className="flex items-center gap-2 bg-amber-50 rounded-lg px-3 py-2 border border-amber-100">
-                    <span className="text-[10px] font-bold text-amber-700 w-16 flex-shrink-0">Segmento</span>
+                  <div className="flex items-center gap-2 bg-violet-50 rounded-lg px-3 py-2 border border-violet-100">
+                    <span className="text-[10px] font-bold text-violet-700 w-16 flex-shrink-0">Segmento</span>
                     <span className="text-[10px] text-neutral-700">Clínicas de Estética</span>
                   </div>
-                  <div className="flex items-center gap-2 bg-amber-50 rounded-lg px-3 py-2 border border-amber-100">
-                    <span className="text-[10px] font-bold text-amber-700 w-16 flex-shrink-0">Cidade</span>
+                  <div className="flex items-center gap-2 bg-violet-50 rounded-lg px-3 py-2 border border-violet-100">
+                    <span className="text-[10px] font-bold text-violet-700 w-16 flex-shrink-0">Cidade</span>
                     <span className="text-[10px] text-neutral-700">São Paulo — SP</span>
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function HowItWorksAgencia() {
               <div className="flex flex-col gap-2">
                 <div
                   className="self-end rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white max-w-[90%]"
-                  style={{ backgroundColor: "#F59E0B" }}
+                  style={{ backgroundColor: "#6C4FE8" }}
                 >
                   Oi, Dra. Ana! Vi que sua clínica de estética não tem um sistema de agendamento automático via WhatsApp. Posso mostrar como outras clínicas em SP triplicaram os agendamentos?
                 </div>
@@ -114,7 +114,7 @@ export default function HowItWorksAgencia() {
                       <span className="text-neutral-400 w-16 flex-shrink-0">{slot.time}</span>
                       <div
                         className="flex-1 rounded px-2 py-1 text-white font-medium"
-                        style={{ backgroundColor: "#F59E0BCC" }}
+                        style={{ backgroundColor: "#6C4FE8CC" }}
                       >
                         {slot.name}
                       </div>

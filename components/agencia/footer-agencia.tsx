@@ -63,7 +63,7 @@ export default function FooterAgencia() {
                   className="w-10 h-10 rounded-xl flex items-center justify-center transition-all hover:-translate-y-0.5"
                   style={{ backgroundColor: "#ffffff14", color: "#9CA3AF" }}
                   onMouseEnter={(e) => {
-                    ;(e.currentTarget as HTMLElement).style.backgroundColor = "#F59E0B"
+                    ;(e.currentTarget as HTMLElement).style.backgroundColor = "#6C4FE8"
                     ;(e.currentTarget as HTMLElement).style.color = "#fff"
                   }}
                   onMouseLeave={(e) => {

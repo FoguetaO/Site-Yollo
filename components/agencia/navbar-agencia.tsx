@@ -80,7 +80,7 @@ export default function NavbarAgencia() {
                     {seg.active && (
                       <span
                         className="text-[10px] font-bold px-2 py-0.5 rounded-full text-white"
-                        style={{ backgroundColor: "#F59E0B" }}
+                        style={{ backgroundColor: "#6C4FE8" }}
                       >
                         Atual
                       </span>
@@ -109,7 +109,7 @@ export default function NavbarAgencia() {
           <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5"
-            style={{ backgroundColor: "#F59E0B" }}
+            style={{ backgroundColor: "#6C4FE8" }}
           >
             Agendar demonstração
           </a>
@@ -138,7 +138,7 @@ export default function NavbarAgencia() {
               <a
                 key={seg.label}
                 href={seg.href}
-                className={`block py-2 text-sm font-medium ${seg.active ? "text-amber-500" : "text-neutral-600"}`}
+                className={`block py-2 text-sm font-medium ${seg.active ? "text-[#6C4FE8]" : "text-neutral-600"}`}
                 onClick={() => setMobileOpen(false)}
               >
                 {seg.label}
@@ -160,7 +160,7 @@ export default function NavbarAgencia() {
           <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center"
-            style={{ backgroundColor: "#F59E0B" }}
+            style={{ backgroundColor: "#6C4FE8" }}
             onClick={() => setMobileOpen(false)}
           >
             Agendar demonstração
