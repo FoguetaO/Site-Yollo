@@ -62,9 +62,9 @@ export default function ContabilidadePage() {
           title="Do lead curioso ao contrato assinado, sem o contador precisar intervir"
           description="Os recursos da Yollo IA para escritórios contábeis incluem:"
           features={[
-            { label: "Agendamento automático e atendimento por IA 24h no WhatsApp", href: "#funcionalidades" },
-            { label: "Qualificação de leads e distribuição por departamento", href: "#funcionalidades" },
-            { label: "Rastreamento de anúncios e CRM com movimentação automática", href: "#funcionalidades" },
+            { label: "Agendamento automático de reuniões", href: "#funcionalidades" },
+            { label: "Qualificação e distribuição de leads por IA", href: "#funcionalidades" },
+            { label: "CRM com movimentação automática", href: "#funcionalidades" },
           ]}
           ctaLabel="Explore os recursos para contabilidade"
           ctaHref="#contratar"
