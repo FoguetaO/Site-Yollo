@@ -112,25 +112,17 @@ async function sendWhatsAppMessage(
 ): Promise<boolean> {
   try {
     const phoneDigits = phone.replace(/\D/g, "")
-
-    // Tenta os dois formatos de campo possíveis segundo a doc (conexao_id / id_conexao e numero / telefone / remote_jid)
-    const bodyV1 = {
-      id_conexao: connectionId,
-      numero: `${phoneDigits}@s.whatsapp.net`,
-      mensagem: message,
-    }
-    console.log("[v0] sendWhatsApp body:", JSON.stringify(bodyV1))
-
     const res = await fetch(`${BASE_URL}/whatsapp/mensagem/texto`, {
       method: "POST",
       headers: HEADERS,
-      body: JSON.stringify(bodyV1),
+      body: JSON.stringify({
+        id_whatsapp: Number(connectionId),
+        number: phoneDigits,
+        text: message,
+      }),
     })
-    const data = await res.json()
-    console.log("[v0] sendWhatsApp response:", res.status, JSON.stringify(data))
     return res.ok
-  } catch (err) {
-    console.log("[v0] sendWhatsApp error:", err)
+  } catch {
     return false
   }
 }
