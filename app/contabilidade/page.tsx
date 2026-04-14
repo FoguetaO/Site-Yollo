@@ -3,6 +3,7 @@ import HeroContabil from "@/components/contabil/hero-contabil"
 import SegmentFeatureHero from "@/components/segment-feature-hero"
 import ComparisonContabil from "@/components/contabil/comparison-contabil"
 import HowItWorksContabil from "@/components/contabil/how-it-works-contabil"
+import CRMSectionContabil from "@/components/contabil/crm-section-contabil"
 import ObjectivesContabil from "@/components/contabil/objectives-contabil"
 import StatsContabil from "@/components/contabil/stats-contabil"
 import LeadFormContabil from "@/components/contabil/lead-form-contabil"
@@ -12,9 +13,9 @@ import WhatsAppFloat from "@/components/whatsapp-float"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
-  title: "Yollo IA para Contabilidade — IA no WhatsApp que Atende Clientes e Lembra Obrigações 24/7",
+  title: "Yollo IA para Contabilidade — Captação, Qualificação e Atendimento Automático de Leads",
   description:
-    "Automação de atendimento via WhatsApp com IA para escritórios contábeis e contadores. Responde dúvidas fiscais, envia lembretes de obrigações, recolhe documentos e agenda reuniões automaticamente.",
+    "Automação de captação e qualificação de leads via WhatsApp com IA para escritórios contábeis. Agenda reuniões, distribui por departamento, rastreia anúncios e move leads no CRM automaticamente.",
   alternates: { canonical: "https://yolloia.com.br/contabilidade" },
   openGraph: {
     title: "IA para Escritórios Contábeis — Yollo IA",
@@ -52,17 +53,18 @@ export default function ContabilidadePage() {
         <HeroContabil />
         <ScrollReveal><ComparisonContabil /></ScrollReveal>
         <ScrollReveal delay={50}><HowItWorksContabil /></ScrollReveal>
+        <CRMSectionContabil />
         <ScrollReveal delay={50}><ObjectivesContabil /></ScrollReveal>
         <ScrollReveal delay={50}><StatsContabil /></ScrollReveal>
         <ScrollReveal delay={50}>
         <SegmentFeatureHero
           badge="IA para Escritórios Contábeis"
-          title="Atenda clientes, lembre prazos e recolha documentos, 24h por dia"
-          description="Os recursos guiados por IA da Yollo para contabilidade incluem:"
+          title="Do lead curioso ao contrato assinado, sem o contador precisar intervir"
+          description="Os recursos da Yollo IA para escritórios contábeis incluem:"
           features={[
-            { label: "Respostas automáticas a dúvidas fiscais e trabalhistas", href: "#funcionalidades" },
-            { label: "Lembretes automáticos de obrigações e prazos", href: "#funcionalidades" },
-            { label: "Recolhimento de documentos e agendamento de reuniões", href: "#funcionalidades" },
+            { label: "Agendamento automático de reuniões", href: "#funcionalidades" },
+            { label: "Qualificação e distribuição de leads por IA", href: "#funcionalidades" },
+            { label: "CRM com movimentação automática", href: "#funcionalidades" },
           ]}
           ctaLabel="Explore os recursos para contabilidade"
           ctaHref="#contratar"
