@@ -87,6 +87,14 @@ export default function HeroImoveis() {
               </svg>
               Ver como funciona
             </a>
+            <a
+              href="https://crm.yolloia.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+            >
+              Já sou cliente
+            </a>
           </div>
 
           {/* Trust badges */}

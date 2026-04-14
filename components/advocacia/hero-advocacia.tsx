@@ -89,6 +89,14 @@ export default function HeroAdvocacia() {
               </svg>
               Ver como funciona
             </a>
+            <a
+              href="https://crm.yolloia.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+            >
+              Já sou cliente
+            </a>
           </div>
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.28s" }}>
