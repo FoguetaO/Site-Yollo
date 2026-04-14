@@ -50,9 +50,9 @@ export default function Hero() {
           {/* Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
             Automatize seu atendimento{" "}
-            <span className="italic gradient-brand">no WhatsApp</span>
+            <span className="gradient-brand">no WhatsApp</span>
             <br className="hidden md:block" /> e venda mais com{" "}
-            <span className="italic gradient-brand">Inteligência Artificial</span>
+            <span className="gradient-brand">Inteligência Artificial</span>
           </h1>
 
           {/* Subheadline */}

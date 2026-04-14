@@ -55,11 +55,11 @@ export default function HeroAdvocacia() {
 
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-advocacia-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
             Seu escritório de advocacia atendendo clientes{" "}
-            <span className="inline-block italic gradient-brand">
-              24 horas
+            <span className="inline-block gradient-brand">
+              24 horas por dia
             </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
-            <span className="inline-block italic gradient-brand">
+            <br className="hidden md:block" /> pelo WhatsApp, sem você precisar estar{" "}
+            <span className="inline-block gradient-brand">
               disponível.
             </span>
           </h1>

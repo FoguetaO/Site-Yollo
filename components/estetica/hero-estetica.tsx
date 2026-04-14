@@ -51,12 +51,12 @@ export default function HeroEstetica() {
           {/* Headline */}
           <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             A secretária virtual que{" "}
-            <span className="italic gradient-brand">
+            <span className="gradient-brand">
               agenda e atende
             </span>{" "}
             suas clientes
-            <br className="hidden md:block" /> pelo WhatsApp —{" "}
-            <span className="italic gradient-brand">
+            <br className="hidden md:block" /> pelo WhatsApp,{" "}
+            <span className="gradient-brand">
               24h por dia.
             </span>
           </h1>
