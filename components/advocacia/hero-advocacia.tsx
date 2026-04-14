@@ -1,14 +1,14 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import ShinyButton from "@/components/shiny-button"
 
 export default function HeroAdvocacia() {
-  const [visible, setVisible] = useState(false)
-
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 100)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => {
+      document.querySelectorAll(".hero-advocacia-eb").forEach((el) => el.classList.add("eb"))
+    }, 50)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -16,7 +16,7 @@ export default function HeroAdvocacia() {
       className="min-h-screen flex items-center relative overflow-hidden"
       aria-label="Yollo IA para Escritórios de Advocacia — automação de atendimento jurídico via WhatsApp 24h"
       style={{
-        background: "linear-gradient(to bottom, #F5F3FF, #EDE9FE, #DDD6FE)",
+        background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -38,10 +38,8 @@ export default function HeroAdvocacia() {
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 py-24 md:py-32 w-full">
-        <div
-          className={`flex flex-col items-center text-center max-w-5xl mx-auto transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-        >
-          <div className="mb-6 md:mb-10">
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
+          <div className="mb-6 md:mb-10 scroll-eb hero-advocacia-eb">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
               style={{
@@ -55,22 +53,22 @@ export default function HeroAdvocacia() {
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
-            Seu escritório de advocacia atendendo clientes{" "}
-            <span className="inline-block italic gradient-brand">
-              24 horas
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-advocacia-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
+            Seu escritório de advocacia atendendo{" "}
+            <span className="inline-block gradient-brand">
+              24 horas por dia pelo
             </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem você precisar estar{" "}
-            <span className="inline-block italic gradient-brand">
+            <br className="hidden md:block" /> WhatsApp, sem você precisar estar{" "}
+            <span className="inline-block gradient-brand">
               disponível.
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
+          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA responde dúvidas jurídicas, qualifica leads, agenda consultas e acompanha casos automaticamente. Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.21s" }}>
             <ShinyButton
               href="#contratar"
               label="Quero agendar minha demonstração →"
@@ -78,7 +76,7 @@ export default function HeroAdvocacia() {
             />
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
@@ -91,9 +89,10 @@ export default function HeroAdvocacia() {
               </svg>
               Ver como funciona
             </a>
+
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
               <span className="font-medium">Funciona no seu número</span>

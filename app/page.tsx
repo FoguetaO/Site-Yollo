@@ -39,24 +39,25 @@ import Security from "@/components/security"
 import FAQ from "@/components/faq"
 import Footer from "@/components/footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
+import ScrollReveal from "@/components/scroll-reveal"
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <Comparison />
-      <Features />
-      <HowItWorks />
-      <HowItConnects />
-      <Objectives />
-      <ConfigureIA />
-      <Stats />
-      <LeadForm />
-      <SocialProof />
-      <Security />
-      <FAQ />
-      <Footer />
+      <ScrollReveal><Comparison /></ScrollReveal>
+      <ScrollReveal delay={50}><Features /></ScrollReveal>
+      <ScrollReveal delay={50}><HowItWorks /></ScrollReveal>
+      <ScrollReveal delay={50}><HowItConnects /></ScrollReveal>
+      <ScrollReveal delay={50}><Objectives /></ScrollReveal>
+      <ScrollReveal delay={50}><ConfigureIA /></ScrollReveal>
+      <ScrollReveal delay={50}><Stats /></ScrollReveal>
+      <ScrollReveal delay={50}><LeadForm /></ScrollReveal>
+      <ScrollReveal delay={50}><SocialProof /></ScrollReveal>
+      <ScrollReveal delay={50}><Security /></ScrollReveal>
+      <ScrollReveal delay={50}><FAQ /></ScrollReveal>
+      <ScrollReveal delay={50}><Footer /></ScrollReveal>
       <WhatsAppFloat />
     </main>
   )

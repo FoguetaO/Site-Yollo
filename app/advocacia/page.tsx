@@ -8,6 +8,7 @@ import ObjectivesAdvocacia from "@/components/advocacia/objectives-advocacia"
 import FAQAdvocacia from "@/components/advocacia/faq-advocacia"
 import LeadFormAdvocacia from "@/components/advocacia/lead-form-advocacia"
 import FooterAdvocacia from "@/components/advocacia/footer-advocacia"
+import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
   title: "Yollo IA para Advocacia — IA no WhatsApp que Agenda Consultas e Qualifica Clientes 24/7",
@@ -28,11 +29,12 @@ export default function AdvocaciaPage() {
     <main>
       <NavbarAdvocacia />
       <HeroAdvocacia />
-      <ComparisonAdvocacia />
-      <HowItWorksAdvocacia />
-      <StatsAdvocacia />
-      <ObjectivesAdvocacia />
-      <FAQAdvocacia />
+      <ScrollReveal><ComparisonAdvocacia /></ScrollReveal>
+      <ScrollReveal delay={50}><HowItWorksAdvocacia /></ScrollReveal>
+      <ScrollReveal delay={50}><StatsAdvocacia /></ScrollReveal>
+      <ScrollReveal delay={50}><ObjectivesAdvocacia /></ScrollReveal>
+      <ScrollReveal delay={50}><FAQAdvocacia /></ScrollReveal>
+      <ScrollReveal delay={50}>
       <SegmentFeatureHero
         badge="IA para Escritórios de Advocacia"
         title="Agende consultas e qualifique clientes enquanto você advoga"
@@ -50,8 +52,9 @@ export default function AdvocaciaPage() {
         }}
         accentColor="#6C4FE8"
       />
-      <LeadFormAdvocacia />
-      <FooterAdvocacia />
+      </ScrollReveal>
+      <ScrollReveal delay={50}><LeadFormAdvocacia /></ScrollReveal>
+      <ScrollReveal delay={50}><FooterAdvocacia /></ScrollReveal>
     </main>
   )
 }

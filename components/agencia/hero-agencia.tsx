@@ -3,10 +3,10 @@
 import { useEffect } from "react"
 import ShinyButton from "@/components/shiny-button"
 
-export default function HeroContabil() {
+export default function HeroAgencia() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      document.querySelectorAll(".hero-contabil-eb").forEach((el) => el.classList.add("eb"))
+      document.querySelectorAll(".hero-agencia-eb").forEach((el) => el.classList.add("eb"))
     }, 50)
     return () => clearTimeout(timer)
   }, [])
@@ -14,20 +14,18 @@ export default function HeroContabil() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
-      aria-label="Yollo IA para Escritórios Contábeis — automação de atendimento via WhatsApp 24h"
+      aria-label="Yollo IA para Agências de Marketing — prospecção automática e disparo em massa via WhatsApp"
       style={{
         background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
-      {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         <div
-          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-25 blur-[120px]"
+          className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] rounded-full opacity-20 blur-[120px]"
           style={{ backgroundColor: "#6C4FE8" }}
         />
       </div>
 
-      {/* Grid background */}
       <div className="absolute inset-0 pointer-events-none hidden md:block opacity-20" aria-hidden="true">
         <div
           className="absolute inset-0"
@@ -41,8 +39,7 @@ export default function HeroContabil() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 py-24 md:py-32 w-full">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
-          {/* Eyebrow tag */}
-          <div className="mb-6 md:mb-10 scroll-eb hero-contabil-eb">
+          <div className="mb-6 md:mb-10 scroll-eb hero-agencia-eb">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
               style={{
@@ -51,32 +48,33 @@ export default function HeroContabil() {
                 color: "#4F39B0",
               }}
             >
-              <span
-                className="w-2 h-2 rounded-full animate-pulse"
-                style={{ backgroundColor: "#6C4FE8" }}
-              />
-              Assistente IA para Escritórios Contábeis
+              <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#6C4FE8" }} />
+              Assistente IA para Agências de Marketing
             </div>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-contabil-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
-            Seu escritório contábil atendendo
-            <br className="hidden md:block" />
-            <span className="gradient-brand">24 horas por dia pelo WhatsApp,</span>
-            <br className="hidden md:block" />
-            sem o contador precisar estar{" "}
-            <span className="gradient-brand">disponível.</span>
+          <h1
+            className="font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-agencia-eb"
+            style={{ fontSize: "51px", transitionDelay: "0.07s" }}
+          >
+            Prospecte clientes por segmento e cidade,{" "}
+            <span className="inline-block gradient-brand">
+              automaticamente
+            </span>{" "}
+            pelo WhatsApp
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.14s" }}>
-            A Yollo IA responde dúvidas fiscais, envia lembretes de obrigações, recolhe documentos e agenda
-            reuniões automaticamente. Seus clientes ficam informados — e nem percebem que é uma IA.
+          <p
+            className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-agencia-eb"
+            style={{ transitionDelay: "0.14s" }}
+          >
+            A Yollo IA prospecta empresas por nicho e localidade, dispara mensagens em massa e nutre leads automaticamente. Sua agência foca em fechar contratos — a IA cuida da prospecção.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.21s" }}>
+          <div
+            className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-agencia-eb"
+            style={{ transitionDelay: "0.21s" }}
+          >
             <ShinyButton
               href="#contratar"
               label="Quero agendar minha demonstração →"
@@ -100,15 +98,17 @@ export default function HeroContabil() {
 
           </div>
 
-          {/* Trust badges */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.28s" }}>
+          <div
+            className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-agencia-eb"
+            style={{ transitionDelay: "0.28s" }}
+          >
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">Prospecção por segmento e cidade</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
+              <span className="font-medium">Disparo em massa pelo WhatsApp</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
@@ -118,7 +118,6 @@ export default function HeroContabil() {
         </div>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 md:h-40 bg-gradient-to-b from-transparent via-white/40 to-white z-30 pointer-events-none" />
     </section>
   )

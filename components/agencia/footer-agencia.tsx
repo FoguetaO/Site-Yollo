@@ -1,40 +1,37 @@
 "use client"
 
-export default function FooterContabil() {
+export default function FooterAgencia() {
   return (
     <footer
-      aria-label="Rodapé — Yollo IA para Contabilidade"
+      aria-label="Rodapé — Yollo IA para Agências de Marketing"
       style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "4rem 1.5rem 2rem" }}
     >
       <div className="max-w-[1200px] mx-auto">
-
-        {/* SEO tagline */}
         <div className="mb-10 pb-8 border-b border-white/[0.06]">
           <p className="text-xs text-center leading-relaxed max-w-3xl mx-auto" style={{ color: "#6B7280" }}>
-            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Contabilidade</strong> — Automação de atendimento via WhatsApp com IA para{" "}
-            <a href="/contabil" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">escritórios contábeis e contadores</a>.{" "}
-            Lembretes automáticos de obrigações fiscais, coleta de documentos e agendamento de reuniões 24h.
+            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Agências de Marketing</strong> — Prospecção automática por segmento e cidade, disparo em massa e nurturing de leads via WhatsApp com IA para{" "}
+            <a href="/agencia-de-marketing" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">agências de marketing digital</a>.{" "}
             Veja também:{" "}
-            <a href="/" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para clínicas de estética</a>,{" "}
-            <a href="/imoveis" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para imobiliárias</a> e{" "}
+            <a href="/clinica-de-estetica" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para clínicas de estética</a>,{" "}
+            <a href="/imoveis" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para imobiliárias</a>,{" "}
+            <a href="/contabilidade" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para contabilidade</a> e{" "}
             <a href="/advocacia" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para advocacia</a>.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
-          {/* Brand */}
           <div className="flex flex-col gap-4">
             <a href="/" aria-label="Yollo IA — Página inicial">
               <img
                 src="/logo-yollo.png"
-                alt="Yollo IA — automação de WhatsApp com IA para escritórios contábeis"
+                alt="Yollo IA — automação de WhatsApp com IA para agências de marketing"
                 className="h-8 w-auto brightness-0 invert"
                 width="120"
                 height="32"
               />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Automatize o atendimento do seu escritório contábil pelo WhatsApp. Responda clientes, envie lembretes de prazos fiscais e recolha documentos com IA — 24h por dia.
+              Automatize a prospecção da sua agência com IA. Mapeie empresas por segmento e cidade, dispare em massa pelo WhatsApp e encha o pipeline de reuniões qualificadas.
             </p>
             <div className="flex gap-3 mt-1">
               {[
@@ -80,7 +77,6 @@ export default function FooterContabil() {
             </div>
           </div>
 
-          {/* Segmentos */}
           <nav aria-label="Outros segmentos Yollo IA">
             <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
               Segmentos
@@ -88,9 +84,9 @@ export default function FooterContabil() {
             <ul className="flex flex-col gap-2">
               {[
                 { label: "IA para Agências de Marketing", href: "/agencia-de-marketing" },
-                { label: "IA para Clínicas de Estética", href: "/" },
+                { label: "IA para Clínicas de Estética", href: "/clinica-de-estetica" },
                 { label: "IA para Imobiliárias", href: "/imoveis" },
-                { label: "IA para Contabilidade", href: "/contabil" },
+                { label: "IA para Contabilidade", href: "/contabilidade" },
                 { label: "IA para Advocacia", href: "/advocacia" },
               ].map((link) => (
                 <li key={link.label}>
@@ -102,16 +98,15 @@ export default function FooterContabil() {
             </ul>
           </nav>
 
-          {/* Produto */}
-          <nav aria-label="Produto Yollo IA para contabilidade">
+          <nav aria-label="Produto Yollo IA para agências">
             <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
               Produto
             </h2>
             <ul className="flex flex-col gap-2">
               {[
-                { label: "Como funciona a automação", href: "#como-funciona" },
-                { label: "Lembretes de obrigações", href: "#funcionalidades" },
-                { label: "Coleta de documentos", href: "#configure-sua-ia" },
+                { label: "Como funciona a prospecção", href: "#como-funciona" },
+                { label: "Disparo em massa", href: "#funcionalidades" },
+                { label: "Nurturing automático", href: "#beneficios" },
                 { label: "Planos e preços", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>
@@ -123,7 +118,6 @@ export default function FooterContabil() {
             </ul>
           </nav>
 
-          {/* Empresa */}
           <nav aria-label="Empresa Yollo IA">
             <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
               Empresa
@@ -143,7 +137,6 @@ export default function FooterContabil() {
             </ul>
           </nav>
 
-          {/* Suporte */}
           <nav aria-label="Suporte Yollo IA">
             <h2 className="text-[13px] font-semibold uppercase tracking-widest mb-3" style={{ color: "#E5E7EB" }}>
               Suporte

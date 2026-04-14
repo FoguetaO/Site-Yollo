@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 
 const segments = [
   { label: "Clínica de Estética", href: "/clinica-de-estetica", active: true },
+  { label: "Agência de Marketing", href: "/agencia-de-marketing", active: false },
   { label: "Imobiliário", href: "/imoveis", active: false },
   { label: "Contabilidade", href: "/contabilidade", active: false },
   { label: "Advocacia", href: "/advocacia", active: false },
@@ -111,7 +112,15 @@ export default function NavbarEstetica() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-4">
+          <a
+            href="https://crm.yolloia.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+          >
+            Já sou cliente
+          </a>
           <a
             href="#contratar"
             className="text-sm font-semibold text-white px-5 py-2.5 rounded-full transition-all hover:opacity-90 hover:-translate-y-0.5"

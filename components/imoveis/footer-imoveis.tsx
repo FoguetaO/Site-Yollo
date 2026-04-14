@@ -87,6 +87,7 @@ export default function FooterImoveis() {
             </h2>
             <ul className="flex flex-col gap-2">
               {[
+                { label: "IA para Agências de Marketing", href: "/agencia-de-marketing" },
                 { label: "IA para Clínicas de Estética", href: "/" },
                 { label: "IA para Imobiliárias", href: "/imoveis" },
                 { label: "IA para Contabilidade", href: "/contabil" },

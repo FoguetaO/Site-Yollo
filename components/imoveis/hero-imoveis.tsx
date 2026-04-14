@@ -1,14 +1,14 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import ShinyButton from "@/components/shiny-button"
 
 export default function HeroImoveis() {
-  const [visible, setVisible] = useState(false)
-
   useEffect(() => {
-    const t = setTimeout(() => setVisible(true), 100)
-    return () => clearTimeout(t)
+    const timer = setTimeout(() => {
+      document.querySelectorAll(".hero-imoveis-eb").forEach((el) => el.classList.add("eb"))
+    }, 50)
+    return () => clearTimeout(timer)
   }, [])
 
   return (
@@ -16,7 +16,7 @@ export default function HeroImoveis() {
       className="min-h-screen flex items-center relative overflow-hidden"
       aria-label="Yollo IA para Imobiliárias e Corretores — automação de atendimento via WhatsApp 24h"
       style={{
-        background: "linear-gradient(to bottom, #EFF6FF, #DBEAFE, #BFDBFE)",
+        background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
     >
       {/* Background decoration */}
@@ -28,11 +28,9 @@ export default function HeroImoveis() {
       </div>
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 py-24 md:py-32 w-full">
-        <div
-          className={`flex flex-col items-center text-center max-w-5xl mx-auto transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-        >
+        <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
           {/* Eyebrow tag */}
-          <div className="mb-6 md:mb-10">
+          <div className="mb-6 md:mb-10 scroll-eb hero-imoveis-eb">
             <div
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold border"
               style={{
@@ -43,32 +41,32 @@ export default function HeroImoveis() {
             >
               <span
                 className="w-2 h-2 rounded-full animate-pulse"
-                style={{ backgroundColor: "#2563EB" }}
+          style={{ backgroundColor: "#6C4FE8" }}
               />
               Assistente IA para Imobiliárias
             </div>
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance" style={{ fontSize: "51px" }}>
-            Sua imobiliária captando leads{" "}
-            <span className="italic gradient-brand">
-              24 horas
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-imoveis-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
+            Sua imobiliária captando{" "}
+            <span className="gradient-brand">
+              24 horas por dia pelo
             </span>
-            <br className="hidden md:block" /> pelo WhatsApp — sem corretor precisar estar{" "}
-            <span className="italic gradient-brand">
+            <br className="hidden md:block" /> WhatsApp, sem corretor precisar estar{" "}
+            <span className="gradient-brand">
               disponível.
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
+          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
             Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10">
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.21s" }}>
             <ShinyButton
               href="#contratar"
               label="Quero agendar minha demonstração →"
@@ -76,7 +74,7 @@ export default function HeroImoveis() {
             />
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all"
+              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#2563EB" }}>
                 <path
@@ -89,10 +87,11 @@ export default function HeroImoveis() {
               </svg>
               Ver como funciona
             </a>
+
           </div>
 
           {/* Trust badges */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
               <span className="font-medium">Funciona no seu número</span>
