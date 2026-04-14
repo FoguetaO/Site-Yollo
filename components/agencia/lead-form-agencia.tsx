@@ -1,0 +1,171 @@
+"use client"
+
+import { useState } from "react"
+
+export default function LeadFormAgencia() {
+  const [form, setForm] = useState({ name: "", email: "", phone: "", niche: "" })
+  const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...form, segment: "Agência de Marketing" }),
+      })
+    } catch {}
+    setLoading(false)
+    setSubmitted(true)
+  }
+
+  return (
+    <section id="contratar" className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <div className="relative z-10 max-w-[1200px] mx-auto px-6">
+        <div className="flex flex-col md:flex-row md:gap-16 lg:gap-24 md:items-start">
+          <div className="md:flex-1 md:sticky md:top-24 mb-10 md:mb-0">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 tracking-tight text-center md:text-left">
+              Comece agora
+            </h2>
+            <p className="text-base md:text-lg text-gray-500 mt-3 text-center md:text-left">
+              Preencha seus dados e veja a Yollo IA prospectando para o segmento e cidade da sua agência — em tempo real.
+            </p>
+            <div className="hidden md:flex flex-col gap-4 mt-10">
+              {[
+                { title: "Prospecção em minutos", desc: "Defina o nicho e a cidade — a IA entrega a lista e já inicia os disparos." },
+                { title: "Planos flexíveis", desc: "Mensal, Trimestral ou Semestral. Cancele quando quiser, sem multa." },
+                { title: "API Oficial e Não Oficial do WhatsApp", desc: "Escolha a melhor opção para o seu negócio." },
+              ].map((item) => (
+                <div key={item.title} className="flex items-start gap-3">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="flex-shrink-0 mt-0.5 text-green-500"
+                  >
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 12l2 2 4-4" />
+                  </svg>
+                  <div>
+                    <p className="text-sm font-semibold text-gray-900">{item.title}</p>
+                    <p className="text-sm text-gray-500">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full md:w-[480px] lg:w-[520px] flex-shrink-0">
+            {submitted ? (
+              <div className="flex flex-col items-center justify-center gap-6 p-12 rounded-2xl border text-center" style={{ backgroundColor: "#FFFBEB", borderColor: "#FDE68A" }}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: "#FEF3C7" }}>
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: "#F59E0B" }}>
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zM9 12l2 2 4-4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Solicitação enviada!</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    Nossa equipe entrará em contato em breve para agendar sua demonstração gratuita.
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-5 bg-white md:bg-gray-50/50 md:border md:border-gray-100 md:rounded-2xl md:p-8 md:shadow-sm"
+              >
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="name-agencia">
+                    Nome completo
+                  </label>
+                  <input
+                    id="name-agencia"
+                    type="text"
+                    required
+                    placeholder="Bruno Lima"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
+                    style={{ "--tw-ring-color": "#F59E0B" } as React.CSSProperties}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="email-agencia">
+                    Gmail
+                  </label>
+                  <input
+                    id="email-agencia"
+                    type="email"
+                    required
+                    placeholder="bruno@agencia.com"
+                    value={form.email}
+                    onChange={(e) => setForm({ ...form, email: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="phone-agencia">
+                    WhatsApp
+                  </label>
+                  <input
+                    id="phone-agencia"
+                    type="tel"
+                    required
+                    placeholder="(11) 98765-4321"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-semibold text-gray-800 mb-1.5" htmlFor="niche-agencia">
+                    Qual nicho sua agência atende?
+                  </label>
+                  <select
+                    id="niche-agencia"
+                    required
+                    value={form.niche}
+                    onChange={(e) => setForm({ ...form, niche: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 bg-white text-gray-900 text-sm focus:outline-none focus:ring-2 focus:border-transparent transition"
+                  >
+                    <option value="">Selecione...</option>
+                    <option>Saúde e Estética</option>
+                    <option>Gastronomia e Food</option>
+                    <option>Varejo e E-commerce</option>
+                    <option>Serviços B2B</option>
+                    <option>Imobiliário</option>
+                    <option>Educação</option>
+                    <option>Múltiplos nichos</option>
+                  </select>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-4 rounded-xl text-white font-semibold text-base transition-all hover:opacity-90 hover:-translate-y-0.5 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg"
+                  style={{ backgroundColor: "#F59E0B", boxShadow: "0 8px 24px #F59E0B44" }}
+                >
+                  {loading ? "Enviando..." : "Quero agendar minha demonstração gratuita →"}
+                </button>
+
+                <p className="text-xs text-center text-gray-400">
+                  Sem spam. Sua demonstração é gratuita e sem compromisso.
+                </p>
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
