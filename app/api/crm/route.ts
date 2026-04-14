@@ -124,6 +124,17 @@ async function sendWhatsAppMessage(
   }
 }
 
+// GET — lista as conexões WhatsApp disponíveis para diagnóstico
+export async function GET() {
+  try {
+    const res = await fetch(`${BASE_URL}/whatsapp/conexoes`, { headers: HEADERS })
+    const data = await res.json()
+    return NextResponse.json({ status: res.status, data })
+  } catch (err) {
+    return NextResponse.json({ error: String(err) }, { status: 500 })
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()

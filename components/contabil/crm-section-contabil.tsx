@@ -177,7 +177,7 @@ function DropZone({ active }: { active: boolean }) {
   )
 }
 
-// ─── Cursor SVG ─────────��─────────────────────────────────────────────────────
+// ─── Cursor SVG ─────────��────────────���────────────────────────────────────────
 
 function AnimatedCursor({
   x, y, visible, clicking, showRipple,
@@ -376,9 +376,7 @@ export default function CRMSectionContabil() {
   }
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      runStep(0, INITIAL_CARDS)
-    }, 1800)
+    const timeout = setTimeout(() => runStep(0, INITIAL_CARDS), 1800)
     return () => clearTimeout(timeout)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
