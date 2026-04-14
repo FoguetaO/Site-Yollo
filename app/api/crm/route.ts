@@ -4,6 +4,7 @@ const BASE_URL = "https://integracao.agendasistemacrm.com.br/api/v1"
 const API_KEY = process.env.AGENDA_SISTEMA_API_KEY!
 const FUNNEL_ID = 5568
 const STAGE_ID = 34490
+const WHATSAPP_CONNECTION_ID = "16279"
 
 const HEADERS = {
   "Content-Type": "application/json",
@@ -27,25 +28,6 @@ function buildWhatsAppMessage(name: string, segment: string): string {
   )
 }
 
-// Busca a primeira conexão WhatsApp disponível na conta
-async function getWhatsAppConnectionId(): Promise<string | null> {
-  try {
-    const res = await fetch(`${BASE_URL}/whatsapp/conexoes`, { headers: HEADERS })
-    const data = await res.json()
-    console.log("[v0] getWhatsAppConnectionId:", res.status, JSON.stringify(data))
-    if (!res.ok) return null
-    const connections: { id: string; status?: string; connected?: boolean }[] =
-      Array.isArray(data) ? data : data?.data ?? data?.conexoes ?? []
-    const active = connections.find(
-      (c) => c.status === "connected" || c.connected === true
-    )
-    return active?.id ?? connections[0]?.id ?? null
-  } catch (err) {
-    console.log("[v0] getWhatsAppConnectionId error:", err)
-    return null
-  }
-}
-
 // Cria o contato no CRM
 async function createContact(payload: {
   name: string
@@ -61,18 +43,15 @@ async function createContact(payload: {
       telefone: phoneDigits,
       observacao: payload.extra ?? "",
     }
-    console.log("[v0] createContact body:", JSON.stringify(body))
     const res = await fetch(`${BASE_URL}/crm/contatos`, {
       method: "POST",
       headers: HEADERS,
       body: JSON.stringify(body),
     })
     const data = await res.json()
-    console.log("[v0] createContact response:", res.status, JSON.stringify(data))
     if (!res.ok) return null
     return data?.data?.id ?? data?.id ?? null
-  } catch (err) {
-    console.log("[v0] createContact error:", err)
+  } catch {
     return null
   }
 }
@@ -80,23 +59,18 @@ async function createContact(payload: {
 // Cria a negociação no funil
 async function createDeal(contactId: string, segment: string): Promise<boolean> {
   try {
-    const body = {
-      titulo: `Lead Yollo IA — ${segment}`,
-      id_contato: contactId,
-      id_funil: FUNNEL_ID,
-      id_estagio: STAGE_ID,
-    }
-    console.log("[v0] createDeal body:", JSON.stringify(body))
     const res = await fetch(`${BASE_URL}/crm/negociacoes`, {
       method: "POST",
       headers: HEADERS,
-      body: JSON.stringify(body),
+      body: JSON.stringify({
+        titulo: `Lead Yollo IA — ${segment}`,
+        id_contato: contactId,
+        id_funil: FUNNEL_ID,
+        id_estagio: STAGE_ID,
+      }),
     })
-    const data = await res.json()
-    console.log("[v0] createDeal response:", res.status, JSON.stringify(data))
     return res.ok
-  } catch (err) {
-    console.log("[v0] createDeal error:", err)
+  } catch {
     return false
   }
 }
@@ -124,17 +98,6 @@ async function sendWhatsAppMessage(
   }
 }
 
-// GET — lista as conexões WhatsApp disponíveis para diagnóstico
-export async function GET() {
-  try {
-    const res = await fetch(`${BASE_URL}/whatsapp/conexoes`, { headers: HEADERS })
-    const data = await res.json()
-    return NextResponse.json({ status: res.status, data })
-  } catch (err) {
-    return NextResponse.json({ error: String(err) }, { status: 500 })
-  }
-}
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
@@ -144,16 +107,13 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Nome e telefone são obrigatórios." }, { status: 400 })
     }
 
-    // Extra info: any additional field (procedures, clients, area, niche, etc.)
+    // Campos extras do formulário (procedimentos, nicho, área, etc.)
     const extraEntries = Object.entries(rest)
       .filter(([, v]) => v)
       .map(([k, v]) => `${k}: ${v}`)
       .join(" | ")
 
-    // 1. Buscar ID da conexão WhatsApp
-    const connectionId = await getWhatsAppConnectionId()
-
-    // 2. Criar contato
+    // 1. Criar contato
     const contactId = await createContact({ name, email, phone, extra: extraEntries })
     if (!contactId) {
       return NextResponse.json(
@@ -162,14 +122,12 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // 3. Criar negociação no funil
+    // 2. Criar negociação no funil
     await createDeal(contactId, segment ?? "Geral")
 
-    // 4. Enviar mensagem WhatsApp (só se tiver conexão disponível)
-    if (connectionId) {
-      const message = buildWhatsAppMessage(name, segment ?? "")
-      await sendWhatsAppMessage(connectionId, phone, message)
-    }
+    // 3. Enviar mensagem WhatsApp imediatamente com a conexão configurada
+    const message = buildWhatsAppMessage(name, segment ?? "")
+    await sendWhatsAppMessage(WHATSAPP_CONNECTION_ID, phone, message)
 
     return NextResponse.json({ success: true, contactId })
   } catch (err) {
