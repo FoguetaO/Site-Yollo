@@ -68,91 +68,6 @@ function AnimatedChatSimulation() {
   )
 }
 
-const CRM_COLUMNS = [
-  { id: "novo", label: "Novo Lead", color: "#E0E7FF", text: "#4338CA" },
-  { id: "qualificado", label: "Qualificado", color: "#DCFCE7", text: "#15803D" },
-  { id: "reuniao", label: "Reunião Marcada", color: "#FEF9C3", text: "#A16207" },
-  { id: "fechado", label: "Fechado", color: "#D1FAE5", text: "#065F46" },
-]
-
-const INITIAL_CARDS = [
-  { id: 1, name: "Rafael M.", service: "Abertura CNPJ", column: "novo" },
-  { id: 2, name: "Fernanda S.", service: "Migração Simples", column: "qualificado" },
-  { id: 3, name: "Carlos P.", service: "Planej. Tributário", column: "reuniao" },
-  { id: 4, name: "Ana C.", service: "MEI → ME", column: "fechado" },
-]
-
-const MOVE_SEQUENCE = [
-  { cardId: 1, toColumn: "qualificado" },
-  { cardId: 2, toColumn: "reuniao" },
-  { cardId: 3, toColumn: "fechado" },
-  { cardId: 1, toColumn: "reuniao" },
-  { cardId: 2, toColumn: "fechado" },
-]
-
-function CRMAnimation() {
-  const [cards, setCards] = useState(INITIAL_CARDS)
-  const [movingCard, setMovingCard] = useState<number | null>(null)
-  const stepRef = useRef(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const step = MOVE_SEQUENCE[stepRef.current % MOVE_SEQUENCE.length]
-      setMovingCard(step.cardId)
-      setTimeout(() => {
-        setCards((prev) =>
-          prev.map((c) => (c.id === step.cardId ? { ...c, column: step.toColumn } : c))
-        )
-        setMovingCard(null)
-      }, 400)
-      stepRef.current += 1
-    }, 2000)
-    return () => clearInterval(interval)
-  }, [])
-
-  return (
-    <div className="mt-auto bg-white rounded-xl border border-neutral-100 overflow-hidden shadow-sm min-h-[220px]">
-      <div className="h-6 bg-neutral-100 border-b border-neutral-200 flex items-center px-3 gap-1.5">
-        <div className="w-2 h-2 rounded-full bg-red-400/50" />
-        <div className="w-2 h-2 rounded-full bg-yellow-400/50" />
-        <div className="w-2 h-2 rounded-full bg-green-400/50" />
-        <span className="text-[9px] text-neutral-400 ml-2 font-medium">CRM — Pipeline de Leads</span>
-      </div>
-      <div className="p-3 grid grid-cols-4 gap-1.5 h-full">
-        {CRM_COLUMNS.map((col) => (
-          <div key={col.id} className="flex flex-col gap-1.5">
-            <div
-              className="text-[8px] font-bold uppercase tracking-wider px-2 py-1 rounded-full text-center"
-              style={{ backgroundColor: col.color, color: col.text }}
-            >
-              {col.label}
-            </div>
-            <div className="flex flex-col gap-1.5 min-h-[140px]">
-              {cards
-                .filter((c) => c.column === col.id)
-                .map((card) => (
-                  <div
-                    key={card.id}
-                    className="rounded-lg px-2 py-2 border shadow-sm text-[9px] leading-tight"
-                    style={{
-                      borderColor: col.color,
-                      backgroundColor: movingCard === card.id ? col.color : "#fff",
-                      transition: "background-color 0.4s ease, transform 0.4s ease, opacity 0.4s ease",
-                      transform: movingCard === card.id ? "scale(1.04)" : "scale(1)",
-                      opacity: movingCard === card.id ? 0.7 : 1,
-                    }}
-                  >
-                    <div className="font-bold text-neutral-800">{card.name}</div>
-                    <div className="text-neutral-500 mt-0.5">{card.service}</div>
-                  </div>
-                ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
 
 export default function HowItWorksContabil() {
   return (
@@ -335,17 +250,6 @@ export default function HowItWorksContabil() {
                 <div className="self-end text-xs text-neutral-400 pr-1">✓✓ Lead qualificado</div>
               </div>
             </div>
-          </div>
-
-          {/* Card 6 — CRM animado */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-semibold mb-3 text-neutral-900">CRM com movimentação automática</h3>
-              <p className="text-sm text-neutral-500 leading-relaxed">
-                Conforme a conversa avança, o lead é movido automaticamente entre as colunas do pipeline — de novo lead até fechado, sem nenhum clique manual.
-              </p>
-            </div>
-            <CRMAnimation />
           </div>
 
         </div>

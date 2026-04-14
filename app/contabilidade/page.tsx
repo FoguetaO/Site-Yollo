@@ -3,6 +3,7 @@ import HeroContabil from "@/components/contabil/hero-contabil"
 import SegmentFeatureHero from "@/components/segment-feature-hero"
 import ComparisonContabil from "@/components/contabil/comparison-contabil"
 import HowItWorksContabil from "@/components/contabil/how-it-works-contabil"
+import CRMSectionContabil from "@/components/contabil/crm-section-contabil"
 import ObjectivesContabil from "@/components/contabil/objectives-contabil"
 import StatsContabil from "@/components/contabil/stats-contabil"
 import LeadFormContabil from "@/components/contabil/lead-form-contabil"
@@ -52,6 +53,7 @@ export default function ContabilidadePage() {
         <HeroContabil />
         <ScrollReveal><ComparisonContabil /></ScrollReveal>
         <ScrollReveal delay={50}><HowItWorksContabil /></ScrollReveal>
+        <CRMSectionContabil />
         <ScrollReveal delay={50}><ObjectivesContabil /></ScrollReveal>
         <ScrollReveal delay={50}><StatsContabil /></ScrollReveal>
         <ScrollReveal delay={50}>
