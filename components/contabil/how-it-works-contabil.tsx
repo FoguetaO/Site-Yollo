@@ -2,6 +2,72 @@
 
 import { useEffect, useRef, useState } from "react"
 
+const CHAT_MESSAGES = [
+  { type: "user", text: "Vocês atendem abertura de empresa para MEI?", time: "19:14" },
+  { type: "bot", text: "Sim! Trabalhamos com abertura de MEI, ME e LTDA. Qual o seu ramo de atividade? Assim consigo te passar os detalhes certos.", time: "19:14 ✓✓" },
+  { type: "user", text: "Sou designer freelancer", time: "" },
+  { type: "bot", text: "Perfeito! Para designers, o MEI costuma ser a melhor opção. Posso agendar uma conversa com o contador para te explicar tudo?", time: "" },
+]
+
+function AnimatedChatSimulation() {
+  const [visibleMessages, setVisibleMessages] = useState(0)
+  const scrollRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisibleMessages((prev) => {
+        if (prev < CHAT_MESSAGES.length) {
+          return prev + 1
+        }
+        return 0
+      })
+    }, 1800)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight
+    }
+  }, [visibleMessages])
+
+  return (
+    <div className="bg-[#E4DDD6] rounded-xl border border-[#D4CDB6] overflow-hidden flex flex-col" style={{ height: "280px" }}>
+      <div
+        ref={scrollRef}
+        className="flex-1 overflow-y-auto flex flex-col gap-2 p-3"
+        style={{ scrollBehavior: "smooth" }}
+      >
+        {CHAT_MESSAGES.slice(0, visibleMessages).map((msg, idx) => (
+          <div key={idx} className={msg.type === "user" ? "flex justify-start" : "flex justify-end"}>
+            <div
+              className={`rounded-2xl px-4 py-2.5 shadow-sm text-sm max-w-[90%] ${
+                msg.type === "user"
+                  ? "bg-white text-neutral-800 rounded-tl-sm"
+                  : "text-white rounded-tr-sm"
+              }`}
+              style={msg.type === "user" ? {} : { backgroundColor: "#6C4FE8" }}
+            >
+              {msg.text}
+            </div>
+          </div>
+        ))}
+        {visibleMessages > 0 && visibleMessages < CHAT_MESSAGES.length && (
+          <div className="flex justify-end">
+            <div
+              className="rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white opacity-50 animate-pulse"
+              style={{ backgroundColor: "#6C4FE8" }}
+            >
+              Digitando...
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
 const CRM_COLUMNS = [
   { id: "novo", label: "Novo Lead", color: "#E0E7FF", text: "#4338CA" },
   { id: "qualificado", label: "Qualificado", color: "#DCFCE7", text: "#15803D" },
@@ -163,29 +229,8 @@ export default function HowItWorksContabil() {
                 A IA atende qualquer lead 24h por dia no WhatsApp: responde dúvidas, apresenta serviços e conduz a conversa até a qualificação.
               </p>
             </div>
-            <div className="mt-auto bg-[#E4DDD6] rounded-xl p-3 min-h-[200px] relative overflow-hidden border border-[#D4CDB6]">
-              <div className="flex flex-col gap-2">
-                <div className="self-start bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 shadow-sm text-sm text-neutral-800 max-w-[85%]">
-                  Vocês atendem abertura de empresa para MEI?
-                </div>
-                <div className="self-end text-xs text-neutral-400 pr-1">19:14</div>
-                <div
-                  className="self-end rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white max-w-[90%]"
-                  style={{ backgroundColor: "#6C4FE8" }}
-                >
-                  Sim! Trabalhamos com abertura de MEI, ME e LTDA. Qual o seu ramo de atividade? Assim consigo te passar os detalhes certos.
-                </div>
-                <div className="self-end text-xs text-neutral-400 pr-1">19:14 ✓✓</div>
-                <div className="self-start bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 shadow-sm text-sm text-neutral-800 max-w-[85%]">
-                  Sou designer freelancer
-                </div>
-                <div
-                  className="self-end rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white max-w-[90%]"
-                  style={{ backgroundColor: "#6C4FE8" }}
-                >
-                  Perfeito! Para designers, o MEI costuma ser a melhor opção. Posso agendar uma conversa com o contador para te explicar tudo?
-                </div>
-              </div>
+            <div className="mt-auto w-full">
+              <AnimatedChatSimulation />
             </div>
           </div>
 
