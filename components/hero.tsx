@@ -65,11 +65,11 @@ export default function Hero() {
             <ShinyButton
               href="#contratar"
               label="Agendar demonstração gratuita →"
-              className="w-full sm:w-auto text-lg"
+              className="w-full sm:w-auto text-sm sm:text-base"
             />
             <a
               href="#funcionalidades"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
+              className="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-5 py-3 sm:px-7 sm:py-3.5 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               Ver todas as funcionalidades
             </a>

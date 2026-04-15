@@ -216,6 +216,16 @@
   .shiny-cta::before { animation: none; }
 }
 
+/* shiny-cta mobile sizing */
+@media (max-width: 639px) {
+  .shiny-cta {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
 /* ── Hero entrance animation ── */
 .scroll-eb {
   opacity: 0;
