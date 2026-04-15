@@ -60,7 +60,7 @@ export default function HeroContabil() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-contabil-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.07s" }}>
             Seu escritório contábil captando,
             <br className="hidden md:block" />
             <span className="gradient-brand">qualificando e atendendo leads</span>

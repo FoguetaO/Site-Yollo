@@ -12,7 +12,7 @@ export default function Objectives() {
             <span className="md:hidden">
               <br />
             </span>{" "}
-            <span className="text-4xl md:text-5xl italic gradient-brand">
+            <span className="italic gradient-brand">
               seu objetivo.
             </span>
           </h2>

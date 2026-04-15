@@ -10,7 +10,7 @@ export default function ObjectivesImoveis() {
           <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
             A Yollo IA se adapta ao
             <span className="md:hidden"><br /></span>{" "}
-            <span className="text-4xl md:text-5xl italic gradient-brand">
+            <span className="italic gradient-brand">
               seu objetivo.
             </span>
           </h2>

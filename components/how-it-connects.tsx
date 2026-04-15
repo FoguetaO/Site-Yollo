@@ -37,7 +37,7 @@ export default function HowItConnects() {
       <div className="max-w-[1200px] mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-semibold text-neutral-900 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-neutral-900 leading-tight">
             Comece em{" "}
             <span className="gradient-brand italic">3 passos simples</span>
           </h2>

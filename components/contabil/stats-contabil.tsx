@@ -63,7 +63,7 @@ export default function StatsContabil() {
 
         <div className="flex flex-col md:flex-row md:items-center gap-12 md:gap-0 max-w-5xl">
           <div className="flex-1 text-center md:text-left">
-            <span className="block text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#6C4FE8" }}>
+            <span className="block text-5xl sm:text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#6C4FE8" }}>
               {stat1}s
             </span>
             <span className="block text-lg font-semibold text-white/80 mt-2">tempo de resposta</span>

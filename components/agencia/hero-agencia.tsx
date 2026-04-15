@@ -54,8 +54,8 @@ export default function HeroAgencia() {
           </div>
 
           <h1
-            className="font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-agencia-eb"
-            style={{ fontSize: "51px", transitionDelay: "0.07s" }}
+            className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-agencia-eb"
+            style={{ transitionDelay: "0.07s" }}
           >
             Prospecte clientes por segmento e cidade,{" "}
             <span className="inline-block gradient-brand">

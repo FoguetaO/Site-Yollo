@@ -49,7 +49,7 @@ export default function HeroEstetica() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-[51px] lg:text-[51px] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
             A secretária virtual que{" "}
             <span className="gradient-brand">
               agenda e atende
