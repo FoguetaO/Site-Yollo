@@ -632,7 +632,7 @@ Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto — desde
       width: 1280,
       height: 720,
     },
-    content: \`
+    content: `
 ## Como Funciona a Automação no WhatsApp na Prática
 
 Entender o funcionamento da automação no WhatsApp é o que separa uma implementação eficiente de uma experiência frustrante para o cliente. Por baixo de cada conversa automatizada existe uma **estrutura lógica** composta por fluxos, gatilhos e integrações que trabalham juntos para simular um atendimento fluido e organizado.
@@ -686,17 +686,17 @@ Os **gatilhos** são os eventos que iniciam ou avançam uma automação dentro d
 
 As **condições** determinam qual caminho o fluxo vai seguir a partir de cada gatilho. Funcionam como "se/então":
 
-\\\`\\\`\\\`
+```
 SE cliente escolheu "Vendas"
    ENTÃO direciona para fluxo comercial
-   
-SE cliente escolheu "Suporte"  
+
+SE cliente escolheu "Suporte"
    ENTÃO verifica horário de atendimento
       SE dentro do horário
          ENTÃO conecta com atendente
       SE fora do horário
          ENTÃO coleta dados e promete retorno
-\\\`\\\`\\\`
+```
 
 Essa combinação entre gatilhos e condições é o que torna a **integração de sistemas** tão relevante na automação: quanto mais o WhatsApp se comunica com outras ferramentas, mais preciso e personalizado o atendimento automático se torna.
 
@@ -826,7 +826,7 @@ Quanto mais você entende essa estrutura, melhores decisões toma na hora de imp
 Com a [Yollo IA](/), você tem acesso a todos esses recursos em uma plataforma única: fluxos visuais, gatilhos inteligentes, integração nativa com CRM e IA com processamento de linguagem natural.
 
 **[Agende uma demonstração gratuita](/#contratar)** e veja como sua automação pode funcionar na prática.
-    \`,
+    `,
   },
   {
     slug: "como-automatizar-whatsapp-guia-completo",
