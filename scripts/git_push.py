@@ -2,7 +2,11 @@ import subprocess
 import sys
 import os
 
-os.chdir("/vercel/share/v0-project")
+# Resolve project root relative to this script's location
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+os.chdir(PROJECT_ROOT)
+print(f"Working directory: {os.getcwd()}")
 
 def run(cmd):
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
