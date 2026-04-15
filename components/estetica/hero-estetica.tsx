@@ -62,7 +62,7 @@ export default function HeroEstetica() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
+          <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
             A Yollo IA responde suas clientes no momento em que elas mandam mensagem — mesmo à noite,
             no fim de semana ou enquanto você realiza um procedimento. Agenda, tira dúvidas, qualifica e reduz faltas automaticamente.
           </p>

@@ -56,7 +56,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-eb" style={{ transitionDelay: "0.14s" }}>
+          <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA é a plataforma completa de automação de WhatsApp com IA: atende clientes, agenda, faz follow-up, dispara campanhas e organiza seu CRM — 24 horas por dia, 7 dias por semana.
           </p>
 

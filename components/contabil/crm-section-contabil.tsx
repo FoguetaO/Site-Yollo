@@ -177,7 +177,7 @@ function DropZone({ active }: { active: boolean }) {
   )
 }
 
-// ─── Cursor SVG ─────────��────────────���────────────────────────────────────────
+// ─── Cursor SVG ─────────��────────────�����────────────────────────────────────────
 
 function AnimatedCursor({
   x, y, visible, clicking, showRipple,
@@ -412,7 +412,7 @@ export default function CRMSectionContabil() {
           >
             CRM com movimentação automática
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal text-neutral-900 text-balance leading-tight">
+          <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-normal text-neutral-900 text-balance leading-tight">
             A IA move seus contatos pelo funil{" "}
             <em className="gradient-brand not-italic">conforme a conversa evolui</em>
           </h2>

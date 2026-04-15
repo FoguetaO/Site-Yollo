@@ -60,7 +60,7 @@ export default function ObjectivesAgencia() {
     <section id="beneficios" className="pt-12 pb-24 md:pt-20 md:pb-32 relative bg-neutral-50 overflow-hidden">
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
+          <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900">
             Tudo que sua agência{" "}
             <span className="italic gradient-brand">precisa</span>
           </h2>

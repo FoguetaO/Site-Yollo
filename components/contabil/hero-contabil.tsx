@@ -70,7 +70,7 @@ export default function HeroContabil() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.14s" }}>
+          <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA agenda reuniões, atende clientes automaticamente, distribui conversas por departamento,
             rastreia leads por anúncios e entrega o prospect pronto para a negociação — sem intervenção da equipe.
           </p>

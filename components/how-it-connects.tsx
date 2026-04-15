@@ -54,7 +54,7 @@ export default function HowItConnects() {
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 01</span>
             </div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-3 leading-snug">
+            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-neutral-900 mb-3 leading-snug">
               Conecte seu WhatsApp de forma segura
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-8">
@@ -123,7 +123,7 @@ export default function HowItConnects() {
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 02</span>
             </div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-3 leading-snug">
+            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-neutral-900 mb-3 leading-snug">
               Gere o prompt da sua IA em segundos
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
@@ -188,7 +188,7 @@ export default function HowItConnects() {
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 03</span>
             </div>
-            <h3 className="text-2xl font-bold text-neutral-900 mb-3 leading-snug">
+            <h3 className="text-base sm:text-lg md:text-2xl font-bold text-neutral-900 mb-3 leading-snug">
               A IA atende por você, 24 horas
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">

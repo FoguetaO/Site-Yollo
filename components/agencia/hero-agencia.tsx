@@ -65,7 +65,7 @@ export default function HeroAgencia() {
           </h1>
 
           <p
-            className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-agencia-eb"
+            className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-agencia-eb"
             style={{ transitionDelay: "0.14s" }}
           >
             A Yollo IA prospecta empresas por nicho e localidade, dispara mensagens em massa e nutre leads automaticamente. Sua agência foca em fechar contratos — a IA cuida da prospecção.
