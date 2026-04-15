@@ -20,7 +20,7 @@ function slugify(text: string) {
     .replace(/\s+/g, "-")
 }
 
-/* CTA inline — aparece no meio do conteúdo (estilo blog-cta-inline do Assis.co) */
+/* CTA inline  -  aparece no meio do conteúdo (estilo blog-cta-inline do Assis.co) */
 function CtaInline() {
   return (
     <aside className="not-prose my-8 rounded-2xl border p-6 md:p-8" style={{ background: "linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%)", borderColor: "#ddd6fe" }}>
@@ -28,7 +28,7 @@ function CtaInline() {
         Quer ver isso funcionando no seu WhatsApp?
       </p>
       <p className="text-gray-600 text-sm mb-5 leading-relaxed">
-        A Yollo IA atende, qualifica leads e agenda automaticamente — sem precisar de um humano 24h.
+        A Yollo IA atende, qualifica leads e agenda automaticamente  -  sem precisar de um humano 24h.
       </p>
       <Link
         href="/#contratar"
@@ -41,7 +41,7 @@ function CtaInline() {
   )
 }
 
-/* CTA banner — versão horizontal (estilo blog-cta-banner do Assis.co) */
+/* CTA banner  -  versão horizontal (estilo blog-cta-banner do Assis.co) */
 function CtaBanner() {
   return (
     <aside className="not-prose my-10 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-5" style={{ backgroundColor: "#1f2937" }}>
@@ -50,7 +50,7 @@ function CtaBanner() {
           Seu WhatsApp pode trabalhar enquanto você dorme
         </p>
         <p className="text-sm leading-relaxed" style={{ color: "#9ca3af" }}>
-          IA que atende, qualifica e agenda — 24h por dia, 7 dias por semana.
+          IA que atende, qualifica e agenda  -  24h por dia, 7 dias por semana.
         </p>
       </div>
       <Link

@@ -42,7 +42,7 @@ export default function LeadFormAdvocacia() {
               Comece agora
             </h2>
             <p className="text-base md:text-lg text-gray-500 mt-3 text-center md:text-left">
-              Preencha seus dados e comece a atender seus clientes jurídicos 24h pelo WhatsApp — sem aumentar sua equipe.
+              Preencha seus dados e comece a atender seus clientes jurídicos 24h pelo WhatsApp  -  sem aumentar sua equipe.
             </p>
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[

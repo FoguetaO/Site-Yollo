@@ -14,7 +14,7 @@ export default function HeroContabil() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
-      aria-label="Yollo IA para Escritórios Contábeis — automação de atendimento via WhatsApp 24h"
+      aria-label="Yollo IA para Escritórios Contábeis  -  automação de atendimento via WhatsApp 24h"
       style={{
         background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
@@ -72,7 +72,7 @@ export default function HeroContabil() {
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA agenda reuniões, atende clientes automaticamente, distribui conversas por departamento,
-            rastreia leads por anúncios e entrega o prospect pronto para a negociação — sem intervenção da equipe.
+            rastreia leads por anúncios e entrega o prospect pronto para a negociação  -  sem intervenção da equipe.
           </p>
 
           {/* CTA Buttons */}

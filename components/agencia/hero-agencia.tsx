@@ -14,7 +14,7 @@ export default function HeroAgencia() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
-      aria-label="Yollo IA para Agências de Marketing — prospecção automática e disparo em massa via WhatsApp"
+      aria-label="Yollo IA para Agências de Marketing  -  prospecção automática e disparo em massa via WhatsApp"
       style={{
         background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
@@ -68,7 +68,7 @@ export default function HeroAgencia() {
             className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-agencia-eb"
             style={{ transitionDelay: "0.14s" }}
           >
-            A Yollo IA prospecta empresas por nicho e localidade, dispara mensagens em massa e nutre leads automaticamente. Sua agência foca em fechar contratos — a IA cuida da prospecção.
+            A Yollo IA prospecta empresas por nicho e localidade, dispara mensagens em massa e nutre leads automaticamente. Sua agência foca em fechar contratos  -  a IA cuida da prospecção.
           </p>
 
           <div

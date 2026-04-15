@@ -94,7 +94,7 @@ export default async function BlogPostPage({ params }: Props) {
               </ol>
             </nav>
 
-            {/* Keyword tags — estilo Assis.co */}
+            {/* Keyword tags  -  estilo Assis.co */}
             <div className="flex flex-wrap gap-2 mb-6">
               {post.keywords.slice(0, 5).map((kw) => (
                 <span key={kw} className="text-xs font-medium px-3 py-1.5 rounded-full transition-colors" style={{ backgroundColor: "#f3f4f6", color: "#6b7280" }}>
@@ -137,7 +137,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Coluna do artigo: 12 cols mobile, 8 cols xl */}
             <div className="col-span-12 xl:col-span-8">
 
-              {/* Imagem destacada — dentro do grid, acima do conteúdo */}
+              {/* Imagem destacada  -  dentro do grid, acima do conteúdo */}
               <figure className="mt-10 mb-10 rounded-2xl overflow-hidden shadow-sm">
                 <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
                   <Image
@@ -172,7 +172,7 @@ export default async function BlogPostPage({ params }: Props) {
                   </div>
                 </div>
 
-                {/* Compartilhar — final do artigo */}
+                {/* Compartilhar  -  final do artigo */}
                 <div className="mt-8 pt-8 border-t flex items-center gap-3 flex-wrap" style={{ borderColor: "#e5e7eb" }}>
                   <p className="text-sm font-semibold" style={{ color: "#6b7280" }}>Compartilhar:</p>
                   <a href={`https://wa.me/?text=${encodeURIComponent(post.title + " - " + shareUrl)}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:opacity-85 transition-opacity" style={{ backgroundColor: "#25D366" }}>
@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: Props) {
               </article>
             </div>
 
-            {/* Sidebar — 4 cols xl, sticky */}
+            {/* Sidebar  -  4 cols xl, sticky */}
             <aside className="hidden xl:block col-span-12 xl:col-span-4">
               <div className="sticky top-28 pt-10">
                 <BlogToc content={post.content} />

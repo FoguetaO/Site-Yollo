@@ -16,12 +16,12 @@ import WhatsAppFloat from "@/components/whatsapp-float"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
-  title: "Yollo IA para Imobiliárias — IA no WhatsApp que Capta, Qualifica e Agenda Visitas 24/7",
+  title: "Yollo IA para Imobiliárias  -  IA no WhatsApp que Capta, Qualifica e Agenda Visitas 24/7",
   description:
-    "Automação de atendimento via WhatsApp com IA para imobiliárias e corretores de imóveis. Qualifique leads, agende visitas e faça follow-up automaticamente. Parceiro oficial Meta — WhatsApp Business API.",
+    "Automação de atendimento via WhatsApp com IA para imobiliárias e corretores de imóveis. Qualifique leads, agende visitas e faça follow-up automaticamente. Parceiro oficial Meta  -  WhatsApp Business API.",
   alternates: { canonical: "https://yolloia.com.br/imoveis" },
   openGraph: {
-    title: "IA para Imobiliárias e Corretores — Yollo IA",
+    title: "IA para Imobiliárias e Corretores  -  Yollo IA",
     description: "Qualifique leads, agende visitas e feche mais negócios pelo WhatsApp com IA. Atendimento 24h.",
     type: "website",
     locale: "pt_BR",
@@ -56,7 +56,7 @@ export default function ImoveisPage() {
         ctaHref="#contratar"
         phoneImage={{
           src: "/ultimasecao.png",
-          alt: "Smartphone mostrando qualificação automática de leads imobiliários via WhatsApp com a IA Yollo — agendamento de visitas e follow-up automático",
+          alt: "Smartphone mostrando qualificação automática de leads imobiliários via WhatsApp com a IA Yollo  -  agendamento de visitas e follow-up automático",
         }}
         accentColor="#6C4FE8"
       />

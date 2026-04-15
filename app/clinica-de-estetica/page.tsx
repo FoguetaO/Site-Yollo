@@ -12,12 +12,12 @@ import Footer from "@/components/footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
 
 export const metadata = {
-  title: "Yollo IA para Clínicas de Estética — IA no WhatsApp que Agenda e Atende 24/7",
+  title: "Yollo IA para Clínicas de Estética  -  IA no WhatsApp que Agenda e Atende 24/7",
   description:
     "Automação de atendimento via WhatsApp com IA para clínicas de estética. Agende procedimentos, responda clientes 24h, reduza faltas e aumente o faturamento da sua clínica com Inteligência Artificial.",
   alternates: { canonical: "https://yolloia.com.br/clinica-de-estetica" },
   openGraph: {
-    title: "IA para Clínicas de Estética — Yollo IA",
+    title: "IA para Clínicas de Estética  -  Yollo IA",
     description: "Automatize o atendimento da sua clínica de estética. Agende, qualifique e atenda clientes 24h pelo WhatsApp com IA.",
     type: "website",
     locale: "pt_BR",
@@ -28,7 +28,7 @@ export const metadata = {
 const segmentSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "IA para Clínicas de Estética — Yollo IA",
+  name: "IA para Clínicas de Estética  -  Yollo IA",
   description:
     "Automação de atendimento via WhatsApp com IA para clínicas de estética. Agendamento automático, qualificação de leads e CRM integrado.",
   url: "https://yolloia.com.br/clinica-de-estetica",

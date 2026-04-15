@@ -96,7 +96,7 @@ export const blogPosts: BlogPost[] = [
     relatedPosts: ["boas-praticas-automatizar-whatsapp", "passo-a-passo-automatizar-whatsapp", "automacao-whatsapp-clinica-estetica"],
     image: {
       src: "/blog/automacao-whatsapp-por-segmento.jpg",
-      alt: "Profissionais de diferentes setores — clínica, e-commerce e financeiro — utilizando automação de WhatsApp em seus negócios",
+      alt: "Profissionais de diferentes setores  -  clínica, e-commerce e financeiro  -  utilizando automação de WhatsApp em seus negócios",
       title: "Como Automatizar o WhatsApp em Diferentes Tipos de Negócio",
       caption: "A automação de WhatsApp não tem formato único. Cada segmento tem demandas específicas que exigem fluxos adaptados à jornada do seu cliente.",
       width: 1280,
@@ -107,7 +107,7 @@ export const blogPosts: BlogPost[] = [
 
 A automação no WhatsApp não tem um formato único que funcione para todos os segmentos. Cada tipo de negócio tem uma jornada do consumidor diferente, demandas específicas e um ritmo de atendimento próprio.
 
-O que determina o sucesso da automação em cada setor não é a tecnologia escolhida — é a capacidade de **adaptar os fluxos à realidade do cliente que aquele negócio atende**. Um fluxo criado para uma clínica de estética não funciona para um e-commerce, assim como a régua de cobrança de uma fintech não se aplica a um escritório de advocacia.
+O que determina o sucesso da automação em cada setor não é a tecnologia escolhida  -  é a capacidade de **adaptar os fluxos à realidade do cliente que aquele negócio atende**. Um fluxo criado para uma clínica de estética não funciona para um e-commerce, assim como a régua de cobrança de uma fintech não se aplica a um escritório de advocacia.
 
 Este artigo apresenta aplicações práticas por segmento para tornar essa adaptação mais concreta.
 
@@ -137,7 +137,7 @@ Com a integração via API entre o WhatsApp e o sistema de logística, o cliente
 
 ### Fluxo de trocas e devoluções
 
-Para situações de troca, fluxos específicos coletam as informações necessárias, registram a solicitação e informam os próximos passos — tudo dentro do próprio WhatsApp, sem que o cliente precise ligar ou acessar outro canal.
+Para situações de troca, fluxos específicos coletam as informações necessárias, registram a solicitação e informam os próximos passos  -  tudo dentro do próprio WhatsApp, sem que o cliente precise ligar ou acessar outro canal.
 
 **Benefício direto**: Redução do volume de atendimentos manuais nos momentos mais críticos da jornada de compra, que costumam concentrar as maiores filas de suporte.
 
@@ -193,7 +193,7 @@ Uma régua bem configurada opera em camadas progressivas:
 | 3 dias após vencimento | Oferta de negociação dentro do fluxo | Recuperação de crédito |
 | 10 dias após vencimento | Encaminhamento para equipe de cobrança | Casos mais complexos |
 
-Esse modelo reduz a inadimplência e o custo operacional das equipes de cobrança — sem desgastar o relacionamento com clientes que simplesmente esqueceram do vencimento.
+Esse modelo reduz a inadimplência e o custo operacional das equipes de cobrança  -  sem desgastar o relacionamento com clientes que simplesmente esqueceram do vencimento.
 
 ### Notificações transacionais em tempo real
 
@@ -205,7 +205,7 @@ Para instituições financeiras, a automação viabiliza o envio imediato de:
 - Faturas de cartão disponíveis para consulta
 - Notificações de aprovação de crédito
 
-Esses alertas aumentam a **percepção de controle e confiança** do cliente sobre sua conta — e reduzem significativamente o volume de ligações para centrais de atendimento.
+Esses alertas aumentam a **percepção de controle e confiança** do cliente sobre sua conta  -  e reduzem significativamente o volume de ligações para centrais de atendimento.
 
 ## Como Pequenas Empresas Podem Automatizar com Baixo Investimento
 
@@ -226,7 +226,7 @@ Esse ponto de partida é adequado para operações de até 30 a 50 atendimentos 
 
 ### Próximo passo: plataformas de entrada acessíveis
 
-Quando o volume de atendimentos cresce, o caminho natural é migrar para plataformas com planos mensais compatíveis com a realidade financeira de pequenos negócios — muitas a partir de valores que cabem no orçamento de qualquer MEI.
+Quando o volume de atendimentos cresce, o caminho natural é migrar para plataformas com planos mensais compatíveis com a realidade financeira de pequenos negócios  -  muitas a partir de valores que cabem no orçamento de qualquer MEI.
 
 ### Estratégia para começar com acerto
 
@@ -251,7 +251,7 @@ Expandir a automação de forma gradual conforme a operação amadurece é mais 
 
 A automação no WhatsApp funciona melhor quando é desenvolvida **de dentro para fora**: primeiro entende-se o comportamento do cliente naquele segmento, depois constroem-se os fluxos que atendem esse comportamento de forma eficiente.
 
-E-commerce, clínicas, serviços financeiros e pequenas empresas têm pontos de partida diferentes — mas todos convergem para o mesmo resultado: **mais atendimentos resolvidos com menos esforço operacional**.
+E-commerce, clínicas, serviços financeiros e pequenas empresas têm pontos de partida diferentes  -  mas todos convergem para o mesmo resultado: **mais atendimentos resolvidos com menos esforço operacional**.
 
 Com a [Yollo IA](/), sua empresa recebe fluxos configurados especificamente para o seu segmento, integração com os sistemas que você já usa e suporte para evoluir a automação conforme a operação cresce.
 
@@ -261,7 +261,7 @@ Com a [Yollo IA](/), sua empresa recebe fluxos configurados especificamente para
   {
     slug: "boas-praticas-automatizar-whatsapp",
     title: "Boas Práticas para Automatizar o WhatsApp sem Perder Qualidade no Atendimento",
-    description: "Como equilibrar automação e atendimento humano no WhatsApp, personalizar mensagens automáticas e evitar os erros mais comuns na configuração de fluxos — sem comprometer a experiência do cliente.",
+    description: "Como equilibrar automação e atendimento humano no WhatsApp, personalizar mensagens automáticas e evitar os erros mais comuns na configuração de fluxos  -  sem comprometer a experiência do cliente.",
     category: "WhatsApp Business",
     categorySlug: "whatsapp-business",
     publishedAt: "2024-04-14",
@@ -282,12 +282,12 @@ Com a [Yollo IA](/), sua empresa recebe fluxos configurados especificamente para
       src: "/blog/boas-praticas-automatizar-whatsapp.jpg",
       alt: "Dois profissionais colaborando em tablet com interface de fluxo de atendimento WhatsApp, mostrando equilíbrio entre automação e atendimento humano",
       title: "Boas Práticas para Automatizar o WhatsApp sem Perder Qualidade",
-      caption: "A automação bem executada não elimina o contato humano — ela o direciona para onde ele realmente faz diferença.",
+      caption: "A automação bem executada não elimina o contato humano  -  ela o direciona para onde ele realmente faz diferença.",
       width: 1280,
       height: 720,
     },
     content: `
-## Automação que Gera Resultado — ou Que Afasta Clientes
+## Automação que Gera Resultado  -  ou Que Afasta Clientes
 
 A diferença entre uma automação de WhatsApp que encanta o cliente e uma que o frustra raramente está na tecnologia escolhida. Está no **planejamento de como ela é configurada e mantida ao longo do tempo**.
 
@@ -295,11 +295,11 @@ Automatizar sem critério pode gerar o efeito oposto ao desejado: conversas aban
 
 ## Como Equilibrar Automação e Atendimento Humano no Mesmo Fluxo
 
-O ponto de equilíbrio entre bot e atendente é um dos aspectos mais críticos de qualquer projeto de automação no WhatsApp. Não se trata de escolher um dos dois — trata-se de saber **quando cada um deve atuar**.
+O ponto de equilíbrio entre bot e atendente é um dos aspectos mais críticos de qualquer projeto de automação no WhatsApp. Não se trata de escolher um dos dois  -  trata-se de saber **quando cada um deve atuar**.
 
 ### O que é o handoff humano
 
-O **handoff humano** é a transferência da conversa do bot para um atendente real. Quando acontece no momento certo e de forma transparente, o cliente nem percebe a transição. Quando acontece tarde demais — ou não acontece — a insatisfação é inevitável.
+O **handoff humano** é a transferência da conversa do bot para um atendente real. Quando acontece no momento certo e de forma transparente, o cliente nem percebe a transição. Quando acontece tarde demais  -  ou não acontece  -  a insatisfação é inevitável.
 
 ### Quando acionar o atendimento humano
 
@@ -322,7 +322,7 @@ O erro mais cometido nesse momento é fazer o cliente **repetir tudo o que já i
 
 Essa continuidade é o que diferencia uma automação bem estruturada de uma experiência fragmentada.
 
-> **Dica prática**: Configure um comando de escape em qualquer ponto do fluxo — como digitar "falar com atendente" — para que o cliente nunca se sinta preso em um loop sem saída.
+> **Dica prática**: Configure um comando de escape em qualquer ponto do fluxo  -  como digitar "falar com atendente"  -  para que o cliente nunca se sinta preso em um loop sem saída.
 
 ## Personalização de Mensagens Automáticas para Não Parecerem Robóticas
 
@@ -346,13 +346,13 @@ Se o cliente acabou de dizer que está procurando informações sobre determinad
 
 **Adote o tom de voz da marca**
 
-Uma clínica de estética tem um tom diferente de um escritório de advocacia. A linguagem das mensagens automáticas precisa refletir essa identidade — não um tom genérico corporativo que não combina com nenhuma das duas.
+Uma clínica de estética tem um tom diferente de um escritório de advocacia. A linguagem das mensagens automáticas precisa refletir essa identidade  -  não um tom genérico corporativo que não combina com nenhuma das duas.
 
 **Varie formulações de mensagens recorrentes**
 
 Quando um mesmo cliente interage com frequência, mensagens idênticas repetidas criam a sensação de conversar com um sistema mecânico. Ter duas ou três variações para a mesma mensagem resolve isso de forma simples.
 
-> O objetivo não é esconder que existe automação — é garantir que ela seja **útil e agradável** de usar.
+> O objetivo não é esconder que existe automação  -  é garantir que ela seja **útil e agradável** de usar.
 
 ## Como Evitar os Erros Mais Comuns na Configuração de Fluxos Automáticos
 
@@ -379,7 +379,7 @@ Ou se preferir, é só digitar 'atendente' para falar com alguém da equipe."
 
 O comportamento dos clientes muda. Os produtos e serviços da empresa evoluem. Um fluxo configurado há seis meses pode estar respondendo perguntas que ninguém mais faz, ou deixando de cobrir dúvidas que surgiram recentemente.
 
-**Como corrigir**: Trate os fluxos como documentos vivos. Estabeleça uma cadência de revisão — mensal ou trimestral — baseada nos dados reais de atendimento:
+**Como corrigir**: Trate os fluxos como documentos vivos. Estabeleça uma cadência de revisão  -  mensal ou trimestral  -  baseada nos dados reais de atendimento:
 
 | Indicador para revisar | O que investigar |
 |------------------------|------------------|
@@ -408,9 +408,9 @@ Antes de lançar qualquer fluxo automatizado no WhatsApp, verifique:
 
 ## Conclusão
 
-A automação de WhatsApp com qualidade não é mais complexa do que a automação mal feita — ela só exige **mais atenção em pontos específicos**: o momento do handoff humano, a personalização das mensagens e a revisão contínua dos fluxos.
+A automação de WhatsApp com qualidade não é mais complexa do que a automação mal feita  -  ela só exige **mais atenção em pontos específicos**: o momento do handoff humano, a personalização das mensagens e a revisão contínua dos fluxos.
 
-Empresas que tratam esses elementos com cuidado constroem um canal de atendimento que escala sem comprometer a experiência do cliente — e é isso que diferencia uma operação de atendimento realmente eficiente.
+Empresas que tratam esses elementos com cuidado constroem um canal de atendimento que escala sem comprometer a experiência do cliente  -  e é isso que diferencia uma operação de atendimento realmente eficiente.
 
 Com a [Yollo IA](/), todos esses elementos são configurados de forma estruturada desde o início: fluxos com handoff inteligente, mensagens personalizadas com dados do CRM e monitoramento contínuo de performance.
 
@@ -450,7 +450,7 @@ Com a [Yollo IA](/), todos esses elementos são configurados de forma estruturad
 
 Automatizar o WhatsApp de forma eficiente não começa pela escolha da ferramenta nem pela configuração técnica. Começa pelo **entendimento profundo de quem é o cliente**, quais são suas dúvidas mais frequentes e qual caminho ele percorre até resolver uma demanda.
 
-Sem esse mapeamento prévio, qualquer fluxo configurado corre o risco de ser genérico demais para gerar valor real. Este guia parte do planejamento estratégico e avança até a integração com os sistemas da empresa — na ordem que produz os melhores resultados.
+Sem esse mapeamento prévio, qualquer fluxo configurado corre o risco de ser genérico demais para gerar valor real. Este guia parte do planejamento estratégico e avança até a integração com os sistemas da empresa  -  na ordem que produz os melhores resultados.
 
 ## Etapa 1: Mapeamento da Jornada do Cliente
 
@@ -470,7 +470,7 @@ O primeiro passo para automatizar o WhatsApp é mapear a jornada do cliente dent
 | Análise de tickets | Categorias de demanda, tempo de resolução, reincidências |
 | Pesquisas de satisfação | Pontos de atrito, expectativas não atendidas |
 
-O resultado desse mapeamento é a **matéria-prima para construir um funil de atendimento** que faça sentido para o cliente — e não apenas para a operação interna da empresa.
+O resultado desse mapeamento é a **matéria-prima para construir um funil de atendimento** que faça sentido para o cliente  -  e não apenas para a operação interna da empresa.
 
 > **Erro mais comum**: Empresas que pulam essa etapa constroem fluxos baseados em suposições internas. O resultado é um bot que responde o que a empresa quer dizer, não o que o cliente precisa ouvir.
 
@@ -487,7 +487,7 @@ Enviada automaticamente quando um cliente inicia conversa pela primeira vez ou a
 Responde automaticamente fora do horário comercial configurado. Deve informar o horário de atendimento e dar uma estimativa de retorno.
 
 **Respostas rápidas**
-Atalhos para textos longos frequentemente usados. São acionados com "/" durante o atendimento — não são automáticas, mas aceleram significativamente o tempo de resposta da equipe.
+Atalhos para textos longos frequentemente usados. São acionados com "/" durante o atendimento  -  não são automáticas, mas aceleram significativamente o tempo de resposta da equipe.
 
 ### Como acessar essas configurações
 
@@ -537,7 +537,7 @@ Com o diagrama em mãos, os fluxos são configurados dentro da plataforma escolh
 
 **4. Teste com cenários reais antes de publicar**
 
-Simule conversas como um cliente real faria — incluindo respostas inesperadas, erros de digitação e caminhos alternativos. Ajuste os fluxos com base nos gaps encontrados.
+Simule conversas como um cliente real faria  -  incluindo respostas inesperadas, erros de digitação e caminhos alternativos. Ajuste os fluxos com base nos gaps encontrados.
 
 > Um onboarding bem conduzido nessa etapa reduz significativamente os erros que aparecem após o lançamento.
 
@@ -584,7 +584,7 @@ A configuração dessa ponte entre sistemas é feita via **API**, com suporte da
 3. Cria ou atualiza o registro com os dados da conversa
 4. Retorna a resposta personalizada ao cliente
 
-Esse passo representa um dos mais decisivos para elevar a maturidade do atendimento automatizado — é o que separa um bot básico de uma operação de atendimento verdadeiramente inteligente.
+Esse passo representa um dos mais decisivos para elevar a maturidade do atendimento automatizado  -  é o que separa um bot básico de uma operação de atendimento verdadeiramente inteligente.
 
 ## Resumo: As 4 Etapas em Sequência
 
@@ -599,7 +599,7 @@ Esse passo representa um dos mais decisivos para elevar a maturidade do atendime
 
 A automação de WhatsApp bem-sucedida segue uma sequência lógica: **entender o cliente antes de configurar qualquer fluxo**, depois construir a automação da camada mais simples para a mais complexa, e por fim integrar com os sistemas internos para que cada conversa alimente a inteligência do negócio.
 
-Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto — desde o mapeamento inicial dos fluxos até a integração nativa com CRM e a configuração dos chatbots com inteligência artificial.
+Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto  -  desde o mapeamento inicial dos fluxos até a integração nativa com CRM e a configuração dos chatbots com inteligência artificial.
 
 **[Agende uma demonstração gratuita](/#contratar)** e veja como sua empresa pode seguir esse passo a passo com suporte especializado do início ao fim.
     `,
@@ -659,13 +659,13 @@ Cada etapa do fluxo é pensada com base nas dúvidas, necessidades e comportamen
 
 Fluxos bem estruturados geram resultados concretos:
 
-- **Redução do tempo de espera** — o cliente não fica aguardando um atendente
-- **Eliminação de retrabalho** — informações são coletadas uma única vez
-- **Atendimento 24/7** — nenhuma mensagem fica sem resposta, mesmo fora do horário
-- **Consistência** — todos os clientes recebem o mesmo padrão de atendimento
-- **Escalabilidade** — atenda 10 ou 1.000 pessoas simultaneamente
+- **Redução do tempo de espera**  -  o cliente não fica aguardando um atendente
+- **Eliminação de retrabalho**  -  informações são coletadas uma única vez
+- **Atendimento 24/7**  -  nenhuma mensagem fica sem resposta, mesmo fora do horário
+- **Consistência**  -  todos os clientes recebem o mesmo padrão de atendimento
+- **Escalabilidade**  -  atenda 10 ou 1.000 pessoas simultaneamente
 
-> **Exemplo prático**: Uma [clínica de estética](/blog/automacao-whatsapp-clinica-estetica) pode criar um fluxo que identifica se o cliente quer agendar, remarcar ou cancelar um procedimento, coleta as informações necessárias e confirma automaticamente — tudo sem intervenção humana.
+> **Exemplo prático**: Uma [clínica de estética](/blog/automacao-whatsapp-clinica-estetica) pode criar um fluxo que identifica se o cliente quer agendar, remarcar ou cancelar um procedimento, coleta as informações necessárias e confirma automaticamente  -  tudo sem intervenção humana.
 
 ## O Papel dos Gatilhos e Condições na Automação
 
@@ -711,7 +711,7 @@ A **WhatsApp Business API** é o recurso que permite conectar o aplicativo de me
 
 ### Como funcionam os webhooks
 
-A integração acontece por meio de **webhooks** — mecanismos de comunicação em tempo real entre sistemas diferentes. 
+A integração acontece por meio de **webhooks**  -  mecanismos de comunicação em tempo real entre sistemas diferentes. 
 
 Na prática, um webhook funciona assim:
 
@@ -722,15 +722,15 @@ Na prática, um webhook funciona assim:
 
 > **Exemplo real**: O sistema de logística atualiza o status de um pedido para "Em transporte". Instantaneamente, o cliente recebe no WhatsApp: "Seu pedido #12345 saiu para entrega! Previsão: hoje até 18h. Acompanhe: [link de rastreio]"
 
-Esse nível de **integração de sistemas** transforma o WhatsApp em um canal de atendimento conectado ao núcleo operacional da empresa — não apenas um aplicativo de mensagens isolado.
+Esse nível de **integração de sistemas** transforma o WhatsApp em um canal de atendimento conectado ao núcleo operacional da empresa  -  não apenas um aplicativo de mensagens isolado.
 
 ### Vantagens da integração via API
 
-- **Atendimento personalizado** — acesso ao histórico completo do cliente
-- **Respostas contextualizadas** — informações em tempo real
-- **Automação de ponta a ponta** — do primeiro contato ao pós-venda
-- **Redução de erros** — eliminação de digitação manual
-- **Métricas unificadas** — dados consolidados entre sistemas
+- **Atendimento personalizado**  -  acesso ao histórico completo do cliente
+- **Respostas contextualizadas**  -  informações em tempo real
+- **Automação de ponta a ponta**  -  do primeiro contato ao pós-venda
+- **Redução de erros**  -  eliminação de digitação manual
+- **Métricas unificadas**  -  dados consolidados entre sistemas
 
 ## Processamento de Linguagem Natural em Bots de WhatsApp
 
@@ -808,7 +808,7 @@ Empresas que implementam automação estruturada no WhatsApp observam:
 
 ## Conclusão
 
-A automação no WhatsApp não é "mágica" — é uma **arquitetura técnica bem planejada** que combina:
+A automação no WhatsApp não é "mágica"  -  é uma **arquitetura técnica bem planejada** que combina:
 
 - **Fluxos de conversa** estruturados para cada cenário
 - **Gatilhos e condições** que direcionam o atendimento
@@ -855,7 +855,7 @@ Com a [Yollo IA](/), você tem acesso a todos esses recursos em uma plataforma �
 
 Automatizar o WhatsApp significa configurar o aplicativo ou uma plataforma integrada a ele para enviar, receber e organizar mensagens **sem a necessidade de intervenção humana** em cada etapa do atendimento. No contexto empresarial, essa automação de mensagens vai além de simples respostas prontas.
 
-A automação envolve **fluxos estruturados** que guiam o cliente por uma conversa, coletam informações, oferecem opções e encaminham demandas para o setor correto — tudo de forma automática e em tempo real.
+A automação envolve **fluxos estruturados** que guiam o cliente por uma conversa, coletam informações, oferecem opções e encaminham demandas para o setor correto  -  tudo de forma automática e em tempo real.
 
 ### O que a automação de WhatsApp faz na prática
 
@@ -906,7 +906,7 @@ A **WhatsApp Business API** é a solução destinada a empresas que precisam de:
 - Múltiplos atendentes no mesmo número
 - Relatórios e métricas detalhadas
 
-A API não tem uma interface própria — ela é operada por meio de **provedores oficiais autorizados pela Meta**, como a [Yollo IA](/). Isso significa que você precisa de uma plataforma intermediária para usar todos os recursos.
+A API não tem uma interface própria  -  ela é operada por meio de **provedores oficiais autorizados pela Meta**, como a [Yollo IA](/). Isso significa que você precisa de uma plataforma intermediária para usar todos os recursos.
 
 ## O Que Pode Ser Automatizado no WhatsApp
 
@@ -984,7 +984,7 @@ Integrado à agenda da empresa, o sistema oferece horários disponíveis e confi
 
 ### 7. Encaminhamento para departamentos
 
-A IA identifica o assunto da conversa e transfere automaticamente para o setor correto — comercial, suporte, financeiro, técnico — sem que o cliente precise repetir informações.
+A IA identifica o assunto da conversa e transfere automaticamente para o setor correto  -  comercial, suporte, financeiro, técnico  -  sem que o cliente precise repetir informações.
 
 ## O Que Não Pode Ser Automatizado
 
@@ -1006,7 +1006,7 @@ Quando a solicitação do cliente não se encaixa nos fluxos previstos, um atend
 
 Situações que exigem interpretar documentos, analisar casos específicos ou tomar decisões que envolvem múltiplas variáveis.
 
-> **Importante**: A automação no WhatsApp **não substitui a equipe de atendimento** — ela libera essa equipe para lidar com os casos que realmente exigem atenção personalizada.
+> **Importante**: A automação no WhatsApp **não substitui a equipe de atendimento**  -  ela libera essa equipe para lidar com os casos que realmente exigem atenção personalizada.
 
 ## Como Começar a Automatizar Seu WhatsApp
 
@@ -1070,7 +1070,7 @@ Veja o que empresas parceiras da Yollo IA conquistaram com automação:
 
 ## Conclusão
 
-Automatizar o WhatsApp não é mais um diferencial competitivo — é uma **necessidade para empresas que querem escalar** seu atendimento sem aumentar proporcionalmente os custos.
+Automatizar o WhatsApp não é mais um diferencial competitivo  -  é uma **necessidade para empresas que querem escalar** seu atendimento sem aumentar proporcionalmente os custos.
 
 A chave está em entender o que automatizar (tarefas repetitivas, coleta de dados, triagem) e o que manter humano (negociações, empatia, decisões complexas).
 
@@ -1132,7 +1132,7 @@ A [automação com IA](/blog/ia-atendimento-whatsapp) permite que sua clínica:
 O assistente de IA responde clientes mesmo de madrugada ou nos finais de semana. Quando uma cliente pesquisa "limpeza de pele perto de mim" às 22h, sua clínica responde instantaneamente.
 
 ### 2. Agendamento inteligente
-O sistema consulta sua agenda em tempo real e oferece horários disponíveis. A cliente escolhe, confirma e recebe um lembrete automático — tudo sem intervenção humana.
+O sistema consulta sua agenda em tempo real e oferece horários disponíveis. A cliente escolhe, confirma e recebe um lembrete automático  -  tudo sem intervenção humana.
 
 ### 3. Qualificação de leads
 A IA identifica o procedimento de interesse, o histórico da cliente e encaminha casos complexos para atendimento humano quando necessário.
@@ -1171,7 +1171,7 @@ Mesmo com automação, sua equipe precisa saber quando e como intervir no atendi
 
 ## Conclusão
 
-A automação de WhatsApp não é mais um diferencial — é uma necessidade para clínicas de estética que querem crescer. Com a [Yollo IA](/), você implementa todo esse sistema em menos de uma semana, sem precisar de conhecimento técnico.
+A automação de WhatsApp não é mais um diferencial  -  é uma necessidade para clínicas de estética que querem crescer. Com a [Yollo IA](/), você implementa todo esse sistema em menos de uma semana, sem precisar de conhecimento técnico.
 
 **[Agende uma demonstração gratuita](/#contratar)** e veja como sua clínica pode atender mais clientes gastando menos tempo.
     `,
@@ -1745,7 +1745,7 @@ O WhatsApp é o canal preferido dos brasileiros para comunicação. Para o merca
 **Erro comum**: "Oi, vi seu interesse no imóvel. Posso ajudar?"
 
 **Abordagem correta**:
-"Olá [Nome]! Vi que você se interessou pelo apartamento de 3 quartos na Vila Mariana. É uma excelente escolha — esse imóvel fica a 5 minutos do metrô e tem vista permanente. Posso enviar um vídeo completo do apartamento?"
+"Olá [Nome]! Vi que você se interessou pelo apartamento de 3 quartos na Vila Mariana. É uma excelente escolha  -  esse imóvel fica a 5 minutos do metrô e tem vista permanente. Posso enviar um vídeo completo do apartamento?"
 
 ### 2. Descoberta de necessidades (5-15 minutos)
 

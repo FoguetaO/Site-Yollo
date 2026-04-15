@@ -34,7 +34,7 @@ export default function SegmentFeatureHero({
     <section
       className="w-full relative"
       style={{ paddingTop: sectionPaddingTop }}
-      aria-label={`Recursos — ${badge}`}
+      aria-label={`Recursos  -  ${badge}`}
     >
       {/* Imagem de background posicionada absolutamente, sem zoom */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -51,7 +51,7 @@ export default function SegmentFeatureHero({
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
 
-        {/* Coluna esquerda — texto */}
+        {/* Coluna esquerda  -  texto */}
         <div className="flex flex-col gap-6 py-16 md:w-[45%] shrink-0" style={{ paddingTop: contentPaddingTop }}>
 
           {/* Badge */}

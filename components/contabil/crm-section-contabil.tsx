@@ -177,7 +177,7 @@ function DropZone({ active }: { active: boolean }) {
   )
 }
 
-// ─── Cursor SVG ─────────��────────────�����────────────────────────────────────────
+// ─── Cursor SVG ─────────��────────────�������────────────────────────────────────────
 
 function AnimatedCursor({
   x, y, visible, clicking, showRipple,
@@ -302,7 +302,7 @@ export default function CRMSectionContabil() {
       const cardCenter = getCenter(cardEl)
       const destCenter = getCenter(destColEl)
 
-      // Phase 1: cursor moves to card — suave (900ms)
+      // Phase 1: cursor moves to card  -  suave (900ms)
       setPhase("hovering")
       animateCursorTo(
         destCenter.x + 140, destCenter.y - 80,
@@ -310,7 +310,7 @@ export default function CRMSectionContabil() {
         900,
         (x, y) => setCursor({ x, y }),
         () => {
-          // Phase 2: click visual — ripple + pausa (350ms)
+          // Phase 2: click visual  -  ripple + pausa (350ms)
           setShowRipple(true)
           setTimeout(() => setShowRipple(false), 500)
           setTimeout(() => {

@@ -9,7 +9,7 @@ const features = [
     badge: "Inteligência Artificial",
     title: "Agente de IA treinado no seu negócio",
     description:
-      "Configure um agente de IA que responde clientes, qualifica leads e agenda reuniões — 24h por dia, 7 dias por semana. Sem deixar nenhum cliente sem resposta.",
+      "Configure um agente de IA que responde clientes, qualifica leads e agenda reuniões  -  24h por dia, 7 dias por semana. Sem deixar nenhum cliente sem resposta.",
     keywords: ["chatbot com IA", "agente virtual WhatsApp", "atendimento automático 24 horas"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -142,7 +142,7 @@ const features = [
     badge: "Gestão de Leads",
     title: "CRM integrado ao WhatsApp",
     description:
-      "Acompanhe cada lead no funil de vendas, registre interações, adicione tags e nunca perca o histórico de um cliente — tudo dentro do WhatsApp, sem trocar de ferramenta.",
+      "Acompanhe cada lead no funil de vendas, registre interações, adicione tags e nunca perca o histórico de um cliente  -  tudo dentro do WhatsApp, sem trocar de ferramenta.",
     keywords: ["CRM WhatsApp", "gestão de leads", "funil de vendas WhatsApp"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -176,7 +176,7 @@ const features = [
     badge: "Produtividade",
     title: "Ações rápidas para o seu time de vendas",
     description:
-      "Envie proposta, transfira atendimento, crie tarefa ou adicione nota com um clique — diretamente na conversa do WhatsApp. Seu time vende mais gastando menos tempo em operacional.",
+      "Envie proposta, transfira atendimento, crie tarefa ou adicione nota com um clique  -  diretamente na conversa do WhatsApp. Seu time vende mais gastando menos tempo em operacional.",
     keywords: ["ações rápidas WhatsApp", "produtividade de vendas", "automação de tarefas"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -210,7 +210,7 @@ const features = [
     badge: "Meta Ads",
     title: "Integração com anúncios do Facebook e Instagram",
     description:
-      "Conecte seus anúncios do Meta ao WhatsApp. Quando o lead clica no anúncio, a IA já inicia a conversa automaticamente — capturando o contato e qualificando em segundos.",
+      "Conecte seus anúncios do Meta ao WhatsApp. Quando o lead clica no anúncio, a IA já inicia a conversa automaticamente  -  capturando o contato e qualificando em segundos.",
     keywords: ["anúncios WhatsApp", "Click to WhatsApp", "Meta Ads WhatsApp"],
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -275,7 +275,7 @@ export default function Features() {
             <span className="italic gradient-brand">em um só lugar</span>
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto text-pretty">
-            Da captação ao fechamento — automatize atendimento, dispare campanhas, gerencie leads e escale suas vendas pelo WhatsApp com Inteligência Artificial.
+            Da captação ao fechamento  -  automatize atendimento, dispare campanhas, gerencie leads e escale suas vendas pelo WhatsApp com Inteligência Artificial.
           </p>
         </div>
 

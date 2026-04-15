@@ -41,7 +41,7 @@ export default function Objectives() {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Qualificação + agendamento</h3>
             <p className="text-sm text-gray-500 leading-relaxed mb-6">
-              Qualifica a cliente e agenda o procedimento diretamente no WhatsApp — sem intervenção humana.
+              Qualifica a cliente e agenda o procedimento diretamente no WhatsApp  -  sem intervenção humana.
             </p>
             <div className="mt-auto pt-5 border-t border-gray-100">
               <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Recomendado para</p>

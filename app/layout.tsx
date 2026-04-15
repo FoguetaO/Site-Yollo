@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   title: {
-    default: 'Yollo IA — Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7',
+    default: 'Yollo IA  -  Assistente IA para WhatsApp que Agenda, Qualifica e Atende 24/7',
     template: '%s | Yollo IA',
   },
   description: 'Assistente IA para WhatsApp que responde clientes em segundos, agenda procedimentos automaticamente e organiza seu negócio. Teste 30 dias grátis.',
@@ -35,12 +35,12 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     siteName: 'Yollo IA',
-    title: 'Yollo IA — Assistente IA para WhatsApp',
+    title: 'Yollo IA  -  Assistente IA para WhatsApp',
     description: 'Assistente IA para WhatsApp que responde clientes em segundos, agenda procedimentos automaticamente e organiza seu negócio.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yollo IA — Assistente IA para WhatsApp',
+    title: 'Yollo IA  -  Assistente IA para WhatsApp',
     description: 'Assistente IA para WhatsApp que responde clientes em segundos e agenda automaticamente.',
   },
   // Adicione seu código real do Google Search Console aqui:
@@ -102,7 +102,7 @@ const softwareSchema = {
   name: 'Yollo IA',
   operatingSystem: 'Web, WhatsApp',
   applicationCategory: 'BusinessApplication',
-  description: 'Plataforma de automação de WhatsApp com IA — agenda, qualifica leads, faz follow-up e dispara campanhas para clínicas, imobiliárias, contadores e advogados.',
+  description: 'Plataforma de automação de WhatsApp com IA  -  agenda, qualifica leads, faz follow-up e dispara campanhas para clínicas, imobiliárias, contadores e advogados.',
   url: 'https://yolloia.com.br',
   offers: {
     '@type': 'Offer',

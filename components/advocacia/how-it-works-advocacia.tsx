@@ -21,7 +21,7 @@ export default function HowItWorksAdvocacia() {
             funciona
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
-            Do primeiro contato ao agendamento da consulta — tudo automático, sem o advogado precisar intervir.
+            Do primeiro contato ao agendamento da consulta  -  tudo automático, sem o advogado precisar intervir.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ export default function HowItWorksAdvocacia() {
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Responde dúvidas jurídicas</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
                 A IA atende clientes instantaneamente, tira dúvidas iniciais sobre direito civil, trabalhista,
-                previdenciário e empresarial — a qualquer hora do dia ou da noite.
+                previdenciário e empresarial  -  a qualquer hora do dia ou da noite.
               </p>
             </div>
             {/* Visual: WhatsApp mock */}
@@ -65,7 +65,7 @@ export default function HowItWorksAdvocacia() {
             {/* Visual: Document checklist mock */}
             <div className="mt-auto bg-gradient-to-br from-neutral-50 to-white rounded-xl overflow-hidden border border-neutral-100 shadow-inner min-h-[200px] p-4">
               <div className="text-[10px] font-semibold text-neutral-400 uppercase tracking-wider mb-3">
-                Documentos solicitados — Carlos M.
+                Documentos solicitados  -  Carlos M.
               </div>
               <div className="flex flex-col gap-2">
                 {[
@@ -104,7 +104,7 @@ export default function HowItWorksAdvocacia() {
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Agenda consultas automaticamente</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
                 Verifica a disponibilidade do advogado, confirma o horário da consulta e envia lembretes
-                automáticos — sem intervenção da equipe.
+                automáticos  -  sem intervenção da equipe.
               </p>
             </div>
             {/* Visual: Calendar mock */}
@@ -118,10 +118,10 @@ export default function HowItWorksAdvocacia() {
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Consultas de hoje</div>
                 <div className="flex flex-col gap-2">
                   {[
-                    { time: "09:00", name: "Direito Trabalhista — Carlos M." },
-                    { time: "10:30", name: "Divórcio consensual — Ana F." },
-                    { time: "14:00", name: "Inventário — Família Silva" },
-                    { time: "16:00", name: "Contrato empresarial — startup" },
+                    { time: "09:00", name: "Direito Trabalhista  -  Carlos M." },
+                    { time: "10:30", name: "Divórcio consensual  -  Ana F." },
+                    { time: "14:00", name: "Inventário  -  Família Silva" },
+                    { time: "16:00", name: "Contrato empresarial  -  startup" },
                   ].map((slot) => (
                     <div key={slot.time} className="flex items-center gap-2 text-[10px]">
                       <span className="text-neutral-400 w-10 flex-shrink-0">{slot.time}</span>

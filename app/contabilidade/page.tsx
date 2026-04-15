@@ -13,12 +13,12 @@ import WhatsAppFloat from "@/components/whatsapp-float"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
-  title: "Yollo IA para Contabilidade — Captação, Qualificação e Atendimento Automático de Leads",
+  title: "Yollo IA para Contabilidade  -  Captação, Qualificação e Atendimento Automático de Leads",
   description:
     "Automação de captação e qualificação de leads via WhatsApp com IA para escritórios contábeis. Agenda reuniões, distribui por departamento, rastreia anúncios e move leads no CRM automaticamente.",
   alternates: { canonical: "https://yolloia.com.br/contabilidade" },
   openGraph: {
-    title: "IA para Escritórios Contábeis — Yollo IA",
+    title: "IA para Escritórios Contábeis  -  Yollo IA",
     description: "Automatize o atendimento do seu escritório contábil. Responda clientes, lembre prazos e recolha documentos com IA.",
     type: "website",
     locale: "pt_BR",
@@ -29,7 +29,7 @@ export const metadata = {
 const segmentSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "IA para Contabilidade — Yollo IA",
+  name: "IA para Contabilidade  -  Yollo IA",
   description: "Automação de atendimento via WhatsApp com IA para escritórios contábeis.",
   url: "https://yolloia.com.br/contabilidade",
   breadcrumb: {

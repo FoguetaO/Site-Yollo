@@ -29,7 +29,7 @@ export default function ObjectivesImoveis() {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Captação + qualificação de leads</h3>
             <p className="text-sm text-gray-500 leading-relaxed mb-6">
-              Captura e qualifica leads de portais como ZAP, Viva Real e OLX diretamente no WhatsApp — sem corretor
+              Captura e qualifica leads de portais como ZAP, Viva Real e OLX diretamente no WhatsApp  -  sem corretor
               precisar intervir na triagem.
             </p>
             <div className="mt-auto pt-5 border-t border-gray-100">
@@ -52,7 +52,7 @@ export default function ObjectivesImoveis() {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Agendamento de visitas</h3>
             <p className="text-sm text-gray-500 leading-relaxed mb-6">
-              Agenda visitas automaticamente, confirma presença e envia lembretes — reduzindo no-shows e
+              Agenda visitas automaticamente, confirma presença e envia lembretes  -  reduzindo no-shows e
               maximizando o tempo do corretor em campo.
             </p>
             <div className="mt-auto pt-5 border-t border-gray-100">

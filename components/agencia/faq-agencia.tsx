@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "O que é a Yollo IA para agências de marketing?",
     answer:
-      "A Yollo IA é uma plataforma de prospecção e automação de atendimento via WhatsApp para agências de marketing. Ela mapeia empresas por segmento e cidade, dispara mensagens em massa personalizadas, faz nurturing automático dos leads e agenda reuniões para o time comercial — sem intervenção humana.",
+      "A Yollo IA é uma plataforma de prospecção e automação de atendimento via WhatsApp para agências de marketing. Ela mapeia empresas por segmento e cidade, dispara mensagens em massa personalizadas, faz nurturing automático dos leads e agenda reuniões para o time comercial  -  sem intervenção humana.",
   },
   {
     question: "Como funciona a prospecção por segmento e cidade?",
@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "O que é o disparo em massa e como ele funciona?",
     answer:
-      "O disparo em massa permite enviar centenas de mensagens personalizadas simultaneamente para os prospects mapeados. Cada mensagem é adaptada ao segmento e contexto da empresa — diferente de um broadcast genérico. A IA gerencia as respostas automaticamente e continua a conversa com cada prospect.",
+      "O disparo em massa permite enviar centenas de mensagens personalizadas simultaneamente para os prospects mapeados. Cada mensagem é adaptada ao segmento e contexto da empresa  -  diferente de um broadcast genérico. A IA gerencia as respostas automaticamente e continua a conversa com cada prospect.",
   },
   {
     question: "A IA faz o follow-up automaticamente?",
@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "Funciona em qualquer cidade do Brasil?",
     answer:
-      "Sim! A prospecção pode ser direcionada para qualquer cidade brasileira. Você pode segmentar por cidade, região, estado ou rodar campanhas nacionais — dependendo do modelo de atendimento da sua agência.",
+      "Sim! A prospecção pode ser direcionada para qualquer cidade brasileira. Você pode segmentar por cidade, região, estado ou rodar campanhas nacionais  -  dependendo do modelo de atendimento da sua agência.",
   },
   {
     question: "Quais planos estão disponíveis?",

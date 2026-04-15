@@ -11,12 +11,12 @@ import FooterAgencia from "@/components/agencia/footer-agencia"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
-  title: "Yollo IA para Agências de Marketing — Prospecção Automática por Segmento e Cidade via WhatsApp",
+  title: "Yollo IA para Agências de Marketing  -  Prospecção Automática por Segmento e Cidade via WhatsApp",
   description:
     "Automatize a prospecção da sua agência de marketing com IA. Mapeie empresas por segmento e cidade, dispare mensagens em massa pelo WhatsApp e encha o pipeline de reuniões qualificadas.",
   alternates: { canonical: "https://yolloia.com.br/agencia-de-marketing" },
   openGraph: {
-    title: "IA para Agências de Marketing — Yollo IA",
+    title: "IA para Agências de Marketing  -  Yollo IA",
     description: "Prospecte clientes por segmento e cidade, dispare em massa pelo WhatsApp e agende reuniões automaticamente com a Yollo IA.",
     type: "website",
     locale: "pt_BR",

@@ -2,14 +2,14 @@ import type { Metadata } from "next"
 import Navbar from "@/components/navbar"
 
 export const metadata: Metadata = {
-  title: "Yollo IA — Automação de Atendimento no WhatsApp com Inteligência Artificial",
+  title: "Yollo IA  -  Automação de Atendimento no WhatsApp com Inteligência Artificial",
   description:
     "A Yollo IA automatiza o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia. Para clínicas de estética, imobiliárias, escritórios contábeis e advocacia.",
   alternates: {
     canonical: "https://yolloia.com.br",
   },
   openGraph: {
-    title: "Yollo IA — Automação de Atendimento no WhatsApp com IA",
+    title: "Yollo IA  -  Automação de Atendimento no WhatsApp com IA",
     description:
       "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica leads, faz follow-up e dispara campanhas 24h por dia.",
     url: "https://yolloia.com.br",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yollo IA — Automação de WhatsApp com IA",
+    title: "Yollo IA  -  Automação de WhatsApp com IA",
     description: "Automatize o atendimento do seu negócio pelo WhatsApp com IA. Agenda, qualifica e atende 24h.",
   },
 }

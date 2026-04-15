@@ -11,12 +11,12 @@ import FooterAdvocacia from "@/components/advocacia/footer-advocacia"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
-  title: "Yollo IA para Advocacia — IA no WhatsApp que Agenda Consultas e Qualifica Clientes 24/7",
+  title: "Yollo IA para Advocacia  -  IA no WhatsApp que Agenda Consultas e Qualifica Clientes 24/7",
   description:
-    "Automação de atendimento via WhatsApp com IA para escritórios de advocacia. Agende consultas, qualifique potenciais clientes e faça follow-up automaticamente — respeitando as normas da OAB.",
+    "Automação de atendimento via WhatsApp com IA para escritórios de advocacia. Agende consultas, qualifique potenciais clientes e faça follow-up automaticamente  -  respeitando as normas da OAB.",
   alternates: { canonical: "https://yolloia.com.br/advocacia" },
   openGraph: {
-    title: "IA para Escritórios de Advocacia — Yollo IA",
+    title: "IA para Escritórios de Advocacia  -  Yollo IA",
     description: "Agende consultas, qualifique clientes e automatize o atendimento do seu escritório com IA. Normas OAB respeitadas.",
     type: "website",
     locale: "pt_BR",

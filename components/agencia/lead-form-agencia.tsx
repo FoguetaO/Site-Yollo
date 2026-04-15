@@ -41,11 +41,11 @@ export default function LeadFormAgencia() {
               Comece agora
             </h2>
             <p className="text-base md:text-lg text-gray-500 mt-3 text-center md:text-left">
-              Preencha seus dados e veja a Yollo IA prospectando para o segmento e cidade da sua agência — em tempo real.
+              Preencha seus dados e veja a Yollo IA prospectando para o segmento e cidade da sua agência  -  em tempo real.
             </p>
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[
-                { title: "Prospecção em minutos", desc: "Defina o nicho e a cidade — a IA entrega a lista e já inicia os disparos." },
+                { title: "Prospecção em minutos", desc: "Defina o nicho e a cidade  -  a IA entrega a lista e já inicia os disparos." },
                 { title: "Planos flexíveis", desc: "Mensal, Trimestral ou Semestral. Cancele quando quiser, sem multa." },
                 { title: "API Oficial e Não Oficial do WhatsApp", desc: "Escolha a melhor opção para o seu negócio." },
               ].map((item) => (

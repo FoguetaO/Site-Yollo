@@ -18,7 +18,7 @@ export interface SegmentHeroProps {
     src: string
     alt: string
   }
-  /** Cor do gradiente de fundo — padrão: roxo/rosa como na referência */
+  /** Cor do gradiente de fundo  -  padrão: roxo/rosa como na referência */
   gradientFrom?: string
   gradientTo?: string
 }
@@ -47,7 +47,7 @@ export default function SegmentHero({
       style={{
         background: `linear-gradient(135deg, ${gradientFrom} 0%, ${gradientTo} 50%, #f9f0ff 100%)`,
       }}
-      aria-label={`Seção principal — ${badge}`}
+      aria-label={`Seção principal  -  ${badge}`}
     >
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
@@ -64,7 +64,7 @@ export default function SegmentHero({
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
 
-          {/* Phone mockup — order-1 on mobile (top), order-2 on desktop (right) */}
+          {/* Phone mockup  -  order-1 on mobile (top), order-2 on desktop (right) */}
           <div
             className="w-full flex items-center justify-center order-1 md:order-2 md:flex-1 relative scroll-eb hero-segment-eb"
             style={{ transitionDelay: "0.2s" }}
@@ -94,7 +94,7 @@ export default function SegmentHero({
             </div>
           </div>
 
-          {/* Text — order-2 on mobile (bottom), order-1 on desktop (left) */}
+          {/* Text  -  order-2 on mobile (bottom), order-1 on desktop (left) */}
           <div className="flex-1 flex flex-col gap-6 order-2 md:order-1 max-w-xl w-full scroll-eb hero-segment-eb text-center md:text-left items-center md:items-start">
             {/* Badge */}
             <div

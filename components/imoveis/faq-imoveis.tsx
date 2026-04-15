@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "O que é a Yollo IA para imobiliárias?",
     answer:
-      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada no mercado imobiliário. Ela atende leads automaticamente 24 horas por dia, responde dúvidas sobre imóveis, preços e condições de financiamento, qualifica compradores e inquilinos e agenda visitas — tudo configurado via prompt com as informações da sua carteira.",
+      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada no mercado imobiliário. Ela atende leads automaticamente 24 horas por dia, responde dúvidas sobre imóveis, preços e condições de financiamento, qualifica compradores e inquilinos e agenda visitas  -  tudo configurado via prompt com as informações da sua carteira.",
   },
   {
     question: "Para quem a Yollo IA imobiliária é indicada?",
@@ -16,12 +16,12 @@ const faqs = [
   {
     question: "Como a IA aprende sobre minha imobiliária?",
     answer:
-      "A Yollo IA é treinada por prompt — você informa os tipos de imóveis, regiões de atuação, condições de venda e locação, e o tom de atendimento. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
+      "A Yollo IA é treinada por prompt  -  você informa os tipos de imóveis, regiões de atuação, condições de venda e locação, e o tom de atendimento. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
   },
   {
     question: "Como funciona a integração com minha agenda de visitas?",
     answer:
-      "A Yollo IA verifica a disponibilidade do corretor responsável pelo imóvel, confirma o agendamento da visita diretamente no WhatsApp e envia lembretes automáticos para o lead no dia anterior e algumas horas antes — reduzindo no-shows consideravelmente.",
+      "A Yollo IA verifica a disponibilidade do corretor responsável pelo imóvel, confirma o agendamento da visita diretamente no WhatsApp e envia lembretes automáticos para o lead no dia anterior e algumas horas antes  -  reduzindo no-shows consideravelmente.",
   },
   {
     question: "A IA consegue apresentar os imóveis com fotos?",

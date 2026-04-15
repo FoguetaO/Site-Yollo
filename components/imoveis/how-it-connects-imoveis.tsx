@@ -10,7 +10,7 @@ export default function HowItConnectsImoveis() {
   const [displayedText, setDisplayedText] = useState("")
   const [charIndex, setCharIndex] = useState(0)
 
-  // Typewriter effect — runs once, stops when done
+  // Typewriter effect  -  runs once, stops when done
   useEffect(() => {
     if (!generated) return
     if (charIndex < promptOutput.length) {
@@ -20,7 +20,7 @@ export default function HowItConnectsImoveis() {
       }, 18)
       return () => clearTimeout(t)
     }
-    // Done typing — just stop, no reset
+    // Done typing  -  just stop, no reset
   }, [generated, charIndex])
 
   // Auto-trigger once on mount
@@ -47,7 +47,7 @@ export default function HowItConnectsImoveis() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-          {/* Card 1 — QR Code */}
+          {/* Card 1  -  QR Code */}
           <div className="bg-[#F8F8FA] rounded-3xl p-8 flex flex-col">
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 01</span>
@@ -56,7 +56,7 @@ export default function HowItConnectsImoveis() {
               Conecte seu WhatsApp de forma segura
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-8">
-              Conecte via API Oficial ou API Não Oficial do WhatsApp — você escolhe a melhor opção para o seu negócio.
+              Conecte via API Oficial ou API Não Oficial do WhatsApp  -  você escolhe a melhor opção para o seu negócio.
             </p>
 
             <div className="flex-1 flex flex-col items-center justify-center gap-4">
@@ -110,7 +110,7 @@ export default function HowItConnectsImoveis() {
             </div>
           </div>
 
-          {/* Card 2 — Gerador de Prompt */}
+          {/* Card 2  -  Gerador de Prompt */}
           <div className="bg-[#F8F8FA] rounded-3xl p-8 flex flex-col">
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 02</span>
@@ -119,7 +119,7 @@ export default function HowItConnectsImoveis() {
               Gere o prompt da sua IA em segundos
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Nosso gerador interno cria o prompt ideal para a sua imobiliaria automaticamente — sem precisar saber nada de tecnologia.
+              Nosso gerador interno cria o prompt ideal para a sua imobiliaria automaticamente  -  sem precisar saber nada de tecnologia.
             </p>
 
             <div className="flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-100 flex flex-col">
@@ -170,7 +170,7 @@ export default function HowItConnectsImoveis() {
             </div>
           </div>
 
-          {/* Card 3 — IA atende */}
+          {/* Card 3  -  IA atende */}
           <div className="bg-[#F8F8FA] rounded-3xl p-8 flex flex-col">
             <div className="mb-2">
               <span className="text-xs font-bold text-[#6C4FE8] uppercase tracking-widest">Passo 03</span>
@@ -179,7 +179,7 @@ export default function HowItConnectsImoveis() {
               A IA atende por voce, 24 horas
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Seu assistente responde leads, qualifica compradores e agenda visitas automaticamente — sem corretor precisar estar online.
+              Seu assistente responde leads, qualifica compradores e agenda visitas automaticamente  -  sem corretor precisar estar online.
             </p>
 
             {/* WhatsApp chat mock */}

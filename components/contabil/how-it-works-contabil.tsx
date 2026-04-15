@@ -9,7 +9,7 @@ const CHAT_MESSAGES = [
   { type: "bot", text: "Entendido! Vou encaminhar você para o nosso Departamento Pessoal, que cuida de tudo relacionado a CLT, férias e folha. Um instante.", time: "" },
 ]
 
-// Delay entre cada mensagem (ms) — alterna entre resposta do usuário e da IA
+// Delay entre cada mensagem (ms)  -  alterna entre resposta do usuário e da IA
 const MESSAGE_DELAYS = [1000, 1600, 1800, 2000]
 
 function AnimatedChatSimulation() {
@@ -111,18 +111,18 @@ export default function HowItWorksContabil() {
             funciona
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
-            Do primeiro contato ao lead pronto para fechar — tudo automático, sem o contador precisar intervir.
+            Do primeiro contato ao lead pronto para fechar  -  tudo automático, sem o contador precisar intervir.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-          {/* Card 1 — Agenda reuniões */}
+          {/* Card 1  -  Agenda reuniões */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="text-center mb-8">
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Agenda reuniões automaticamente</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
-                Verifica a disponibilidade do contador, confirma o horário e envia lembretes automáticos ao lead — sem nenhuma intervenção da equipe.
+                Verifica a disponibilidade do contador, confirma o horário e envia lembretes automáticos ao lead  -  sem nenhuma intervenção da equipe.
               </p>
             </div>
             <div className="mt-auto bg-white rounded-xl border border-neutral-100 overflow-hidden shadow-sm min-h-[200px]">
@@ -135,10 +135,10 @@ export default function HowItWorksContabil() {
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Agenda de hoje</div>
                 <div className="flex flex-col gap-2">
                   {[
-                    { time: "09:00", name: "Abertura CNPJ — Rafael M." },
-                    { time: "10:30", name: "Migração Simples — Fernanda S." },
-                    { time: "14:00", name: "Consultoria MEI — Ana C." },
-                    { time: "16:00", name: "Planej. tributário — Carlos P." },
+                    { time: "09:00", name: "Abertura CNPJ  -  Rafael M." },
+                    { time: "10:30", name: "Migração Simples  -  Fernanda S." },
+                    { time: "14:00", name: "Consultoria MEI  -  Ana C." },
+                    { time: "16:00", name: "Planej. tributário  -  Carlos P." },
                   ].map((slot) => (
                     <div key={slot.time} className="flex items-center gap-2 text-[10px]">
                       <span className="text-neutral-400 w-10 flex-shrink-0">{slot.time}</span>
@@ -155,7 +155,7 @@ export default function HowItWorksContabil() {
             </div>
           </div>
 
-          {/* Card 2 — Atendimento automático */}
+          {/* Card 2  -  Atendimento automático */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="text-center mb-8">
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Atendimento automático por IA</h3>
@@ -168,7 +168,7 @@ export default function HowItWorksContabil() {
             </div>
           </div>
 
-          {/* Card 3 — Distribuição por departamento */}
+          {/* Card 3  -  Distribuição por departamento */}
           <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
             <div className="text-center mb-8">
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Distribuição por departamento</h3>

@@ -6,7 +6,7 @@ const messages = [
   { role: "bot", text: "Olá! Vou te ajudar a configurar seu assistente imobiliário. Como se chama sua imobiliária?", delay: 0 },
   { role: "user", text: "Imobiliária Central Prime", delay: 1200 },
   { role: "bot", text: "Perfeito! Quais tipos de imóveis você trabalha? Venda, locação ou ambos?", delay: 2400 },
-  { role: "user", text: "Ambos — residencial e comercial", delay: 3600 },
+  { role: "user", text: "Ambos  -  residencial e comercial", delay: 3600 },
   { role: "bot", text: "Pronto! Configurei a IA com sua carteira de imóveis e perfil de atendimento. Ela já pode qualificar e agendar visitas!", delay: 4800 },
 ]
 
@@ -106,7 +106,7 @@ export default function ConfigureIAImoveis() {
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-600 flex-shrink-0">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
               </svg>
-              <span className="text-sm font-medium text-neutral-700">Conexão Segura — API Oficial WhatsApp</span>
+              <span className="text-sm font-medium text-neutral-700">Conexão Segura  -  API Oficial WhatsApp</span>
             </div>
           </div>
 

@@ -6,12 +6,12 @@ const faqs = [
   {
     question: "O que a Yollo IA faz para escritórios contábeis?",
     answer:
-      "A Yollo IA automatiza o processo de captação e qualificação de leads para escritórios contábeis via WhatsApp. Ela agenda reuniões automaticamente, realiza o atendimento inicial por IA, distribui conversas para o departamento correto (fiscal, pessoal, societário ou comercial), rastreia qual anúncio gerou cada lead e move os cards do CRM conforme o lead avança na conversa — tudo sem intervenção da equipe.",
+      "A Yollo IA automatiza o processo de captação e qualificação de leads para escritórios contábeis via WhatsApp. Ela agenda reuniões automaticamente, realiza o atendimento inicial por IA, distribui conversas para o departamento correto (fiscal, pessoal, societário ou comercial), rastreia qual anúncio gerou cada lead e move os cards do CRM conforme o lead avança na conversa  -  tudo sem intervenção da equipe.",
   },
   {
     question: "A Yollo IA envia lembretes de obrigações fiscais?",
     answer:
-      "Não. A Yollo IA não é focada em lembretes de obrigações nem em recolhimento de documentos de clientes ativos. Ela é especializada em captação, qualificação e nutrição de leads — ou seja, em transformar prospects em clientes prontos para fechar contrato. Para gestão de obrigações de clientes já ativos, existem outras ferramentas específicas.",
+      "Não. A Yollo IA não é focada em lembretes de obrigações nem em recolhimento de documentos de clientes ativos. Ela é especializada em captação, qualificação e nutrição de leads  -  ou seja, em transformar prospects em clientes prontos para fechar contrato. Para gestão de obrigações de clientes já ativos, existem outras ferramentas específicas.",
   },
   {
     question: "Para quem a Yollo IA contábil é indicada?",
@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "Como funciona o CRM com movimentação automática?",
     answer:
-      "Conforme o lead interage com a IA e avança nas etapas — responde as perguntas de qualificação, escolhe um horário de reunião, confirma o agendamento — o card dele é movido automaticamente entre as colunas do pipeline (Novo Lead → Qualificado → Reunião Marcada → Fechado). Nenhum clique manual é necessário.",
+      "Conforme o lead interage com a IA e avança nas etapas  -  responde as perguntas de qualificação, escolhe um horário de reunião, confirma o agendamento  -  o card dele é movido automaticamente entre as colunas do pipeline (Novo Lead → Qualificado → Reunião Marcada → Fechado). Nenhum clique manual é necessário.",
   },
   {
     question: "Como o rastreamento de anúncios funciona?",

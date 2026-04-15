@@ -2,7 +2,7 @@
 
 const socialLinks = [
   {
-    label: "Instagram da Yollo IA — automação WhatsApp",
+    label: "Instagram da Yollo IA  -  automação WhatsApp",
     href: "https://www.instagram.com/yollo.ia",
     icon: (
       <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -38,7 +38,7 @@ const productLinks = [
 
 const companyLinks = [
   { label: "Sobre a Yollo IA", href: "#" },
-  { label: "Blog — IA e Automação", href: "/blog" },
+  { label: "Blog  -  IA e Automação", href: "/blog" },
   { label: "Contato e demonstração", href: "#contratar" },
 ]
 
@@ -59,7 +59,7 @@ export default function Footer() {
         {/* SEO tag line above grid */}
         <div className="mb-10 pb-8 border-b border-white/[0.06]">
           <p className="text-xs text-center leading-relaxed max-w-3xl mx-auto" style={{ color: "#6B7280" }}>
-            <strong style={{ color: "#9CA3AF" }}>Yollo IA</strong> — Plataforma de automação de atendimento via WhatsApp com Inteligência Artificial para{" "}
+            <strong style={{ color: "#9CA3AF" }}>Yollo IA</strong>  -  Plataforma de automação de atendimento via WhatsApp com Inteligência Artificial para{" "}
             <a href="/agencia-de-marketing" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">agências de marketing</a>,{" "}
             <a href="/clinica-de-estetica" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">clínicas de estética</a>,{" "}
             <a href="/imoveis" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">imobiliárias e corretores de imóveis</a>,{" "}
@@ -74,17 +74,17 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/" aria-label="Yollo IA — Página inicial">
+            <a href="/" aria-label="Yollo IA  -  Página inicial">
               <img
                 src="/logo-yollo.png"
-                alt="Yollo IA — automação de WhatsApp com Inteligência Artificial"
+                alt="Yollo IA  -  automação de WhatsApp com Inteligência Artificial"
                 className="h-8 w-auto brightness-0 invert"
                 width="120"
                 height="32"
               />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Automatize o atendimento do seu negócio pelo WhatsApp com IA. Responda clientes em segundos, agende, qualifique leads e nunca perca uma venda — 24h por dia, 7 dias por semana.
+              Automatize o atendimento do seu negócio pelo WhatsApp com IA. Responda clientes em segundos, agende, qualifique leads e nunca perca uma venda  -  24h por dia, 7 dias por semana.
             </p>
             <div className="flex gap-3 mt-1">
               {socialLinks.map((social) => (
@@ -196,7 +196,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px]" style={{ color: "#6B7280" }}>
           <span>© {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.</span>
           <span>
-            Parceiro oficial Meta — WhatsApp Business API &nbsp;·&nbsp; CNPJ em fase de registro
+            Parceiro oficial Meta  -  WhatsApp Business API &nbsp;·&nbsp; CNPJ em fase de registro
           </span>
         </div>
       </div>

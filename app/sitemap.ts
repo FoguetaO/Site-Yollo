@@ -55,7 +55,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Artigos do blog — usa updatedAt para lastModified preciso
+  // Artigos do blog  -  usa updatedAt para lastModified preciso
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt ?? post.publishedAt),

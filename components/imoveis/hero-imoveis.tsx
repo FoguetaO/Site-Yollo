@@ -14,7 +14,7 @@ export default function HeroImoveis() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
-      aria-label="Yollo IA para Imobiliárias e Corretores — automação de atendimento via WhatsApp 24h"
+      aria-label="Yollo IA para Imobiliárias e Corretores  -  automação de atendimento via WhatsApp 24h"
       style={{
         background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
@@ -62,7 +62,7 @@ export default function HeroImoveis() {
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
-            Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
+            Seus clientes recebem atendimento imediato  -  e nem percebem que é uma IA.
           </p>
 
           {/* CTA Buttons */}

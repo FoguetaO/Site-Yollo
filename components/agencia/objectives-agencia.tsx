@@ -2,7 +2,7 @@ export default function ObjectivesAgencia() {
   const items = [
     {
       title: "Prospecção por segmento e cidade",
-      desc: "Defina o nicho e a cidade — a IA mapeia automaticamente empresas com WhatsApp disponível para contato.",
+      desc: "Defina o nicho e a cidade  -  a IA mapeia automaticamente empresas com WhatsApp disponível para contato.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -29,7 +29,7 @@ export default function ObjectivesAgencia() {
     },
     {
       title: "Agendamento automático de reuniões",
-      desc: "Prospects interessados têm a reunião agendada diretamente na agenda do time comercial — sem intervenção humana.",
+      desc: "Prospects interessados têm a reunião agendada diretamente na agenda do time comercial  -  sem intervenção humana.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" />
@@ -47,7 +47,7 @@ export default function ObjectivesAgencia() {
     },
     {
       title: "Funciona para qualquer nicho",
-      desc: "Estética, gastronomia, saúde, varejo, educação — configure a IA para qualquer segmento que sua agência atende.",
+      desc: "Estética, gastronomia, saúde, varejo, educação  -  configure a IA para qualquer segmento que sua agência atende.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

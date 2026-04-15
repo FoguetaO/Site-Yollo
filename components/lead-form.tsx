@@ -79,7 +79,7 @@ export default function LeadForm() {
               Preencha seus dados e leve mais clientes para sua clínica pelo WhatsApp.
             </p>
 
-            {/* Value props — desktop only */}
+            {/* Value props  -  desktop only */}
             <div className="hidden md:flex flex-col gap-4 mt-10">
               {[
                 { title: "Configuração em minutos", desc: "Sem fluxos complexos. A IA aprende sobre sua clínica via prompt." },

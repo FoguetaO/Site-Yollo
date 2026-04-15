@@ -1,9 +1,7 @@
 import os
 import glob
 
-# Resolve project root relative to this script's location
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+PROJECT_ROOT = "/vercel/share/v0-project"
 
 EXTENSIONS = ["*.tsx", "*.ts", "*.md"]
 EXCLUDE_DIRS = {".git", "node_modules", ".next", "user_read_only_context", "scripts"}
@@ -15,7 +13,9 @@ total_replacements = 0
 
 for ext in EXTENSIONS:
     pattern = os.path.join(PROJECT_ROOT, "**", ext)
-    for filepath in glob.glob(pattern, recursive=True):
+    matches = glob.glob(pattern, recursive=True)
+    print(f"Pattern {pattern}: {len(matches)} files found")
+    for filepath in matches:
         # Skip excluded directories
         parts = filepath.replace(PROJECT_ROOT, "").split(os.sep)
         if any(part in EXCLUDE_DIRS for part in parts):
