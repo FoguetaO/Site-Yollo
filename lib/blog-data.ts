@@ -686,17 +686,11 @@ Os **gatilhos** são os eventos que iniciam ou avançam uma automação dentro d
 
 As **condições** determinam qual caminho o fluxo vai seguir a partir de cada gatilho. Funcionam como "se/então":
 
-```
-SE cliente escolheu "Vendas"
-   ENTÃO direciona para fluxo comercial
-
-SE cliente escolheu "Suporte"
-   ENTÃO verifica horário de atendimento
-      SE dentro do horário
-         ENTÃO conecta com atendente
-      SE fora do horário
-         ENTÃO coleta dados e promete retorno
-```
+> SE cliente escolheu "Vendas" → direciona para fluxo comercial
+>
+> SE cliente escolheu "Suporte" → verifica horário de atendimento
+> - Dentro do horário → conecta com atendente
+> - Fora do horário → coleta dados e promete retorno
 
 Essa combinação entre gatilhos e condições é o que torna a **integração de sistemas** tão relevante na automação: quanto mais o WhatsApp se comunica com outras ferramentas, mais preciso e personalizado o atendimento automático se torna.
 
