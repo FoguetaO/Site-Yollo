@@ -88,7 +88,7 @@ export default function SocialProofImoveis() {
   return (
     <section className="pt-12 pb-24 md:pt-20 md:pb-32 bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 mb-12 md:mb-16">
-        <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900 text-center">
+        <h2 className="text-3xl sm:text-3xl md:text-5xl font-normal text-neutral-900 text-center">
           Imobiliárias que{" "}
           <span className="italic gradient-brand">
             já usam

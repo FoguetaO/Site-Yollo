@@ -270,7 +270,7 @@ export default function Features() {
           >
             Plataforma completa
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-5xl font-semibold text-neutral-900 text-balance">
+          <h2 className="text-3xl sm:text-3xl md:text-5xl font-semibold text-neutral-900 text-balance">
             Tudo que seu time precisa{" "}
             <span className="italic gradient-brand">em um só lugar</span>
           </h2>

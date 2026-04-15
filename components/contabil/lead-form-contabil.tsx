@@ -38,7 +38,7 @@ export default function LeadFormContabil() {
         <div className="flex flex-col md:flex-row md:gap-16 lg:gap-24 md:items-start">
           {/* Left: headline + value props */}
           <div className="md:flex-1 md:sticky md:top-24 mb-10 md:mb-0">
-            <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold text-gray-900 tracking-tight text-center md:text-left">
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-semibold text-gray-900 tracking-tight text-center md:text-left">
               Comece agora
             </h2>
             <p className="text-base md:text-lg text-gray-500 mt-3 text-center md:text-left">
