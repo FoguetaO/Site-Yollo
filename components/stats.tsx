@@ -57,7 +57,7 @@ export default function Stats() {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         <div className="text-center md:text-left max-w-4xl mb-14 md:mb-20">
-          <h2 className="text-3xl md:text-5xl font-semibold text-white tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-5xl font-semibold text-white tracking-tight">
             Não é promessa. É dado.
           </h2>
         </div>
@@ -65,7 +65,7 @@ export default function Stats() {
         <div className="flex flex-col md:flex-row md:items-center gap-12 md:gap-0 max-w-5xl">
           {/* Hero stat */}
           <div className="flex-1 text-center md:text-left">
-            <span className="block text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#6C4FE8" }}>
+            <span className="block text-5xl sm:text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#6C4FE8" }}>
               {stat1}s
             </span>
             <span className="block text-lg font-semibold text-white/80 mt-2">tempo de resposta</span>

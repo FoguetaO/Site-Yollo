@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-eb" style={{ transitionDelay: "0.07s" }}>
             Automatize seu atendimento{" "}
             <span className="gradient-brand">no WhatsApp</span>
             <br className="hidden md:block" /> e venda mais com{" "}
@@ -56,7 +56,7 @@ export default function Hero() {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-eb" style={{ transitionDelay: "0.14s" }}>
+          <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA é a plataforma completa de automação de WhatsApp com IA: atende clientes, agenda, faz follow-up, dispara campanhas e organiza seu CRM — 24 horas por dia, 7 dias por semana.
           </p>
 
@@ -65,11 +65,11 @@ export default function Hero() {
             <ShinyButton
               href="#contratar"
               label="Agendar demonstração gratuita →"
-              className="w-full sm:w-auto text-lg"
+              className="w-full sm:w-auto text-sm sm:text-base"
             />
             <a
               href="#funcionalidades"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
+              className="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-5 py-3 sm:px-7 sm:py-3.5 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
               Ver todas as funcionalidades
             </a>

@@ -26,7 +26,7 @@ export default function SegmentFeatureHero({
   ctaHref,
   phoneImage,
   accentColor = "#6C4FE8",
-  titleFontSize = "44px",
+  titleFontSize = "clamp(26px, 4vw, 44px)",
   sectionPaddingTop = "0",
   contentPaddingTop = "64px",
 }: SegmentFeatureHeroProps) {
@@ -78,7 +78,7 @@ export default function SegmentFeatureHero({
           </span>
 
           {/* Heading */}
-          <h2 className="text-4xl font-normal leading-tight text-balance text-neutral-900" style={{ fontSize: titleFontSize }}>
+          <h2 className="font-normal leading-tight text-balance text-neutral-900" style={{ fontSize: titleFontSize }}>
             {title}
           </h2>
 

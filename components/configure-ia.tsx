@@ -137,7 +137,7 @@ export default function ConfigureIA() {
                 Configuração simples
               </div>
             </div>
-            <h2 className="text-3xl md:text-5xl font-normal text-neutral-900 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure sua IA{" "}
               <span className="italic gradient-brand">por prompt</span>
             </h2>

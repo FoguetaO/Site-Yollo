@@ -18,7 +18,7 @@ export default function SecurityImoveis() {
             </div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 text-neutral-900">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium text-center mb-4 text-neutral-900">
             Duas opções de{" "}
             <span className="font-semibold text-green-600">API WhatsApp</span>
           </h2>

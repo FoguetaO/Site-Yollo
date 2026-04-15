@@ -19,7 +19,7 @@ export default function Security() {
             </div>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-medium text-center mb-4 text-neutral-900">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-medium text-center mb-4 text-neutral-900">
             <span style={{ color: "#2b2929", fontWeight: "500" }}>Parceiros oficiais</span> da Meta
           </h2>
           <p className="text-lg text-neutral-600 text-center mb-16 max-w-3xl mx-auto">

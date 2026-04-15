@@ -53,7 +53,7 @@ export default function HeroAdvocacia() {
             </div>
           </div>
 
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-advocacia-eb" style={{ fontSize: "51px", transitionDelay: "0.07s" }}>
+          <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.07s" }}>
             Seu escritório de advocacia atendendo{" "}
             <span className="inline-block gradient-brand">
               24 horas por dia pelo
@@ -64,7 +64,7 @@ export default function HeroAdvocacia() {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.14s" }}>
+          <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.14s" }}>
             A Yollo IA responde dúvidas jurídicas, qualifica leads, agenda consultas e acompanha casos automaticamente. Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
           </p>
 
@@ -72,13 +72,13 @@ export default function HeroAdvocacia() {
             <ShinyButton
               href="#contratar"
               label="Quero agendar minha demonstração →"
-              className="w-full sm:w-auto text-lg"
+              className="w-full sm:w-auto text-sm sm:text-base"
             />
             <a
               href="#como-funciona"
-              className="flex items-center justify-center gap-2 text-lg font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-8 py-4 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
+              className="flex items-center justify-center gap-2 text-xs sm:text-sm font-medium text-neutral-700 bg-white/80 border border-neutral-200 px-5 py-3 sm:px-7 sm:py-3.5 rounded-full w-full sm:w-auto hover:bg-white transition-all leading-normal"
             >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ color: "#6C4FE8" }}>
                 <path
                   d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
                   stroke="currentColor"
