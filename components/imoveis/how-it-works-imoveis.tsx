@@ -23,7 +23,7 @@ export default function HowItWorksImoveis() {
             funciona
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
-            Do primeiro contato ao agendamento da visita  -  tudo automático, sem o corretor precisar intervir.
+            Do primeiro contato ao agendamento da visita. Tudo automático, sem o corretor precisar intervir.
           </p>
         </div>
 
@@ -34,7 +34,7 @@ export default function HowItWorksImoveis() {
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Responde em segundos</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
                 A IA atende leads instantaneamente, apresenta os imóveis disponíveis, tira dúvidas de preço,
-                localização e condições  -  a qualquer hora do dia ou da noite.
+                localização e condições a qualquer hora do dia ou da noite.
               </p>
             </div>
             {/* Visual: WhatsApp mock */}
@@ -71,9 +71,9 @@ export default function HowItWorksImoveis() {
               </div>
               <div className="flex flex-col gap-2">
                 {[
-                  { initials: "RS", name: "Ricardo S.", status: "Compra  -  Apto 3q, até R$ 600k", badge: "Qualificado", badgeColor: "bg-green-100 text-green-700" },
+                  { initials: "RS", name: "Ricardo S.", status: "Compra: Apto 3q, até R$ 600k", badge: "Qualificado", badgeColor: "bg-green-100 text-green-700" },
                   { initials: "TM", name: "Talita M.", status: "Apenas curiosidade", badge: "Descartado", badgeColor: "bg-neutral-100 text-neutral-500" },
-                  { initials: "PL", name: "Paulo L.", status: "Aluguel  -  Imóvel comercial", badge: "Qualificado", badgeColor: "bg-green-100 text-green-700" },
+                  { initials: "PL", name: "Paulo L.", status: "Aluguel de Imóvel comercial", badge: "Qualificado", badgeColor: "bg-green-100 text-green-700" },
                 ].map((item) => (
                   <div key={item.name} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-neutral-100 shadow-sm">
                     <div
@@ -101,7 +101,7 @@ export default function HowItWorksImoveis() {
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Agenda visitas automaticamente</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
                 Verifica a disponibilidade do corretor e do imóvel, confirma o horário da visita e envia lembrete
-                automático  -  sem você fazer nada.
+                automático sem você fazer nada.
               </p>
             </div>
             {/* Visual: Calendar mock */}
@@ -115,10 +115,10 @@ export default function HowItWorksImoveis() {
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Visitas de hoje</div>
                 <div className="flex flex-col gap-2">
                   {[
-                    { time: "09:00", name: "Apto 3q  -  Ricardo S." },
-                    { time: "10:30", name: "Casa condomínio  -  Ana R." },
-                    { time: "14:00", name: "Sala comercial  -  Paulo L." },
-                    { time: "16:00", name: "Cobertura  -  Mariana F." },
+                    { time: "09:00", name: "Apto 3q com Ricardo S." },
+                    { time: "10:30", name: "Casa condomínio com Ana R." },
+                    { time: "14:00", name: "Sala comercial com Paulo L." },
+                    { time: "16:00", name: "Cobertura com Mariana F." },
                   ].map((slot) => (
                     <div key={slot.time} className="flex items-center gap-2 text-[10px]">
                       <span className="text-neutral-400 w-10 flex-shrink-0">{slot.time}</span>

@@ -20,7 +20,7 @@ export default function HowItWorksAgencia() {
             prospecta para você
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
-            Da busca de empresas ao agendamento da reunião  -  tudo automático, sem o time precisar intervir.
+            Da busca de empresas ao agendamento da reunião. Tudo automático, sem o time precisar intervir.
           </p>
         </div>
 
@@ -49,7 +49,7 @@ export default function HowItWorksAgencia() {
                   </div>
                   <div className="flex items-center gap-2 bg-violet-50 rounded-lg px-3 py-2 border border-violet-100">
                     <span className="text-[10px] font-bold text-violet-700 w-16 flex-shrink-0">Cidade</span>
-                    <span className="text-[10px] text-neutral-700">São Paulo  -  SP</span>
+                    <span className="text-[10px] text-neutral-700">São Paulo SP</span>
                   </div>
                 </div>
                 <div className="bg-green-50 rounded-lg px-3 py-2 border border-green-100">
@@ -105,10 +105,10 @@ export default function HowItWorksAgencia() {
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Reuniões desta semana</div>
                 <div className="flex flex-col gap-2">
                   {[
-                    { time: "Ter 14:00", name: "Clínica Bella Pele  -  Prospecção" },
-                    { time: "Qua 10:00", name: "Studio Corpo & Arte  -  Demo" },
-                    { time: "Qui 15:30", name: "Espaço Renova  -  Proposta" },
-                    { time: "Sex 09:00", name: "Clínica Estética Zen  -  Follow" },
+                    { time: "Ter 14:00", name: "Clínica Bella Pele: Prospecção" },
+                    { time: "Qua 10:00", name: "Studio Corpo & Arte: Demo" },
+                    { time: "Qui 15:30", name: "Espaço Renova: Proposta" },
+                    { time: "Sex 09:00", name: "Clínica Estética Zen: Follow" },
                   ].map((slot) => (
                     <div key={slot.time} className="flex items-center gap-2 text-[10px]">
                       <span className="text-neutral-400 w-16 flex-shrink-0">{slot.time}</span>

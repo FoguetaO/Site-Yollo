@@ -3,13 +3,13 @@
 export default function FooterAgencia() {
   return (
     <footer
-      aria-label="Rodapé  -  Yollo IA para Agências de Marketing"
+      aria-label="Rodapé Yollo IA para Agências de Marketing"
       style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "4rem 1.5rem 2rem" }}
     >
       <div className="max-w-[1200px] mx-auto">
         <div className="mb-10 pb-8 border-b border-white/[0.06]">
           <p className="text-xs text-center leading-relaxed max-w-3xl mx-auto" style={{ color: "#6B7280" }}>
-            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Agências de Marketing</strong>  -  Prospecção automática por segmento e cidade, disparo em massa e nurturing de leads via WhatsApp com IA para{" "}
+            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Agências de Marketing</strong>: Prospecção automática por segmento e cidade, disparo em massa e nurturing de leads via WhatsApp com IA para{" "}
             <a href="/agencia-de-marketing" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">agências de marketing digital</a>.{" "}
             Veja também:{" "}
             <a href="/clinica-de-estetica" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">IA para clínicas de estética</a>,{" "}
@@ -21,10 +21,10 @@ export default function FooterAgencia() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           <div className="flex flex-col gap-4">
-            <a href="/" aria-label="Yollo IA  -  Página inicial">
+            <a href="/" aria-label="Yollo IA Página inicial">
               <img
                 src="/logo-yollo.png"
-                alt="Yollo IA  -  automação de WhatsApp com IA para agências de marketing"
+                alt="Yollo IA automação de WhatsApp com IA para agências de marketing"
                 className="h-8 w-auto brightness-0 invert"
                 width="120"
                 height="32"
@@ -125,7 +125,7 @@ export default function FooterAgencia() {
             <ul className="flex flex-col gap-2">
               {[
                 { label: "Sobre a Yollo IA", href: "#" },
-                { label: "Blog  -  IA e Automação", href: "/blog" },
+                { label: "Blog sobre IA e Automação", href: "/blog" },
                 { label: "Agendar demonstração", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>
@@ -159,7 +159,7 @@ export default function FooterAgencia() {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px]" style={{ color: "#6B7280" }}>
           <span>© {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.</span>
-          <span>Parceiro oficial Meta  -  WhatsApp Business API</span>
+          <span>Parceiro oficial Meta e WhatsApp Business API</span>
         </div>
       </div>
     </footer>

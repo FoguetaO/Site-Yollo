@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "O que é a Yollo IA para imobiliárias?",
     answer:
-      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada no mercado imobiliário. Ela atende leads automaticamente 24 horas por dia, responde dúvidas sobre imóveis, preços e condições de financiamento, qualifica compradores e inquilinos e agenda visitas  -  tudo configurado via prompt com as informações da sua carteira.",
+      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada no mercado imobiliário. Ela atende leads automaticamente 24 horas por dia, responde dúvidas sobre imóveis, preços e condições de financiamento, qualifica compradores e inquilinos e agenda visitas. Tudo configurado via prompt com as informações da sua carteira.",
   },
   {
     question: "Para quem a Yollo IA imobiliária é indicada?",

@@ -2,7 +2,7 @@ export default function ObjectivesContabil() {
   const items = [
     {
       title: "Disparo em massa personalizado",
-      desc: "Envie mensagens para toda a carteira ou segmentos específicos  -  clientes MEI, Simples Nacional, empresas do Lucro Presumido  -  com texto adaptado para cada perfil.",
+      desc: "Envie mensagens para toda a carteira ou segmentos específicos como clientes MEI, Simples Nacional e empresas do Lucro Presumido, com texto adaptado para cada perfil.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="22" y1="2" x2="11" y2="13" /><polygon points="22 2 15 22 11 13 2 9 22 2" />
@@ -38,7 +38,7 @@ export default function ObjectivesContabil() {
     },
     {
       title: "Multi-atendente com filas",
-      desc: "Vários colaboradores atendem simultaneamente pelo mesmo número. A IA triou, o humano fecha  -  com visibilidade total de quem está atendendo o quê.",
+      desc: "Vários colaboradores atendem simultaneamente pelo mesmo número. A IA triou, o humano fecha com visibilidade total de quem está atendendo o quê.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
@@ -47,7 +47,7 @@ export default function ObjectivesContabil() {
     },
     {
       title: "Relatórios de atendimento",
-      desc: "Visualize volume de conversas por período, tempo médio de resposta, departamentos mais acionados e leads gerados  -  tudo em painel simples.",
+      desc: "Visualize volume de conversas por período, tempo médio de resposta, departamentos mais acionados e leads gerados, tudo em painel simples.",
       icon: (
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" />

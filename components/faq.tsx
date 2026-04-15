@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "O que é a Yollo IA?",
     answer:
-      "A Yollo IA é uma plataforma de automação de atendimento via WhatsApp com Inteligência Artificial. Ela atende seus clientes automaticamente 24 horas por dia, 7 dias por semana, responde dúvidas, qualifica leads e agenda procedimentos ou reuniões diretamente no chat  -  tudo configurado por você, sem precisar de programador.",
+      "A Yollo IA é uma plataforma de automação de atendimento via WhatsApp com Inteligência Artificial. Ela atende seus clientes automaticamente 24 horas por dia, 7 dias por semana, responde dúvidas, qualifica leads e agenda procedimentos ou reuniões diretamente no chat. Tudo configurado por você, sem precisar de programador.",
   },
   {
     question: "Para quem a Yollo IA é indicada?",
@@ -16,22 +16,22 @@ const faqs = [
   {
     question: "Como a IA aprende sobre o meu negócio?",
     answer:
-      "A Yollo IA é configurada por prompt  -  você preenche as informações do seu negócio (serviços, preços, horários, tom de atendimento) e nosso gerador automático cria um prompt completo que instrui a IA sobre como atender seus clientes. Não há necessidade de programação ou treinamento com histórico de conversas.",
+      "A Yollo IA é configurada por prompt. Você preenche as informações do seu negócio (serviços, preços, horários, tom de atendimento) e nosso gerador automático cria um prompt completo que instrui a IA sobre como atender seus clientes. Não há necessidade de programação ou treinamento com histórico de conversas.",
   },
   {
     question: "Como funciona a integração com minha agenda?",
     answer:
-      "A Yollo IA integra com as principais ferramentas de agenda online. O chatbot verifica os horários disponíveis em tempo real e confirma o agendamento diretamente no WhatsApp. Após o agendamento, envia lembretes automáticos para reduzir faltas e no-shows  -  sem você precisar intervir.",
+      "A Yollo IA integra com as principais ferramentas de agenda online. O chatbot verifica os horários disponíveis em tempo real e confirma o agendamento diretamente no WhatsApp. Após o agendamento, envia lembretes automáticos para reduzir faltas e no-shows sem você precisar intervir.",
   },
   {
     question: "Preciso de um número novo ou posso usar o número atual do meu negócio?",
     answer:
-      "Você pode usar o número existente do seu negócio. Oferecemos integração tanto via API Oficial do WhatsApp Business (Meta Tech Provider) quanto via API não oficial (Meta Tech Provider)  -  você escolhe a opção que melhor se encaixa. Nenhuma das opções exige trocar o número.",
+      "Você pode usar o número existente do seu negócio. Oferecemos integração tanto via API Oficial do WhatsApp Business (Meta Tech Provider) quanto via API não oficial (Meta Tech Provider). Você escolhe a opção que melhor se encaixa e nenhuma delas exige trocar o número.",
   },
   {
     question: "A Yollo IA funciona para imobiliárias e escritórios de advocacia?",
     answer:
-      "Sim! A Yollo IA é multi-segmento. Para imobiliárias, automatiza a qualificação de leads, agendamento de visitas e follow-up de propostas. Para escritórios de advocacia, agenda consultas, responde dúvidas iniciais e encaminha os clientes para os advogados responsáveis  -  sempre dentro das normas da OAB.",
+      "Sim! A Yollo IA é multi-segmento. Para imobiliárias, automatiza a qualificação de leads, agendamento de visitas e follow-up de propostas. Para escritórios de advocacia, agenda consultas, responde dúvidas iniciais e encaminha os clientes para os advogados responsáveis, sempre dentro das normas da OAB.",
   },
   {
     question: "Quais planos estão disponíveis?",
@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "Posso testar antes de contratar?",
     answer:
-      "Sim! Oferecemos uma demonstração gratuita e personalizada com os dados do seu negócio. Basta preencher o formulário acima e nossa equipe entrará em contato para agendar a demo  -  sem compromisso.",
+      "Sim! Oferecemos uma demonstração gratuita e personalizada com os dados do seu negócio. Basta preencher o formulário acima e nossa equipe entrará em contato para agendar a demo sem compromisso.",
   },
 ]
 

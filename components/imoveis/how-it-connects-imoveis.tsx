@@ -10,7 +10,7 @@ export default function HowItConnectsImoveis() {
   const [displayedText, setDisplayedText] = useState("")
   const [charIndex, setCharIndex] = useState(0)
 
-  // Typewriter effect  -  runs once, stops when done
+  // Typewriter effect, runs once, stops when done
   useEffect(() => {
     if (!generated) return
     if (charIndex < promptOutput.length) {

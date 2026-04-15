@@ -6,7 +6,7 @@ const faqs = [
   {
     question: "O que é a Yollo IA para escritórios de advocacia?",
     answer:
-      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada em advocacia. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas jurídicas iniciais, qualifica leads, coleta documentos e agenda consultas  -  tudo configurado via prompt com as informações do seu escritório.",
+      "A Yollo IA é uma plataforma de atendimento inteligente para WhatsApp especializada em advocacia. Ela atende clientes automaticamente 24 horas por dia, responde dúvidas jurídicas iniciais, qualifica leads, coleta documentos e agenda consultas. Tudo configurado via prompt com as informações do seu escritório.",
   },
   {
     question: "Para quem a Yollo IA jurídica é indicada?",
@@ -16,17 +16,17 @@ const faqs = [
   {
     question: "A IA pode dar consultoria jurídica?",
     answer:
-      "Não. A Yollo IA não dá pareceres ou consultoria jurídica  -  apenas respostas informativas iniciais e qualificação de casos. Para questões que exigem análise técnica, ela orienta o cliente a agendar uma consulta com o advogado. Isso garante segurança jurídica e responsabilidade ética.",
+      "Não. A Yollo IA não dá pareceres ou consultoria jurídica, apenas respostas informativas iniciais e qualificação de casos. Para questões que exigem análise técnica, ela orienta o cliente a agendar uma consulta com o advogado. Isso garante segurança jurídica e responsabilidade ética.",
   },
   {
     question: "Como a IA aprende sobre meu escritório?",
     answer:
-      "A Yollo IA é treinada por prompt  -  você informa as áreas de atuação, tom de atendimento, tipos de caso que atende e o processo de qualificação. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
+      "A Yollo IA é treinada por prompt. Você informa as áreas de atuação, tom de atendimento, tipos de caso que atende e o processo de qualificação. Nosso gerador cria o prompt completo que instrui a IA. Não é necessário treinar com conversas.",
   },
   {
     question: "Funciona com diferentes áreas do direito?",
     answer:
-      "Sim! Civil, trabalhista, empresarial, previdenciário, familiar, tributário  -  você configura via prompt conforme sua especialidade. Escritórios multidisciplinares também podem definir diferentes instruções por área de atuação.",
+      "Sim! Civil, trabalhista, empresarial, previdenciário, familiar, tributário: você configura via prompt conforme sua especialidade. Escritórios multidisciplinares também podem definir diferentes instruções por área de atuação.",
   },
   {
     question: "Como funciona a coleta de documentos?",

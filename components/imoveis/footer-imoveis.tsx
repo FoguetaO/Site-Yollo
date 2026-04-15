@@ -3,7 +3,7 @@
 export default function FooterImoveis() {
   return (
     <footer
-      aria-label="Rodapé  -  Yollo IA para Imobiliárias"
+      aria-label="Rodapé Yollo IA para Imobiliárias"
       style={{ backgroundColor: "#0a0d14", color: "#9CA3AF", padding: "4rem 1.5rem 2rem" }}
     >
       <div className="max-w-[1200px] mx-auto">
@@ -11,7 +11,7 @@ export default function FooterImoveis() {
         {/* SEO tagline */}
         <div className="mb-10 pb-8 border-b border-white/[0.06]">
           <p className="text-xs text-center leading-relaxed max-w-3xl mx-auto" style={{ color: "#6B7280" }}>
-            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Imobiliárias</strong>  -  Automação de atendimento via WhatsApp com IA para{" "}
+            <strong style={{ color: "#9CA3AF" }}>Yollo IA para Imobiliárias</strong>: Automação de atendimento via WhatsApp com IA para{" "}
             <a href="/imoveis" className="underline underline-offset-2 hover:text-neutral-300 transition-colors">imobiliárias e corretores de imóveis</a>.{" "}
             Qualificação automática de leads, agendamento de visitas e follow-up de propostas 24h por dia.
             Veja também:{" "}
@@ -24,17 +24,17 @@ export default function FooterImoveis() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[1.6fr_1fr_1fr_1fr_1fr] gap-10 pb-10 border-b border-white/[0.08]">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-            <a href="/" aria-label="Yollo IA  -  Página inicial">
+            <a href="/" aria-label="Yollo IA Página inicial">
               <img
                 src="/logo-yollo.png"
-                alt="Yollo IA  -  automação de WhatsApp com IA para imobiliárias"
+                alt="Yollo IA automação de WhatsApp com IA para imobiliárias"
                 className="h-8 w-auto brightness-0 invert"
                 width="120"
                 height="32"
               />
             </a>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: "#9CA3AF" }}>
-              Automatize a captação e qualificação de leads imobiliários pelo WhatsApp com IA. Agende visitas, faça follow-up e nunca perca uma oportunidade  -  24h por dia.
+              Automatize a captação e qualificação de leads imobiliários pelo WhatsApp com IA. Agende visitas, faça follow-up e nunca perca uma oportunidade. Disponível 24h por dia.
             </p>
             <div className="flex gap-3 mt-1">
               {[
@@ -131,7 +131,7 @@ export default function FooterImoveis() {
             <ul className="flex flex-col gap-2">
               {[
                 { label: "Sobre a Yollo IA", href: "#" },
-                { label: "Blog  -  IA e Automação", href: "/blog" },
+                { label: "Blog sobre IA e Automação", href: "/blog" },
                 { label: "Agendar demonstração", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>
@@ -166,7 +166,7 @@ export default function FooterImoveis() {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px]" style={{ color: "#6B7280" }}>
           <span>© {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.</span>
-          <span>Parceiro oficial Meta  -  WhatsApp Business API</span>
+          <span>Parceiro oficial Meta e WhatsApp Business API</span>
         </div>
       </div>
     </footer>

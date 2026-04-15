@@ -10,7 +10,7 @@ export default function HowItConnects() {
   const [displayedText, setDisplayedText] = useState("")
   const [charIndex, setCharIndex] = useState(0)
 
-  // Typewriter effect  -  runs once, stops when done
+  // Typewriter effect, runs once, stops when done
   useEffect(() => {
     if (!generated) return
     if (charIndex < promptOutput.length) {
@@ -20,7 +20,7 @@ export default function HowItConnects() {
       }, 18)
       return () => clearTimeout(t)
     }
-    // Done typing  -  just stop, no reset
+    // Done typing, just stop, no reset
   }, [generated, charIndex])
 
   // Auto-trigger once on mount
@@ -58,7 +58,7 @@ export default function HowItConnects() {
               Conecte seu WhatsApp de forma segura
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-8">
-              Conecte via API Oficial ou API Não Oficial do WhatsApp  -  você escolhe a melhor opção para o seu negócio.
+              Conecte via API Oficial ou API Não Oficial do WhatsApp e escolha a melhor opção para o seu negócio.
             </p>
 
             {/* QR visual */}
@@ -127,7 +127,7 @@ export default function HowItConnects() {
               Gere o prompt da sua IA em segundos
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Nosso gerador interno cria o prompt ideal para a sua clinica automaticamente  -  sem precisar saber nada de tecnologia.
+              Nosso gerador interno cria o prompt ideal para a sua clinica automaticamente, sem precisar saber nada de tecnologia.
             </p>
 
             {/* Prompt generator visual */}
@@ -192,7 +192,7 @@ export default function HowItConnects() {
               A IA atende por você, 24 horas
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Seu assistente responde clientes, tira dúvidas, qualifica e agenda  -  tudo automaticamente, sem você precisar estar online.
+              Seu assistente responde clientes, tira dúvidas, qualifica e agenda. Tudo automaticamente, sem você precisar estar online.
             </p>
 
             {/* WhatsApp chat mock */}

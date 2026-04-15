@@ -30,7 +30,7 @@ const withoutItems = [
       </svg>
     ),
     title: "Baixíssima taxa de resposta",
-    sub: "Poucos prospects respondem  -  esforço alto, retorno baixo",
+    sub: "Poucos prospects respondem, esforço alto e retorno baixo",
     color: "bg-red-50 border-red-200",
   },
   {
@@ -83,7 +83,7 @@ const withItems = [
       </svg>
     ),
     title: "Time foca só em fechar contratos",
-    sub: "Reunião marcada, prospect qualificado  -  equipe comercial no que importa",
+    sub: "Reunião marcada, prospect qualificado: equipe comercial no que importa",
     color: "bg-green-50 border-green-200",
   },
 ]
