@@ -62,7 +62,7 @@ export const blogCategories: BlogCategory[] = [
     name: "WhatsApp Business",
     slug: "whatsapp-business",
     description: "Tutoriais e dicas para usar o WhatsApp comercialmente",
-    count: 5,
+    count: 6,
   },
   {
     name: "Inteligência Artificial",
@@ -74,6 +74,193 @@ export const blogCategories: BlogCategory[] = [
 
 export const blogPosts: BlogPost[] = [
   // === WHATSAPP BUSINESS ===
+  {
+    slug: "passo-a-passo-automatizar-whatsapp",
+    title: "Passo a Passo para Automatizar o WhatsApp: Do Mapeamento à Integração com CRM",
+    description: "Aprenda como automatizar o WhatsApp de forma eficiente: do mapeamento da jornada do cliente à criação de chatbots e integração com CRM. Um guia prático do planejamento à operação.",
+    category: "WhatsApp Business",
+    categorySlug: "whatsapp-business",
+    publishedAt: "2024-04-14",
+    updatedAt: "2024-04-14",
+    readingTime: 11,
+    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    keywords: [
+      "passo a passo automatizar whatsapp",
+      "como criar chatbot whatsapp",
+      "configurar mensagens automáticas whatsapp business",
+      "integração whatsapp crm",
+      "fluxo de atendimento whatsapp",
+      "bot whatsapp para empresas",
+      "mapeamento jornada cliente whatsapp"
+    ],
+    relatedPosts: ["como-automatizar-whatsapp-guia-completo", "como-funciona-automacao-whatsapp-pratica", "ia-atendimento-whatsapp"],
+    image: {
+      src: "/blog/passo-a-passo-automatizar-whatsapp.jpg",
+      alt: "Profissional planejando fluxo de automação no WhatsApp em quadro branco com diagrama e laptop exibindo painel de CRM",
+      title: "Passo a Passo para Automatizar o WhatsApp",
+      caption: "A automação eficiente começa pelo mapeamento da jornada do cliente, não pela escolha da ferramenta.",
+      width: 1280,
+      height: 720,
+    },
+    content: `
+## Por Que a Ordem das Etapas Importa
+
+Automatizar o WhatsApp de forma eficiente não começa pela escolha da ferramenta nem pela configuração técnica. Começa pelo **entendimento profundo de quem é o cliente**, quais são suas dúvidas mais frequentes e qual caminho ele percorre até resolver uma demanda.
+
+Sem esse mapeamento prévio, qualquer fluxo configurado corre o risco de ser genérico demais para gerar valor real. Este guia parte do planejamento estratégico e avança até a integração com os sistemas da empresa — na ordem que produz os melhores resultados.
+
+## Etapa 1: Mapeamento da Jornada do Cliente
+
+O primeiro passo para automatizar o WhatsApp é mapear a jornada do cliente dentro do canal de atendimento. Isso significa identificar:
+
+- Os **momentos em que o cliente entra em contato** e por quais motivos
+- As **perguntas mais recorrentes** em cada etapa da jornada
+- As **situações que geram insatisfação** ou abandono da conversa
+- Os **pontos em que o atendimento humano é insubstituível**
+
+### Como fazer esse mapeamento
+
+| Fonte de dados | O que você encontra |
+|----------------|---------------------|
+| Histórico de conversas | Padrões de dúvidas, horários de pico, vocabulário do cliente |
+| Entrevistas com a equipe | Casos difíceis, exceções, situações não documentadas |
+| Análise de tickets | Categorias de demanda, tempo de resolução, reincidências |
+| Pesquisas de satisfação | Pontos de atrito, expectativas não atendidas |
+
+O resultado desse mapeamento é a **matéria-prima para construir um funil de atendimento** que faça sentido para o cliente — e não apenas para a operação interna da empresa.
+
+> **Erro mais comum**: Empresas que pulam essa etapa constroem fluxos baseados em suposições internas. O resultado é um bot que responde o que a empresa quer dizer, não o que o cliente precisa ouvir.
+
+## Etapa 2: Configurar Mensagens Automáticas no WhatsApp Business
+
+Para quem está começando, o WhatsApp Business oferece um caminho acessível para os primeiros passos na automação **sem depender de plataformas externas**.
+
+### Configurações básicas disponíveis no app
+
+**Mensagem de saudação**
+Enviada automaticamente quando um cliente inicia conversa pela primeira vez ou após 14 dias de inatividade. Deve apresentar a empresa e orientar o cliente sobre como prosseguir.
+
+**Mensagem de ausência**
+Responde automaticamente fora do horário comercial configurado. Deve informar o horário de atendimento e dar uma estimativa de retorno.
+
+**Respostas rápidas**
+Atalhos para textos longos frequentemente usados. São acionados com "/" durante o atendimento — não são automáticas, mas aceleram significativamente o tempo de resposta da equipe.
+
+### Como acessar essas configurações
+
+As três configurações estão disponíveis em **Configurações → Ferramentas Comerciais** dentro do aplicativo e não exigem conhecimento técnico para serem ativadas.
+
+### Limitações do WhatsApp Business
+
+Essa abordagem é adequada para volumes baixos de atendimento, mas tem limites claros:
+
+- Apenas um usuário por vez
+- Sem fluxos de conversa condicionais
+- Sem integração com sistemas externos
+- Sem métricas de desempenho
+
+Para escalar, o próximo passo é a API.
+
+## Etapa 3: Criar um Chatbot Funcional Integrado ao WhatsApp
+
+A criação de um [chatbot para WhatsApp](/blog/como-funciona-automacao-whatsapp-pratica) funcional exige acesso à **WhatsApp Business API** e o uso de uma plataforma de automação compatível.
+
+### Processo de construção do chatbot
+
+**1. Defina o objetivo principal do bot**
+
+Antes de qualquer configuração, responda: o bot vai realizar triagem de atendimentos, responder dúvidas frequentes, coletar dados do cliente, conduzir uma venda ou agendar reuniões? Objetivos misturados sem priorização geram fluxos confusos.
+
+**2. Desenhe os fluxos em formato de árvore de decisão**
+
+Mapeie cada possível resposta do cliente e o caminho correspondente:
+
+\`\`\`
+Cliente envia "Oi"
+  → Bot: Menu com opções (1. Vendas / 2. Suporte / 3. Financeiro)
+    → Cliente digita "1"
+      → Bot: "Qual produto você tem interesse?"
+        → Cliente responde
+          → Bot coleta dados e agenda demonstração
+    → Cliente digita "2"
+      → Verifica horário comercial
+        → Dentro do horário: transfere para atendente
+        → Fora do horário: coleta dados e promete retorno
+\`\`\`
+
+**3. Configure os fluxos na plataforma**
+
+Com o diagrama em mãos, os fluxos são configurados dentro da plataforma escolhida usando construtores visuais ou configurações via API.
+
+**4. Teste com cenários reais antes de publicar**
+
+Simule conversas como um cliente real faria — incluindo respostas inesperadas, erros de digitação e caminhos alternativos. Ajuste os fluxos com base nos gaps encontrados.
+
+> Um onboarding bem conduzido nessa etapa reduz significativamente os erros que aparecem após o lançamento.
+
+### Critérios para escolher a plataforma certa
+
+| Critério | O que avaliar |
+|----------|---------------|
+| Integração com API oficial | Plataforma autorizada pela Meta |
+| Construtor visual de fluxos | Facilidade para criar e editar sem código |
+| Integração com CRM | Conexão nativa ou via API |
+| Multi-atendente | Suporte a vários operadores no mesmo número |
+| Relatórios | Métricas de atendimento, tempo de resposta, satisfação |
+| Suporte | Disponibilidade e qualidade do suporte técnico |
+
+## Etapa 4: Conectar o WhatsApp ao CRM da Empresa
+
+A integração entre o WhatsApp automatizado e o [CRM](/blog/crm-whatsapp-estetica) é o que transforma o canal de mensagens em uma **fonte de dados estratégica** para a empresa.
+
+### O que essa integração viabiliza
+
+Com a conexão estabelecida, cada interação no WhatsApp alimenta automaticamente o histórico do cliente no CRM:
+
+- **Atendentes acessam o contexto completo** antes de qualquer intervenção humana
+- **O bot consulta o CRM em tempo real** para identificar o cliente, verificar o status de um pedido ou confirmar informações cadastrais
+- **Leads são criados automaticamente** no pipeline de vendas quando um novo contato é iniciado
+- **Tags e categorias** são aplicadas com base nas respostas do cliente durante o fluxo
+
+### Fluxo de dados com CRM integrado
+
+| Evento no WhatsApp | Ação automática no CRM |
+|--------------------|------------------------|
+| Primeiro contato | Cria novo lead com nome e telefone |
+| Cliente escolhe "Vendas" | Move lead para etapa "Interesse demonstrado" |
+| Agendamento confirmado | Cria tarefa para o consultor responsável |
+| Cliente diz "não tenho interesse" | Marca como "Perdido" com motivo registrado |
+| Pesquisa de satisfação respondida | Registra CSAT no histórico do cliente |
+
+### Como é feita a integração técnica
+
+A configuração dessa ponte entre sistemas é feita via **API**, com suporte da plataforma de automação escolhida. Na prática:
+
+1. A plataforma de automação recebe a mensagem via webhook
+2. Consulta o CRM para identificar se o contato já existe
+3. Cria ou atualiza o registro com os dados da conversa
+4. Retorna a resposta personalizada ao cliente
+
+Esse passo representa um dos mais decisivos para elevar a maturidade do atendimento automatizado — é o que separa um bot básico de uma operação de atendimento verdadeiramente inteligente.
+
+## Resumo: As 4 Etapas em Sequência
+
+| Etapa | O que fazer | Resultado esperado |
+|-------|-------------|-------------------|
+| 1. Mapeamento | Analisar histórico, entrevistar equipe, categorizar demandas | Base para construir fluxos relevantes |
+| 2. Configuração básica | Ativar saudação, ausência e respostas rápidas no app | Primeiro nível de automação funcionando |
+| 3. Chatbot via API | Desenhar fluxos, configurar na plataforma, testar | Atendimento automatizado em escala |
+| 4. Integração com CRM | Conectar sistemas via API, mapear dados | Atendimento inteligente e personalizado |
+
+## Conclusão
+
+A automação de WhatsApp bem-sucedida segue uma sequência lógica: **entender o cliente antes de configurar qualquer fluxo**, depois construir a automação da camada mais simples para a mais complexa, e por fim integrar com os sistemas internos para que cada conversa alimente a inteligência do negócio.
+
+Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto — desde o mapeamento inicial dos fluxos até a integração nativa com CRM e a configuração dos chatbots com inteligência artificial.
+
+**[Agende uma demonstração gratuita](/#contratar)** e veja como sua empresa pode seguir esse passo a passo com suporte especializado do início ao fim.
+    `,
+  },
   {
     slug: "como-funciona-automacao-whatsapp-pratica",
     title: "Como Funciona a Automação no WhatsApp na Prática: Fluxos, Gatilhos e Integrações",
