@@ -4,7 +4,7 @@ const BASE_URL = "https://integracao.agendasistemacrm.com.br/api/v1"
 const API_KEY = process.env.AGENDA_SISTEMA_API_KEY!
 const FUNNEL_ID = 5568
 const STAGE_ID = 34490
-const WHATSAPP_CONNECTION_ID = "16279"
+const WHATSAPP_CONNECTION_ID = "16473"
 
 const HEADERS = {
   "Content-Type": "application/json",
@@ -59,12 +59,12 @@ async function createContact(payload: {
 
 // Labels legíveis para os campos extras de cada formulário
 const FIELD_LABELS: Record<string, string> = {
-  procedures:   "Procedimentos oferecidos",
-  clients:      "Quantidade de clientes",
-  area:         "Área de atuação",
-  niche:        "Nicho de mercado",
+  procedures: "Procedimentos oferecidos",
+  clients: "Quantidade de clientes",
+  area: "Área de atuação",
+  niche: "Nicho de mercado",
   propertyType: "Foco da imobiliária",
-  extra:        "Informação adicional",
+  extra: "Informação adicional",
 }
 
 function buildDealDescription(extra: string): string {
