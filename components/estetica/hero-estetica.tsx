@@ -13,7 +13,7 @@ export default function HeroEstetica() {
   return (
     <section
       className="min-h-screen flex items-center relative overflow-hidden"
-      aria-label="Yollo IA para Clínicas de Estética  -  automação de atendimento via WhatsApp 24h"
+      aria-label="Yollo IA para Clínicas de Estética: automação de atendimento via WhatsApp 24h"
       style={{
         background: "linear-gradient(to bottom, #FDF2F8, #F5E6FA, #EDE9FE)",
       }}
@@ -50,20 +50,15 @@ export default function HeroEstetica() {
 
           {/* Headline */}
           <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
-            A secretária virtual que{" "}
-            <span className="gradient-brand">
-              agenda e atende
-            </span>{" "}
-            suas clientes
-            <br className="hidden md:block" /> pelo WhatsApp,{" "}
-            <span className="gradient-brand">
-              24h por dia.
+            Sua clínica atende, agenda e confirma pelo WhatsApp{" "}
+            <span className="italic gradient-brand">
+              mesmo quando você está em atendimento
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Yollo IA responde suas clientes no momento em que elas mandam mensagem  -  mesmo à noite,
+            A Yollo IA responde suas clientes no momento em que elas mandam mensagem, mesmo à noite,
             no fim de semana ou enquanto você realiza um procedimento. Agenda, tira dúvidas, qualifica e reduz faltas automaticamente.
           </p>
 
@@ -91,14 +86,13 @@ export default function HeroEstetica() {
               </svg>
               Ver como funciona
             </a>
-
           </div>
 
           {/* Trust badges */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">Funciona no seu número atual</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
@@ -106,7 +100,7 @@ export default function HeroEstetica() {
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Configuração em minutos</span>
+              <span className="font-medium">Sem precisar de recepcionista extra</span>
             </div>
           </div>
         </div>
