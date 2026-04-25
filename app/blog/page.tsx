@@ -61,8 +61,11 @@ const blogSchema = {
 }
 
 export default function BlogPage() {
-  const featuredPost = blogPosts[0]
-  const regularPosts = blogPosts.slice(1)
+  const sortedPosts = [...blogPosts].sort(
+    (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+  )
+  const featuredPost = sortedPosts[0]
+  const regularPosts = sortedPosts.slice(1)
 
   return (
     <>

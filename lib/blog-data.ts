@@ -3095,7 +3095,9 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 }
 
 export function getPostsByCategory(categorySlug: string): BlogPost[] {
-  return blogPosts.filter((post) => post.categorySlug === categorySlug)
+  return blogPosts
+    .filter((post) => post.categorySlug === categorySlug)
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
 }
 
 export function getRelatedPosts(post: BlogPost): BlogPost[] {
