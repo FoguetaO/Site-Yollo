@@ -13,8 +13,6 @@ export default function robots(): MetadataRoute.Robots {
           "/api/",
           "/_next/",
           "/admin/",
-          "/estetica",   // redirect antigo  -  canônico é /clinica-de-estetica
-          "/contabil",   // redirect antigo  -  canônico é /contabilidade
         ],
       },
       // ChatGPT (OpenAI)
