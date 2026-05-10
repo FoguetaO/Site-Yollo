@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 
-function useCountUp(target: number, decimals = 0, active: boolean) {
+function useCountUp(target: number, active: boolean) {
   const [value, setValue] = useState(0)
   useEffect(() => {
     if (!active) return
@@ -11,12 +11,12 @@ function useCountUp(target: number, decimals = 0, active: boolean) {
     const tick = (now: number) => {
       const progress = Math.min((now - start) / duration, 1)
       const eased = 1 - Math.pow(1 - progress, 4)
-      setValue(eased * target)
+      setValue(Math.round(eased * target))
       if (progress < 1) requestAnimationFrame(tick)
     }
     requestAnimationFrame(tick)
   }, [active, target])
-  return decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString()
+  return value
 }
 
 export default function Stats() {
@@ -37,9 +37,8 @@ export default function Stats() {
     return () => observer.disconnect()
   }, [])
 
-  const stat1 = useCountUp(8, 0, active)
-  const stat2 = useCountUp(1.5, 1, active)
-  const stat3 = useCountUp(94, 0, active)
+  const stat2 = useCountUp(4000, active)
+  const stat3 = useCountUp(89, active)
 
   return (
     <section
@@ -66,7 +65,7 @@ export default function Stats() {
           {/* Hero stat */}
           <div className="flex-1 text-center md:text-left">
             <span className="block text-5xl sm:text-7xl md:text-[7rem] font-semibold tracking-tighter leading-none" style={{ color: "#6C4FE8" }}>
-              {stat1}s
+              até 10s
             </span>
             <span className="block text-lg font-semibold text-white/80 mt-2">tempo de resposta</span>
             <span className="block text-sm text-white/35 mt-1">de mais de 2h para 8 segundos</span>
@@ -76,7 +75,7 @@ export default function Stats() {
           <div className="flex flex-row md:flex-col gap-8 md:gap-10 md:pl-12 md:border-l md:border-white/[0.08]">
             <div className="flex-1 text-center md:text-left">
               <span className="block text-4xl md:text-5xl font-semibold text-white tracking-tight leading-none">
-                {stat2}M+
+                {stat2 >= 4000 ? "4.000+" : stat2.toLocaleString("pt-BR")}
               </span>
               <span className="block text-sm font-semibold text-white/70 mt-2">agendamentos</span>
               <span className="hidden md:block text-xs text-white/30 mt-0.5">gerenciados pela Yollo IA</span>

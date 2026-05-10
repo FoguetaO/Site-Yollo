@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: `https://yolloia.com.br${post.image.src}`, width: post.image.width, height: post.image.height, alt: post.image.alt }],
     },
     twitter: { card: "summary_large_image", title: post.title, description: post.description, images: [`https://yolloia.com.br${post.image.src}`] },
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `https://yolloia.com.br/blog/${post.slug}` },
   }
 }
 

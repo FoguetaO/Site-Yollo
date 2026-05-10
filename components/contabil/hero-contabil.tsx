@@ -55,31 +55,31 @@ export default function HeroContabil() {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ backgroundColor: "#6C4FE8" }}
               />
-              IA para Captação e Qualificação Contábil
+              IA para Escritórios Contábeis
             </div>
           </div>
 
           {/* Headline */}
           <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.07s" }}>
-            Seu escritório contábil captando,
+            IA para Escritórios Contábeis:{" "}
+            <span className="gradient-brand">Atenda Mais Clientes</span>
             <br className="hidden md:block" />
-            <span className="gradient-brand">qualificando e atendendo leads</span>
-            <br className="hidden md:block" />
-            de forma{" "}
-            <span className="gradient-brand">totalmente automatizada.</span>
+            sem{" "}
+            <span className="gradient-brand">Ampliar a Equipe</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.14s" }}>
-            A Yollo IA agenda reuniões, atende clientes automaticamente, distribui conversas por departamento,
-            rastreia leads por anúncios e entrega o prospect pronto para a negociação — sem intervenção da equipe.
+            A Yollo IA capta leads, responde dúvidas fiscais e tributárias, envia lembretes automáticos de obrigações
+            e agenda reuniões — tudo pelo WhatsApp, sem precisar aumentar o quadro de colaboradores. Seu time foca
+            no que gera valor; a IA cuida do atendimento inicial.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.21s" }}>
             <ShinyButton
               href="#contratar"
-              label="Quero agendar minha demonstração →"
+              label="Agendar demonstração para meu escritório →"
               className="w-full sm:w-auto text-sm sm:text-base"
             />
             <a
@@ -104,15 +104,15 @@ export default function HeroContabil() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-contabil-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Leads qualificados automaticamente</span>
+              <span className="font-medium">Captação e qualificação automática</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">CRM com movimentação automática</span>
+              <span className="font-medium">Lembretes de obrigações fiscais</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Rastreamento de anúncios incluído</span>
+              <span className="font-medium">Sem necessidade de ampliar equipe</span>
             </div>
           </div>
         </div>

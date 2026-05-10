@@ -10,14 +10,30 @@ import LeadFormAdvocacia from "@/components/advocacia/lead-form-advocacia"
 import FooterAdvocacia from "@/components/advocacia/footer-advocacia"
 import ScrollReveal from "@/components/scroll-reveal"
 
-export const metadata = {
-  title: "Yollo IA para Advocacia — IA no WhatsApp que Agenda Consultas e Qualifica Clientes 24/7",
+const segmentSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "IA para Escritórios de Advocacia — Yollo IA",
   description:
-    "Automação de atendimento via WhatsApp com IA para escritórios de advocacia. Agende consultas, qualifique potenciais clientes e faça follow-up automaticamente — respeitando as normas da OAB.",
+    "Automação de atendimento via WhatsApp com IA para escritórios de advocacia. Agendamento de consultas, qualificação de clientes e follow-up respeitando as normas da OAB.",
+  url: "https://yolloia.com.br/advocacia",
+  breadcrumb: {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Início", item: "https://yolloia.com.br" },
+      { "@type": "ListItem", position: 2, name: "Advocacia", item: "https://yolloia.com.br/advocacia" },
+    ],
+  },
+}
+
+export const metadata = {
+  title: "IA para Advogados: Qualifique Clientes e Agende Consultas Automaticamente — Yollo IA",
+  description:
+    "Faça triagem de casos, qualifique potenciais clientes por área do direito e agende consultas automaticamente pelo WhatsApp. Compliance com as normas da OAB — atendimento jurídico 24h.",
   alternates: { canonical: "https://yolloia.com.br/advocacia" },
   openGraph: {
-    title: "IA para Escritórios de Advocacia — Yollo IA",
-    description: "Agende consultas, qualifique clientes e automatize o atendimento do seu escritório com IA. Normas OAB respeitadas.",
+    title: "IA para Advogados: Triagem de Casos e Agendamento de Consultas — Yollo IA",
+    description: "Traje casos, qualifique clientes e agende consultas automaticamente com IA no WhatsApp. Dentro das normas da OAB.",
     type: "website",
     locale: "pt_BR",
     siteName: "Yollo IA",
@@ -27,6 +43,10 @@ export const metadata = {
 export default function AdvocaciaPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(segmentSchema) }}
+      />
       <NavbarAdvocacia />
       <HeroAdvocacia />
       <ScrollReveal><ComparisonAdvocacia /></ScrollReveal>
@@ -37,14 +57,14 @@ export default function AdvocaciaPage() {
       <ScrollReveal delay={50}>
       <SegmentFeatureHero
         badge="IA para Escritórios de Advocacia"
-        title="Agende consultas e qualifique clientes enquanto você advoga"
-        description="Os recursos da Yollo IA para escritórios de advocacia incluem:"
+        title="Só entre em contato com clientes que já foram triados e qualificados"
+        description="O que a Yollo IA faz pelo seu escritório de advocacia:"
         features={[
-          { label: "Agendamento automático de consultas iniciais", href: "#funcionalidades" },
-          { label: "Qualificação de potenciais clientes por área do direito", href: "#funcionalidades" },
-          { label: "Follow-up ético e dentro das normas da OAB", href: "#funcionalidades" },
+          { label: "Faz triagem de casos: identifica área do direito e viabilidade antes da consulta", href: "#funcionalidades" },
+          { label: "Agenda consultas iniciais automaticamente e envia confirmação ao cliente", href: "#funcionalidades" },
+          { label: "Atua dentro das diretrizes éticas da OAB — sem captação indevida de clientela", href: "#funcionalidades" },
         ]}
-        ctaLabel="Explore os recursos para advocacia"
+        ctaLabel="Agendar demonstração para meu escritório"
         ctaHref="#contratar"
         phoneImage={{
           src: "/ultimasecao.png",

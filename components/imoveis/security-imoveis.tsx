@@ -1,4 +1,4 @@
-import WhatsAppIcon from "@/components/icons/whatsapp-icon"
+import Image from "next/image"
 
 export default function SecurityImoveis() {
   return (
@@ -28,16 +28,13 @@ export default function SecurityImoveis() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-neutral-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className="mb-6 h-16 flex items-center">
-                <div className="flex items-center gap-3">
-                  <div className="w-14 h-14 rounded-2xl bg-green-500 flex items-center justify-center">
-                    <WhatsAppIcon size={32} color="white" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-neutral-900">WhatsApp</div>
-                    <div className="text-xs text-neutral-500">API Oficial</div>
-                  </div>
-                </div>
+              <div className="mb-6 flex items-center justify-center">
+                <Image
+                  src="/images/meta-verified.svg"
+                  alt="Meta Verified"
+                  width={200}
+                  height={32}
+                />
               </div>
               <h3 className="text-xl font-medium mb-3 text-neutral-900">API Oficial do WhatsApp</h3>
               <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
@@ -52,16 +49,14 @@ export default function SecurityImoveis() {
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-neutral-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className="mb-6 h-16 flex items-center">
-                <div className="flex items-center gap-3">
-                  <div className="w-14 h-14 rounded-2xl bg-neutral-800 flex items-center justify-center">
-                    <WhatsAppIcon size={32} color="white" />
-                  </div>
-                  <div>
-                    <div className="text-sm font-semibold text-neutral-900">WhatsApp</div>
-                    <div className="text-xs text-neutral-500">API Não Oficial</div>
-                  </div>
-                </div>
+              <div className="mb-6 flex items-center justify-center">
+                <Image
+                  src="/images/whatsapp-ai-hub.png"
+                  alt="WhatsApp AI Startups Hub"
+                  width={120}
+                  height={120}
+                  className="rounded-2xl"
+                />
               </div>
               <h3 className="text-xl font-medium mb-3 text-neutral-900">API Não Oficial do WhatsApp</h3>
               <p className="text-sm text-neutral-600 mb-6 leading-relaxed">

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
+import rehypeRaw from "rehype-raw"
 import type { Components } from "react-markdown"
 
 interface BlogContentProps {
@@ -225,11 +226,64 @@ export default function BlogContent({ content }: BlogContentProps) {
     hr: () => (
       <hr style={{ margin: "3rem 0", border: 0, height: "1px", background: "linear-gradient(to right, transparent, #e5e7eb, transparent)" }} />
     ),
+
+    details: ({ children }) => (
+      <details
+        style={{
+          borderRadius: "12px",
+          border: "1px solid #e5e7eb",
+          marginBottom: "0.75rem",
+          overflow: "hidden",
+          backgroundColor: "#fff",
+        }}
+      >
+        {children}
+      </details>
+    ),
+
+    summary: ({ children }) => (
+      <summary
+        style={{
+          padding: "1rem 1.25rem",
+          fontWeight: 600,
+          fontSize: "15px",
+          color: "#111827",
+          cursor: "pointer",
+          listStyle: "none",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "1rem",
+          userSelect: "none",
+        }}
+        className="group [&::-webkit-details-marker]:hidden marker:hidden"
+      >
+        <span>{children}</span>
+        <span
+          aria-hidden="true"
+          style={{
+            flexShrink: 0,
+            width: "20px",
+            height: "20px",
+            borderRadius: "50%",
+            backgroundColor: "#f3f4f6",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "12px",
+            color: "#6C4FE8",
+            fontWeight: 700,
+          }}
+        >
+          +
+        </span>
+      </summary>
+    ),
   }
 
   return (
     <div style={{ fontFamily: "inherit" }}>
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]} components={components}>
         {content}
       </ReactMarkdown>
     </div>

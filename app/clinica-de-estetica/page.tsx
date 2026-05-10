@@ -12,13 +12,13 @@ import Footer from "@/components/footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
 
 export const metadata = {
-  title: "Yollo IA para Clínicas de Estética — IA no WhatsApp que Agenda e Atende 24/7",
+  title: "IA para Clínicas de Estética: Atendimento Automático no WhatsApp 24h — Yollo IA",
   description:
-    "Automação de atendimento via WhatsApp com IA para clínicas de estética. Agende procedimentos, responda clientes 24h, reduza faltas e aumente o faturamento da sua clínica com Inteligência Artificial.",
+    "Agende botox, limpeza de pele, micropigmentação e peeling automaticamente pelo WhatsApp com IA. Confirmações automáticas reduzem faltas. Sem secretária, sem falhas, 24h por dia.",
   alternates: { canonical: "https://yolloia.com.br/clinica-de-estetica" },
   openGraph: {
-    title: "IA para Clínicas de Estética — Yollo IA",
-    description: "Automatize o atendimento da sua clínica de estética. Agende, qualifique e atenda clientes 24h pelo WhatsApp com IA.",
+    title: "IA para Clínicas de Estética: Agendamento Automático 24h — Yollo IA",
+    description: "Reduza faltas e agende procedimentos automaticamente pelo WhatsApp com IA. Botox, limpeza de pele, micropigmentação e mais.",
     type: "website",
     locale: "pt_BR",
     siteName: "Yollo IA",
@@ -57,14 +57,14 @@ export default function ClinicaDeEsteticaPage() {
         <Stats />
         <SegmentFeatureHero
           badge="IA para Clínicas de Estética"
-          title="Atende, agenda e qualifica suas clientes pelo WhatsApp, 24h por dia"
-          description="Os recursos guiados por IA da Yollo para clínicas de estética incluem:"
+          title="Menos faltas, mais procedimentos realizados — sem depender de secretária"
+          description="O que a Yollo IA faz pela sua clínica de estética:"
           features={[
-            { label: "Agendamento automático de procedimentos", href: "#funcionalidades" },
-            { label: "Qualificação e CRM de clientes", href: "#funcionalidades" },
-            { label: "Lembretes e redução de faltas", href: "#funcionalidades" },
+            { label: "Agenda botox, peeling, limpeza de pele e micropigmentação automaticamente", href: "#funcionalidades" },
+            { label: "Envia confirmações e lembretes 24h antes para reduzir faltas", href: "#funcionalidades" },
+            { label: "Qualifica a cliente e responde dúvidas sobre procedimentos no WhatsApp", href: "#funcionalidades" },
           ]}
-          ctaLabel="Explore os recursos para estética"
+          ctaLabel="Agendar demonstração para minha clínica"
           ctaHref="#contratar"
           phoneImage={{
             src: "/ultimasecao.png",

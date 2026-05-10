@@ -37,15 +37,15 @@ const productLinks = [
 ]
 
 const companyLinks = [
-  { label: "Sobre a Yollo IA", href: "#" },
+  { label: "Sobre a Yollo IA", href: "/sobre" },
   { label: "Blog — IA e Automação", href: "/blog" },
   { label: "Contato e demonstração", href: "#contratar" },
 ]
 
 const supportLinks = [
   { label: "Perguntas frequentes (FAQ)", href: "#faq" },
-  { label: "Política de privacidade", href: "#" },
-  { label: "Termos de uso", href: "#" },
+  { label: "Política de privacidade", href: "/privacidade" },
+  { label: "Termos de uso", href: "/termos" },
 ]
 
 export default function Footer() {
@@ -196,7 +196,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px]" style={{ color: "#6B7280" }}>
           <span>© {new Date().getFullYear()} Yollo IA. Todos os direitos reservados.</span>
           <span>
-            Parceiro oficial Meta — WhatsApp Business API &nbsp;·&nbsp; CNPJ em fase de registro
+            Parceiro oficial Meta — WhatsApp Business API
           </span>
         </div>
       </div>

@@ -49,29 +49,31 @@ export default function HeroAdvocacia() {
               }}
             >
               <span className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: "#6C4FE8" }} />
-              Assistente IA para Escritórios e Advogados
+              IA para Triagem e Agendamento Jurídico
             </div>
           </div>
 
           <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.07s" }}>
-            Seu escritório de advocacia atendendo{" "}
+            IA para Advogados:{" "}
             <span className="inline-block gradient-brand">
-              24 horas por dia pelo
-            </span>
-            <br className="hidden md:block" /> WhatsApp, sem você precisar estar{" "}
+              Qualifique Clientes
+            </span>{" "}
+            e Agende Consultas{" "}
             <span className="inline-block gradient-brand">
-              disponível.
+              Automaticamente
             </span>
           </h1>
 
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.14s" }}>
-            A Yollo IA responde dúvidas jurídicas, qualifica leads, agenda consultas e acompanha casos automaticamente. Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
+            A Yollo IA faz a triagem inicial de casos, identifica a área do direito, qualifica o potencial cliente e
+            agenda consultas pelo WhatsApp — tudo dentro das normas da OAB. Seu escritório recebe apenas clientes
+            que já passaram pelo filtro, prontos para a primeira consulta.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.21s" }}>
             <ShinyButton
               href="#contratar"
-              label="Quero agendar minha demonstração →"
+              label="Agendar demonstração para meu escritório →"
               className="w-full sm:w-auto text-sm sm:text-base"
             />
             <a
@@ -95,15 +97,15 @@ export default function HeroAdvocacia() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-advocacia-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">Triagem automática de casos</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
+              <span className="font-medium">Agendamento de consultas 24h</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Configuração em minutos</span>
+              <span className="font-medium">Compliance com normas OAB</span>
             </div>
           </div>
         </div>
