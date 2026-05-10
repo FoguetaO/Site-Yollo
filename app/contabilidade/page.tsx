@@ -13,13 +13,13 @@ import WhatsAppFloat from "@/components/whatsapp-float"
 import ScrollReveal from "@/components/scroll-reveal"
 
 export const metadata = {
-  title: "Yollo IA para Contabilidade — Captação, Qualificação e Atendimento Automático de Leads",
+  title: "IA para Escritórios Contábeis: Atenda Mais Clientes sem Ampliar a Equipe — Yollo IA",
   description:
-    "Automação de captação e qualificação de leads via WhatsApp com IA para escritórios contábeis. Agenda reuniões, distribui por departamento, rastreia anúncios e move leads no CRM automaticamente.",
+    "Responda dúvidas fiscais, envie lembretes de obrigações e capte novos leads automaticamente pelo WhatsApp. Escale o atendimento do seu escritório contábil sem precisar contratar mais colaboradores.",
   alternates: { canonical: "https://yolloia.com.br/contabilidade" },
   openGraph: {
-    title: "IA para Escritórios Contábeis — Yollo IA",
-    description: "Automatize o atendimento do seu escritório contábil. Responda clientes, lembre prazos e recolha documentos com IA.",
+    title: "IA para Escritórios Contábeis: Mais Clientes, Mesma Equipe — Yollo IA",
+    description: "Automatize dúvidas fiscais, lembretes de obrigações e captação de leads para seu escritório contábil com IA no WhatsApp.",
     type: "website",
     locale: "pt_BR",
     siteName: "Yollo IA",
@@ -59,14 +59,14 @@ export default function ContabilidadePage() {
         <ScrollReveal delay={50}>
         <SegmentFeatureHero
           badge="IA para Escritórios Contábeis"
-          title="Do lead curioso ao contrato assinado, sem o contador precisar intervir"
-          description="Os recursos da Yollo IA para escritórios contábeis incluem:"
+          title="Escale o atendimento do seu escritório sem contratar mais ninguém"
+          description="O que a Yollo IA faz pelo seu escritório contábil:"
           features={[
-            { label: "Agendamento automático de reuniões", href: "#funcionalidades" },
-            { label: "Qualificação e distribuição de leads por IA", href: "#funcionalidades" },
-            { label: "CRM com movimentação automática", href: "#funcionalidades" },
+            { label: "Responde dúvidas sobre IRPF, MEI, Simples Nacional e obrigações acessórias", href: "#funcionalidades" },
+            { label: "Envia lembretes automáticos de vencimentos fiscais para cada cliente", href: "#funcionalidades" },
+            { label: "Capta, qualifica e agenda reunião com novos leads sem intervenção da equipe", href: "#funcionalidades" },
           ]}
-          ctaLabel="Explore os recursos para contabilidade"
+          ctaLabel="Agendar demonstração para meu escritório"
           ctaHref="#contratar"
           phoneImage={{
             src: "/ultimasecao.png",

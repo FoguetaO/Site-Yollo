@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Yollo IA",
     },
     alternates: {
-      canonical: `/blog/categoria/${category.slug}`,
+      canonical: `https://yolloia.com.br/blog/categoria/${category.slug}`,
     },
   }
 }

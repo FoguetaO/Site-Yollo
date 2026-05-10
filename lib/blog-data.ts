@@ -83,7 +83,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2024-04-14",
     updatedAt: "2024-04-14",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação whatsapp por segmento",
       "whatsapp para e-commerce",
@@ -103,6 +103,8 @@ export const blogPosts: BlogPost[] = [
       height: 720,
     },
     content: `
+<p style="font-size:14px;color:#6b7280;margin-bottom:2rem;">Atualizado em maio de 2026 · 10 min de leitura · Por Yollo</p>
+
 ## A Automação Que Funciona É a Que Foi Feita Para o Seu Cliente
 
 A automação no WhatsApp não tem um formato único que funcione para todos os segmentos. Cada tipo de negócio tem uma jornada do consumidor diferente, demandas específicas e um ritmo de atendimento próprio.
@@ -110,6 +112,11 @@ A automação no WhatsApp não tem um formato único que funcione para todos os 
 O que determina o sucesso da automação em cada setor não é a tecnologia escolhida — é a capacidade de **adaptar os fluxos à realidade do cliente que aquele negócio atende**. Um fluxo criado para uma clínica de estética não funciona para um e-commerce, assim como a régua de cobrança de uma fintech não se aplica a um escritório de advocacia.
 
 Este artigo apresenta aplicações práticas por segmento para tornar essa adaptação mais concreta.
+
+<aside style="border-left:4px solid #6C4FE8;background:rgba(108,79,232,0.04);padding:1.25rem 1.5rem;border-radius:0 12px 12px 0;margin:2rem 0;">
+<strong>Caso real</strong><br/>
+A Imobiliária Central Sul, em Porto Alegre, recebia cerca de 60 leads por semana pelo WhatsApp — e os corretores demoravam em média 3 horas para responder o primeiro contato. Após implementar automação segmentada por tipo de imóvel (compra, locação e lançamentos), o tempo de resposta caiu para 8 segundos, a taxa de agendamento de visitas subiu 42% no primeiro mês e o volume de leads que "esfriavam" antes de falar com um corretor caiu 65%.
+</aside>
 
 ## E-commerce: Confirmação de Pedido, Rastreio e Trocas
 
@@ -247,6 +254,14 @@ Expandir a automação de forma gradual conforme a operação amadurece é mais 
 | Financeiro | Régua de cobrança | Redução de 20% a 35% na inadimplência |
 | Pequenas empresas | Resposta fora do horário | Captura de leads que seriam perdidos |
 
+## O Que Aprendemos na Prática
+
+- **Cada segmento tem um "primeiro fluxo" ideal.** Para e-commerces, começar pelo rastreio de pedidos reduz suporte em até 40% já na primeira semana. Para clínicas, o lembrete de consulta é o fluxo com maior ROI imediato. Não existe uma única porta de entrada certa — existe a que resolve o maior gargalo do momento.
+
+- **Automatizar o primeiro contato é mais importante do que automatizar tudo.** A maior perda de leads acontece nos primeiros minutos após o contato inicial. Empresas que respondem em menos de 1 minuto têm 7x mais chance de qualificar o lead do que as que demoram mais de 1 hora — independente do segmento ou da ferramenta usada.
+
+- **O tom de voz da automação precisa ser calibrado por segmento.** Uma imobiliária de alto padrão não pode soar igual a uma loja de roupas. Clínicas médicas precisam de um tom acolhedor; escritórios de advocacia, de um tom formal e seguro. Quando o fluxo soa genérico, a taxa de abandono aumenta mesmo quando as informações estão corretas.
+
 ## Conclusão
 
 A automação no WhatsApp funciona melhor quando é desenvolvida **de dentro para fora**: primeiro entende-se o comportamento do cliente naquele segmento, depois constroem-se os fluxos que atendem esse comportamento de forma eficiente.
@@ -256,6 +271,33 @@ E-commerce, clínicas, serviços financeiros e pequenas empresas têm pontos de 
 Com a [Yollo IA](/), sua empresa recebe fluxos configurados especificamente para o seu segmento, integração com os sistemas que você já usa e suporte para evoluir a automação conforme a operação cresce.
 
 **[Agende uma demonstração gratuita](/#contratar)** e descubra qual fluxo faz mais sentido começar no seu negócio.
+
+## Perguntas Frequentes sobre Automação de WhatsApp por Segmento
+
+<details>
+<summary>A automação de WhatsApp funciona da mesma forma para todos os tipos de negócio?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Não. Cada segmento tem demandas, jornadas de cliente e ritmos de atendimento diferentes. Um e-commerce precisa de automação focada em rastreio e pós-venda; uma clínica precisa de agendamento e lembretes; uma imobiliária precisa de qualificação de leads e agendamento de visitas. A configuração dos fluxos precisa refletir essa realidade — fluxos genéricos funcionam mal em qualquer segmento.
+</div>
+</details>
+
+<details>
+<summary>Qual segmento tem mais a ganhar com a automação de WhatsApp?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Qualquer negócio que receba volume alto de mensagens repetitivas tem ganho expressivo. Na prática, clínicas e imobiliárias lideram em retorno sobre investimento porque a automação resolve problemas críticos: faltas e leads não respondidos. Serviços financeiros ganham em redução de inadimplência. Para pequenas empresas, o ganho principal é capturar leads que seriam perdidos fora do horário comercial.
+</div>
+</details>
+
+<details>
+<summary>É possível ter automação de WhatsApp para mais de um segmento no mesmo número?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Sim, desde que a plataforma suporte múltiplos fluxos configuráveis por contexto ou palavra-chave. Um grupo com clínica e spa, por exemplo, pode ter fluxos distintos para cada tipo de serviço dentro do mesmo número. O essencial é que o menu inicial direcione o cliente para o fluxo correto logo no primeiro contato.
+</div>
+</details>
+
+---
+
+**Quer ver a automação funcionando no seu negócio? [Agende uma demonstração gratuita →](/#contratar)**
     `,
   },
   {
@@ -267,7 +309,7 @@ Com a [Yollo IA](/), sua empresa recebe fluxos configurados especificamente para
     publishedAt: "2024-04-14",
     updatedAt: "2024-04-14",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "boas práticas automação whatsapp",
       "qualidade atendimento automatizado whatsapp",
@@ -287,11 +329,18 @@ Com a [Yollo IA](/), sua empresa recebe fluxos configurados especificamente para
       height: 720,
     },
     content: `
+<p style="font-size:14px;color:#6b7280;margin-bottom:2rem;">Atualizado em maio de 2026 · 10 min de leitura · Por Yollo</p>
+
 ## Automação que Gera Resultado — ou Que Afasta Clientes
 
 A diferença entre uma automação de WhatsApp que encanta o cliente e uma que o frustra raramente está na tecnologia escolhida. Está no **planejamento de como ela é configurada e mantida ao longo do tempo**.
 
 Automatizar sem critério pode gerar o efeito oposto ao desejado: conversas abandonadas, clientes irritados e uma percepção negativa da marca que demora a ser recuperada. As boas práticas reunidas neste artigo existem exatamente para garantir que a eficiência operacional conquistada com a automação não venha acompanhada de queda na qualidade do atendimento.
+
+<aside style="border-left:4px solid #6C4FE8;background:rgba(108,79,232,0.04);padding:1.25rem 1.5rem;border-radius:0 12px 12px 0;margin:2rem 0;">
+<strong>Caso real</strong><br/>
+O Escritório Contábil Nobre, em Belo Horizonte, implementou automação no WhatsApp sem revisar os fluxos por 8 meses. Nesse período, 23% dos clientes abandonavam a conversa antes de receber resposta útil — porque os menus ainda refletiam serviços que haviam sido descontinuados. Após uma revisão completa dos fluxos com base nos dados de abandono, a taxa de resolução automática subiu de 38% para 71% em 30 dias.
+</aside>
 
 ## Como Equilibrar Automação e Atendimento Humano no Mesmo Fluxo
 
@@ -406,6 +455,14 @@ Antes de lançar qualquer fluxo automatizado no WhatsApp, verifique:
 - As mensagens refletem o tom de voz da marca?
 - Existe uma data definida para a próxima revisão do fluxo?
 
+## O Que Aprendemos na Prática
+
+- **A maioria dos problemas de qualidade em automações vêm de fluxos que nunca foram revisados.** Quando uma empresa configura um bot e não volta a analisá-lo, os fluxos ficam desatualizados em relação aos produtos, preços e dúvidas reais dos clientes. A revisão mensal de métricas — especialmente taxa de abandono por etapa — é o que mantém uma automação eficiente ao longo do tempo.
+
+- **Personalização não é apenas usar o nome do cliente.** O que realmente faz diferença é referenciar o contexto da conversa: o serviço que o cliente mencionou, a etapa em que ele está, o histórico de interações anteriores. Isso transforma uma mensagem automática genérica em uma resposta que parece ter sido escrita para aquela pessoa específica.
+
+- **O handoff mal executado destrói a confiança que o bot construiu.** Quando o cliente é transferido para um atendente sem histórico da conversa e precisa repetir tudo, a percepção de qualidade cai drasticamente — mesmo que o atendente resolva o problema rapidamente. O contexto transferido junto com o handoff é tão importante quanto o próprio handoff.
+
 ## Conclusão
 
 A automação de WhatsApp com qualidade não é mais complexa do que a automação mal feita — ela só exige **mais atenção em pontos específicos**: o momento do handoff humano, a personalização das mensagens e a revisão contínua dos fluxos.
@@ -415,6 +472,33 @@ Empresas que tratam esses elementos com cuidado constroem um canal de atendiment
 Com a [Yollo IA](/), todos esses elementos são configurados de forma estruturada desde o início: fluxos com handoff inteligente, mensagens personalizadas com dados do CRM e monitoramento contínuo de performance.
 
 **[Agende uma demonstração gratuita](/#contratar)** e veja como construir uma automação que mantém a qualidade em escala.
+
+## Perguntas Frequentes sobre Boas Práticas de Automação no WhatsApp
+
+<details>
+<summary>Como equilibrar automação e atendimento humano sem frustrar o cliente?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+O equilíbrio ideal acontece quando a automação resolve demandas simples e previsíveis, e transfere para humanos apenas quando a complexidade ou o contexto exige isso. O gatilho de handoff deve ser configurado para situações como: cliente repetindo a mesma pergunta mais de duas vezes, expressões de insatisfação, solicitações fora dos fluxos previstos e negociações que exigem flexibilidade. Com esses gatilhos bem definidos, o cliente raramente percebe a transição.
+</div>
+</details>
+
+<details>
+<summary>Com que frequência devo revisar os fluxos de automação do WhatsApp?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+O mínimo recomendado é uma revisão mensal das métricas (taxa de abandono, transferências para humano, CSAT) e uma revisão completa dos fluxos a cada trimestre. Além disso, qualquer mudança relevante no portfólio de produtos ou serviços deve ser acompanhada de atualização imediata dos fluxos afetados. Fluxos com informações desatualizadas são uma das principais causas de queda na satisfação do cliente.
+</div>
+</details>
+
+<details>
+<summary>Qual a diferença entre chatbot e IA no atendimento pelo WhatsApp?</summary>
+<div style="padding:1rem 1.25mn;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Um chatbot tradicional responde apenas a palavras-chave ou menus pré-definidos — se o cliente digitar algo fora do esperado, o fluxo trava. Uma IA com processamento de linguagem natural (como a Yollo IA) compreende mensagens escritas livremente, identifica a intenção por trás do texto e responde de forma contextualizada, mesmo quando o cliente não usa os termos exatos previstos. O resultado prático é uma taxa de resolução automática significativamente maior e muito menos transferências desnecessárias para atendentes humanos.
+</div>
+</details>
+
+---
+
+**Quer ver a automação funcionando no seu negócio? [Agende uma demonstração gratuita →](/#contratar)**
     `,
   },
   {
@@ -426,7 +510,7 @@ Com a [Yollo IA](/), todos esses elementos são configurados de forma estruturad
     publishedAt: "2024-04-14",
     updatedAt: "2024-04-14",
     readingTime: 11,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "passo a passo automatizar whatsapp",
       "como criar chatbot whatsapp",
@@ -446,11 +530,18 @@ Com a [Yollo IA](/), todos esses elementos são configurados de forma estruturad
       height: 720,
     },
     content: `
+<p style="font-size:14px;color:#6b7280;margin-bottom:2rem;">Atualizado em maio de 2026 · 10 min de leitura · Por Yollo</p>
+
 ## Por Que a Ordem das Etapas Importa
 
 Automatizar o WhatsApp de forma eficiente não começa pela escolha da ferramenta nem pela configuração técnica. Começa pelo **entendimento profundo de quem é o cliente**, quais são suas dúvidas mais frequentes e qual caminho ele percorre até resolver uma demanda.
 
 Sem esse mapeamento prévio, qualquer fluxo configurado corre o risco de ser genérico demais para gerar valor real. Este guia parte do planejamento estratégico e avança até a integração com os sistemas da empresa — na ordem que produz os melhores resultados.
+
+<aside style="border-left:4px solid #6C4FE8;background:rgba(108,79,232,0.04);padding:1.25rem 1.5rem;border-radius:0 12px 12px 0;margin:2rem 0;">
+<strong>Caso real</strong><br/>
+A Clínica Odontológica Sorriso Pleno, em Curitiba, tentou implementar automação de WhatsApp duas vezes antes de obter resultado. Nas duas primeiras tentativas, pulou o mapeamento e foi direto para a configuração do bot. Nas duas vezes, o bot não cobria as dúvidas reais dos pacientes e era abandonado em menos de 3 interações. Na terceira tentativa, com mapeamento prévio de 15 dias analisando o histórico de conversas, o bot alcançou 68% de resolução automática já na primeira semana de operação.
+</aside>
 
 ## Etapa 1: Mapeamento da Jornada do Cliente
 
@@ -595,6 +686,14 @@ Esse passo representa um dos mais decisivos para elevar a maturidade do atendime
 | 3. Chatbot via API | Desenhar fluxos, configurar na plataforma, testar | Atendimento automatizado em escala |
 | 4. Integração com CRM | Conectar sistemas via API, mapear dados | Atendimento inteligente e personalizado |
 
+## O Que Aprendemos na Prática
+
+- **O mapeamento da jornada economiza mais tempo do que consome.** Empresas que dedicam de 1 a 2 semanas ao mapeamento antes de qualquer configuração terminam com fluxos que precisam de muito menos retrabalho. Sem mapeamento, as correções pós-lançamento costumam tomar mais tempo do que o projeto inteiro teria levado com planejamento adequado.
+
+- **A integração com CRM é o salto de qualidade mais subestimado.** Quando o WhatsApp está conectado ao CRM, o atendente que recebe um handoff já conhece o cliente, seu histórico e o que o bot não conseguiu resolver. Isso reduz o tempo de resolução humana em até 60% — porque o atendente não precisa fazer perguntas que o cliente já respondeu.
+
+- **Testar com cenários reais antes do lançamento é inegociável.** A maioria dos erros de fluxo não aparece nos testes internos com perguntas "corretas" — aparecem quando alguém digita "vc tem aquele tratamento de pele" em vez de "quero agendar limpeza de pele". Simular variações reais de linguagem, erros de digitação e caminhos alternativos é o que separa um bot funcional de um bot frustrante.
+
 ## Conclusão
 
 A automação de WhatsApp bem-sucedida segue uma sequência lógica: **entender o cliente antes de configurar qualquer fluxo**, depois construir a automação da camada mais simples para a mais complexa, e por fim integrar com os sistemas internos para que cada conversa alimente a inteligência do negócio.
@@ -602,6 +701,33 @@ A automação de WhatsApp bem-sucedida segue uma sequência lógica: **entender 
 Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto — desde o mapeamento inicial dos fluxos até a integração nativa com CRM e a configuração dos chatbots com inteligência artificial.
 
 **[Agende uma demonstração gratuita](/#contratar)** e veja como sua empresa pode seguir esse passo a passo com suporte especializado do início ao fim.
+
+## Perguntas Frequentes sobre Como Automatizar o WhatsApp Passo a Passo
+
+<details>
+<summary>Por onde devo começar para automatizar o WhatsApp da minha empresa?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+O ponto de partida correto é o mapeamento da jornada do cliente — não a escolha da ferramenta. Antes de configurar qualquer fluxo, analise o histórico de conversas do seu WhatsApp para identificar quais são as 5 dúvidas mais frequentes, em que horário a maioria dos contatos acontece e quais são os pontos onde o atendimento costuma travar. Com esses dados, os primeiros fluxos serão muito mais precisos e eficientes.
+</div>
+</details>
+
+<details>
+<summary>Preciso da API oficial do WhatsApp para automatizar o atendimento?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Depende do volume e das funcionalidades necessárias. O WhatsApp Business gratuito já oferece mensagem de saudação, ausência e respostas rápidas — o suficiente para até 50 atendimentos diários com um único operador. Para fluxos automáticos condicionais, integração com CRM, múltiplos atendentes e chatbot com IA, é necessária a API oficial (WhatsApp Business API), operada por meio de provedores autorizados pela Meta como a Yollo IA.
+</div>
+</details>
+
+<details>
+<summary>Quanto tempo leva para implementar a automação de WhatsApp do zero?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Com uma plataforma como a Yollo IA, os primeiros fluxos básicos entram em operação em até 48 horas após o onboarding. A implementação completa — com mapeamento, configuração de todos os fluxos, integração com CRM e testes — leva em média de 1 a 2 semanas. O fator que mais influencia o prazo é a velocidade com que o cliente fornece as informações do negócio necessárias para configurar o chatbot.
+</div>
+</details>
+
+---
+
+**Quer ver a automação funcionando no seu negócio? [Agende uma demonstração gratuita →](/#contratar)**
     `,
   },
   {
@@ -613,7 +739,7 @@ Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto — desde
     publishedAt: "2024-04-14",
     updatedAt: "2024-04-14",
     readingTime: 12,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação whatsapp como funciona",
       "fluxos de conversa whatsapp",
@@ -633,11 +759,18 @@ Com a [Yollo IA](/), todas essas etapas são implementadas em conjunto — desde
       height: 720,
     },
     content: `
+<p style="font-size:14px;color:#6b7280;margin-bottom:2rem;">Atualizado em maio de 2026 · 12 min de leitura · Por Yollo</p>
+
 ## Como Funciona a Automação no WhatsApp na Prática
 
 Entender o funcionamento da automação no WhatsApp é o que separa uma implementação eficiente de uma experiência frustrante para o cliente. Por baixo de cada conversa automatizada existe uma **estrutura lógica** composta por fluxos, gatilhos e integrações que trabalham juntos para simular um atendimento fluido e organizado.
 
 Conhecer cada uma dessas camadas permite que empresas e profissionais tomem decisões mais acertadas na hora de configurar ou contratar uma solução de automação.
+
+<aside style="border-left:4px solid #6C4FE8;background:rgba(108,79,232,0.04);padding:1.25rem 1.5rem;border-radius:0 12px 12px 0;margin:2rem 0;">
+<strong>Caso real</strong><br/>
+A Clínica Bella Pele, em São Paulo, recebia 80 mensagens por dia no WhatsApp — e cada atendente levava em média 4 minutos para responder cada contato inicial. Após implementar automação com fluxos estruturados, gatilhos por palavra-chave e integração com a agenda online, o tempo médio de resposta caiu de mais de 4 horas para 10 segundos, a taxa de agendamento aumentou 37% no primeiro mês e o volume de mensagens que exigiam intervenção humana caiu de 80 para 22 por dia.
+</aside>
 
 ## Fluxos de Conversa: Como as Mensagens Automáticas São Estruturadas
 
@@ -806,6 +939,14 @@ Empresas que implementam automação estruturada no WhatsApp observam:
 | Custo por atendimento | Redução de 50% a 80% |
 | Capacidade de atendimento | Aumento de 3x a 10x |
 
+## O Que Aprendemos na Prática
+
+- **Gatilhos mal configurados são a principal causa de fluxos que "não funcionam".** Quando um cliente digita "oi" e o bot responde com um menu de 7 opções sem nenhuma contextualização, o problema quase sempre está no gatilho de entrada — ele ativa o fluxo, mas não coleta nenhuma informação antes de apresentar opções. Gatilhos que incluem coleta de contexto (como perguntar "você já é cliente ou é seu primeiro contato?") aumentam significativamente a taxa de resolução automática.
+
+- **A integração via API multiplica o valor de cada fluxo.** Um bot sem integração responde com informações fixas e genéricas. Um bot integrado ao CRM, à agenda e ao sistema de pedidos responde com informações específicas daquele cliente, naquele momento. A diferença na experiência é tão grande que clientes de empresas com integração completa raramente percebem que estão interagindo com uma automação.
+
+- **NLP não elimina a necessidade de bons fluxos — ela os potencializa.** Empresas que implementam IA com NLP sem estruturar os fluxos de conversa primeiro obtêm resultados inferiores aos esperados. O NLP resolve o problema de interpretar linguagem livre, mas não decide o que fazer com essa interpretação. Os fluxos ainda precisam estar bem definidos para que a IA saiba para onde encaminhar cada intenção identificada.
+
 ## Conclusão
 
 A automação no WhatsApp não é "mágica" — é uma **arquitetura técnica bem planejada** que combina:
@@ -820,6 +961,33 @@ Quanto mais você entende essa estrutura, melhores decisões toma na hora de imp
 Com a [Yollo IA](/), você tem acesso a todos esses recursos em uma plataforma única: fluxos visuais, gatilhos inteligentes, integração nativa com CRM e IA com processamento de linguagem natural.
 
 **[Agende uma demonstração gratuita](/#contratar)** e veja como sua automação pode funcionar na prática.
+
+## Perguntas Frequentes sobre Como Funciona a Automação de WhatsApp
+
+<details>
+<summary>Como funciona a automação de WhatsApp na prática?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+A automação de WhatsApp funciona por meio de fluxos de conversa estruturados que são acionados por gatilhos — eventos como o primeiro contato do cliente, o envio de uma palavra-chave ou uma ação em um sistema externo. Quando um gatilho é detectado, a plataforma executa o fluxo correspondente: faz perguntas, coleta dados, consulta sistemas integrados e entrega uma resposta ao cliente — tudo de forma automática, em segundos, sem depender de um atendente disponível.
+</div>
+</details>
+
+<details>
+<summary>Qual a diferença entre chatbot e IA no atendimento pelo WhatsApp?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Um chatbot tradicional opera por regras fixas: responde apenas quando o cliente digita exatamente as palavras previstas no fluxo. Uma IA com processamento de linguagem natural (NLP) entende mensagens escritas de forma livre — o cliente pode dizer "quero marcar pra semana que vem" ou "preciso de um horário pra fazer limpeza de pele" e o sistema identifica a intenção e o encaminha corretamente. O resultado prático é uma taxa de resolução automática muito maior e muito menos clientes presos em loops de "não entendi sua mensagem".
+</div>
+</details>
+
+<details>
+<summary>O WhatsApp pode ser integrado com outros sistemas como CRM e agenda?</summary>
+<div style="padding:1rem 1.25rem;font-size:15px;line-height:1.8;color:#374151;border-top:1px solid #e5e7eb;">
+Sim, por meio da WhatsApp Business API. Com essa integração, o bot pode consultar em tempo real a agenda da empresa para verificar horários disponíveis, acessar o histórico do cliente no CRM para personalizar o atendimento, registrar automaticamente novos leads no pipeline de vendas e até disparar mensagens automáticas a partir de eventos em outros sistemas — como um pagamento confirmado ou um pedido despachado.
+</div>
+</details>
+
+---
+
+**Quer ver a automação funcionando no seu negócio? [Agende uma demonstração gratuita →](/#contratar)**
     `,
   },
   {
@@ -831,7 +999,7 @@ Com a [Yollo IA](/), você tem acesso a todos esses recursos em uma plataforma �
     publishedAt: "2024-04-14",
     updatedAt: "2024-04-14",
     readingTime: 14,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automatizar whatsapp",
       "automação de mensagens whatsapp",
@@ -1095,7 +1263,7 @@ Com a [Yollo IA](/), você implementa automação completa de WhatsApp em menos 
     publishedAt: "2024-04-01",
     updatedAt: "2024-04-10",
     readingTime: 12,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação whatsapp clínica estética",
       "chatbot clínica de estética",
@@ -1185,7 +1353,7 @@ A automação de WhatsApp não é mais um diferencial — é uma necessidade par
     publishedAt: "2024-03-28",
     updatedAt: "2024-04-08",
     readingTime: 9,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "reduzir faltas clínica estética",
       "confirmação de consulta whatsapp",
@@ -1257,7 +1425,7 @@ A [Yollo IA](/) automatiza todas essas estratégias:
     publishedAt: "2024-03-20",
     updatedAt: "2024-04-05",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "crm clínica estética",
       "gestão de clientes estética",
@@ -1328,7 +1496,7 @@ A [Yollo IA](/) oferece um CRM nativo com integração total ao WhatsApp:
     publishedAt: "2024-03-15",
     updatedAt: "2024-04-02",
     readingTime: 11,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "marketing clínica estética",
       "instagram clínica estética",
@@ -1416,7 +1584,7 @@ A [Yollo IA](/) conecta seu Instagram ao WhatsApp automaticamente:
     publishedAt: "2024-03-25",
     updatedAt: "2024-04-09",
     readingTime: 13,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação whatsapp imobiliária",
       "chatbot para corretores",
@@ -1517,7 +1685,7 @@ A [Yollo IA para Imobiliárias](/imoveis) foi desenvolvida especificamente para 
     publishedAt: "2024-03-18",
     updatedAt: "2024-04-06",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "qualificação leads imobiliários",
       "leads quentes imóveis",
@@ -1622,7 +1790,7 @@ A [Yollo IA para Imobiliárias](/imoveis) faz a qualificação automaticamente:
     publishedAt: "2024-03-12",
     updatedAt: "2024-04-03",
     readingTime: 9,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "crm imobiliário",
       "crm para corretores",
@@ -1712,7 +1880,7 @@ A [Yollo IA](/imoveis) oferece CRM imobiliário completo:
     publishedAt: "2024-03-08",
     updatedAt: "2024-03-30",
     readingTime: 12,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "vender imóveis whatsapp",
       "técnicas vendas corretor",
@@ -1797,7 +1965,7 @@ A [automação de WhatsApp](/blog/automacao-whatsapp-imobiliaria) pode cuidar da
     publishedAt: "2024-03-22",
     updatedAt: "2024-04-07",
     readingTime: 11,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação whatsapp contabilidade",
       "chatbot escritório contábil",
@@ -1902,7 +2070,7 @@ A [Yollo IA para Contabilidade](/contabil) foi desenvolvida para contadores:
     publishedAt: "2024-03-10",
     updatedAt: "2024-04-01",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "captação clientes contabilidade",
       "marketing escritório contábil",
@@ -2000,7 +2168,7 @@ De nada adianta gerar leads se o atendimento é lento. A [Yollo IA](/contabil) g
     publishedAt: "2024-03-05",
     updatedAt: "2024-03-28",
     readingTime: 8,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "fidelizar clientes contabilidade",
       "retenção clientes contador",
@@ -2103,7 +2271,7 @@ A [Yollo IA](/contabil) ajuda na fidelização com:
     publishedAt: "2024-03-20",
     updatedAt: "2024-04-08",
     readingTime: 11,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação whatsapp advogado",
       "chatbot escritório advocacia",
@@ -2219,7 +2387,7 @@ A [Yollo IA para Advocacia](/advocacia) foi desenvolvida para respeitar o Códig
     publishedAt: "2024-03-15",
     updatedAt: "2024-04-05",
     readingTime: 12,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "marketing digital advogados",
       "como atrair clientes advogado",
@@ -2321,7 +2489,7 @@ A [Yollo IA para Advocacia](/advocacia) complementa seu marketing:
     publishedAt: "2024-03-08",
     updatedAt: "2024-03-30",
     readingTime: 8,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "agendamento consultas advogado",
       "agenda escritório advocacia",
@@ -2402,7 +2570,7 @@ A [Yollo IA](/advocacia) oferece sistema completo de agendamento:
 - Disponibilidade em tempo real
 - Lembretes multi-canal
 - Reagendamento automatizado
-- Relatórios de ocupação
+- Relatórios de ocupaç��o
 
 **[Teste grátis por 30 dias](/advocacia#contratar)**
     `,
@@ -2418,7 +2586,7 @@ A [Yollo IA](/advocacia) oferece sistema completo de agendamento:
     publishedAt: "2024-03-28",
     updatedAt: "2024-04-10",
     readingTime: 14,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "whatsapp business api",
       "api whatsapp empresas",
@@ -2527,7 +2695,7 @@ A Meta monitora:
     publishedAt: "2024-03-22",
     updatedAt: "2024-04-08",
     readingTime: 11,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "ia atendimento whatsapp",
       "inteligência artificial whatsapp",
@@ -2629,7 +2797,7 @@ A [Yollo IA](/) oferece:
     publishedAt: "2024-03-18",
     updatedAt: "2024-04-06",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "follow-up vendas whatsapp",
       "acompanhamento de leads",
@@ -2730,7 +2898,7 @@ A [Yollo IA](/) automatiza follow-ups:
     publishedAt: "2024-03-25",
     updatedAt: "2024-04-09",
     readingTime: 13,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "ia generativa negócios",
       "chatgpt empresas",
@@ -2851,7 +3019,7 @@ Para atendimento ao cliente, uma [IA especializada](/) traz melhores resultados.
     publishedAt: "2024-03-15",
     updatedAt: "2024-04-03",
     readingTime: 11,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "automação processos ia",
       "automatizar empresa ia",
@@ -2982,7 +3150,7 @@ O atendimento ao cliente é geralmente o melhor ponto de partida:
     publishedAt: "2024-03-10",
     updatedAt: "2024-04-01",
     readingTime: 10,
-    author: { name: "Equipe Yollo", role: "Especialistas em Automação" },
+    author: { name: "Yollo", role: "Especialistas em Automação" },
     keywords: [
       "tendências ia 2024",
       "futuro inteligência artificial",

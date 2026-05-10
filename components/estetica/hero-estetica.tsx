@@ -44,27 +44,27 @@ export default function HeroEstetica() {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ backgroundColor: "#6C4FE8" }}
               />
-              Assistente IA para Clínicas de Estética
+              IA para Agendamento em Clínicas de Estética
             </div>
           </div>
 
           {/* Headline */}
           <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance">
-            A secretária virtual que{" "}
+            IA para Clínicas de Estética:{" "}
             <span className="gradient-brand">
-              agenda e atende
+              Atendimento Automático
             </span>{" "}
-            suas clientes
-            <br className="hidden md:block" /> pelo WhatsApp,{" "}
+            no WhatsApp{" "}
             <span className="gradient-brand">
-              24h por dia.
+              24h
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty">
-            A Yollo IA responde suas clientes no momento em que elas mandam mensagem — mesmo à noite,
-            no fim de semana ou enquanto você realiza um procedimento. Agenda, tira dúvidas, qualifica e reduz faltas automaticamente.
+            A Yollo IA agenda botox, limpeza de pele, micropigmentação, peeling e qualquer outro procedimento
+            diretamente pelo WhatsApp — sem secretária, sem falhas e sem deixar cliente sem resposta.
+            Confirmações automáticas reduzem faltas em até 40% e liberam sua equipe para o que realmente importa.
           </p>
 
           {/* CTA Buttons */}
@@ -74,7 +74,7 @@ export default function HeroEstetica() {
               className="text-white text-sm sm:text-base font-semibold px-5 py-3 sm:px-8 sm:py-3.5 rounded-full w-full sm:w-auto text-center transition-all hover:opacity-90 hover:-translate-y-0.5 shadow-lg"
               style={{ backgroundColor: "#6C4FE8", boxShadow: "0 8px 24px #6C4FE844" }}
             >
-              Quero agendar minha demonstração →
+              Agendar demonstração para minha clínica →
             </a>
             <a
               href="#como-funciona"
@@ -98,15 +98,15 @@ export default function HeroEstetica() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">Agendamento automático 24h</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
+              <span className="font-medium">Confirmações e lembretes automáticos</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Configuração em minutos</span>
+              <span className="font-medium">Redução de faltas comprovada</span>
             </div>
           </div>
         </div>

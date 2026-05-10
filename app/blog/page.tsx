@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Yollo IA",
   },
   alternates: {
-    canonical: "/blog",
+    canonical: "https://yolloia.com.br/blog",
   },
 }
 

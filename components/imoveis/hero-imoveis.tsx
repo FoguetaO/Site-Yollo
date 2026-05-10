@@ -43,33 +43,34 @@ export default function HeroImoveis() {
                 className="w-2 h-2 rounded-full animate-pulse"
           style={{ backgroundColor: "#6C4FE8" }}
               />
-              Assistente IA para Imobiliárias
+              IA para Qualificação de Leads Imobiliários
             </div>
           </div>
 
           {/* Headline */}
           <h1 className="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[3.2rem] font-semibold text-neutral-900 leading-tight tracking-tight mb-6 text-balance scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.07s" }}>
-            Sua imobiliária captando{" "}
+            IA para Imobiliárias:{" "}
             <span className="gradient-brand">
-              24 horas por dia pelo
-            </span>
-            <br className="hidden md:block" /> WhatsApp, sem corretor precisar estar{" "}
+              Qualifique Leads
+            </span>{" "}
+            e Agende Visitas pelo{" "}
             <span className="gradient-brand">
-              disponível.
+              WhatsApp
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-sm sm:text-base md:text-lg text-neutral-600 max-w-3xl leading-relaxed mb-10 text-pretty scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.14s" }}>
-            A Yollo IA responde leads em segundos, qualifica compradores e inquilinos, e agenda visitas automaticamente.
-            Seus clientes recebem atendimento imediato — e nem percebem que é uma IA.
+            A Yollo IA responde compradores e locatários em segundos, descobre perfil de busca, orçamento e urgência —
+            e agenda visitas automaticamente no WhatsApp. Seu corretor só entra em campo quando o lead já está qualificado
+            e pronto para ver o imóvel.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center w-full mb-10 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.21s" }}>
             <ShinyButton
               href="#contratar"
-              label="Quero agendar minha demonstração →"
+              label="Agendar demonstração para minha imobiliária →"
               className="w-full sm:w-auto text-sm sm:text-base"
             />
             <a
@@ -94,15 +95,15 @@ export default function HeroImoveis() {
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 text-sm text-neutral-600 scroll-eb hero-imoveis-eb" style={{ transitionDelay: "0.28s" }}>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Funciona no seu número</span>
+              <span className="font-medium">Qualificação automática de compradores</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">API Oficial e Não Oficial do WhatsApp</span>
+              <span className="font-medium">Agendamento de visitas pelo WhatsApp</span>
             </div>
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-green-500 flex-shrink-0" />
-              <span className="font-medium">Configuração em minutos</span>
+              <span className="font-medium">Follow-up automático de propostas</span>
             </div>
           </div>
         </div>
