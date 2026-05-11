@@ -1,0 +1,57 @@
+# Yollo IA
+
+> Plataforma brasileira de automação de atendimento no WhatsApp com Inteligência Artificial para pequenas e médias empresas.
+
+## O que é
+
+Yollo IA é uma plataforma SaaS que automatiza o atendimento ao cliente via WhatsApp usando IA generativa. O sistema responde clientes em até 8 segundos, agenda consultas, faz follow-up automático, dispara campanhas e organiza leads em um CRM integrado — tudo sem intervenção humana constante, 24 horas por dia, 7 dias por semana.
+
+## Para quem é
+
+- Clínicas de estética e spas
+- Imobiliárias e corretores de imóveis
+- Escritórios de contabilidade
+- Escritórios de advocacia
+- Agências de marketing digital
+
+## Principais funcionalidades
+
+- Agente de IA no WhatsApp que responde, qualifica leads e agenda automaticamente
+- Disparos de campanha com personalização por nome e segmentação por tags ou etapa do funil
+- Follow-up automático em sequência para reativar leads frios e fechar vendas abandonadas
+- CRM integrado com histórico de conversas, tags e etapas do funil de vendas
+- Integração com agenda para confirmação automática de consultas e lembretes
+- Redução de até 40% nas faltas com confirmações e lembretes automáticos
+- Integração com Meta Ads (Facebook e Instagram) para captura de leads
+
+## Diferenciais
+
+- Parceiro oficial Meta Tech Provider (conexão sem precisar de aprovação da Meta)
+- Tempo de resposta médio: 8 segundos (vs. +2 horas do mercado)
+- Conformidade com LGPD e criptografia ponta a ponta
+- Configuração em menos de 30 minutos, sem necessidade de programação
+- +200 negócios automatizados | +4.000 agendamentos mensais gerenciados | 89% de satisfação
+
+## Preços
+
+Planos a partir de R$297/mês. Disponíveis nas modalidades mensal, trimestral e semestral. Cancelamento sem multa a qualquer momento.
+
+Arquivo completo de preços: https://yolloia.com.br/pricing.md
+
+## Páginas importantes
+
+- Página inicial: https://yolloia.com.br
+- Clínicas de estética: https://yolloia.com.br/clinica-de-estetica
+- Imobiliárias: https://yolloia.com.br/imoveis
+- Contabilidade: https://yolloia.com.br/contabilidade
+- Advocacia: https://yolloia.com.br/advocacia
+- Agências de marketing: https://yolloia.com.br/agencia-de-marketing
+- Blog: https://yolloia.com.br/blog
+- Sobre: https://yolloia.com.br/sobre
+
+## Contato
+
+- Site: https://yolloia.com.br
+- Instagram: @yollo.ia
+- TikTok: @yollo.ia
+- Demonstração gratuita: https://yolloia.com.br/#contratar
