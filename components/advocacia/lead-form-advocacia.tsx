@@ -46,7 +46,7 @@ export default function LeadFormAdvocacia() {
 
           {/* Right: form */}
           <div className="w-full md:w-[480px] lg:w-[520px] flex-shrink-0">
-            <div className="bg-white md:border md:border-gray-100 md:rounded-2xl md:p-4 md:shadow-sm overflow-hidden">
+            <div>
               <CrmEmbedForm />
             </div>
           </div>
