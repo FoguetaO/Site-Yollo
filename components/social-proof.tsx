@@ -5,44 +5,44 @@ import { useEffect, useRef } from "react"
 const comments = [
   {
     initials: "AC",
-    username: "@ana.clinica.bella",
+    username: "@ana.carvalho.negocios",
     time: "há 2 dias",
-    text: "A IA da Bella está sendo incrível! Minha agenda encheu na semana seguinte que ativei. Não perco mais cliente por falta de resposta.",
+    text: "A IA está sendo incrível! Minha agenda encheu na semana seguinte que ativei. Não perco mais cliente por falta de resposta.",
     likes: 24,
   },
   {
     initials: "FM",
-    username: "@fer.estetica",
+    username: "@fer.mendes.empresa",
     time: "há 5 dias",
     text: "Senti uma diferença enorme. Antes eu perdia clientes que mandavam mensagem à noite. Agora todos são atendidos na hora.",
     likes: 18,
   },
   {
     initials: "LC",
-    username: "@lu.corpoebeleza",
+    username: "@lu.costa.consultoria",
     time: "há 1 semana",
-    text: "De todos os sistemas que testei, este é o mais prático e natural. As clientes não percebem que é uma IA.",
+    text: "De todos os sistemas que testei, este é o mais prático e natural. Os clientes não percebem que é uma IA.",
     likes: 31,
   },
   {
     initials: "KS",
-    username: "@kclinics_",
+    username: "@ksouza.servicos",
     time: "há 1 dia",
-    text: "Minha recepcionista ficou aliviada. A IA faz todo o pré-atendimento e só manda para ela as clientes já prontas para agendar.",
+    text: "Minha equipe ficou aliviada. A IA faz todo o pré-atendimento e só manda para eles os clientes já prontos para fechar.",
     likes: 12,
   },
   {
     initials: "RS",
-    username: "@renata.spa",
+    username: "@renata.store",
     time: "há 3 dias",
     text: "Configurei em menos de 30 minutos e já estava funcionando. Simplesmente fantástico!",
     likes: 9,
   },
   {
     initials: "MB",
-    username: "@michbella.clinic",
+    username: "@michel.borges.co",
     time: "há 6 dias",
-    text: "Taxa de conversão melhorou muito. A IA qualifica os leads e entrega para mim só quem quer mesmo agendar.",
+    text: "Taxa de conversão melhorou muito. A IA qualifica os leads e entrega para mim só quem quer mesmo comprar.",
     likes: 15,
   },
 ]
@@ -122,14 +122,14 @@ export default function SocialProof() {
     <section className="py-20 bg-white overflow-hidden">
       <div className="max-w-[1200px] mx-auto px-6 mb-12 text-center">
         <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900">
-          Clínicas que já{" "}
+          Empresas que já{" "}
           <span className="gradient-brand">
             transformaram
           </span>{" "}
           o atendimento
         </h2>
         <p className="text-base text-neutral-500 mt-4 max-w-xl mx-auto">
-          Veja o que donos de clínicas estão dizendo sobre a Yollo IA
+          Veja o que donos de empresas estão dizendo sobre a Yollo IA
         </p>
       </div>
 

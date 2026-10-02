@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const promptOutput = "Você é uma assistente virtual da Clínica Estética Bella Pele. Responda sempre de forma simpática e profissional. Ofereça procedimentos como limpeza de pele, botox e peeling. Agende horários disponíveis e qualifique cada cliente com cuidado."
+const promptOutput = "Você é uma assistente virtual da Prime Soluções Empresariais. Responda sempre de forma simpática e profissional. Apresente nossos serviços de consultoria, implantação e suporte. Agende reuniões nos horários disponíveis e qualifique cada cliente com cuidado."
 
 export default function HowItConnects() {
   const [analyzing, setAnalyzing] = useState(false)
@@ -127,7 +127,7 @@ export default function HowItConnects() {
               Gere o prompt da sua IA em segundos
             </h3>
             <p className="text-sm text-neutral-500 leading-relaxed mb-6">
-              Nosso gerador interno cria o prompt ideal para a sua clinica automaticamente — sem precisar saber nada de tecnologia.
+              Nosso gerador interno cria o prompt ideal para a sua empresa automaticamente — sem precisar saber nada de tecnologia.
             </p>
 
             {/* Prompt generator visual */}
@@ -147,11 +147,11 @@ export default function HowItConnects() {
                 {/* Input fields */}
                 <div className="bg-neutral-50 border border-neutral-200 rounded-xl px-3 py-2 flex items-center gap-2">
                   <span className="text-[10px] text-neutral-400 font-medium shrink-0">Negócio</span>
-                  <span className="text-xs text-neutral-700 font-medium">Clínica Estética Bella Pele</span>
+                  <span className="text-xs text-neutral-700 font-medium">Prime Soluções Empresariais</span>
                 </div>
                 <div className="bg-neutral-50 border border-neutral-200 rounded-xl px-3 py-2 flex items-center gap-2">
                   <span className="text-[10px] text-neutral-400 font-medium shrink-0">Serviços</span>
-                  <span className="text-xs text-neutral-700">Limpeza, Botox, Peeling</span>
+                  <span className="text-xs text-neutral-700">Consultoria, Implantação, Suporte</span>
                 </div>
 
                 {/* Generate button */}
@@ -219,12 +219,12 @@ export default function HowItConnects() {
                 </div>
                 <div className="flex justify-start">
                   <div className="bg-white px-3 py-2 rounded-2xl rounded-tl-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
-                    Olá! Temos sim. Qual procedimento você gostaria? 😊
+                    Olá! Temos sim. Qual serviço você gostaria? 😊
                   </div>
                 </div>
                 <div className="flex justify-end">
                   <div className="bg-[#DCF8C6] px-3 py-2 rounded-2xl rounded-tr-sm text-xs text-neutral-800 max-w-[85%] shadow-sm">
-                    Limpeza de pele
+                    Uma reunião de consultoria
                   </div>
                 </div>
                 <div className="flex justify-start">

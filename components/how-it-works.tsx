@@ -34,7 +34,7 @@ export default function HowItWorks() {
             <div className="text-center mb-8">
               <h3 className="text-xl font-semibold mb-3 text-neutral-900">Responde em segundos</h3>
               <p className="text-sm text-neutral-500 leading-relaxed">
-                A IA atende seus clientes instantaneamente, apresenta tratamentos e tira dúvidas — a qualquer hora do
+                A IA atende seus clientes instantaneamente, apresenta seus serviços e tira dúvidas — a qualquer hora do
                 dia ou da noite.
               </p>
             </div>
@@ -42,14 +42,14 @@ export default function HowItWorks() {
             <div className="mt-auto bg-[#E4DDD6] rounded-xl p-3 min-h-[200px] relative overflow-hidden border border-[#D4CDB6]">
               <div className="flex flex-col gap-2">
                 <div className="self-start bg-white rounded-2xl rounded-tl-sm px-4 py-2.5 shadow-sm text-sm text-neutral-800 max-w-[85%]">
-                  Oi, vocês fazem limpeza de pele? Qual o valor?
+                  Oi, vocês fazem consultoria para pequenas empresas? Qual o valor?
                 </div>
                 <div className="self-end text-xs text-neutral-400 pr-1">08:02</div>
                 <div
                   className="self-end rounded-2xl rounded-tr-sm px-4 py-2.5 shadow-sm text-sm text-white max-w-[90%]"
                   style={{ backgroundColor: "#6C4FE8" }}
                 >
-                  Olá! Sim, fazemos! Nossa limpeza de pele profunda custa R$ 180. Posso te mostrar o que está incluso?
+                  Olá! Sim, fazemos! Nosso pacote inicial de consultoria custa R$ 480. Posso te mostrar o que está incluso?
                 </div>
                 <div className="self-end text-xs text-neutral-400 pr-1">08:02 ✓✓</div>
               </div>
@@ -72,9 +72,9 @@ export default function HowItWorks() {
               </div>
               <div className="flex flex-col gap-2">
                 {[
-                  { initials: "AC", name: "Ana Carla", status: "Agendar Limpeza", badge: "Qualificada", badgeColor: "bg-green-100 text-green-700" },
+                  { initials: "AC", name: "Ana Carla", status: "Agendar reunião", badge: "Qualificada", badgeColor: "bg-green-100 text-green-700" },
                   { initials: "JP", name: "João P.", status: "Apenas curiosidade", badge: "Descartado", badgeColor: "bg-neutral-100 text-neutral-500" },
-                  { initials: "MF", name: "Maria F.", status: "Botox — Alta prioridade", badge: "Qualificada", badgeColor: "bg-green-100 text-green-700" },
+                  { initials: "MF", name: "Maria F.", status: "Proposta — Alta prioridade", badge: "Qualificada", badgeColor: "bg-green-100 text-green-700" },
                 ].map((item) => (
                   <div key={item.name} className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border border-neutral-100 shadow-sm">
                     <div
@@ -116,10 +116,10 @@ export default function HowItWorks() {
                 <div className="text-[10px] font-semibold text-neutral-500 mb-3 uppercase tracking-wider">Agenda de hoje</div>
                 <div className="flex flex-col gap-2">
                   {[
-                    { time: "09:00", name: "Limpeza de Pele — Ana C.", color: "#6C4FE8" },
-                    { time: "10:30", name: "Micropigmentação — Lucia M.", color: "#6C4FE8" },
-                    { time: "14:00", name: "Botox — Fernanda S.", color: "#6C4FE8" },
-                    { time: "16:00", name: "Peeling — Carla R.", color: "#6C4FE8" },
+                    { time: "09:00", name: "Reunião comercial — Ana C.", color: "#6C4FE8" },
+                    { time: "10:30", name: "Demonstração — Lucia M.", color: "#6C4FE8" },
+                    { time: "14:00", name: "Consultoria — Fernanda S.", color: "#6C4FE8" },
+                    { time: "16:00", name: "Apresentação de proposta — Carla R.", color: "#6C4FE8" },
                   ].map((slot) => (
                     <div key={slot.time} className="flex items-center gap-2 text-[10px]">
                       <span className="text-neutral-400 w-10 flex-shrink-0">{slot.time}</span>
