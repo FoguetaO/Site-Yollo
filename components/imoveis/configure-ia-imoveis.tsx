@@ -68,7 +68,7 @@ export default function ConfigureIAImoveis() {
             </div>
             <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure sua IA{" "}
-              <span className="italic gradient-brand">
+              <span className="gradient-brand">
                 por prompt
               </span>
             </h2>

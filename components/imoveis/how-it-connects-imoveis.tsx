@@ -38,7 +38,7 @@ export default function HowItConnectsImoveis() {
         <div className="text-center mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-neutral-900 leading-tight">
             Comece em{" "}
-            <span className="gradient-brand italic">3 passos simples</span>
+            <span className="gradient-brand">3 passos simples</span>
           </h2>
           <p className="mt-4 text-lg text-neutral-500 max-w-2xl mx-auto">
             Do zero ao seu assistente funcionando no WhatsApp em menos de 10 minutos.

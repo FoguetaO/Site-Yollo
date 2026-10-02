@@ -116,7 +116,7 @@ export default function SegmentHero({
               {titleHighlight && (
                 <>
                   {" "}
-                  <span className="italic" style={{ color: "#6C4FE8" }}>
+                  <span style={{ color: "#6C4FE8" }}>
                     {titleHighlight}
                   </span>
                 </>

@@ -139,7 +139,7 @@ export default function ConfigureIA() {
             </div>
             <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900 mb-6">
               Configure sua IA{" "}
-              <span className="italic gradient-brand">por prompt</span>
+              <span className="gradient-brand">por prompt</span>
             </h2>
             <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8">
               Sem fluxos complexos, sem planilhas. Você preenche as informações da sua clínica e nosso gerador cria

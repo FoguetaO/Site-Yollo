@@ -17,7 +17,7 @@ export default function HowItWorksImoveis() {
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
           <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900">
             Como a{" "}
-            <span className="italic gradient-brand">
+            <span className="gradient-brand">
               Yollo IA
             </span>{" "}
             funciona

@@ -123,7 +123,7 @@ export default function SocialProof() {
       <div className="max-w-[1200px] mx-auto px-6 mb-12 text-center">
         <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900">
           Clínicas que já{" "}
-          <span className="italic gradient-brand">
+          <span className="gradient-brand">
             transformaram
           </span>{" "}
           o atendimento

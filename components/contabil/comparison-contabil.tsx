@@ -98,7 +98,7 @@ export default function ComparisonContabil() {
           <h2 className="text-3xl md:text-5xl font-normal text-neutral-900">
             O que muda{" "}
             <span className="md:hidden"><br /></span>
-            <span className="italic gradient-brand">
+            <span className="gradient-brand">
               com a Yollo IA?
             </span>
           </h2>

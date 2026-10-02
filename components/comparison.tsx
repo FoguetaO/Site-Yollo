@@ -101,7 +101,7 @@ export default function Comparison() {
             <span className="md:hidden">
               <br />
             </span>
-            <span className="italic gradient-brand">
+            <span className="gradient-brand">
               com a Yollo IA?
             </span>
           </h2>
