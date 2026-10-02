@@ -32,7 +32,6 @@ const segmentLinks = [
 const productLinks = [
   { label: "Como funciona a automação", href: "#como-funciona" },
   { label: "Funcionalidades da IA", href: "#funcionalidades" },
-  { label: "Configure sua IA", href: "#configure-sua-ia" },
   { label: "Planos e preços", href: "#contratar" },
 ]
 

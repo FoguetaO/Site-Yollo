@@ -111,7 +111,7 @@ export default function FooterContabil() {
               {[
                 { label: "Como funciona a automação", href: "#como-funciona" },
                 { label: "Lembretes de obrigações", href: "#funcionalidades" },
-                { label: "Coleta de documentos", href: "#configure-sua-ia" },
+                { label: "Coleta de documentos", href: "#beneficios" },
                 { label: "Planos e preços", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>

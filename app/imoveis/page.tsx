@@ -5,7 +5,6 @@ import ComparisonImoveis from "@/components/imoveis/comparison-imoveis"
 import HowItWorksImoveis from "@/components/imoveis/how-it-works-imoveis"
 import HowItConnectsImoveis from "@/components/imoveis/how-it-connects-imoveis"
 import ObjectivesImoveis from "@/components/imoveis/objectives-imoveis"
-import ConfigureIAImoveis from "@/components/imoveis/configure-ia-imoveis"
 import StatsImoveis from "@/components/imoveis/stats-imoveis"
 import LeadFormImoveis from "@/components/imoveis/lead-form-imoveis"
 import SocialProofImoveis from "@/components/imoveis/social-proof-imoveis"
@@ -58,7 +57,7 @@ export default function ImoveisPage() {
       <ScrollReveal delay={50}><HowItWorksImoveis /></ScrollReveal>
       <ScrollReveal delay={50}><HowItConnectsImoveis /></ScrollReveal>
       <ScrollReveal delay={50}><ObjectivesImoveis /></ScrollReveal>
-      <ScrollReveal delay={50}><ConfigureIAImoveis /></ScrollReveal>
+
       <ScrollReveal delay={50}><StatsImoveis /></ScrollReveal>
       <ScrollReveal delay={50}><LeadFormImoveis /></ScrollReveal>
       <ScrollReveal delay={50}><SocialProofImoveis /></ScrollReveal>
