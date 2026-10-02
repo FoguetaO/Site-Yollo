@@ -134,6 +134,16 @@ export default function Integrations() {
             ))}
           </ul>
         </div>
+
+        <div className="mt-14 flex justify-center">
+          <div className="inline-flex flex-col items-center gap-3 rounded-2xl border border-[#6C4FE8]/20 bg-white px-6 py-4 text-center shadow-sm sm:flex-row sm:gap-4 sm:text-left">
+            <span className="text-3xl font-bold text-[#6C4FE8] md:text-4xl">+50</span>
+            <span className="hidden h-10 w-px bg-neutral-200 sm:block" aria-hidden="true" />
+            <p className="text-base text-neutral-700 md:text-lg">
+              <span className="font-semibold text-neutral-900">Mais de 50 integrações diretas</span> na Yollo
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )
