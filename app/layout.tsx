@@ -85,14 +85,6 @@ const websiteSchema = {
   url: 'https://yolloia.com.br',
   inLanguage: 'pt-BR',
   description: 'Plataforma de automação de atendimento via WhatsApp com IA para negócios brasileiros.',
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: {
-      '@type': 'EntryPoint',
-      urlTemplate: 'https://yolloia.com.br/blog?q={search_term_string}',
-    },
-    'query-input': 'required name=search_term_string',
-  },
 }
 
 // JSON-LD Schema for SoftwareApplication

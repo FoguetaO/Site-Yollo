@@ -38,7 +38,6 @@ const productLinks = [
 
 const companyLinks = [
   { label: "Sobre a Yollo IA", href: "/sobre" },
-  { label: "Blog — IA e Automação", href: "/blog" },
   { label: "Contato e demonstração", href: "#contratar" },
 ]
 
