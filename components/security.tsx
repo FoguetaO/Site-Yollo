@@ -30,9 +30,9 @@ export default function Security() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* API Oficial */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-neutral-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className="mb-6 flex items-center justify-center">
-                <Image
-                  src="/images/meta-verified.svg"
+  <div className="mb-6 flex items-center justify-start">
+  <Image
+  src="/images/meta-verified.svg"
                   alt="Meta Verified"
                   width={200}
                   height={32}
