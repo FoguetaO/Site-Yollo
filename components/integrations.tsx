@@ -9,16 +9,16 @@ const leftIntegrations: Integration[] = [
   { name: "WhatsApp", description: "Conversas com contexto", logo: "/integrations/whatsapp.svg" },
   { name: "Instagram", description: "Direct e comentários", logo: "/integrations/instagram.svg" },
   { name: "Google Agenda", description: "Agendamentos automáticos", logo: "/integrations/google-calendar.svg" },
-  { name: "Typeform", description: "Respostas viram leads", monogram: { label: "T", bg: "#262627" } },
-  { name: "Respondi", description: "Formulários integrados", monogram: { label: "R", bg: "#7B3FE4" } },
+  { name: "Typeform", description: "Respostas viram leads", logo: "/integrations/typeform.png" },
+  { name: "Respondi", description: "Formulários integrados", logo: "/integrations/respondi.png" },
 ]
 
 const rightIntegrations: Integration[] = [
   { name: "Pipedrive", description: "Negócios no funil", logo: "/integrations/pipedrive.svg" },
-  { name: "RD Station CRM", description: "Contatos e oportunidades", monogram: { label: "RD", bg: "#0B2D4E", fg: "#4FE3F0" } },
+  { name: "RD Station CRM", description: "Contatos e oportunidades", logo: "/integrations/rd-station.png" },
   { name: "HubSpot", description: "Histórico e tarefas", logo: "/integrations/hubspot.svg" },
-  { name: "ActiveCampaign", description: "Automação de e-mail", monogram: { label: ">", bg: "#004CFF" } },
-  { name: "Agendor", description: "Vendas e follow-ups", monogram: { label: "A", bg: "#FF6B2C" } },
+  { name: "ActiveCampaign", description: "Automação de e-mail", logo: "/integrations/activecampaign.png" },
+  { name: "Agendor", description: "Vendas e follow-ups", logo: "/integrations/agendor.png" },
 ]
 
 const CARD_HEIGHT = 88
@@ -29,7 +29,7 @@ const CENTER_Y = COLUMN_HEIGHT / 2
 
 function IntegrationLogo({ item }: { item: Integration }) {
   if (item.logo) {
-    return <img src={item.logo} alt="" className="h-9 w-9 object-contain" loading="lazy" />
+    return <img src={item.logo} alt="" className="h-9 w-9 rounded-lg object-contain" loading="lazy" />
   }
   const m = item.monogram!
   return (
