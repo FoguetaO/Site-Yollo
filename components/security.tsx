@@ -52,13 +52,13 @@ export default function Security() {
 
             {/* API Não Oficial */}
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-neutral-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className="mb-6 flex items-center justify-center">
+              <div className="mb-6 flex items-center justify-start">
                 <Image
                   src="/images/whatsapp-ai-hub.png"
                   alt="WhatsApp AI Startups Hub"
-                  width={120}
-                  height={120}
-                  className="rounded-2xl"
+                  width={72}
+  height={72}
+  className="rounded-xl"
                 />
               </div>
               <h3 className="text-xl font-medium mb-3 text-neutral-900">Meta Tech Provider</h3>
