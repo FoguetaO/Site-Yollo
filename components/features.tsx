@@ -272,7 +272,7 @@ export default function Features() {
           </div>
           <h2 className="text-xl sm:text-2xl md:text-5xl font-semibold text-neutral-900 text-balance">
             Tudo que seu time precisa{" "}
-            <span className="italic gradient-brand">em um só lugar</span>
+            <span className="gradient-brand">em um só lugar</span>
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto text-pretty">
             Da captação ao fechamento — automatize atendimento, dispare campanhas, gerencie leads e escale suas vendas pelo WhatsApp com Inteligência Artificial.

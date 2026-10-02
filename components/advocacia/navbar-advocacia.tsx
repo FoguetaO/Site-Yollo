@@ -97,9 +97,6 @@ export default function NavbarAdvocacia() {
           <a href="#faq" className="hover:text-neutral-900 transition-colors">
             FAQ
           </a>
-          <a href="/blog" className="hover:text-neutral-900 transition-colors">
-            Blog
-          </a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
@@ -158,9 +155,6 @@ export default function NavbarAdvocacia() {
           </a>
           <a href="#faq" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
             FAQ
-          </a>
-          <a href="/blog" className="text-sm font-medium text-neutral-700 py-2" onClick={() => setMobileOpen(false)}>
-            Blog
           </a>
           <a href="#contratar" className="text-sm font-semibold text-white px-5 py-3 rounded-full text-center" style={{ backgroundColor: "#6C4FE8" }} onClick={() => setMobileOpen(false)}>
             Agendar demonstração

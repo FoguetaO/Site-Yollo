@@ -85,7 +85,7 @@ export default function Stats() {
                 {stat3}%
               </span>
               <span className="block text-sm font-semibold text-white/70 mt-2">de satisfação</span>
-              <span className="hidden md:block text-xs text-white/30 mt-0.5">das clientes atendidas pela IA</span>
+              <span className="hidden md:block text-xs text-white/30 mt-0.5">dos clientes atendidos pela IA</span>
             </div>
           </div>
         </div>

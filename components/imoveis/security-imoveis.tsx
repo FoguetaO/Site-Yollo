@@ -28,9 +28,9 @@ export default function SecurityImoveis() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-neutral-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className="mb-6 flex items-center justify-center">
-                <Image
-                  src="/images/meta-verified.svg"
+  <div className="mb-6 flex items-center justify-start">
+  <Image
+  src="/images/meta-verified.svg"
                   alt="Meta Verified"
                   width={200}
                   height={32}
@@ -49,13 +49,13 @@ export default function SecurityImoveis() {
             </div>
 
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-neutral-200 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
-              <div className="mb-6 flex items-center justify-center">
+              <div className="mb-6 flex items-center justify-start">
                 <Image
                   src="/images/whatsapp-ai-hub.png"
                   alt="WhatsApp AI Startups Hub"
-                  width={120}
-                  height={120}
-                  className="rounded-2xl"
+                  width={72}
+  height={72}
+  className="rounded-xl"
                 />
               </div>
               <h3 className="text-xl font-medium mb-3 text-neutral-900">API Não Oficial do WhatsApp</h3>

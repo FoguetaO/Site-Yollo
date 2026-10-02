@@ -1,12 +1,11 @@
 import type { MetadataRoute } from "next"
-import { blogPosts } from "@/lib/blog-data"
 
 const BASE_URL = "https://yolloia.com.br"
 const LAST_MOD_SITE = "2026-05-09"
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Páginas estáticas — prioridades e datas conforme especificação
-  const staticPages: MetadataRoute.Sitemap = [
+  return [
     {
       url: BASE_URL,
       lastModified: new Date(LAST_MOD_SITE),
@@ -61,21 +60,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: new Date(LAST_MOD_SITE),
-      changeFrequency: "daily",
-      priority: 0.7,
-    },
   ]
-
-  // Artigos do blog — usa a data de publicação original de cada post
-  const blogPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.updatedAt ?? post.publishedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }))
-
-  return [...staticPages, ...blogPages]
 }

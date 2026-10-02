@@ -12,7 +12,7 @@ export default function Objectives() {
             <span className="md:hidden">
               <br />
             </span>{" "}
-            <span className="italic gradient-brand">
+            <span className="gradient-brand">
               seu objetivo.
             </span>
           </h2>
@@ -41,12 +41,12 @@ export default function Objectives() {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Qualificação + agendamento</h3>
             <p className="text-sm text-gray-500 leading-relaxed mb-6">
-              Qualifica a cliente e agenda o procedimento diretamente no WhatsApp — sem intervenção humana.
+              Qualifica o cliente e agenda o atendimento diretamente no WhatsApp — sem intervenção humana.
             </p>
             <div className="mt-auto pt-5 border-t border-gray-100">
               <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Recomendado para</p>
               <p className="text-sm text-gray-600 font-medium leading-relaxed">
-                Clínicas de estética, spas, centros de beleza
+                Empresas de serviços, prestadores e equipes comerciais
               </p>
             </div>
           </div>
@@ -78,7 +78,7 @@ export default function Objectives() {
             <div className="mt-auto pt-5 border-t border-gray-100">
               <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Recomendado para</p>
               <p className="text-sm text-gray-600 font-medium leading-relaxed">
-                Dermatologistas, biomédicos estetas, esteticistas
+                Consultorias, escritórios e profissionais liberais
               </p>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Objectives() {
             </div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Venda de pacotes</h3>
             <p className="text-sm text-gray-500 leading-relaxed mb-6">
-              Apresenta pacotes de tratamento, oferece upgrades e finaliza a venda diretamente no chat.
+              Apresenta produtos e pacotes, oferece upgrades e finaliza a venda diretamente no chat.
             </p>
             <div className="mt-auto pt-5 border-t border-gray-100">
               <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400 mb-1.5">Recomendado para</p>

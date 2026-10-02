@@ -46,7 +46,6 @@ Arquivo completo de preços: https://yolloia.com.br/pricing.md
 - Contabilidade: https://yolloia.com.br/contabilidade
 - Advocacia: https://yolloia.com.br/advocacia
 - Agências de marketing: https://yolloia.com.br/agencia-de-marketing
-- Blog: https://yolloia.com.br/blog
 - Sobre: https://yolloia.com.br/sobre
 
 ## Contato

@@ -125,7 +125,6 @@ export default function FooterAgencia() {
             <ul className="flex flex-col gap-2">
               {[
                 { label: "Sobre a Yollo IA", href: "#" },
-                { label: "Blog — IA e Automação", href: "/blog" },
                 { label: "Agendar demonstração", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>

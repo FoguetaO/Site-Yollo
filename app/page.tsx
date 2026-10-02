@@ -119,11 +119,11 @@ export const metadata: Metadata = {
 
 import Hero from "@/components/hero"
 import Features from "@/components/features"
+import Integrations from "@/components/integrations"
 import Comparison from "@/components/comparison"
 import HowItWorks from "@/components/how-it-works"
 import HowItConnects from "@/components/how-it-connects"
 import Objectives from "@/components/objectives"
-import ConfigureIA from "@/components/configure-ia"
 import Stats from "@/components/stats"
 import LeadForm from "@/components/lead-form"
 import SocialProof from "@/components/social-proof"
@@ -148,10 +148,11 @@ export default function Home() {
       <Hero />
       <ScrollReveal><Comparison /></ScrollReveal>
       <ScrollReveal delay={50}><Features /></ScrollReveal>
+      <ScrollReveal delay={50}><Integrations /></ScrollReveal>
       <ScrollReveal delay={50}><HowItWorks /></ScrollReveal>
       <ScrollReveal delay={50}><HowItConnects /></ScrollReveal>
       <ScrollReveal delay={50}><Objectives /></ScrollReveal>
-      <ScrollReveal delay={50}><ConfigureIA /></ScrollReveal>
+
       <ScrollReveal delay={50}><Stats /></ScrollReveal>
       <ScrollReveal delay={50}><LeadForm /></ScrollReveal>
       <ScrollReveal delay={50}><SocialProof /></ScrollReveal>

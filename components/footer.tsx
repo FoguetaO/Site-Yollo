@@ -32,13 +32,11 @@ const segmentLinks = [
 const productLinks = [
   { label: "Como funciona a automação", href: "#como-funciona" },
   { label: "Funcionalidades da IA", href: "#funcionalidades" },
-  { label: "Configure sua IA", href: "#configure-sua-ia" },
   { label: "Planos e preços", href: "#contratar" },
 ]
 
 const companyLinks = [
   { label: "Sobre a Yollo IA", href: "/sobre" },
-  { label: "Blog — IA e Automação", href: "/blog" },
   { label: "Contato e demonstração", href: "#contratar" },
 ]
 

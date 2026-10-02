@@ -111,7 +111,7 @@ export default function FooterImoveis() {
               {[
                 { label: "Como funciona a automação", href: "#como-funciona" },
                 { label: "Qualificação de leads", href: "#funcionalidades" },
-                { label: "Agendamento de visitas", href: "#configure-sua-ia" },
+                { label: "Agendamento de visitas", href: "#beneficios" },
                 { label: "Planos e preços", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>
@@ -131,7 +131,6 @@ export default function FooterImoveis() {
             <ul className="flex flex-col gap-2">
               {[
                 { label: "Sobre a Yollo IA", href: "#" },
-                { label: "Blog — IA e Automação", href: "/blog" },
                 { label: "Agendar demonstração", href: "#contratar" },
               ].map((link) => (
                 <li key={link.label}>

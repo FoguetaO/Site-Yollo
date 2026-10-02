@@ -62,7 +62,7 @@ export default function ObjectivesContabil() {
         <div className="text-center max-w-4xl mx-auto mb-16 md:mb-20">
           <h2 className="text-xl sm:text-2xl md:text-5xl font-normal text-neutral-900">
             Tudo que seu escritório{" "}
-            <span className="italic gradient-brand">precisa</span>
+            <span className="gradient-brand">precisa</span>
           </h2>
           <p className="text-base md:text-lg text-neutral-500 mt-4 leading-relaxed max-w-2xl mx-auto">
             Recursos complementares que otimizam a rotina do escritório e melhoram a experiência do cliente.
