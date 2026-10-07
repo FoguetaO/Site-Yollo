@@ -84,14 +84,11 @@ export default function Objectives() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm transition-all duration-300 flex flex-col hover:-translate-y-2 hover:shadow-xl relative">
-            <span
-              className="absolute top-4 right-4 text-[10px] font-bold px-2.5 py-1 rounded-full text-white"
-              style={{ backgroundColor: "#6C4FE8" }}
+          <div className="bg-white rounded-2xl p-8 border border-neutral-100 shadow-sm transition-all duration-300 flex flex-col hover:-translate-y-2 hover:shadow-xl">
+            <div
+              className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
+              style={{ backgroundColor: "#6C4FE818" }}
             >
-              Em breve
-            </span>
-            <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5 bg-gray-100">
               <svg
                 width="22"
                 height="22"
@@ -101,7 +98,7 @@ export default function Objectives() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="text-gray-400"
+                style={{ color: "#6C4FE8" }}
               >
                 <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" />
               </svg>

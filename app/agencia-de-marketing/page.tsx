@@ -1,6 +1,5 @@
 import NavbarAgencia from "@/components/agencia/navbar-agencia"
 import HeroAgencia from "@/components/agencia/hero-agencia"
-import SegmentFeatureHero from "@/components/segment-feature-hero"
 import ComparisonAgencia from "@/components/agencia/comparison-agencia"
 import HowItWorksAgencia from "@/components/agencia/how-it-works-agencia"
 import StatsAgencia from "@/components/agencia/stats-agencia"
@@ -34,25 +33,6 @@ export default function AgenciaMarketingPage() {
       <ScrollReveal delay={50}><StatsAgencia /></ScrollReveal>
       <ScrollReveal delay={50}><ObjectivesAgencia /></ScrollReveal>
       <ScrollReveal delay={50}><FAQAgencia /></ScrollReveal>
-      <ScrollReveal delay={50}>
-        <SegmentFeatureHero
-          badge="IA para Agências de Marketing"
-          title="Prospecte, dispare e feche contratos enquanto sua agência dorme"
-          description="Os recursos da Yollo IA para agências de marketing incluem:"
-          features={[
-            { label: "Prospecção automática por segmento e cidade", href: "#funcionalidades" },
-            { label: "Disparo em massa personalizado via WhatsApp", href: "#funcionalidades" },
-            { label: "Nurturing e agendamento automático de reuniões", href: "#funcionalidades" },
-          ]}
-          ctaLabel="Explore os recursos para agências"
-          ctaHref="#contratar"
-          phoneImage={{
-            src: "/ultimasecao.png",
-            alt: "Smartphone mostrando prospecção automática e disparo em massa via WhatsApp com IA Yollo para agências de marketing",
-          }}
-          accentColor="#F59E0B"
-        />
-      </ScrollReveal>
       <ScrollReveal delay={50}><LeadFormAgencia /></ScrollReveal>
       <ScrollReveal delay={50}><FooterAgencia /></ScrollReveal>
     </main>
