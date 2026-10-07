@@ -1,6 +1,5 @@
 import NavbarEstetica from "@/components/estetica/navbar-estetica"
 import HeroEstetica from "@/components/estetica/hero-estetica"
-import SegmentFeatureHero from "@/components/segment-feature-hero"
 import Comparison from "@/components/comparison"
 import HowItWorks from "@/components/how-it-works"
 import Objectives from "@/components/objectives"
@@ -55,23 +54,6 @@ export default function ClinicaDeEsteticaPage() {
         <HowItWorks />
         <Objectives />
         <Stats />
-        <SegmentFeatureHero
-          badge="IA para Clínicas de Estética"
-          title="Menos faltas, mais procedimentos realizados — sem depender de secretária"
-          description="O que a Yollo IA faz pela sua clínica de estética:"
-          features={[
-            { label: "Agenda botox, peeling, limpeza de pele e micropigmentação automaticamente", href: "#funcionalidades" },
-            { label: "Envia confirmações e lembretes 24h antes para reduzir faltas", href: "#funcionalidades" },
-            { label: "Qualifica a cliente e responde dúvidas sobre procedimentos no WhatsApp", href: "#funcionalidades" },
-          ]}
-          ctaLabel="Agendar demonstração para minha clínica"
-          ctaHref="#contratar"
-          phoneImage={{
-            src: "/ultimasecao.png",
-            alt: "Smartphone mostrando atendimento automático via WhatsApp em clínica de estética com IA Yollo",
-          }}
-          accentColor="#6C4FE8"
-        />
         <LeadForm />
         <Security />
         <Faq />
