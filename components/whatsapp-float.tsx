@@ -65,8 +65,11 @@ export default function WhatsAppFloat() {
         role="dialog"
         aria-modal="false"
         aria-labelledby="wa-popup-title"
-        hidden={!open}
-        className="fixed bottom-4 right-4 z-[999] w-[min(360px,calc(100vw-20px))] overflow-hidden rounded-xl border border-neutral-200 bg-white text-neutral-800 shadow-[0_24px_70px_rgb(15_23_42/0.24)] max-sm:bottom-1.5 max-sm:right-1.5 max-sm:w-[calc(100vw-12px)] max-sm:max-h-[calc(100dvh-16px)] max-sm:overflow-y-auto"
+        aria-hidden={!open}
+        inert={!open}
+        className={`fixed inset-x-4 bottom-4 z-[999] max-h-[calc(100dvh-32px)] overflow-y-auto rounded-xl border border-neutral-200 bg-white text-neutral-800 shadow-[0_24px_70px_rgb(15_23_42/0.24)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] sm:left-auto sm:right-6 sm:bottom-6 sm:w-[360px] ${
+          open ? "visible translate-y-0 opacity-100" : "pointer-events-none invisible translate-y-10 opacity-0"
+        }`}
       >
         <header className="flex items-center gap-2.5 p-3 min-h-[78px]" style={{ backgroundColor: "#173e32" }}>
           <div
