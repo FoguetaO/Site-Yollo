@@ -95,6 +95,25 @@ function Connectors({ side }: { side: "left" | "right" }) {
   )
 }
 
+function LogoMarquee({ items, reverse = false }: { items: Integration[]; reverse?: boolean }) {
+  const loop = [...items, ...items]
+  return (
+    <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">
+      <ul className={`logo-marquee-track flex items-center gap-4 ${reverse ? "reverse" : ""}`}>
+        {loop.map((item, i) => (
+          <li
+            key={`${item.name}-${i}`}
+            aria-hidden={i >= items.length}
+            className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border border-neutral-200 bg-white shadow-sm"
+          >
+            <img src={item.logo} alt={i < items.length ? item.name : ""} className="h-10 w-10 object-contain" loading="lazy" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
 export default function Integrations() {
   return (
     <section id="integracoes" className="bg-neutral-50 py-24">
@@ -109,12 +128,13 @@ export default function Integrations() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:justify-center lg:gap-0">
-          <div className="order-1 flex flex-col items-center gap-3 lg:order-none lg:hidden">
-            <CenterHub />
-          </div>
+        <div className="-mx-6 flex flex-col gap-4 lg:hidden" aria-label="Integrações">
+          <LogoMarquee items={leftIntegrations} />
+          <LogoMarquee items={rightIntegrations} reverse />
+        </div>
 
-          <ul className="grid w-full gap-4 sm:grid-cols-2 lg:flex lg:w-[340px] lg:flex-col" aria-label="Canais e ferramentas">
+        <div className="hidden flex-col items-center gap-10 lg:flex lg:flex-row lg:justify-center lg:gap-0">
+          <ul className="flex w-[340px] flex-col gap-4" aria-label="Canais e ferramentas">
             {leftIntegrations.map((item) => (
               <IntegrationCard key={item.name} item={item} />
             ))}
@@ -128,7 +148,7 @@ export default function Integrations() {
 
           <Connectors side="right" />
 
-          <ul className="grid w-full gap-4 sm:grid-cols-2 lg:flex lg:w-[340px] lg:flex-col" aria-label="CRMs e automações">
+          <ul className="flex w-[340px] flex-col gap-4" aria-label="CRMs e automações">
             {rightIntegrations.map((item) => (
               <IntegrationCard key={item.name} item={item} />
             ))}
